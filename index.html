@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>May21.org</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --black:    #0a0a0a;
+      --off-black:#111111;
+      --charcoal: #1c1c1c;
+      --dim:      #2a2a2a;
+      --mid:      #444444;
+      --muted:    #888888;
+      --smoke:    #bbbbbb;
+      --white:    #f0ede8;
+      --accent:   #c8382a;
+      --accent2:  #d47c2b;
+      --line:     rgba(255,255,255,0.08);
+      --font-display: 'Bebas Neue', sans-serif;
+      --font-body:    'DM Sans', sans-serif;
+      --font-mono:    'DM Mono', monospace;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    /* noise texture */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+      opacity: 0.025;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; width: 100%; z-index: 100;
+      padding: 18px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(to bottom, rgba(10,10,10,0.95), transparent);
+    }
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      letter-spacing: 0.06em;
+    }
+    .nav-logo span { color: var(--accent); }
+    .nav-links {
+      display: flex; gap: 36px; list-style: none;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--smoke);
+    }
+    .nav-links a:hover { color: var(--accent); transition: color 0.2s; }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 0 48px 80px;
+      position: relative;
+      overflow: hidden;
+      background: var(--black);
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; right: 0;
+      width: 3px; height: 100%;
+      background: linear-gradient(to bottom, transparent, var(--accent), transparent);
+      opacity: 0.6;
+    }
+    .hero-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(4rem, 12vw, 11rem);
+      line-height: 0.9;
+      letter-spacing: 0.02em;
+      max-width: 14ch;
+    }
+    .hero-title em { font-style: normal; color: var(--accent); }
+    .hero-sub {
+      margin-top: 32px;
+      max-width: 520px;
+      font-size: 1rem;
+      color: var(--smoke);
+      border-left: 2px solid var(--accent);
+      padding-left: 20px;
+    }
+    .hero-cta { margin-top: 44px; display: flex; gap: 16px; flex-wrap: wrap; }
+
+    /* BUTTONS */
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      border: 1px solid var(--accent);
+      color: var(--white);
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      background: transparent;
+    }
+    .btn:hover { background: var(--accent); color: var(--black); }
+    .btn.ghost { border-color: var(--mid); color: var(--muted); }
+    .btn.ghost:hover { border-color: var(--smoke); color: var(--white); background: transparent; }
+
+    /* TICKER */
+    .ticker-wrap {
+      overflow: hidden;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 10px 0;
+      background: var(--off-black);
+    }
+    .ticker {
+      display: flex;
+      white-space: nowrap;
+      animation: ticker 30s linear infinite;
+    }
+    .ticker span {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding-right: 64px;
+    }
+    .ticker span em { color: var(--accent); font-style: normal; }
+    @keyframes ticker { to { transform: translateX(-50%); } }
+
+    /* SECTIONS */
+    section { padding: 96px 48px; }
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 6vw, 5rem);
+      line-height: 1;
+      letter-spacing: 0.03em;
+      margin-bottom: 32px;
+    }
+    .divider { width: 48px; height: 2px; background: var(--accent); margin-bottom: 32px; }
+
+    /* ABOUT */
+    .about {
+      background: var(--off-black);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .about-text p { color: var(--smoke); margin-bottom: 18px; font-size: 1.05rem; }
+    .about-text p strong { color: var(--white); font-weight: 500; }
+    .about-stat-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--line);
+    }
+    .stat-block { padding: 32px 28px; background: var(--charcoal); }
+    .stat-num {
+      font-family: var(--font-display);
+      font-size: 3.2rem;
+      color: var(--accent);
+      line-height: 1;
+    }
+    .stat-label {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+
+    /* INSTAGRAM */
+    .instagram { background: var(--black); }
+    .feed-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 36px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .feed-link {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-bottom: 1px solid var(--mid);
+      padding-bottom: 2px;
+    }
+    .feed-link:hover { color: var(--accent2); border-color: var(--accent2); }
+    .ig-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 4px;
+    }
+    .ig-placeholder {
+      aspect-ratio: 1;
+      background: var(--charcoal);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      color: var(--mid);
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border: 1px solid var(--dim);
+    }
+    .ig-setup-note {
+      background: var(--charcoal);
+      border: 1px solid var(--dim);
+      padding: 28px 32px;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--muted);
+      line-height: 1.9;
+    }
+    .ig-setup-note strong { color: var(--smoke); font-weight: 400; }
+    .ig-setup-note a { color: var(--accent2); }
+
+    /* FLICKR */
+    .flickr-section { background: var(--off-black); }
+    .flickr-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 6px;
+    }
+    .flickr-img-wrap {
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      position: relative;
+      background: var(--charcoal);
+      display: block;
+    }
+    .flickr-img-wrap img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease, filter 0.5s ease;
+      filter: grayscale(30%);
+    }
+    .flickr-img-wrap:hover img { transform: scale(1.04); filter: grayscale(0%); }
+    .flickr-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.6), transparent 50%);
+      opacity: 0;
+      transition: opacity 0.3s;
+      display: flex;
+      align-items: flex-end;
+      padding: 16px;
+    }
+    .flickr-img-wrap:hover .flickr-overlay { opacity: 1; }
+    .flickr-overlay span {
+      font-size: 0.7rem;
+      font-family: var(--font-mono);
+      letter-spacing: 0.08em;
+      color: var(--white);
+    }
+    .flickr-placeholder {
+      aspect-ratio: 4/3;
+      background: var(--charcoal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--mid);
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border: 1px solid var(--dim);
+    }
+    .flickr-status {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    /* CONTACT */
+    .contact {
+      background: var(--charcoal);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .contact-detail { margin-bottom: 28px; }
+    .contact-detail-label {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+    .contact-detail-value { font-size: 1rem; color: var(--smoke); }
+    .contact-detail-value a:hover { color: var(--accent2); }
+    .social-row { display: flex; gap: 24px; }
+    .social-row a {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .social-row a:hover { color: var(--accent2); }
+    .contact-form { display: flex; flex-direction: column; gap: 16px; }
+    .contact-form input,
+    .contact-form textarea {
+      background: var(--dim);
+      border: 1px solid var(--mid);
+      color: var(--white);
+      padding: 14px 18px;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      width: 100%;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus { border-color: var(--accent); }
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder { color: var(--mid); }
+    .contact-form textarea { min-height: 120px; resize: vertical; }
+
+    /* FOOTER */
+    footer {
+      padding: 40px 48px;
+      background: var(--black);
+      border-top: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .logo-small {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      letter-spacing: 0.06em;
+    }
+    .logo-small span { color: var(--accent); }
+    footer p {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      nav { padding: 16px 24px; }
+      .nav-links { display: none; }
+      .hero { padding: 0 24px 60px; }
+      section { padding: 64px 24px; }
+      .about, .contact { grid-template-columns: 1fr; gap: 48px; }
+      footer { padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">May21<span>.</span>org</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#instagram">Instagram</a></li>
+      <li><a href="#flickr">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <p class="hero-eyebrow">Circassian Cultural &amp; Political Activism</p>
+    <h1 class="hero-title">The Day Of <em>Resistance</em></h1>
+    <p class="hero-sub">
+      A space for radical culture, grassroots action, and collective memory.
+      We document. We organise. We don't look away.
+    </p>
+    <div class="hero-cta">
+      <a href="#about" class="btn">Our Mission</a>
+      <a href="#contact" class="btn ghost">Get Involved</a>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker-wrap">
+    <div class="ticker">
+      <span>Culture as <em>Resistance</em> &nbsp;·&nbsp;</span>
+      <span>Document Everything &nbsp;·&nbsp;</span>
+      <span>Art Changes <em>Minds</em> &nbsp;·&nbsp;</span>
+      <span>Show Up &nbsp;·&nbsp;</span>
+      <span>Speak Louder &nbsp;·&nbsp;</span>
+      <span>No Pasarán &nbsp;·&nbsp;</span>
+      <span>Culture as <em>Resistance</em> &nbsp;·&nbsp;</span>
+      <span>Document Everything &nbsp;·&nbsp;</span>
+      <span>Art Changes <em>Minds</em> &nbsp;·&nbsp;</span>
+      <span>Show Up &nbsp;·&nbsp;</span>
+      <span>Speak Louder &nbsp;·&nbsp;</span>
+      <span>No Pasarán &nbsp;·&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-text">
+      <p class="section-label">Who We Are</p>
+      <h2 class="section-title">Beyond the<br>Spectacle</h2>
+      <div class="divider"></div>
+      <p>
+        We are a collective of activists, artists, organisers, and documentarians committed to
+        <strong>cultural resistance</strong>. We believe that memory is political,
+        images are evidence, and every protest is a performance.
+      </p>
+      <p>
+        Founded in response to the erasure of public space and the criminalisation of
+        dissent, we archive what institutions would rather forget, and
+        <strong>amplify voices that power tries to silence</strong>.
+      </p>
+      <p>
+        Our work spans street photography, zine publishing, live events, and community
+        organising — always rooted in solidarity, never in spectacle.
+      </p>
+      <a href="#contact" class="btn" style="margin-top:12px">Join the collective</a>
+    </div>
+    <div>
+      <div class="about-stat-grid">
+        <div class="stat-block">
+          <div class="stat-num">12+</div>
+          <div class="stat-label">Years active</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-num">340</div>
+          <div class="stat-label">Events documented</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-num">18</div>
+          <div class="stat-label">Cities reached</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-num">∞</div>
+          <div class="stat-label">Reasons to fight</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM -->
+  <section class="instagram" id="instagram">
+    <div class="feed-header">
+      <div>
+        <p class="section-label">Latest Posts</p>
+        <h2 class="section-title">Instagram</h2>
+      </div>
+      <!-- ★ Replace YOUR_INSTAGRAM_HANDLE -->
+      <a href="https://instagram.com/YOUR_INSTAGRAM_HANDLE" target="_blank" rel="noopener" class="feed-link">
+        @YOUR_INSTAGRAM_HANDLE ↗
+      </a>
+    </div>
+
+    <!--
+    ══════════════════════════════════════════════════════════════
+    INSTAGRAM FEED — HOW TO ACTIVATE
+
+    OPTION A  Behold.so (best free option — auto-updates)
+      1. Sign up free at https://behold.so
+      2. Connect your Instagram Business/Creator account
+      3. Create a "Feed Widget" and copy the embed code
+      4. DELETE the ig-setup-note div below and PASTE your code here
+
+    OPTION B  SnapWidget.com (free plan)
+      1. Sign up at https://snapwidget.com
+      2. Authorise your Instagram account
+      3. Copy the <iframe> code and paste it here
+
+    OPTION C  Official Instagram oEmbed (manual, single posts)
+      Paste post embeds like this:
+      <blockquote class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/p/POST_ID/">
+      </blockquote>
+      <script async src="https://www.instagram.com/embed.js"></script>
+    ══════════════════════════════════════════════════════════════
+    -->
+
+    <div class="ig-setup-note">
+      <strong>Instagram feed not yet configured.</strong><br>
+      Add your feed widget here. Recommended free services:<br>
+      · <a href="https://behold.so" target="_blank">behold.so</a> — auto-updating grid, free tier<br>
+      · <a href="https://snapwidget.com" target="_blank">snapwidget.com</a> — free tier available<br>
+      · Official Instagram oEmbed (manual post embeds)<br><br>
+      See the HTML comments in this section for step-by-step instructions.
+    </div>
+
+  </section>
+
+  <!-- FLICKR -->
+  <section class="flickr-section" id="flickr">
+    <div class="feed-header">
+      <div>
+        <p class="section-label">Photo Archive</p>
+        <h2 class="section-title">Gallery</h2>
+      </div>
+      <!-- ★ Replace YOUR_FLICKR_USER_ID -->
+      <a href="https://www.flickr.com/photos/YOUR_FLICKR_USER_ID/" target="_blank" rel="noopener" class="feed-link">
+        Full archive ↗
+      </a>
+    </div>
+    <p class="flickr-status" id="flickr-status">Loading from Flickr…</p>
+    <div class="flickr-grid" id="flickr-grid"></div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div>
+      <p class="section-label">Reach Us</p>
+      <h2 class="section-title">Get<br>In Touch</h2>
+      <div class="divider"></div>
+
+      <div class="contact-detail">
+        <div class="contact-detail-label">Email</div>
+        <div class="contact-detail-value">
+          <a href="mailto:info@may21.org">info@may21.org</a>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="contact-detail-label">Follow</div>
+        <div class="contact-detail-value">
+          <div class="social-row" style="margin-top:4px">
+            <a href="https://instagram.com/YOUR_HANDLE" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.flickr.com/photos/YOUR_FLICKR_USER_ID" target="_blank" rel="noopener">Flickr</a>
+            <a href="https://facebook.com/YOUR_FACEBOOK_PAGE" target="_blank" rel="noopener">Facebook</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <!--
+      CONTACT FORM — needs a free form backend:
+        · https://formspree.io  — free: 50 msg/month
+        · https://web3forms.com — free: 250 msg/month
+
+      Replace the action URL below with your Formspree endpoint
+      e.g. https://formspree.io/f/YOUR_FORM_ID
+      -->
+      <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="text"  name="name"    placeholder="Your name"    required />
+        <input type="email" name="email"   placeholder="Your email"   required />
+        <input type="text"  name="subject" placeholder="Subject" />
+        <textarea           name="message" placeholder="Your message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="logo-small">May21<span>.</span>org</div>
+    <p>&copy; 2025 May21.org &middot; All rights reserved</p>
+    <div class="social-row">
+      <a href="https://instagram.com/YOUR_HANDLE" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.flickr.com/photos/YOUR_FLICKR_USER_ID" target="_blank" rel="noopener">Flickr</a>
+      <a href="https://facebook.com/YOUR_FACEBOOK_PAGE" target="_blank" rel="noopener">Facebook</a>
+    </div>
+  </footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    /*
+    ═══════════════════════════════════════════════════════
+    FLICKR FEED SETUP
+    ═══════════════════════════════════════════════════════
+    Replace YOUR_FLICKR_USER_ID with your numeric Flickr ID
+    e.g. "12345678@N00"
+
+    To find your ID:
+      Go to https://www.idgettr.com/
+      or https://flickr.com/services/api/explore/flickr.urls.lookupUser
+
+    No API key required — uses the public RSS feed.
+    ═══════════════════════════════════════════════════════
+    */
+    const FLICKR_USER_ID = 'YOUR_FLICKR_USER_ID'; // ← replace this
+    const FLICKR_COUNT   = 12;
+
+    async function loadFlickr() {
+      const status = document.getElementById('flickr-status');
+      const grid   = document.getElementById('flickr-grid');
+
+      if (FLICKR_USER_ID === 'YOUR_FLICKR_USER_ID') {
+        status.textContent = '★ Add your Flickr user ID in the script block to load photos automatically.';
+        renderPlaceholders(grid, FLICKR_COUNT);
+        return;
+      }
+
+      try {
+        const url = `https://api.flickr.com/services/feeds/photos_public.gne?id=${FLICKR_USER_ID}&lang=en-us&format=json&nojsoncallback=1`;
+        const res = await fetch(url);
+        if (!res.ok) throw new Error('fetch failed');
+        const data = await res.json();
+        const items = data.items.slice(0, FLICKR_COUNT);
+
+        status.style.display = 'none';
+        grid.innerHTML = '';
+
+        items.forEach(item => {
+          const src = item.media.m.replace('_m.jpg', '_z.jpg');
+          const a = document.createElement('a');
+          a.href = item.link;
+          a.target = '_blank';
+          a.rel = 'noopener';
+          a.className = 'flickr-img-wrap';
+          a.innerHTML = `
+            <img src="${src}" alt="${item.title}" loading="lazy" />
+            <div class="flickr-overlay"><span>${item.title || ''}</span></div>
+          `;
+          grid.appendChild(a);
+        });
+      } catch (e) {
+        status.textContent = 'Could not load Flickr photos — check your user ID.';
+        renderPlaceholders(grid, 6);
+      }
+    }
+
+    function renderPlaceholders(grid, count) {
+      for (let i =
