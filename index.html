@@ -6,7 +6,7 @@
   <title>May21.org</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400;500&family=Noto+Sans+Arabic:wght@300;400;500&display=swap" rel="stylesheet" />
 
   <style>
     :root {
@@ -36,10 +36,10 @@
       line-height: 1.7;
       overflow-x: hidden;
     }
+    body[lang="ar"] { font-family: 'Noto Sans Arabic', sans-serif; direction: rtl; }
     a { color: inherit; text-decoration: none; }
     img { display: block; max-width: 100%; }
 
-    /* noise texture */
     body::before {
       content: '';
       position: fixed;
@@ -60,80 +60,107 @@
       justify-content: space-between;
       background: linear-gradient(to bottom, rgba(10,10,10,0.95), transparent);
     }
-    .nav-logo {
-      font-family: var(--font-display);
-      font-size: 1.6rem;
-      letter-spacing: 0.06em;
-    }
+    .nav-logo { font-family: var(--font-display); font-size: 1.6rem; letter-spacing: 0.06em; }
     .nav-logo span { color: var(--accent); }
+    .nav-right { display: flex; align-items: center; gap: 36px; }
     .nav-links {
       display: flex; gap: 36px; list-style: none;
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--smoke);
+      font-family: var(--font-mono); font-size: 0.72rem;
+      letter-spacing: 0.12em; text-transform: uppercase; color: var(--smoke);
     }
     .nav-links a:hover { color: var(--accent); transition: color 0.2s; }
+
+    /* LANGUAGE SWITCHER */
+    .lang-switcher { position: relative; }
+    .lang-btn {
+      background: transparent;
+      border: 1px solid var(--mid);
+      color: var(--smoke);
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 6px 12px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .lang-btn:hover { border-color: var(--accent); color: var(--white); }
+    .lang-btn .arrow { font-size: 0.5rem; transition: transform 0.2s; }
+    .lang-switcher.open .lang-btn .arrow { transform: rotate(180deg); }
+    .lang-dropdown {
+      display: none;
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      background: var(--charcoal);
+      border: 1px solid var(--dim);
+      min-width: 160px;
+      z-index: 200;
+    }
+    .lang-switcher.open .lang-dropdown { display: block; }
+    .lang-option {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      color: var(--smoke);
+      cursor: pointer;
+      border: none;
+      background: none;
+      width: 100%;
+      text-align: left;
+      transition: background 0.15s, color 0.15s;
+    }
+    .lang-option:hover { background: var(--dim); color: var(--white); }
+    .lang-option.active { color: var(--accent); }
+    .lang-option .lang-native { color: var(--muted); font-size: 0.75rem; }
 
     /* HERO */
     .hero {
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
+      display: flex; flex-direction: column; justify-content: flex-end;
       padding: 0 48px 80px;
-      position: relative;
-      overflow: hidden;
+      position: relative; overflow: hidden;
       background: var(--black);
     }
     .hero::after {
       content: '';
-      position: absolute;
-      top: 0; right: 0;
+      position: absolute; top: 0; right: 0;
       width: 3px; height: 100%;
       background: linear-gradient(to bottom, transparent, var(--accent), transparent);
       opacity: 0.6;
     }
     .hero-eyebrow {
-      font-family: var(--font-mono);
-      font-size: 0.7rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 20px;
+      font-family: var(--font-mono); font-size: 0.7rem;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 20px;
     }
     .hero-title {
       font-family: var(--font-display);
       font-size: clamp(4rem, 12vw, 11rem);
-      line-height: 0.9;
-      letter-spacing: 0.02em;
-      max-width: 14ch;
+      line-height: 0.9; letter-spacing: 0.02em; max-width: 14ch;
     }
     .hero-title em { font-style: normal; color: var(--accent); }
     .hero-sub {
-      margin-top: 32px;
-      max-width: 520px;
-      font-size: 1rem;
-      color: var(--smoke);
-      border-left: 2px solid var(--accent);
-      padding-left: 20px;
+      margin-top: 32px; max-width: 520px; font-size: 1rem; color: var(--smoke);
+      border-left: 2px solid var(--accent); padding-left: 20px;
     }
+    body[lang="ar"] .hero-sub { border-left: none; border-right: 2px solid var(--accent); padding-left: 0; padding-right: 20px; }
     .hero-cta { margin-top: 44px; display: flex; gap: 16px; flex-wrap: wrap; }
 
     /* BUTTONS */
     .btn {
-      display: inline-block;
-      padding: 12px 28px;
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      border: 1px solid var(--accent);
-      color: var(--white);
-      cursor: pointer;
-      transition: background 0.2s, color 0.2s;
-      background: transparent;
+      display: inline-block; padding: 12px 28px;
+      font-family: var(--font-mono); font-size: 0.72rem;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      border: 1px solid var(--accent); color: var(--white);
+      cursor: pointer; transition: background 0.2s, color 0.2s; background: transparent;
     }
     .btn:hover { background: var(--accent); color: var(--black); }
     .btn.ghost { border-color: var(--mid); color: var(--muted); }
@@ -141,24 +168,13 @@
 
     /* TICKER */
     .ticker-wrap {
-      overflow: hidden;
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      padding: 10px 0;
-      background: var(--off-black);
+      overflow: hidden; border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line); padding: 10px 0; background: var(--off-black);
     }
-    .ticker {
-      display: flex;
-      white-space: nowrap;
-      animation: ticker 30s linear infinite;
-    }
+    .ticker { display: flex; white-space: nowrap; animation: ticker 30s linear infinite; }
     .ticker span {
-      font-family: var(--font-mono);
-      font-size: 0.68rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--muted);
-      padding-right: 64px;
+      font-family: var(--font-mono); font-size: 0.68rem;
+      letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); padding-right: 64px;
     }
     .ticker span em { color: var(--accent); font-style: normal; }
     @keyframes ticker { to { transform: translateX(-50%); } }
@@ -166,235 +182,69 @@
     /* SECTIONS */
     section { padding: 96px 48px; }
     .section-label {
-      font-family: var(--font-mono);
-      font-size: 0.68rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 12px;
+      font-family: var(--font-mono); font-size: 0.68rem;
+      letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px;
     }
     .section-title {
-      font-family: var(--font-display);
-      font-size: clamp(2.4rem, 6vw, 5rem);
-      line-height: 1;
-      letter-spacing: 0.03em;
-      margin-bottom: 32px;
+      font-family: var(--font-display); font-size: clamp(2.4rem, 6vw, 5rem);
+      line-height: 1; letter-spacing: 0.03em; margin-bottom: 32px;
     }
     .divider { width: 48px; height: 2px; background: var(--accent); margin-bottom: 32px; }
 
     /* ABOUT */
-    .about {
-      background: var(--off-black);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-    }
+    .about { background: var(--off-black); display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
     .about-text p { color: var(--smoke); margin-bottom: 18px; font-size: 1.05rem; }
     .about-text p strong { color: var(--white); font-weight: 500; }
-    .about-stat-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1px;
-      background: var(--line);
-    }
+    .about-stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); }
     .stat-block { padding: 32px 28px; background: var(--charcoal); }
-    .stat-num {
-      font-family: var(--font-display);
-      font-size: 3.2rem;
-      color: var(--accent);
-      line-height: 1;
-    }
-    .stat-label {
-      font-family: var(--font-mono);
-      font-size: 0.68rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-top: 8px;
-    }
+    .stat-num { font-family: var(--font-display); font-size: 3.2rem; color: var(--accent); line-height: 1; }
+    .stat-label { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-top: 8px; }
 
     /* INSTAGRAM */
     .instagram { background: var(--black); }
-    .feed-header {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      margin-bottom: 36px;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-    .feed-link {
-      font-family: var(--font-mono);
-      font-size: 0.7rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--muted);
-      border-bottom: 1px solid var(--mid);
-      padding-bottom: 2px;
-    }
+    .feed-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 36px; flex-wrap: wrap; gap: 16px; }
+    .feed-link { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--mid); padding-bottom: 2px; }
     .feed-link:hover { color: var(--accent2); border-color: var(--accent2); }
-    .ig-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 4px;
-    }
-    .ig-placeholder {
-      aspect-ratio: 1;
-      background: var(--charcoal);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      color: var(--mid);
-      font-family: var(--font-mono);
-      font-size: 0.65rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      border: 1px solid var(--dim);
-    }
-    .ig-setup-note {
-      background: var(--charcoal);
-      border: 1px solid var(--dim);
-      padding: 28px 32px;
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      color: var(--muted);
-      line-height: 1.9;
-    }
+    .ig-setup-note { background: var(--charcoal); border: 1px solid var(--dim); padding: 28px 32px; font-family: var(--font-mono); font-size: 0.72rem; color: var(--muted); line-height: 1.9; }
     .ig-setup-note strong { color: var(--smoke); font-weight: 400; }
     .ig-setup-note a { color: var(--accent2); }
 
     /* FLICKR */
     .flickr-section { background: var(--off-black); }
-    .flickr-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 6px;
-    }
-    .flickr-img-wrap {
-      aspect-ratio: 4/3;
-      overflow: hidden;
-      position: relative;
-      background: var(--charcoal);
-      display: block;
-    }
-    .flickr-img-wrap img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease, filter 0.5s ease;
-      filter: grayscale(30%);
-    }
+    .flickr-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 6px; }
+    .flickr-img-wrap { aspect-ratio: 4/3; overflow: hidden; position: relative; background: var(--charcoal); display: block; }
+    .flickr-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease, filter 0.5s ease; filter: grayscale(30%); }
     .flickr-img-wrap:hover img { transform: scale(1.04); filter: grayscale(0%); }
-    .flickr-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.6), transparent 50%);
-      opacity: 0;
-      transition: opacity 0.3s;
-      display: flex;
-      align-items: flex-end;
-      padding: 16px;
-    }
+    .flickr-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.6), transparent 50%); opacity: 0; transition: opacity 0.3s; display: flex; align-items: flex-end; padding: 16px; }
     .flickr-img-wrap:hover .flickr-overlay { opacity: 1; }
-    .flickr-overlay span {
-      font-size: 0.7rem;
-      font-family: var(--font-mono);
-      letter-spacing: 0.08em;
-      color: var(--white);
-    }
-    .flickr-placeholder {
-      aspect-ratio: 4/3;
-      background: var(--charcoal);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--mid);
-      font-family: var(--font-mono);
-      font-size: 0.65rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      border: 1px solid var(--dim);
-    }
-    .flickr-status {
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      letter-spacing: 0.1em;
-      color: var(--muted);
-      margin-bottom: 20px;
-    }
+    .flickr-overlay span { font-size: 0.7rem; font-family: var(--font-mono); letter-spacing: 0.08em; color: var(--white); }
+    .flickr-placeholder { aspect-ratio: 4/3; background: var(--charcoal); display: flex; align-items: center; justify-content: center; color: var(--mid); font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; border: 1px solid var(--dim); }
+    .flickr-status { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 20px; }
 
     /* CONTACT */
-    .contact {
-      background: var(--charcoal);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: start;
-    }
+    .contact { background: var(--charcoal); display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
     .contact-detail { margin-bottom: 28px; }
-    .contact-detail-label {
-      font-family: var(--font-mono);
-      font-size: 0.65rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 6px;
-    }
+    .contact-detail-label { font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
     .contact-detail-value { font-size: 1rem; color: var(--smoke); }
     .contact-detail-value a:hover { color: var(--accent2); }
     .social-row { display: flex; gap: 24px; }
-    .social-row a {
-      font-family: var(--font-mono);
-      font-size: 0.65rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
+    .social-row a { font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
     .social-row a:hover { color: var(--accent2); }
     .contact-form { display: flex; flex-direction: column; gap: 16px; }
-    .contact-form input,
-    .contact-form textarea {
-      background: var(--dim);
-      border: 1px solid var(--mid);
-      color: var(--white);
-      padding: 14px 18px;
-      font-family: var(--font-body);
-      font-size: 0.9rem;
-      width: 100%;
-      outline: none;
-      transition: border-color 0.2s;
+    .contact-form input, .contact-form textarea {
+      background: var(--dim); border: 1px solid var(--mid); color: var(--white);
+      padding: 14px 18px; font-family: var(--font-body); font-size: 0.9rem;
+      width: 100%; outline: none; transition: border-color 0.2s;
     }
-    .contact-form input:focus,
-    .contact-form textarea:focus { border-color: var(--accent); }
-    .contact-form input::placeholder,
-    .contact-form textarea::placeholder { color: var(--mid); }
+    .contact-form input:focus, .contact-form textarea:focus { border-color: var(--accent); }
+    .contact-form input::placeholder, .contact-form textarea::placeholder { color: var(--mid); }
     .contact-form textarea { min-height: 120px; resize: vertical; }
 
     /* FOOTER */
-    footer {
-      padding: 40px 48px;
-      background: var(--black);
-      border-top: 1px solid var(--line);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-    .logo-small {
-      font-family: var(--font-display);
-      font-size: 1.2rem;
-      letter-spacing: 0.06em;
-    }
+    footer { padding: 40px 48px; background: var(--black); border-top: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .logo-small { font-family: var(--font-display); font-size: 1.2rem; letter-spacing: 0.06em; }
     .logo-small span { color: var(--accent); }
-    footer p {
-      font-family: var(--font-mono);
-      font-size: 0.65rem;
-      letter-spacing: 0.1em;
-      color: var(--muted);
-    }
+    footer p { font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.1em; color: var(--muted); }
 
     /* RESPONSIVE */
     @media (max-width: 768px) {
@@ -407,36 +257,54 @@
     }
   </style>
 </head>
-<body>
+<body lang="en">
 
   <!-- NAV -->
   <nav>
     <div class="nav-logo">May21<span>.</span>org</div>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#instagram">Instagram</a></li>
-      <li><a href="#flickr">Gallery</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#about" data-i18n="nav_about">About</a></li>
+        <li><a href="#instagram">Instagram</a></li>
+        <li><a href="#flickr" data-i18n="nav_gallery">Gallery</a></li>
+        <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+      </ul>
+      <!-- LANGUAGE SWITCHER -->
+      <div class="lang-switcher" id="langSwitcher">
+        <button class="lang-btn" onclick="toggleLangMenu()">
+          <span id="currentLangLabel">EN</span>
+          <span class="arrow">▼</span>
+        </button>
+        <div class="lang-dropdown" id="langDropdown">
+          <button class="lang-option active" onclick="setLang('en')">EN <span class="lang-native">English</span></button>
+          <button class="lang-option" onclick="setLang('kbd')">КАБ <span class="lang-native">Кабардинский</span></button>
+          <button class="lang-option" onclick="setLang('ady')">АДЫ <span class="lang-native">Адыгабзэ</span></button>
+          <button class="lang-option" onclick="setLang('ru')">РУС <span class="lang-native">Русский</span></button>
+          <button class="lang-option" onclick="setLang('tr')">TR <span class="lang-native">Türkçe</span></button>
+          <button class="lang-option" onclick="setLang('de')">DE <span class="lang-native">Deutsch</span></button>
+          <button class="lang-option" onclick="setLang('ar')">عر <span class="lang-native">العربية</span></button>
+        </div>
+      </div>
+    </div>
   </nav>
 
   <!-- HERO -->
   <section class="hero" id="home">
-    <p class="hero-eyebrow">Circassian Cultural &amp; Political Activism</p>
-    <h1 class="hero-title">The Day Of <em>Resistance</em></h1>
-    <p class="hero-sub">
+    <p class="hero-eyebrow" data-i18n="hero_eyebrow">Circassian Cultural &amp; Political Activism</p>
+    <h1 class="hero-title" data-i18n="hero_title">The Day Of <em data-i18n="hero_title_em">Resistance</em></h1>
+    <p class="hero-sub" data-i18n="hero_sub">
       A space for radical culture, grassroots action, and collective memory.
       We document. We organise. We don't look away.
     </p>
     <div class="hero-cta">
-      <a href="#about" class="btn">Our Mission</a>
-      <a href="#contact" class="btn ghost">Get Involved</a>
+      <a href="#about" class="btn" data-i18n="hero_cta1">Our Mission</a>
+      <a href="#contact" class="btn ghost" data-i18n="hero_cta2">Get Involved</a>
     </div>
   </section>
 
   <!-- TICKER -->
   <div class="ticker-wrap">
-    <div class="ticker">
+    <div class="ticker" id="ticker">
       <span>Culture as <em>Resistance</em> &nbsp;·&nbsp;</span>
       <span>Document Everything &nbsp;·&nbsp;</span>
       <span>Art Changes <em>Minds</em> &nbsp;·&nbsp;</span>
@@ -455,42 +323,42 @@
   <!-- ABOUT -->
   <section class="about" id="about">
     <div class="about-text">
-      <p class="section-label">Who We Are</p>
-      <h2 class="section-title">Beyond the<br>Spectacle</h2>
+      <p class="section-label" data-i18n="about_label">Who We Are</p>
+      <h2 class="section-title" data-i18n="about_title">Beyond the<br>Spectacle</h2>
       <div class="divider"></div>
-      <p>
+      <p data-i18n="about_p1">
         We are a collective of activists, artists, organisers, and documentarians committed to
         <strong>cultural resistance</strong>. We believe that memory is political,
         images are evidence, and every protest is a performance.
       </p>
-      <p>
+      <p data-i18n="about_p2">
         Founded in response to the erasure of public space and the criminalisation of
         dissent, we archive what institutions would rather forget, and
         <strong>amplify voices that power tries to silence</strong>.
       </p>
-      <p>
+      <p data-i18n="about_p3">
         Our work spans street photography, zine publishing, live events, and community
         organising — always rooted in solidarity, never in spectacle.
       </p>
-      <a href="#contact" class="btn" style="margin-top:12px">Join the collective</a>
+      <a href="#contact" class="btn" style="margin-top:12px" data-i18n="about_cta">Join the collective</a>
     </div>
     <div>
       <div class="about-stat-grid">
         <div class="stat-block">
           <div class="stat-num">12+</div>
-          <div class="stat-label">Years active</div>
+          <div class="stat-label" data-i18n="stat1">Years active</div>
         </div>
         <div class="stat-block">
           <div class="stat-num">340</div>
-          <div class="stat-label">Events documented</div>
+          <div class="stat-label" data-i18n="stat2">Events documented</div>
         </div>
         <div class="stat-block">
           <div class="stat-num">18</div>
-          <div class="stat-label">Cities reached</div>
+          <div class="stat-label" data-i18n="stat3">Cities reached</div>
         </div>
         <div class="stat-block">
           <div class="stat-num">∞</div>
-          <div class="stat-label">Reasons to fight</div>
+          <div class="stat-label" data-i18n="stat4">Reasons to fight</div>
         </div>
       </div>
     </div>
@@ -500,82 +368,61 @@
   <section class="instagram" id="instagram">
     <div class="feed-header">
       <div>
-        <p class="section-label">Latest Posts</p>
+        <p class="section-label" data-i18n="ig_label">Latest Posts</p>
         <h2 class="section-title">Instagram</h2>
       </div>
-      <!-- ★ Replace YOUR_INSTAGRAM_HANDLE -->
       <a href="https://instagram.com/YOUR_INSTAGRAM_HANDLE" target="_blank" rel="noopener" class="feed-link">
         @YOUR_INSTAGRAM_HANDLE ↗
       </a>
     </div>
-
     <!--
-    ══════════════════════════════════════════════════════════════
     INSTAGRAM FEED — HOW TO ACTIVATE
-
     OPTION A  Behold.so (best free option — auto-updates)
       1. Sign up free at https://behold.so
       2. Connect your Instagram Business/Creator account
-      3. Create a "Feed Widget" and copy the embed code
-      4. DELETE the ig-setup-note div below and PASTE your code here
-
-    OPTION B  SnapWidget.com (free plan)
-      1. Sign up at https://snapwidget.com
-      2. Authorise your Instagram account
-      3. Copy the <iframe> code and paste it here
-
-    OPTION C  Official Instagram oEmbed (manual, single posts)
-      Paste post embeds like this:
-      <blockquote class="instagram-media"
-        data-instgrm-permalink="https://www.instagram.com/p/POST_ID/">
-      </blockquote>
+      3. Delete the ig-setup-note div below and paste your embed code here
+    OPTION B  SnapWidget.com (free plan) — https://snapwidget.com
+    OPTION C  Official Instagram oEmbed (single posts):
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/POST_ID/"></blockquote>
       <script async src="https://www.instagram.com/embed.js"></script>
-    ══════════════════════════════════════════════════════════════
     -->
-
     <div class="ig-setup-note">
       <strong>Instagram feed not yet configured.</strong><br>
-      Add your feed widget here. Recommended free services:<br>
       · <a href="https://behold.so" target="_blank">behold.so</a> — auto-updating grid, free tier<br>
       · <a href="https://snapwidget.com" target="_blank">snapwidget.com</a> — free tier available<br>
-      · Official Instagram oEmbed (manual post embeds)<br><br>
-      See the HTML comments in this section for step-by-step instructions.
+      See HTML comments for step-by-step instructions.
     </div>
-
   </section>
 
   <!-- FLICKR -->
   <section class="flickr-section" id="flickr">
     <div class="feed-header">
       <div>
-        <p class="section-label">Photo Archive</p>
-        <h2 class="section-title">Gallery</h2>
+        <p class="section-label" data-i18n="flickr_label">Photo Archive</p>
+        <h2 class="section-title" data-i18n="flickr_title">Gallery</h2>
       </div>
-      <!-- ★ Replace YOUR_FLICKR_USER_ID -->
-      <a href="https://www.flickr.com/photos/YOUR_FLICKR_USER_ID/" target="_blank" rel="noopener" class="feed-link">
+      <a href="https://www.flickr.com/photos/YOUR_FLICKR_USER_ID/" target="_blank" rel="noopener" class="feed-link" data-i18n="flickr_link">
         Full archive ↗
       </a>
     </div>
-    <p class="flickr-status" id="flickr-status">Loading from Flickr…</p>
+    <p class="flickr-status" id="flickr-status" data-i18n="flickr_loading">Loading from Flickr…</p>
     <div class="flickr-grid" id="flickr-grid"></div>
   </section>
 
   <!-- CONTACT -->
   <section class="contact" id="contact">
     <div>
-      <p class="section-label">Reach Us</p>
-      <h2 class="section-title">Get<br>In Touch</h2>
+      <p class="section-label" data-i18n="contact_label">Reach Us</p>
+      <h2 class="section-title" data-i18n="contact_title">Get<br>In Touch</h2>
       <div class="divider"></div>
-
       <div class="contact-detail">
-        <div class="contact-detail-label">Email</div>
+        <div class="contact-detail-label" data-i18n="contact_email_label">Email</div>
         <div class="contact-detail-value">
           <a href="mailto:info@may21.org">info@may21.org</a>
         </div>
       </div>
-
       <div class="contact-detail">
-        <div class="contact-detail-label">Follow</div>
+        <div class="contact-detail-label" data-i18n="contact_follow_label">Follow</div>
         <div class="contact-detail-value">
           <div class="social-row" style="margin-top:4px">
             <a href="https://instagram.com/YOUR_HANDLE" target="_blank" rel="noopener">Instagram</a>
@@ -585,22 +432,13 @@
         </div>
       </div>
     </div>
-
     <div>
-      <!--
-      CONTACT FORM — needs a free form backend:
-        · https://formspree.io  — free: 50 msg/month
-        · https://web3forms.com — free: 250 msg/month
-
-      Replace the action URL below with your Formspree endpoint
-      e.g. https://formspree.io/f/YOUR_FORM_ID
-      -->
       <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <input type="text"  name="name"    placeholder="Your name"    required />
-        <input type="email" name="email"   placeholder="Your email"   required />
-        <input type="text"  name="subject" placeholder="Subject" />
-        <textarea           name="message" placeholder="Your message" required></textarea>
-        <button type="submit" class="btn">Send Message</button>
+        <input type="text"  name="name"    data-i18n-placeholder="form_name"    placeholder="Your name"    required />
+        <input type="email" name="email"   data-i18n-placeholder="form_email"   placeholder="Your email"   required />
+        <input type="text"  name="subject" data-i18n-placeholder="form_subject" placeholder="Subject" />
+        <textarea           name="message" data-i18n-placeholder="form_message" placeholder="Your message" required></textarea>
+        <button type="submit" class="btn" data-i18n="form_send">Send Message</button>
       </form>
     </div>
   </section>
@@ -616,21 +454,218 @@
     </div>
   </footer>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-    /*
-    ═══════════════════════════════════════════════════════
-    FLICKR FEED SETUP
-    ═══════════════════════════════════════════════════════
-    Replace YOUR_FLICKR_USER_ID with your numeric Flickr ID
-    e.g. "12345678@N00"
+  <script>
+    /* ═══════════════════════════════════════════
+       TRANSLATIONS
+       Note: Circassian (Kabardino-Adyghe) text
+       uses Cyrillic script as standardised.
+    ═══════════════════════════════════════════ */
+    const i18n = {
+      en: {
+        nav_about: 'About', nav_gallery: 'Gallery', nav_contact: 'Contact',
+        hero_eyebrow: 'Circassian Cultural & Political Activism',
+        hero_title: 'The Day Of <em>Resistance</em>',
+        hero_sub: 'A space for radical culture, grassroots action, and collective memory. We document. We organise. We don\'t look away.',
+        hero_cta1: 'Our Mission', hero_cta2: 'Get Involved',
+        about_label: 'Who We Are', about_title: 'Beyond the<br>Spectacle',
+        about_p1: 'We are a collective of activists, artists, organisers, and documentarians committed to <strong>cultural resistance</strong>. We believe that memory is political, images are evidence, and every protest is a performance.',
+        about_p2: 'Founded in response to the erasure of public space and the criminalisation of dissent, we archive what institutions would rather forget, and <strong>amplify voices that power tries to silence</strong>.',
+        about_p3: 'Our work spans street photography, zine publishing, live events, and community organising — always rooted in solidarity, never in spectacle.',
+        about_cta: 'Join the collective',
+        stat1: 'Years active', stat2: 'Events documented', stat3: 'Cities reached', stat4: 'Reasons to fight',
+        ig_label: 'Latest Posts', flickr_label: 'Photo Archive', flickr_title: 'Gallery',
+        flickr_link: 'Full archive ↗', flickr_loading: 'Loading from Flickr…',
+        contact_label: 'Reach Us', contact_title: 'Get<br>In Touch',
+        contact_email_label: 'Email', contact_follow_label: 'Follow',
+        form_name: 'Your name', form_email: 'Your email', form_subject: 'Subject', form_message: 'Your message', form_send: 'Send Message',
+        ticker: ['Culture as <em>Resistance</em>', 'Document Everything', 'Art Changes <em>Minds</em>', 'Show Up', 'Speak Louder', 'No Pasarán'],
+        dir: 'ltr'
+      },
+      kbd: {
+        nav_about: 'Зытетыр', nav_gallery: 'Сурэтхэр', nav_contact: 'Зэпыщӏэныгъэ',
+        hero_eyebrow: 'Адыгэ Щэнхабзэ Политикэ Лэжьыгъэ',
+        hero_title: 'Зэпэщӏэтыныгъэм и <em>Махуэ</em>',
+        hero_sub: 'Щэнхабзэм, цӏыхубэ лэжьыгъэм, хъуэхъум я щӏыпӏэ. Тодж. Зэдогъэпэщ. Дыплъэжыркъым.',
+        hero_cta1: 'Ди Мурад', hero_cta2: 'Хэт',
+        about_label: 'Сэ Дыхэт', about_title: 'Театрым<br>Нэхъ Лъагэу',
+        about_p1: 'Ди гуп активистхэр, сурэтыщӏхэр, зэгъэпэщакӏуэхэр, документалистхэр хэту <strong>щэнхабзэ зэпэщӏэтыныгъэм</strong> хуолажьэ. Хъуэхъур политикэщ, сурэтхэр щыхьэтщ, зэхуэс псори театрщ.',
+        about_p2: 'Цӏыхубэ щӏыпӏэхэр зэхуакъутэным, зэпэщӏэтыныгъэр уголовнэ лэжьыгъэ щӏыным пэщӏэту ди гупыр зэхэтащ — <strong>властым зэщӏэхъуэну хэтхэм я макъхэр дгъэлъэщ</strong>.',
+        about_p3: 'Ди лэжьыгъэр уэрамым и сурэтхэм, зин тедзэным, зэхуэсхэм, зэгухьэныгъэм ехьэлӏащ — солидарностым и лъабжьэм тетщ.',
+        about_cta: 'Ди гупым хыхьэ',
+        stat1: 'Илъэс лэжьащ', stat2: 'Хъыбарзехьэ', stat3: 'Къалэ', stat4: 'Зэпэщӏэтыным и щхьэусыгъуэ',
+        ig_label: 'ЗэрыкӀуэцӀылъ', flickr_label: 'Сурэт Архив', flickr_title: 'Галерей',
+        flickr_link: 'Архив псор ↗', flickr_loading: 'Flickr-м щыщ солъагъу…',
+        contact_label: 'Зэпыщӏэныгъэ', contact_title: 'Зэпыщӏэ<br>Дызэрыгъэ',
+        contact_email_label: 'Имэил', contact_follow_label: 'Кӏэлъыплъ',
+        form_name: 'Уи цӏэ', form_email: 'Уи имэил', form_subject: 'Тема', form_message: 'Уи хъыбар', form_send: 'Хъыбар Гъэхьэ',
+        ticker: ['Щэнхабзэр — <em>Зэпэщӏэтыныгъэщ</em>', 'Псори Тхы', 'Гъуазджэм <em>Гур</em> Еху', 'Кӏуэ', 'Нэхъ Ин Жыӏэ', 'Сэ Дыхэт'],
+        dir: 'ltr'
+      },
+      ady: {
+        nav_about: 'Тэ тыхэтхэр', nav_gallery: 'Сурэтхэр', nav_contact: 'Зэпхэныгъэ',
+        hero_eyebrow: 'Адыгэ ШэнхабзэкӀэ Политикэ Лэжьыгъэ',
+        hero_title: 'Пэуцужьыным и <em>Мафэ</em>',
+        hero_sub: 'ШэнхабзэмкӀэ, цӀыфыбэ Іофшӏэным, зэгъэгупсэсыным я чӀыпӀэ. Тэ тэтхэ. Тэ зэдэтэгъэпытэ. Тэ тыплъэжырэп.',
+        hero_cta1: 'Ти Мурад', hero_cta2: 'Хэхьэ',
+        about_label: 'Тэ Тыхэтхэр', about_title: 'Театрым<br>ИкӀыпӀэ',
+        about_p1: 'Ти гупым хэтых активистхэр, сурэтыщхэр, зэгъэпэщакӀохэр, документалистхэр — <strong>шэнхабзэ пэуцужьыным</strong> зафэдгъэзэу. Гум игу тетхэр политикэщт, сурэтхэр ышыхьатщт, зэхэс пстэури театрщт.',
+        about_p2: 'ЦӀыфыбэ чӀыпӀэхэр агъэкӀодыным, пэуцужьыныр уголовнэ Іоф ашӀыным апэуцужьэу ти гупыр зэхащагъ — <strong>хабзэм щырет хэтхэм ямакъэ тэгъэбыба</strong>.',
+        about_p3: 'Ти Іофышӏэныр урамым исурэтхэм, зин тедзэным, зэхэсхэм, зэгухьэныгъэм алъытэгъ — солидарностым иунэе лъапсэ тетщ.',
+        about_cta: 'Ти гупым хэхьэ',
+        stat1: 'ИлъэскӀэ Іоф ашӀагъ', stat2: 'Хъытыу зэхащагъ', stat3: 'Къалэ', stat4: 'Пэуцужьыным ищхьэусыгъо',
+        ig_label: 'ИкӀэрыкӀэ', flickr_label: 'Сурэт Архив', flickr_title: 'Галерей',
+        flickr_link: 'Архив пстэури ↗', flickr_loading: 'Flickr-м щыщ солъэгъу…',
+        contact_label: 'Зэпхэныгъэ', contact_title: 'Зэпхэ<br>Тызэрыгъэ',
+        contact_email_label: 'Имэил', contact_follow_label: 'КӀэлъыплъ',
+        form_name: 'Уи цӀэ', form_email: 'Уи имэил', form_subject: 'Тема', form_message: 'Уи хъытыу', form_send: 'Хъытыу Гъэхьы',
+        ticker: ['ШэнхабзэмкӀэ — <em>Пэуцужьыныгъэ</em>', 'Пстэури Тхы', 'Гъуазджэм <em>Гур</em> Еу', 'КӀо', 'НахьышӀоу ЖъугъаӀу', 'No Pasarán'],
+        dir: 'ltr'
+      },
+      ru: {
+        nav_about: 'О нас', nav_gallery: 'Галерея', nav_contact: 'Контакт',
+        hero_eyebrow: 'Черкесская культурно-политическая активность',
+        hero_title: 'День <em>Сопротивления</em>',
+        hero_sub: 'Пространство радикальной культуры, низовых действий и коллективной памяти. Мы документируем. Мы организуемся. Мы не отводим взгляд.',
+        hero_cta1: 'Наша Миссия', hero_cta2: 'Присоединиться',
+        about_label: 'Кто Мы', about_title: 'За Пределами<br>Спектакля',
+        about_p1: 'Мы — коллектив активистов, художников, организаторов и документалистов, преданных идее <strong>культурного сопротивления</strong>. Мы верим, что память — это политика, образы — доказательства, а каждый протест — это перформанс.',
+        about_p2: 'Основанные в ответ на уничтожение общественных пространств и криминализацию инакомыслия, мы сохраняем то, что институты хотели бы забыть, и <strong>усиливаем голоса, которые власть пытается заглушить</strong>.',
+        about_p3: 'Наша работа охватывает уличную фотографию, издание зинов, живые мероприятия и общественную организацию — всегда из солидарности, никогда из спектакля.',
+        about_cta: 'Вступить в коллектив',
+        stat1: 'Лет активности', stat2: 'Задокументировано событий', stat3: 'Городов', stat4: 'Причин бороться',
+        ig_label: 'Последние посты', flickr_label: 'Фотоархив', flickr_title: 'Галерея',
+        flickr_link: 'Весь архив ↗', flickr_loading: 'Загрузка с Flickr…',
+        contact_label: 'Связаться', contact_title: 'Напишите<br>Нам',
+        contact_email_label: 'Email', contact_follow_label: 'Следите',
+        form_name: 'Ваше имя', form_email: 'Ваш email', form_subject: 'Тема', form_message: 'Ваше сообщение', form_send: 'Отправить',
+        ticker: ['Культура — <em>Сопротивление</em>', 'Документируй всё', 'Искусство меняет <em>умы</em>', 'Выходи', 'Говори громче', 'No Pasarán'],
+        dir: 'ltr'
+      },
+      tr: {
+        nav_about: 'Hakkımızda', nav_gallery: 'Galeri', nav_contact: 'İletişim',
+        hero_eyebrow: 'Çerkes Kültürel ve Siyasi Aktivizm',
+        hero_title: '<em>Direniş</em>in Günü',
+        hero_sub: 'Radikal kültür, taban hareketi ve kolektif bellek için bir alan. Belgeliyoruz. Örgütleniyoruz. Gözlerimizi kaçırmıyoruz.',
+        hero_cta1: 'Misyonumuz', hero_cta2: 'Katıl',
+        about_label: 'Biz Kimiz', about_title: 'Gösterinin<br>Ötesinde',
+        about_p1: 'Biz, <strong>kültürel direnişe</strong> adanmış aktivistler, sanatçılar, örgütçüler ve belgeselcilerden oluşan bir kolektifiz. Belleğin siyasi olduğuna, görüntülerin kanıt olduğuna ve her protestonun bir performans olduğuna inanıyoruz.',
+        about_p2: 'Kamusal alanın silinmesine ve muhalefetin suç sayılmasına karşı kurulan kolektifimiz, kurumların unutmak istediği her şeyi arşivliyor ve <strong>iktidarın susturmaya çalıştığı sesleri yükseltiyor</strong>.',
+        about_p3: 'Çalışmalarımız sokak fotoğrafçılığı, zin yayıncılığı, canlı etkinlikler ve topluluk örgütlenmesini kapsıyor — her zaman dayanışmayla, asla gösteri için değil.',
+        about_cta: 'Kolektife katıl',
+        stat1: 'Yıl aktif', stat2: 'Belgelenen etkinlik', stat3: 'Şehir', stat4: 'Mücadele sebebi',
+        ig_label: 'Son Paylaşımlar', flickr_label: 'Fotoğraf Arşivi', flickr_title: 'Galeri',
+        flickr_link: 'Tam arşiv ↗', flickr_loading: 'Flickr\'dan yükleniyor…',
+        contact_label: 'Bize Ulaşın', contact_title: 'İletişime<br>Geçin',
+        contact_email_label: 'E-posta', contact_follow_label: 'Takip Et',
+        form_name: 'Adınız', form_email: 'E-postanız', form_subject: 'Konu', form_message: 'Mesajınız', form_send: 'Gönder',
+        ticker: ['Kültür <em>Direniştir</em>', 'Her şeyi belgele', 'Sanat <em>Zihinleri</em> değiştirir', 'Katıl', 'Daha yüksek ses çıkar', 'No Pasarán'],
+        dir: 'ltr'
+      },
+      de: {
+        nav_about: 'Über uns', nav_gallery: 'Galerie', nav_contact: 'Kontakt',
+        hero_eyebrow: 'Tscherkessischer kultureller und politischer Aktivismus',
+        hero_title: 'Der Tag des <em>Widerstands</em>',
+        hero_sub: 'Ein Raum für radikale Kultur, Basisbewegungen und kollektives Gedächtnis. Wir dokumentieren. Wir organisieren. Wir schauen nicht weg.',
+        hero_cta1: 'Unsere Mission', hero_cta2: 'Mitmachen',
+        about_label: 'Wer wir sind', about_title: 'Jenseits des<br>Spektakels',
+        about_p1: 'Wir sind ein Kollektiv aus Aktivistinnen, Künstlerinnen, Organisatorinnen und Dokumentaristinnen, die sich dem <strong>kulturellen Widerstand</strong> verpflichtet haben. Wir glauben: Erinnerung ist politisch, Bilder sind Beweise, und jeder Protest ist eine Performance.',
+        about_p2: 'Gegründet als Antwort auf die Auslöschung des öffentlichen Raums und die Kriminalisierung von Dissens, archivieren wir, was Institutionen lieber vergessen würden, und <strong>verstärken Stimmen, die die Macht zum Schweigen bringen will</strong>.',
+        about_p3: 'Unsere Arbeit umfasst Straßenfotografie, Zine-Veröffentlichungen, Live-Veranstaltungen und Community-Organisierung — immer in Solidarität, nie als Spektakel.',
+        about_cta: 'Dem Kollektiv beitreten',
+        stat1: 'Jahre aktiv', stat2: 'Dokumentierte Ereignisse', stat3: 'Städte erreicht', stat4: 'Gründe zu kämpfen',
+        ig_label: 'Neueste Beiträge', flickr_label: 'Fotoarchiv', flickr_title: 'Galerie',
+        flickr_link: 'Vollständiges Archiv ↗', flickr_loading: 'Lade von Flickr…',
+        contact_label: 'Kontakt', contact_title: 'Schreibt<br>uns',
+        contact_email_label: 'E-Mail', contact_follow_label: 'Folgen',
+        form_name: 'Ihr Name', form_email: 'Ihre E-Mail', form_subject: 'Betreff', form_message: 'Ihre Nachricht', form_send: 'Nachricht senden',
+        ticker: ['Kultur als <em>Widerstand</em>', 'Alles dokumentieren', 'Kunst verändert <em>Köpfe</em>', 'Erscheint', 'Sprecht lauter', 'No Pasarán'],
+        dir: 'ltr'
+      },
+      ar: {
+        nav_about: 'من نحن', nav_gallery: 'المعرض', nav_contact: 'اتصل بنا',
+        hero_eyebrow: 'النشاط الثقافي والسياسي الشركسي',
+        hero_title: 'يوم <em>المقاومة</em>',
+        hero_sub: 'فضاء للثقافة الجذرية والعمل الشعبي والذاكرة الجماعية. نوثّق. ننظّم. لا نغض الطرف.',
+        hero_cta1: 'مهمتنا', hero_cta2: 'انضم إلينا',
+        about_label: 'من نحن', about_title: 'ما وراء<br>المشهد',
+        about_p1: 'نحن مجموعة من الناشطين والفنانين والمنظمين والموثّقين الملتزمين بـ<strong>المقاومة الثقافية</strong>. نؤمن بأن الذاكرة سياسة، والصور دليل، وكل احتجاج أداء.',
+        about_p2: 'تأسّسنا رداً على محو الفضاء العام وتجريم المعارضة، نحفظ ما تودّ المؤسسات نسيانه، <strong>ونضخّم الأصوات التي تسعى السلطة إلى إخمادها</strong>.',
+        about_p3: 'يشمل عملنا التصوير في الشوارع ونشر المجلات المستقلة والفعاليات الحية والتنظيم المجتمعي — دائماً بروح التضامن، لا الاستعراض.',
+        about_cta: 'انضم إلى المجموعة',
+        stat1: 'سنوات نشاط', stat2: 'فعالية موثّقة', stat3: 'مدينة', stat4: 'أسباب للنضال',
+        ig_label: 'آخر المنشورات', flickr_label: 'أرشيف الصور', flickr_title: 'المعرض',
+        flickr_link: 'الأرشيف الكامل ↗', flickr_loading: 'جارٍ التحميل من Flickr…',
+        contact_label: 'تواصل معنا', contact_title: 'ابقَ<br>على تواصل',
+        contact_email_label: 'البريد الإلكتروني', contact_follow_label: 'تابعنا',
+        form_name: 'اسمك', form_email: 'بريدك الإلكتروني', form_subject: 'الموضوع', form_message: 'رسالتك', form_send: 'إرسال',
+        ticker: ['الثقافة <em>مقاومة</em>', 'وثّق كل شيء', 'الفن يغيّر <em>العقول</em>', 'كن حاضراً', 'تكلّم بصوت أعلى', 'No Pasarán'],
+        dir: 'rtl'
+      }
+    };
 
-    To find your ID:
-      Go to https://www.idgettr.com/
-      or https://flickr.com/services/api/explore/flickr.urls.lookupUser
+    const langLabels = { en: 'EN', kbd: 'КАБ', ady: 'АДЫ', ru: 'РУС', tr: 'TR', de: 'DE', ar: 'عر' };
 
-    No API key required — uses the public RSS feed.
-    ═══════════════════════════════════════════════════════
-    */
+    function setLang(lang) {
+      const t = i18n[lang];
+      if (!t) return;
+
+      // set document direction and lang
+      document.body.setAttribute('lang', lang);
+      document.documentElement.setAttribute('lang', lang);
+      document.documentElement.setAttribute('dir', t.dir);
+
+      // update all data-i18n elements
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t[key] !== undefined) el.innerHTML = t[key];
+      });
+
+      // update placeholders
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        if (t[key] !== undefined) el.setAttribute('placeholder', t[key]);
+      });
+
+      // update ticker
+      const tickerEl = document.getElementById('ticker');
+      if (tickerEl && t.ticker) {
+        const items = [...t.ticker, ...t.ticker]; // duplicate for seamless loop
+        tickerEl.innerHTML = items.map(s => `<span>${s} &nbsp;·&nbsp;</span>`).join('');
+      }
+
+      // update lang button label
+      document.getElementById('currentLangLabel').textContent = langLabels[lang] || lang.toUpperCase();
+
+      // mark active option
+      document.querySelectorAll('.lang-option').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('onclick') === `setLang('${lang}')`);
+      });
+
+      // close dropdown
+      document.getElementById('langSwitcher').classList.remove('open');
+
+      // store preference
+      localStorage.setItem('may21_lang', lang);
+    }
+
+    function toggleLangMenu() {
+      document.getElementById('langSwitcher').classList.toggle('open');
+    }
+
+    // close dropdown when clicking outside
+    document.addEventListener('click', e => {
+      if (!document.getElementById('langSwitcher').contains(e.target)) {
+        document.getElementById('langSwitcher').classList.remove('open');
+      }
+    });
+
+    // restore saved language on load
+    const saved = localStorage.getItem('may21_lang');
+    if (saved && i18n[saved]) setLang(saved);
+
+    /* ═══════════════════════════════════════════
+       FLICKR FEED
+    ═══════════════════════════════════════════ */
     const FLICKR_USER_ID = 'YOUR_FLICKR_USER_ID'; // ← replace this
     const FLICKR_COUNT   = 12;
 
@@ -661,10 +696,7 @@
           a.target = '_blank';
           a.rel = 'noopener';
           a.className = 'flickr-img-wrap';
-          a.innerHTML = `
-            <img src="${src}" alt="${item.title}" loading="lazy" />
-            <div class="flickr-overlay"><span>${item.title || ''}</span></div>
-          `;
+          a.innerHTML = `<img src="${src}" alt="${item.title}" loading="lazy" /><div class="flickr-overlay"><span>${item.title || ''}</span></div>`;
           grid.appendChild(a);
         });
       } catch (e) {
@@ -674,4 +706,15 @@
     }
 
     function renderPlaceholders(grid, count) {
-      for (let i =
+      for (let i = 0; i < count; i++) {
+        const d = document.createElement('div');
+        d.className = 'flickr-placeholder';
+        d.textContent = 'Photo ' + (i + 1);
+        grid.appendChild(d);
+      }
+    }
+
+    loadFlickr();
+  </script>
+</body>
+</html>
