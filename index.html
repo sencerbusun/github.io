@@ -192,13 +192,10 @@
     .divider { width: 48px; height: 2px; background: var(--accent); margin-bottom: 32px; }
 
     /* ABOUT */
-    .about { background: var(--off-black); display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .about { background: var(--off-black); }
+    .about-text { max-width: 720px; }
     .about-text p { color: var(--smoke); margin-bottom: 18px; font-size: 1.05rem; }
     .about-text p strong { color: var(--white); font-weight: 500; }
-    .about-stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); }
-    .stat-block { padding: 32px 28px; background: var(--charcoal); }
-    .stat-num { font-family: var(--font-display); font-size: 3.2rem; color: var(--accent); line-height: 1; }
-    .stat-label { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-top: 8px; }
 
     /* INSTAGRAM */
     .instagram { background: var(--black); }
@@ -328,7 +325,7 @@
       <div class="divider"></div>
       <p data-i18n="about_p1">
         We are a collective of activists, artists, organisers, and documentarians committed to
-        <strong>cultural resistance</strong>. We believe that memory is political,
+        <strong>safeguarding the Circassian existence</strong>. We believe that memory is political,
         images are evidence, and every protest is a performance.
       </p>
       <p data-i18n="about_p2">
@@ -341,26 +338,6 @@
         organising — always rooted in solidarity, never in spectacle.
       </p>
       <a href="#contact" class="btn" style="margin-top:12px" data-i18n="about_cta">Join the collective</a>
-    </div>
-    <div>
-      <div class="about-stat-grid">
-        <div class="stat-block">
-          <div class="stat-num">12+</div>
-          <div class="stat-label" data-i18n="stat1">Years active</div>
-        </div>
-        <div class="stat-block">
-          <div class="stat-num">340</div>
-          <div class="stat-label" data-i18n="stat2">Events documented</div>
-        </div>
-        <div class="stat-block">
-          <div class="stat-num">18</div>
-          <div class="stat-label" data-i18n="stat3">Cities reached</div>
-        </div>
-        <div class="stat-block">
-          <div class="stat-num">∞</div>
-          <div class="stat-label" data-i18n="stat4">Reasons to fight</div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -468,7 +445,7 @@
         hero_sub: 'A space for radical culture, grassroots action, and collective memory. We document. We organise. We don\'t look away.',
         hero_cta1: 'Our Mission', hero_cta2: 'Get Involved',
         about_label: 'Who We Are', about_title: 'Beyond the<br>Spectacle',
-        about_p1: 'We are a collective of activists, artists, organisers, and documentarians committed to <strong>cultural resistance</strong>. We believe that memory is political, images are evidence, and every protest is a performance.',
+        about_p1: 'We are a collective of activists, artists, organisers, and documentarians committed to <strong>safeguarding the Circassian existence</strong>. We believe that memory is political, images are evidence, and every protest is a performance.',
         about_p2: 'Founded in response to the erasure of public space and the criminalisation of dissent, we archive what institutions would rather forget, and <strong>amplify voices that power tries to silence</strong>.',
         about_p3: 'Our work spans street photography, zine publishing, live events, and community organising — always rooted in solidarity, never in spectacle.',
         about_cta: 'Join the collective',
@@ -528,7 +505,7 @@
         hero_sub: 'Пространство радикальной культуры, низовых действий и коллективной памяти. Мы документируем. Мы организуемся. Мы не отводим взгляд.',
         hero_cta1: 'Наша Миссия', hero_cta2: 'Присоединиться',
         about_label: 'Кто Мы', about_title: 'За Пределами<br>Спектакля',
-        about_p1: 'Мы — коллектив активистов, художников, организаторов и документалистов, преданных идее <strong>культурного сопротивления</strong>. Мы верим, что память — это политика, образы — доказательства, а каждый протест — это перформанс.',
+        about_p1: 'Мы — коллектив активистов, художников, организаторов и документалистов, преданных делу <strong>сохранения черкесского существования</strong>. Мы верим, что память — это политика, образы — доказательства, а каждый протест — это перформанс.',
         about_p2: 'Основанные в ответ на уничтожение общественных пространств и криминализацию инакомыслия, мы сохраняем то, что институты хотели бы забыть, и <strong>усиливаем голоса, которые власть пытается заглушить</strong>.',
         about_p3: 'Наша работа охватывает уличную фотографию, издание зинов, живые мероприятия и общественную организацию — всегда из солидарности, никогда из спектакля.',
         about_cta: 'Вступить в коллектив',
@@ -548,7 +525,7 @@
         hero_sub: 'Radikal kültür, taban hareketi ve kolektif bellek için bir alan. Belgeliyoruz. Örgütleniyoruz. Gözlerimizi kaçırmıyoruz.',
         hero_cta1: 'Misyonumuz', hero_cta2: 'Katıl',
         about_label: 'Biz Kimiz', about_title: 'Gösterinin<br>Ötesinde',
-        about_p1: 'Biz, <strong>kültürel direnişe</strong> adanmış aktivistler, sanatçılar, örgütçüler ve belgeselcilerden oluşan bir kolektifiz. Belleğin siyasi olduğuna, görüntülerin kanıt olduğuna ve her protestonun bir performans olduğuna inanıyoruz.',
+        about_p1: 'Biz, <strong>Çerkes varlığını korumaya</strong> adanmış aktivistler, sanatçılar, örgütçüler ve belgeselcilerden oluşan bir kolektifiz. Belleğin siyasi olduğuna, görüntülerin kanıt olduğuna ve her protestonun bir performans olduğuna inanıyoruz.',
         about_p2: 'Kamusal alanın silinmesine ve muhalefetin suç sayılmasına karşı kurulan kolektifimiz, kurumların unutmak istediği her şeyi arşivliyor ve <strong>iktidarın susturmaya çalıştığı sesleri yükseltiyor</strong>.',
         about_p3: 'Çalışmalarımız sokak fotoğrafçılığı, zin yayıncılığı, canlı etkinlikler ve topluluk örgütlenmesini kapsıyor — her zaman dayanışmayla, asla gösteri için değil.',
         about_cta: 'Kolektife katıl',
@@ -568,7 +545,7 @@
         hero_sub: 'Ein Raum für radikale Kultur, Basisbewegungen und kollektives Gedächtnis. Wir dokumentieren. Wir organisieren. Wir schauen nicht weg.',
         hero_cta1: 'Unsere Mission', hero_cta2: 'Mitmachen',
         about_label: 'Wer wir sind', about_title: 'Jenseits des<br>Spektakels',
-        about_p1: 'Wir sind ein Kollektiv aus Aktivistinnen, Künstlerinnen, Organisatorinnen und Dokumentaristinnen, die sich dem <strong>kulturellen Widerstand</strong> verpflichtet haben. Wir glauben: Erinnerung ist politisch, Bilder sind Beweise, und jeder Protest ist eine Performance.',
+        about_p1: 'Wir sind ein Kollektiv aus Aktivistinnen, Künstlerinnen, Organisatorinnen und Dokumentaristinnen, die sich dem <strong>Schutz der tscherkessischen Existenz</strong> verpflichtet haben. Wir glauben: Erinnerung ist politisch, Bilder sind Beweise, und jeder Protest ist eine Performance.',
         about_p2: 'Gegründet als Antwort auf die Auslöschung des öffentlichen Raums und die Kriminalisierung von Dissens, archivieren wir, was Institutionen lieber vergessen würden, und <strong>verstärken Stimmen, die die Macht zum Schweigen bringen will</strong>.',
         about_p3: 'Unsere Arbeit umfasst Straßenfotografie, Zine-Veröffentlichungen, Live-Veranstaltungen und Community-Organisierung — immer in Solidarität, nie als Spektakel.',
         about_cta: 'Dem Kollektiv beitreten',
@@ -588,7 +565,7 @@
         hero_sub: 'فضاء للثقافة الجذرية والعمل الشعبي والذاكرة الجماعية. نوثّق. ننظّم. لا نغض الطرف.',
         hero_cta1: 'مهمتنا', hero_cta2: 'انضم إلينا',
         about_label: 'من نحن', about_title: 'ما وراء<br>المشهد',
-        about_p1: 'نحن مجموعة من الناشطين والفنانين والمنظمين والموثّقين الملتزمين بـ<strong>المقاومة الثقافية</strong>. نؤمن بأن الذاكرة سياسة، والصور دليل، وكل احتجاج أداء.',
+        about_p1: 'نحن مجموعة من الناشطين والفنانين والمنظمين والموثّقين الملتزمين بـ<strong>صون الوجود الشركسي</strong>. نؤمن بأن الذاكرة سياسة، والصور دليل، وكل احتجاج أداء.',
         about_p2: 'تأسّسنا رداً على محو الفضاء العام وتجريم المعارضة، نحفظ ما تودّ المؤسسات نسيانه، <strong>ونضخّم الأصوات التي تسعى السلطة إلى إخمادها</strong>.',
         about_p3: 'يشمل عملنا التصوير في الشوارع ونشر المجلات المستقلة والفعاليات الحية والتنظيم المجتمعي — دائماً بروح التضامن، لا الاستعراض.',
         about_cta: 'انضم إلى المجموعة',
