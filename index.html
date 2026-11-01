@@ -582,7 +582,7 @@
 
     const langLabels = { en: 'EN', kbd: 'КАБ', ady: 'АДЫ', ru: 'РУС', tr: 'TR', de: 'DE', ar: 'عر' };
 
-    function setLang(lang) {
+    function setLang(lang, remember = true) {
       const t = i18n[lang];
       if (!t) return;
 
@@ -622,7 +622,7 @@
       document.getElementById('langSwitcher').classList.remove('open');
 
       // store preference
-      localStorage.setItem('may21_lang', lang);
+      if (remember) { try { localStorage.setItem('may21_lang', lang); } catch (e) {} }
     }
 
     function toggleLangMenu() {
@@ -636,9 +636,25 @@
       }
     });
 
-    // restore saved language on load
-    const saved = localStorage.getItem('may21_lang');
-    if (saved && i18n[saved]) setLang(saved);
+    // on load: use the visitor's own choice if they made one,
+    // otherwise match their browser language (falls back to English)
+    function detectLang() {
+      const prefs = navigator.languages && navigator.languages.length
+        ? navigator.languages : [navigator.language || 'en'];
+      for (const pref of prefs) {
+        const code = String(pref).toLowerCase().split('-')[0];
+        if (i18n[code]) return code;
+      }
+      return 'en';
+    }
+    let saved = null;
+    try { saved = localStorage.getItem('may21_lang'); } catch (e) {}
+    if (saved && i18n[saved]) {
+      setLang(saved);
+    } else {
+      const auto = detectLang();
+      if (auto !== 'en') setLang(auto, false);
+    }
 
     /* ═══════════════════════════════════════════
        FLICKR GALLERY — daily random selection
