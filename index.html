@@ -211,6 +211,9 @@
     .doc-desc { color: var(--smoke); font-size: 0.95rem; margin-top: 8px; max-width: 680px; }
     .doc-open { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
     .doc-link:hover .doc-open { color: var(--accent2); }
+    .doc-reader { display:inline-block; margin:-14px 0 22px 172px; font-family:var(--font-mono); font-size:0.66rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted); border-bottom:1px solid var(--mid); padding-bottom:2px; }
+    .doc-reader:hover { color:var(--accent2); border-color:var(--accent2); }
+    body[lang="ar"] .doc-reader { margin:-14px 172px 22px 0; }
     .doc-empty { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.1em; color: var(--muted); padding: 28px 0; border-bottom: 1px solid var(--line); }
 
     /* INSTAGRAM */
@@ -268,6 +271,7 @@
       .about, .contact { grid-template-columns: 1fr; gap: 48px; }
       footer { padding: 32px 24px; }
       .doc-link { grid-template-columns: 1fr; gap: 10px; padding: 24px 0; }
+      .doc-reader, body[lang="ar"] .doc-reader { margin: -10px 0 20px 0; }
     }
   </style>
 </head>
@@ -477,7 +481,7 @@
         about_cta: 'Join the collective',
         lib_label: 'Library', lib_title: 'Articles &amp;<br>Documents',
         lib_intro: 'Important articles, statements and documents published by our collective.',
-        lib_empty: 'Nothing published yet — check back soon.', lib_open: 'Open ↗',
+        lib_empty: 'Nothing published yet — check back soon.', lib_open: 'Open ↗', lib_reader: 'Reader view',
         stat1: 'Years active', stat2: 'Events documented', stat3: 'Cities reached', stat4: 'Reasons to fight',
         ig_label: 'Latest Posts', flickr_label: 'Photo Archive', flickr_title: 'Gallery',
         flickr_link: 'Full archive ↗', flickr_loading: 'Loading from Flickr…',
@@ -500,7 +504,7 @@
         about_cta: 'Ди гупым хыхьэ',
         lib_label: 'Тхыгъэхэр', lib_title: 'Тхыгъэхэр &amp;<br>Документхэр',
         lib_intro: 'Ди тхыгъэ нэхъыщхьэхэмрэ документхэмрэ мыбдеж щыӏэщ.',
-        lib_empty: 'Иджыри зыри къыдэкӏакъым.', lib_open: 'Еплъын ↗',
+        lib_empty: 'Иджыри зыри къыдэкӏакъым.', lib_open: 'Еплъын ↗', lib_reader: 'Еджэн',
         stat1: 'Илъэс лэжьащ', stat2: 'Хъыбарзехьэ', stat3: 'Къалэ', stat4: 'Зэпэщӏэтыным и щхьэусыгъуэ',
         ig_label: 'ЗэрыкӀуэцӀылъ', flickr_label: 'Сурэт Архив', flickr_title: 'Галерей',
         flickr_link: 'Архив псор ↗', flickr_loading: 'Flickr-м щыщ солъагъу…',
@@ -523,7 +527,7 @@
         about_cta: 'Ти гупым хэхь',
         lib_label: 'Тхыгъэхэр', lib_title: 'Тхыгъэхэр &amp;<br>Документхэр',
         lib_intro: 'Ти тхыгъэ шъхьаӀэхэр ыкӀи документхэр мыщ щыӀэх.',
-        lib_empty: 'Джыри зи къыдэкӀыгъэп.', lib_open: 'Еплъын ↗',
+        lib_empty: 'Джыри зи къыдэкӀыгъэп.', lib_open: 'Еплъын ↗', lib_reader: 'Еджэн',
         stat1: 'ИлъэскӀэ Іоф ашӀагъ', stat2: 'Хъытыу зэхащагъ', stat3: 'Къалэ', stat4: 'Пэуцужьыным ищхьэусыгъо',
         ig_label: 'ИкӀэрыкӀэ', flickr_label: 'Сурэт Архив', flickr_title: 'Галерей',
         flickr_link: 'Архив пстэури ↗', flickr_loading: 'Flickr-м щыщ солъэгъу…',
@@ -546,7 +550,7 @@
         about_cta: 'Вступить в коллектив',
         lib_label: 'Библиотека', lib_title: 'Статьи и<br>Документы',
         lib_intro: 'Важные статьи, заявления и документы, опубликованные нашим коллективом.',
-        lib_empty: 'Пока ничего не опубликовано.', lib_open: 'Открыть ↗',
+        lib_empty: 'Пока ничего не опубликовано.', lib_open: 'Открыть ↗', lib_reader: 'Режим чтения',
         stat1: 'Лет активности', stat2: 'Задокументировано событий', stat3: 'Городов', stat4: 'Причин бороться',
         ig_label: 'Последние посты', flickr_label: 'Фотоархив', flickr_title: 'Галерея',
         flickr_link: 'Весь архив ↗', flickr_loading: 'Загрузка с Flickr…',
@@ -569,7 +573,7 @@
         about_cta: 'Kolektife katıl',
         lib_label: 'Kütüphane', lib_title: 'Makaleler ve<br>Belgeler',
         lib_intro: 'Kolektifimizin yayımladığı önemli makaleler, açıklamalar ve belgeler.',
-        lib_empty: 'Henüz yayımlanmış bir şey yok.', lib_open: 'Aç ↗',
+        lib_empty: 'Henüz yayımlanmış bir şey yok.', lib_open: 'Aç ↗', lib_reader: 'Okuma görünümü',
         stat1: 'Yıl aktif', stat2: 'Belgelenen etkinlik', stat3: 'Şehir', stat4: 'Mücadele sebebi',
         ig_label: 'Son Paylaşımlar', flickr_label: 'Fotoğraf Arşivi', flickr_title: 'Galeri',
         flickr_link: 'Tam arşiv ↗', flickr_loading: 'Flickr\'dan yükleniyor…',
@@ -592,7 +596,7 @@
         about_cta: 'Dem Kollektiv beitreten',
         lib_label: 'Bibliothek', lib_title: 'Artikel &amp;<br>Dokumente',
         lib_intro: 'Wichtige Artikel, Erklärungen und Dokumente, veröffentlicht von unserem Kollektiv.',
-        lib_empty: 'Noch nichts veröffentlicht.', lib_open: 'Öffnen ↗',
+        lib_empty: 'Noch nichts veröffentlicht.', lib_open: 'Öffnen ↗', lib_reader: 'Leseansicht',
         stat1: 'Jahre aktiv', stat2: 'Dokumentierte Ereignisse', stat3: 'Städte erreicht', stat4: 'Gründe zu kämpfen',
         ig_label: 'Neueste Beiträge', flickr_label: 'Fotoarchiv', flickr_title: 'Galerie',
         flickr_link: 'Vollständiges Archiv ↗', flickr_loading: 'Lade von Flickr…',
@@ -615,7 +619,7 @@
         about_cta: 'انضم إلى المجموعة',
         lib_label: 'المكتبة', lib_title: 'مقالات<br>ووثائق',
         lib_intro: 'مقالات وبيانات ووثائق مهمة ينشرها تجمّعنا.',
-        lib_empty: 'لم يُنشر شيء بعد.', lib_open: 'فتح ↗',
+        lib_empty: 'لم يُنشر شيء بعد.', lib_open: 'فتح ↗', lib_reader: 'وضع القراءة',
         stat1: 'سنوات نشاط', stat2: 'فعالية موثّقة', stat3: 'مدينة', stat4: 'أسباب للنضال',
         ig_label: 'آخر المنشورات', flickr_label: 'أرشيف الصور', flickr_title: 'المعرض',
         flickr_link: 'الأرشيف الكامل ↗', flickr_loading: 'جارٍ التحميل من Flickr…',
@@ -850,7 +854,7 @@
           <div class="doc-meta">${d.type ? `<span class="doc-type">${escapeHtml(d.type)}</span>` : ''}${meta}</div>
           <div><div class="doc-title">${escapeHtml(d.title)}</div>${d.description ? `<p class="doc-desc">${escapeHtml(d.description)}</p>` : ''}</div>
           <span class="doc-open" data-i18n="lib_open">${t.lib_open}</span>
-        </a></li>`;
+        </a>${!external && /\.html?$/i.test(d.url) ? `<a class="doc-reader" href="${escapeHtml(d.url)}?view=reader">Aa · <span data-i18n="lib_reader">${t.lib_reader}</span></a>` : ''}</li>`;
       }).join('');
     }
     loadLibrary();
