@@ -254,6 +254,8 @@
     }
     .contact-form input:focus, .contact-form textarea:focus { border-color: var(--accent); }
     .contact-form input::placeholder, .contact-form textarea::placeholder { color: var(--mid); }
+    .form-status { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.06em; color: var(--smoke); border-left: 2px solid var(--accent); padding: 6px 0 6px 14px; }
+    body[lang="ar"] .form-status { border-left: none; border-right: 2px solid var(--accent); padding: 6px 14px 6px 0; }
     .contact-form textarea { min-height: 120px; resize: vertical; }
 
     /* FOOTER */
@@ -441,12 +443,14 @@
       </div>
     </div>
     <div>
-      <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <!-- Contact form: until a Formspree form ID is set below, sending opens the visitor's email app addressed to info@may21.org -->
+      <form class="contact-form" id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
         <input type="text"  name="name"    data-i18n-placeholder="form_name"    placeholder="Your name"    required />
         <input type="email" name="email"   data-i18n-placeholder="form_email"   placeholder="Your email"   required />
         <input type="text"  name="subject" data-i18n-placeholder="form_subject" placeholder="Subject" />
         <textarea           name="message" data-i18n-placeholder="form_message" placeholder="Your message" required></textarea>
         <button type="submit" class="btn" data-i18n="form_send">Send Message</button>
+        <p class="form-status" id="form-status" role="status" hidden></p>
       </form>
     </div>
   </section>
@@ -489,6 +493,7 @@
         contact_label: 'Reach Us', contact_title: 'Get<br>In Touch',
         contact_email_label: 'Email', contact_follow_label: 'Follow',
         form_name: 'Your name', form_email: 'Your email', form_subject: 'Subject', form_message: 'Your message', form_send: 'Send Message',
+        form_mailto: 'Your email app has opened with your message. Please press send there.', form_ok: 'Thank you — your message has been sent.', form_err: 'Sending failed. Please write to us at info@may21.org.',
         ticker: ['Culture as <em>Resistance</em>', 'Document Everything', 'Art Changes <em>Minds</em>', 'Show Up', 'Speak Louder', 'No Pasarán'],
         dir: 'ltr'
       },
@@ -512,6 +517,7 @@
         contact_label: 'Зэпыщӏэныгъэ', contact_title: 'Зэпыщӏэ<br>Дызэрыгъэ',
         contact_email_label: 'Имэил', contact_follow_label: 'Кӏэлъыплъ',
         form_name: 'Уи цӏэ', form_email: 'Уи имэил', form_subject: 'Тема', form_message: 'Уи хъыбар', form_send: 'Хъыбар Гъэхьэ',
+        form_mailto: 'Уи имэил программэр къызэӏуихащ уи хъыбарыр иту. Абдеж «гъэхьын» теӏуэ.', form_ok: 'Упсэу — уи хъыбарыр егъэхьащ.', form_err: 'Гъэхьэн хъуакъым. Кхъыӏэ, info@may21.org-м къыдэтх.',
         ticker: ['Щэнхабзэр — <em>Зэпэщӏэтыныгъэщ</em>', 'Псори Тхы', 'Гъуазджэм <em>Гур</em> Еху', 'Кӏуэ', 'Нэхъ Ин Жыӏэ', 'Сэ Дыхэт'],
         dir: 'ltr'
       },
@@ -535,6 +541,7 @@
         contact_label: 'Зэпхэныгъэ', contact_title: 'Зэпхэ<br>Тызэрыгъэ',
         contact_email_label: 'Имэил', contact_follow_label: 'КӀэлъыплъ',
         form_name: 'Уи цӀэ', form_email: 'Уи имэил', form_subject: 'Тема', form_message: 'Уи хъытыу', form_send: 'Хъытыу Гъэхьы',
+        form_mailto: 'Уиимэйл программэ къызэӀуихыгъ уитхыгъэ хэтэу. Ащ «гъэхьын» тебэу.', form_ok: 'Тхьауегъэпсэу — уитхыгъэ агъэхьыгъ.', form_err: 'Гъэхьын хъугъэп. Чэфэу, info@may21.org-м къытфэтх.',
         ticker: ['ШэнхабзэмкӀэ — <em>Пэуцужьыныгъэ</em>', 'Пстэури Тхы', 'Гъуазджэм <em>Гур</em> Еу', 'КӀо', 'НахьышӀоу ЖъугъаӀу', 'No Pasarán'],
         dir: 'ltr'
       },
@@ -558,6 +565,7 @@
         contact_label: 'Связаться', contact_title: 'Напишите<br>Нам',
         contact_email_label: 'Email', contact_follow_label: 'Следите',
         form_name: 'Ваше имя', form_email: 'Ваш email', form_subject: 'Тема', form_message: 'Ваше сообщение', form_send: 'Отправить',
+        form_mailto: 'Открылась ваша почтовая программа с вашим сообщением. Нажмите там «Отправить».', form_ok: 'Спасибо — ваше сообщение отправлено.', form_err: 'Не удалось отправить. Напишите нам на info@may21.org.',
         ticker: ['Культура — <em>Сопротивление</em>', 'Документируй всё', 'Искусство меняет <em>умы</em>', 'Выходи', 'Говори громче', 'No Pasarán'],
         dir: 'ltr'
       },
@@ -581,6 +589,7 @@
         contact_label: 'Bize Ulaşın', contact_title: 'İletişime<br>Geçin',
         contact_email_label: 'E-posta', contact_follow_label: 'Takip Et',
         form_name: 'Adınız', form_email: 'E-postanız', form_subject: 'Konu', form_message: 'Mesajınız', form_send: 'Gönder',
+        form_mailto: 'E-posta uygulamanız mesajınızla birlikte açıldı. Lütfen orada gönder’e basın.', form_ok: 'Teşekkürler — mesajınız gönderildi.', form_err: 'Gönderilemedi. Lütfen info@may21.org adresine yazın.',
         ticker: ['Kültür <em>Direniştir</em>', 'Her şeyi belgele', 'Sanat <em>Zihinleri</em> değiştirir', 'Katıl', 'Daha yüksek ses çıkar', 'No Pasarán'],
         dir: 'ltr'
       },
@@ -604,6 +613,7 @@
         contact_label: 'Kontakt', contact_title: 'Schreibt<br>uns',
         contact_email_label: 'E-Mail', contact_follow_label: 'Folgen',
         form_name: 'Ihr Name', form_email: 'Ihre E-Mail', form_subject: 'Betreff', form_message: 'Ihre Nachricht', form_send: 'Nachricht senden',
+        form_mailto: 'Ihr E-Mail-Programm wurde mit Ihrer Nachricht geöffnet. Bitte dort auf Senden drücken.', form_ok: 'Danke – Ihre Nachricht wurde gesendet.', form_err: 'Senden fehlgeschlagen. Bitte schreiben Sie an info@may21.org.',
         ticker: ['Kultur als <em>Widerstand</em>', 'Alles dokumentieren', 'Kunst verändert <em>Köpfe</em>', 'Erscheint', 'Sprecht lauter', 'No Pasarán'],
         dir: 'ltr'
       },
@@ -627,6 +637,7 @@
         contact_label: 'تواصل معنا', contact_title: 'ابقَ<br>على تواصل',
         contact_email_label: 'البريد الإلكتروني', contact_follow_label: 'تابعنا',
         form_name: 'اسمك', form_email: 'بريدك الإلكتروني', form_subject: 'الموضوع', form_message: 'رسالتك', form_send: 'إرسال',
+        form_mailto: 'فُتح تطبيق البريد لديك مع رسالتك. يُرجى الضغط على «إرسال» هناك.', form_ok: 'شكرًا لك — أُرسلت رسالتك.', form_err: 'تعذّر الإرسال. يُرجى مراسلتنا على info@may21.org.',
         ticker: ['الثقافة <em>مقاومة</em>', 'وثّق كل شيء', 'الفن يغيّر <em>العقول</em>', 'كن حاضراً', 'تكلّم بصوت أعلى', 'No Pasarán'],
         dir: 'rtl'
       }
@@ -823,6 +834,34 @@
     }
 
     loadFlickr();
+
+    /* ═══════════════════════════════════════════
+       CONTACT FORM
+       To receive messages directly: create a free form at formspree.io
+       and replace YOUR_FORM_ID in the form's action with your form ID.
+    ═══════════════════════════════════════════ */
+    (function () {
+      const form = document.getElementById('contact-form');
+      const status = document.getElementById('form-status');
+      const T = () => i18n[document.documentElement.getAttribute('lang')] || i18n.en;
+      const say = msg => { status.textContent = msg; status.hidden = false; };
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const d = new FormData(form);
+        if (form.action.includes('YOUR_FORM_ID')) {
+          const subject = d.get('subject') || 'Message from may21.org';
+          const body = `${d.get('message')}\n\n— ${d.get('name')} <${d.get('email')}>`;
+          window.location.href = 'mailto:info@may21.org?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+          say(T().form_mailto);
+          return;
+        }
+        try {
+          const res = await fetch(form.action, { method: 'POST', body: d, headers: { Accept: 'application/json' } });
+          if (!res.ok) throw new Error();
+          form.reset(); say(T().form_ok);
+        } catch (err) { say(T().form_err); }
+      });
+    })();
 
     /* ═══════════════════════════════════════════
        LIBRARY — articles & documents
