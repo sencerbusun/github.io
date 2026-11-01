@@ -284,7 +284,7 @@
       <ul class="nav-links">
         <li><a href="#about" data-i18n="nav_about">About</a></li>
         <li><a href="#library" data-i18n="nav_library">Library</a></li>
-        <li><a href="#instagram">Instagram</a></li>
+        <li hidden><a href="#instagram">Instagram</a></li> <!-- Instagram hidden until an account is linked -->
         <li><a href="#flickr" data-i18n="nav_gallery">Gallery</a></li>
         <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
       </ul>
@@ -372,7 +372,8 @@
   </section>
 
   <!-- INSTAGRAM -->
-  <section class="instagram" id="instagram">
+  <!-- Hidden until an Instagram account is linked: remove the "hidden" attribute to show it again -->
+  <section class="instagram" id="instagram" hidden>
     <div class="feed-header">
       <div>
         <p class="section-label" data-i18n="ig_label">Latest Posts</p>
@@ -432,9 +433,9 @@
         <div class="contact-detail-label" data-i18n="contact_follow_label">Follow</div>
         <div class="contact-detail-value">
           <div class="social-row" style="margin-top:4px">
-            <a href="https://instagram.com/YOUR_HANDLE" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://instagram.com/YOUR_HANDLE" target="_blank" rel="noopener" hidden>Instagram</a>
             <a href="https://www.flickr.com/photos/76905328@N05/albums/" target="_blank" rel="noopener">Flickr</a>
-            <a href="https://facebook.com/YOUR_FACEBOOK_PAGE" target="_blank" rel="noopener">Facebook</a>
+            <a href="https://www.facebook.com/May21org/" target="_blank" rel="noopener">Facebook</a>
           </div>
         </div>
       </div>
@@ -455,9 +456,9 @@
     <div class="logo-small">May21<span>.</span>org</div>
     <p>&copy; 2025 May21.org &middot; All rights reserved</p>
     <div class="social-row">
-      <a href="https://instagram.com/YOUR_HANDLE" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://instagram.com/YOUR_HANDLE" target="_blank" rel="noopener" hidden>Instagram</a>
       <a href="https://www.flickr.com/photos/76905328@N05/albums/" target="_blank" rel="noopener">Flickr</a>
-      <a href="https://facebook.com/YOUR_FACEBOOK_PAGE" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.facebook.com/May21org/" target="_blank" rel="noopener">Facebook</a>
     </div>
   </footer>
 
