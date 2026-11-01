@@ -197,6 +197,22 @@
     .about-text p { color: var(--smoke); margin-bottom: 18px; font-size: 1.05rem; }
     .about-text p strong { color: var(--white); font-weight: 500; }
 
+    /* LIBRARY */
+    .library { background: var(--black); }
+    .library-intro { color: var(--smoke); max-width: 620px; margin-bottom: 40px; font-size: 1.05rem; }
+    .doc-list { list-style: none; border-top: 1px solid var(--line); }
+    .doc-item { border-bottom: 1px solid var(--line); }
+    .doc-link { display: grid; grid-template-columns: 140px 1fr auto; gap: 32px; align-items: baseline; padding: 28px 0; transition: background 0.2s; }
+    .doc-link:hover { background: var(--off-black); }
+    .doc-link:hover .doc-title { color: var(--accent); }
+    .doc-meta { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); line-height: 1.9; }
+    .doc-type { display: block; color: var(--accent); }
+    .doc-title { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.05; letter-spacing: 0.03em; color: var(--white); transition: color 0.2s; }
+    .doc-desc { color: var(--smoke); font-size: 0.95rem; margin-top: 8px; max-width: 680px; }
+    .doc-open { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+    .doc-link:hover .doc-open { color: var(--accent2); }
+    .doc-empty { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.1em; color: var(--muted); padding: 28px 0; border-bottom: 1px solid var(--line); }
+
     /* INSTAGRAM */
     .instagram { background: var(--black); }
     .feed-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 36px; flex-wrap: wrap; gap: 16px; }
@@ -251,6 +267,7 @@
       section { padding: 64px 24px; }
       .about, .contact { grid-template-columns: 1fr; gap: 48px; }
       footer { padding: 32px 24px; }
+      .doc-link { grid-template-columns: 1fr; gap: 10px; padding: 24px 0; }
     }
   </style>
 </head>
@@ -262,6 +279,7 @@
     <div class="nav-right">
       <ul class="nav-links">
         <li><a href="#about" data-i18n="nav_about">About</a></li>
+        <li><a href="#library" data-i18n="nav_library">Library</a></li>
         <li><a href="#instagram">Instagram</a></li>
         <li><a href="#flickr" data-i18n="nav_gallery">Gallery</a></li>
         <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
@@ -339,6 +357,15 @@
       </p>
       <a href="#contact" class="btn" style="margin-top:12px" data-i18n="about_cta">Join the collective</a>
     </div>
+  </section>
+
+  <!-- LIBRARY: articles & documents (list lives in documents.json) -->
+  <section class="library" id="library">
+    <p class="section-label" data-i18n="lib_label">Library</p>
+    <h2 class="section-title" data-i18n="lib_title">Articles &amp;<br>Documents</h2>
+    <div class="divider"></div>
+    <p class="library-intro" data-i18n="lib_intro">Important articles, statements and documents published by our collective.</p>
+    <ul class="doc-list" id="doc-list"></ul>
   </section>
 
   <!-- INSTAGRAM -->
@@ -439,7 +466,7 @@
     ═══════════════════════════════════════════ */
     const i18n = {
       en: {
-        nav_about: 'About', nav_gallery: 'Gallery', nav_contact: 'Contact',
+        nav_about: 'About', nav_gallery: 'Gallery', nav_contact: 'Contact', nav_library: 'Library',
         hero_eyebrow: 'Circassian Cultural & Political Activism',
         hero_title: 'The Day Of <em>Resistance</em>',
         hero_sub: 'A space for radical culture, grassroots action, and collective memory. We document. We organise. We don\'t look away.',
@@ -449,6 +476,9 @@
         about_p2: 'Founded in response to the erasure of public space and the criminalisation of dissent, we archive what institutions would rather forget, and <strong>amplify voices that power tries to silence</strong>.',
         about_p3: 'Our work spans street photography, zine publishing, live events, and community organising — always rooted in solidarity, never in spectacle.',
         about_cta: 'Join the collective',
+        lib_label: 'Library', lib_title: 'Articles &amp;<br>Documents',
+        lib_intro: 'Important articles, statements and documents published by our collective.',
+        lib_empty: 'Nothing published yet — check back soon.', lib_open: 'Open ↗',
         stat1: 'Years active', stat2: 'Events documented', stat3: 'Cities reached', stat4: 'Reasons to fight',
         ig_label: 'Latest Posts', flickr_label: 'Photo Archive', flickr_title: 'Gallery',
         flickr_link: 'Full archive ↗', flickr_loading: 'Loading from Flickr…',
@@ -459,7 +489,7 @@
         dir: 'ltr'
       },
       kbd: {
-        nav_about: 'Зытетыр', nav_gallery: 'Сурэтхэр', nav_contact: 'Зэпыщӏэныгъэ',
+        nav_about: 'Зытетыр', nav_gallery: 'Сурэтхэр', nav_contact: 'Зэпыщӏэныгъэ', nav_library: 'Тхылъхэр',
         hero_eyebrow: 'Адыгэ Щэнхабзэ Политикэ Лэжьыгъэ',
         hero_title: 'Зэпэщӏэтыныгъэм и <em>Махуэ</em>',
         hero_sub: 'Щэнхабзэм, цӏыхубэ лэжьыгъэм, хъуэхъум я щӏыпӏэ. Тодж. Зэдогъэпэщ. Дыплъэжыркъым.',
@@ -469,6 +499,9 @@
         about_p2: 'Цӏыхубэ щӏыпӏэхэр ягъэкӏуэду, зэпэщӏэтыныгъэр бзаджагъэу ябж щыхъум ди гупыр къызэрагъэпэщащ. Ӏуэхущӏапӏэхэм ящыгъупщэну зыхуейр дохъумэ, <strong>властым игъэщыму хуей макъхэр нэхъ лъэщ тщӏ</strong>.',
         about_p3: 'Ди лэжьыгъэм хохьэ уэрам сурэтхэр, зин тедзэныр, зэхуэсхэр, цӏыхухэр зэгъэуӏуныр — сыт щыгъуи солидарностым тету, зэи театрым емыхьэлӏауэ.',
         about_cta: 'Ди гупым хыхьэ',
+        lib_label: 'Тхыгъэхэр', lib_title: 'Тхыгъэхэр &amp;<br>Документхэр',
+        lib_intro: 'Ди тхыгъэ нэхъыщхьэхэмрэ документхэмрэ мыбдеж щыӏэщ.',
+        lib_empty: 'Иджыри зыри къыдэкӏакъым.', lib_open: 'Еплъын ↗',
         stat1: 'Илъэс лэжьащ', stat2: 'Хъыбарзехьэ', stat3: 'Къалэ', stat4: 'Зэпэщӏэтыным и щхьэусыгъуэ',
         ig_label: 'ЗэрыкӀуэцӀылъ', flickr_label: 'Сурэт Архив', flickr_title: 'Галерей',
         flickr_link: 'Архив псор ↗', flickr_loading: 'Flickr-м щыщ солъагъу…',
@@ -479,7 +512,7 @@
         dir: 'ltr'
       },
       ady: {
-        nav_about: 'Тэ тыхэтхэр', nav_gallery: 'Сурэтхэр', nav_contact: 'Зэпхэныгъэ',
+        nav_about: 'Тэ тыхэтхэр', nav_gallery: 'Сурэтхэр', nav_contact: 'Зэпхэныгъэ', nav_library: 'Тхылъхэр',
         hero_eyebrow: 'Адыгэ ШэнхабзэкӀэ Политикэ Лэжьыгъэ',
         hero_title: 'Пэуцужьыным и <em>Мафэ</em>',
         hero_sub: 'ШэнхабзэмкӀэ, цӀыфыбэ Іофшӏэным, зэгъэгупсэсыным я чӀыпӀэ. Тэ тэтхэ. Тэ зэдэтэгъэпытэ. Тэ тыплъэжырэп.',
@@ -489,6 +522,9 @@
         about_p2: 'ЦӀыфыбэ чӀыпӀэхэр агъэкӀодыхэу, пэуцужьыныр бзэджэшӀагъэу алъытэу зырагъажьэм ти гуп зэхащагъ. ӀофышӀапӀэхэм агъэгъупшэ ашӀоигъор къэтэухъумэ, <strong>хабзэм агъэщымы ашӀоигъо макъэхэр нахь лъэш тэшӀых</strong>.',
         about_p3: 'Ти ӀофшӀэн урам сурэтхэр, зин тедзэныр, зэхахьэхэр, цӀыфхэр зэхэщэныр зэлъеубыты — сыдигъуи солидарностым тетэу.',
         about_cta: 'Ти гупым хэхь',
+        lib_label: 'Тхыгъэхэр', lib_title: 'Тхыгъэхэр &amp;<br>Документхэр',
+        lib_intro: 'Ти тхыгъэ шъхьаӀэхэр ыкӀи документхэр мыщ щыӀэх.',
+        lib_empty: 'Джыри зи къыдэкӀыгъэп.', lib_open: 'Еплъын ↗',
         stat1: 'ИлъэскӀэ Іоф ашӀагъ', stat2: 'Хъытыу зэхащагъ', stat3: 'Къалэ', stat4: 'Пэуцужьыным ищхьэусыгъо',
         ig_label: 'ИкӀэрыкӀэ', flickr_label: 'Сурэт Архив', flickr_title: 'Галерей',
         flickr_link: 'Архив пстэури ↗', flickr_loading: 'Flickr-м щыщ солъэгъу…',
@@ -499,7 +535,7 @@
         dir: 'ltr'
       },
       ru: {
-        nav_about: 'О нас', nav_gallery: 'Галерея', nav_contact: 'Контакт',
+        nav_about: 'О нас', nav_gallery: 'Галерея', nav_contact: 'Контакт', nav_library: 'Библиотека',
         hero_eyebrow: 'Черкесская культурно-политическая активность',
         hero_title: 'День <em>Сопротивления</em>',
         hero_sub: 'Пространство радикальной культуры, низовых действий и коллективной памяти. Мы документируем. Мы организуемся. Мы не отводим взгляд.',
@@ -509,6 +545,9 @@
         about_p2: 'Основанные в ответ на уничтожение общественных пространств и криминализацию инакомыслия, мы сохраняем то, что институты хотели бы забыть, и <strong>усиливаем голоса, которые власть пытается заглушить</strong>.',
         about_p3: 'Наша работа охватывает уличную фотографию, издание зинов, живые мероприятия и общественную организацию — всегда из солидарности, никогда из спектакля.',
         about_cta: 'Вступить в коллектив',
+        lib_label: 'Библиотека', lib_title: 'Статьи и<br>Документы',
+        lib_intro: 'Важные статьи, заявления и документы, опубликованные нашим коллективом.',
+        lib_empty: 'Пока ничего не опубликовано.', lib_open: 'Открыть ↗',
         stat1: 'Лет активности', stat2: 'Задокументировано событий', stat3: 'Городов', stat4: 'Причин бороться',
         ig_label: 'Последние посты', flickr_label: 'Фотоархив', flickr_title: 'Галерея',
         flickr_link: 'Весь архив ↗', flickr_loading: 'Загрузка с Flickr…',
@@ -519,7 +558,7 @@
         dir: 'ltr'
       },
       tr: {
-        nav_about: 'Hakkımızda', nav_gallery: 'Galeri', nav_contact: 'İletişim',
+        nav_about: 'Hakkımızda', nav_gallery: 'Galeri', nav_contact: 'İletişim', nav_library: 'Kütüphane',
         hero_eyebrow: 'Çerkes Kültürel ve Siyasi Aktivizm',
         hero_title: '<em>Direniş</em>in Günü',
         hero_sub: 'Radikal kültür, taban hareketi ve kolektif bellek için bir alan. Belgeliyoruz. Örgütleniyoruz. Gözlerimizi kaçırmıyoruz.',
@@ -529,6 +568,9 @@
         about_p2: 'Kamusal alanın silinmesine ve muhalefetin suç sayılmasına karşı kurulan kolektifimiz, kurumların unutmak istediği her şeyi arşivliyor ve <strong>iktidarın susturmaya çalıştığı sesleri yükseltiyor</strong>.',
         about_p3: 'Çalışmalarımız sokak fotoğrafçılığı, zin yayıncılığı, canlı etkinlikler ve topluluk örgütlenmesini kapsıyor — her zaman dayanışmayla, asla gösteri için değil.',
         about_cta: 'Kolektife katıl',
+        lib_label: 'Kütüphane', lib_title: 'Makaleler ve<br>Belgeler',
+        lib_intro: 'Kolektifimizin yayımladığı önemli makaleler, açıklamalar ve belgeler.',
+        lib_empty: 'Henüz yayımlanmış bir şey yok.', lib_open: 'Aç ↗',
         stat1: 'Yıl aktif', stat2: 'Belgelenen etkinlik', stat3: 'Şehir', stat4: 'Mücadele sebebi',
         ig_label: 'Son Paylaşımlar', flickr_label: 'Fotoğraf Arşivi', flickr_title: 'Galeri',
         flickr_link: 'Tam arşiv ↗', flickr_loading: 'Flickr\'dan yükleniyor…',
@@ -539,7 +581,7 @@
         dir: 'ltr'
       },
       de: {
-        nav_about: 'Über uns', nav_gallery: 'Galerie', nav_contact: 'Kontakt',
+        nav_about: 'Über uns', nav_gallery: 'Galerie', nav_contact: 'Kontakt', nav_library: 'Bibliothek',
         hero_eyebrow: 'Tscherkessischer kultureller und politischer Aktivismus',
         hero_title: 'Der Tag des <em>Widerstands</em>',
         hero_sub: 'Ein Raum für radikale Kultur, Basisbewegungen und kollektives Gedächtnis. Wir dokumentieren. Wir organisieren. Wir schauen nicht weg.',
@@ -549,6 +591,9 @@
         about_p2: 'Gegründet als Antwort auf die Auslöschung des öffentlichen Raums und die Kriminalisierung von Dissens, archivieren wir, was Institutionen lieber vergessen würden, und <strong>verstärken Stimmen, die die Macht zum Schweigen bringen will</strong>.',
         about_p3: 'Unsere Arbeit umfasst Straßenfotografie, Zine-Veröffentlichungen, Live-Veranstaltungen und Community-Organisierung — immer in Solidarität, nie als Spektakel.',
         about_cta: 'Dem Kollektiv beitreten',
+        lib_label: 'Bibliothek', lib_title: 'Artikel &amp;<br>Dokumente',
+        lib_intro: 'Wichtige Artikel, Erklärungen und Dokumente, veröffentlicht von unserem Kollektiv.',
+        lib_empty: 'Noch nichts veröffentlicht.', lib_open: 'Öffnen ↗',
         stat1: 'Jahre aktiv', stat2: 'Dokumentierte Ereignisse', stat3: 'Städte erreicht', stat4: 'Gründe zu kämpfen',
         ig_label: 'Neueste Beiträge', flickr_label: 'Fotoarchiv', flickr_title: 'Galerie',
         flickr_link: 'Vollständiges Archiv ↗', flickr_loading: 'Lade von Flickr…',
@@ -559,7 +604,7 @@
         dir: 'ltr'
       },
       ar: {
-        nav_about: 'من نحن', nav_gallery: 'المعرض', nav_contact: 'اتصل بنا',
+        nav_about: 'من نحن', nav_gallery: 'المعرض', nav_contact: 'اتصل بنا', nav_library: 'المكتبة',
         hero_eyebrow: 'النشاط الثقافي والسياسي الشركسي',
         hero_title: 'يوم <em>المقاومة</em>',
         hero_sub: 'فضاء للثقافة الجذرية والعمل الشعبي والذاكرة الجماعية. نوثّق. ننظّم. لا نغض الطرف.',
@@ -569,6 +614,9 @@
         about_p2: 'تأسّسنا رداً على محو الفضاء العام وتجريم المعارضة، نحفظ ما تودّ المؤسسات نسيانه، <strong>ونضخّم الأصوات التي تسعى السلطة إلى إخمادها</strong>.',
         about_p3: 'يشمل عملنا التصوير في الشوارع ونشر المجلات المستقلة والفعاليات الحية والتنظيم المجتمعي — دائماً بروح التضامن، لا الاستعراض.',
         about_cta: 'انضم إلى المجموعة',
+        lib_label: 'المكتبة', lib_title: 'مقالات<br>ووثائق',
+        lib_intro: 'مقالات وبيانات ووثائق مهمة ينشرها تجمّعنا.',
+        lib_empty: 'لم يُنشر شيء بعد.', lib_open: 'فتح ↗',
         stat1: 'سنوات نشاط', stat2: 'فعالية موثّقة', stat3: 'مدينة', stat4: 'أسباب للنضال',
         ig_label: 'آخر المنشورات', flickr_label: 'أرشيف الصور', flickr_title: 'المعرض',
         flickr_link: 'الأرشيف الكامل ↗', flickr_loading: 'جارٍ التحميل من Flickr…',
@@ -771,6 +819,42 @@
     }
 
     loadFlickr();
+
+    /* ═══════════════════════════════════════════
+       LIBRARY — articles & documents
+       To publish: add an entry to documents.json (see documents/README.md)
+    ═══════════════════════════════════════════ */
+    function escapeHtml(v) {
+      return String(v == null ? '' : v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    }
+    function currentT() {
+      return i18n[document.documentElement.getAttribute('lang')] || i18n.en;
+    }
+    async function loadLibrary() {
+      const list = document.getElementById('doc-list');
+      let docs = [];
+      try {
+        const res = await fetch('documents.json', { cache: 'no-cache' });
+        if (res.ok) docs = await res.json();
+      } catch (e) {}
+      docs = (Array.isArray(docs) ? docs : []).filter(d => d && d.title && d.url);
+      docs.sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')));
+      const t = currentT();
+      if (!docs.length) {
+        list.innerHTML = `<li class="doc-empty" data-i18n="lib_empty">${t.lib_empty}</li>`;
+        return;
+      }
+      list.innerHTML = docs.map(d => {
+        const external = /^https?:\/\//i.test(d.url);
+        const meta = [d.date, d.lang].filter(Boolean).map(escapeHtml).join(' · ');
+        return `<li class="doc-item"><a class="doc-link" href="${escapeHtml(d.url)}"${external ? ' target="_blank" rel="noopener"' : ''}>
+          <div class="doc-meta">${d.type ? `<span class="doc-type">${escapeHtml(d.type)}</span>` : ''}${meta}</div>
+          <div><div class="doc-title">${escapeHtml(d.title)}</div>${d.description ? `<p class="doc-desc">${escapeHtml(d.description)}</p>` : ''}</div>
+          <span class="doc-open" data-i18n="lib_open">${t.lib_open}</span>
+        </a></li>`;
+      }).join('');
+    }
+    loadLibrary();
   </script>
 </body>
 </html>
