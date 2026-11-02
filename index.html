@@ -202,12 +202,23 @@
     .library-intro { color: var(--smoke); max-width: 620px; margin-bottom: 40px; font-size: 1.05rem; }
     .doc-list { list-style: none; border-top: 1px solid var(--line); }
     .doc-item { border-bottom: 1px solid var(--line); }
+    .doc-group { list-style: none; }
+    .doc-group-title {
+      font-family: var(--font-display); font-weight: 400;
+      font-size: clamp(1.3rem, 2.4vw, 1.7rem); letter-spacing: 0.06em;
+      color: var(--accent); padding: 48px 0 14px; border-bottom: 1px solid var(--line);
+    }
+    .doc-group:first-child .doc-group-title { padding-top: 24px; }
     .doc-link { display: grid; grid-template-columns: 140px 1fr auto; gap: 32px; align-items: baseline; padding: 28px 0; transition: background 0.2s; }
     .doc-link:hover { background: var(--off-black); }
     .doc-link:hover .doc-title { color: var(--accent); }
     .doc-meta { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); line-height: 1.9; }
     .doc-type { display: block; color: var(--accent); }
+    .doc-access { display: block; margin-top: 6px; font-size: 0.6rem; letter-spacing: 0.1em; }
+    .doc-access.open { color: var(--accent2); }
+    .doc-access.restricted { color: var(--muted); }
     .doc-title { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.05; letter-spacing: 0.03em; color: var(--white); transition: color 0.2s; }
+    .doc-author { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.06em; color: var(--smoke); margin-top: 8px; }
     .doc-desc { color: var(--smoke); font-size: 0.95rem; margin-top: 8px; max-width: 680px; }
     .doc-open { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
     .doc-link:hover .doc-open { color: var(--accent2); }
@@ -274,6 +285,7 @@
       footer { padding: 32px 24px; }
       .doc-link { grid-template-columns: 1fr; gap: 10px; padding: 24px 0; }
       .doc-reader, body[lang="ar"] .doc-reader { margin: -10px 0 20px 0; }
+      .doc-group-title { padding-top: 36px; }
     }
   </style>
 </head>
@@ -471,6 +483,7 @@
        TRANSLATIONS
        Note: Circassian (Kabardino-Adyghe) text
        uses Cyrillic script as standardised.
+       Any key missing in a language falls back to English.
     ═══════════════════════════════════════════ */
     const i18n = {
       en: {
@@ -487,6 +500,9 @@
         lib_label: 'Library', lib_title: 'Articles &amp;<br>Documents',
         lib_intro: 'Important articles, statements and documents published by our collective.',
         lib_empty: 'Nothing published yet — check back soon.', lib_open: 'Open ↗', lib_reader: 'Reader view',
+        lib_cat_books: 'Key Books', lib_cat_theses: 'Dissertations &amp; Theses', lib_cat_articles: 'Journal Articles &amp; Papers',
+        lib_open_pdf: 'Open PDF ↗', lib_get_access: 'Get access ↗',
+        lib_access_open: 'Open access', lib_access_restricted: 'Restricted · buy or request access',
         stat1: 'Years active', stat2: 'Events documented', stat3: 'Cities reached', stat4: 'Reasons to fight',
         ig_label: 'Latest Posts', flickr_label: 'Photo Archive', flickr_title: 'Gallery',
         flickr_link: 'Full archive ↗', flickr_loading: 'Loading from Flickr…',
@@ -511,6 +527,8 @@
         lib_label: 'Тхыгъэхэр', lib_title: 'Тхыгъэхэр &amp;<br>Документхэр',
         lib_intro: 'Ди тхыгъэ нэхъыщхьэхэмрэ документхэмрэ мыбдеж щыӏэщ.',
         lib_empty: 'Иджыри зыри къыдэкӏакъым.', lib_open: 'Еплъын ↗', lib_reader: 'Еджэн',
+        lib_cat_books: 'Тхылъ нэхъыщхьэхэр', lib_cat_theses: 'Диссертацэхэр', lib_cat_articles: 'Щӏэныгъэ тхыгъэхэр',
+        lib_open_pdf: 'PDF Еплъын ↗',
         stat1: 'Илъэс лэжьащ', stat2: 'Хъыбарзехьэ', stat3: 'Къалэ', stat4: 'Зэпэщӏэтыным и щхьэусыгъуэ',
         ig_label: 'ЗэрыкӀуэцӀылъ', flickr_label: 'Сурэт Архив', flickr_title: 'Галерей',
         flickr_link: 'Архив псор ↗', flickr_loading: 'Flickr-м щыщ солъагъу…',
@@ -535,6 +553,8 @@
         lib_label: 'Тхыгъэхэр', lib_title: 'Тхыгъэхэр &amp;<br>Документхэр',
         lib_intro: 'Ти тхыгъэ шъхьаӀэхэр ыкӀи документхэр мыщ щыӀэх.',
         lib_empty: 'Джыри зи къыдэкӀыгъэп.', lib_open: 'Еплъын ↗', lib_reader: 'Еджэн',
+        lib_cat_books: 'Тхылъ шъхьаӀэхэр', lib_cat_theses: 'Диссертациехэр', lib_cat_articles: 'ШӀэныгъэ тхыгъэхэр',
+        lib_open_pdf: 'PDF Еплъын ↗',
         stat1: 'ИлъэскӀэ Іоф ашӀагъ', stat2: 'Хъытыу зэхащагъ', stat3: 'Къалэ', stat4: 'Пэуцужьыным ищхьэусыгъо',
         ig_label: 'ИкӀэрыкӀэ', flickr_label: 'Сурэт Архив', flickr_title: 'Галерей',
         flickr_link: 'Архив пстэури ↗', flickr_loading: 'Flickr-м щыщ солъэгъу…',
@@ -559,6 +579,9 @@
         lib_label: 'Библиотека', lib_title: 'Статьи и<br>Документы',
         lib_intro: 'Важные статьи, заявления и документы, опубликованные нашим коллективом.',
         lib_empty: 'Пока ничего не опубликовано.', lib_open: 'Открыть ↗', lib_reader: 'Режим чтения',
+        lib_cat_books: 'Ключевые книги', lib_cat_theses: 'Диссертации', lib_cat_articles: 'Научные статьи и доклады',
+        lib_open_pdf: 'Открыть PDF ↗', lib_get_access: 'Получить доступ ↗',
+        lib_access_open: 'Открытый доступ', lib_access_restricted: 'Ограниченный доступ · купить или запросить',
         stat1: 'Лет активности', stat2: 'Задокументировано событий', stat3: 'Городов', stat4: 'Причин бороться',
         ig_label: 'Последние посты', flickr_label: 'Фотоархив', flickr_title: 'Галерея',
         flickr_link: 'Весь архив ↗', flickr_loading: 'Загрузка с Flickr…',
@@ -583,6 +606,9 @@
         lib_label: 'Kütüphane', lib_title: 'Makaleler ve<br>Belgeler',
         lib_intro: 'Kolektifimizin yayımladığı önemli makaleler, açıklamalar ve belgeler.',
         lib_empty: 'Henüz yayımlanmış bir şey yok.', lib_open: 'Aç ↗', lib_reader: 'Okuma görünümü',
+        lib_cat_books: 'Temel Kitaplar', lib_cat_theses: 'Tezler', lib_cat_articles: 'Akademik Makaleler ve Bildiriler',
+        lib_open_pdf: 'PDF’i aç ↗', lib_get_access: 'Erişim ↗',
+        lib_access_open: 'Açık erişim', lib_access_restricted: 'Kısıtlı erişim · satın al veya erişim iste',
         stat1: 'Yıl aktif', stat2: 'Belgelenen etkinlik', stat3: 'Şehir', stat4: 'Mücadele sebebi',
         ig_label: 'Son Paylaşımlar', flickr_label: 'Fotoğraf Arşivi', flickr_title: 'Galeri',
         flickr_link: 'Tam arşiv ↗', flickr_loading: 'Flickr\'dan yükleniyor…',
@@ -607,6 +633,9 @@
         lib_label: 'Bibliothek', lib_title: 'Artikel &amp;<br>Dokumente',
         lib_intro: 'Wichtige Artikel, Erklärungen und Dokumente, veröffentlicht von unserem Kollektiv.',
         lib_empty: 'Noch nichts veröffentlicht.', lib_open: 'Öffnen ↗', lib_reader: 'Leseansicht',
+        lib_cat_books: 'Grundlegende Bücher', lib_cat_theses: 'Dissertationen &amp; Abschlussarbeiten', lib_cat_articles: 'Fachartikel &amp; Aufsätze',
+        lib_open_pdf: 'PDF öffnen ↗', lib_get_access: 'Zugang ↗',
+        lib_access_open: 'Frei zugänglich', lib_access_restricted: 'Zugang beschränkt · kaufen oder Zugang beantragen',
         stat1: 'Jahre aktiv', stat2: 'Dokumentierte Ereignisse', stat3: 'Städte erreicht', stat4: 'Gründe zu kämpfen',
         ig_label: 'Neueste Beiträge', flickr_label: 'Fotoarchiv', flickr_title: 'Galerie',
         flickr_link: 'Vollständiges Archiv ↗', flickr_loading: 'Lade von Flickr…',
@@ -631,6 +660,9 @@
         lib_label: 'المكتبة', lib_title: 'مقالات<br>ووثائق',
         lib_intro: 'مقالات وبيانات ووثائق مهمة ينشرها تجمّعنا.',
         lib_empty: 'لم يُنشر شيء بعد.', lib_open: 'فتح ↗', lib_reader: 'وضع القراءة',
+        lib_cat_books: 'كتب أساسية', lib_cat_theses: 'أطروحات ورسائل جامعية', lib_cat_articles: 'مقالات ودراسات أكاديمية',
+        lib_open_pdf: 'فتح PDF ↗', lib_get_access: 'الحصول على الوصول ↗',
+        lib_access_open: 'وصول مفتوح', lib_access_restricted: 'وصول مقيّد · شراء أو طلب الوصول',
         stat1: 'سنوات نشاط', stat2: 'فعالية موثّقة', stat3: 'مدينة', stat4: 'أسباب للنضال',
         ig_label: 'آخر المنشورات', flickr_label: 'أرشيف الصور', flickr_title: 'المعرض',
         flickr_link: 'الأرشيف الكامل ↗', flickr_loading: 'جارٍ التحميل من Flickr…',
@@ -645,6 +677,12 @@
 
     const langLabels = { en: 'EN', kbd: 'КАБ', ady: 'АДЫ', ru: 'РУС', tr: 'TR', de: 'DE', ar: 'عر' };
 
+    // look up a key in the given language, falling back to English
+    function tr(lang, key) {
+      const t = i18n[lang] || i18n.en;
+      return t[key] !== undefined ? t[key] : i18n.en[key];
+    }
+
     function setLang(lang, remember = true) {
       const t = i18n[lang];
       if (!t) return;
@@ -656,14 +694,14 @@
 
       // update all data-i18n elements
       document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if (t[key] !== undefined) el.innerHTML = t[key];
+        const v = tr(lang, el.getAttribute('data-i18n'));
+        if (v !== undefined) el.innerHTML = v;
       });
 
       // update placeholders
       document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-        const key = el.getAttribute('data-i18n-placeholder');
-        if (t[key] !== undefined) el.setAttribute('placeholder', t[key]);
+        const v = tr(lang, el.getAttribute('data-i18n-placeholder'));
+        if (v !== undefined) el.setAttribute('placeholder', v);
       });
 
       // update ticker
@@ -865,13 +903,42 @@
 
     /* ═══════════════════════════════════════════
        LIBRARY — articles & documents
-       To publish: add an entry to documents.json (see documents/README.md)
+       To publish: add an entry to documents.json (see documents/README.md).
+       Fields: title, url (required); author, date, lang, type,
+       description, category ("books" | "theses" | "articles";
+       leave empty for the collective's own statements),
+       access ("open" | "restricted"), pdf (true if url is a PDF file).
     ═══════════════════════════════════════════ */
+    const LIB_GROUPS = [
+      { key: '',         label: null },              // the collective's own publications, no heading
+      { key: 'books',    label: 'lib_cat_books' },
+      { key: 'theses',   label: 'lib_cat_theses' },
+      { key: 'articles', label: 'lib_cat_articles' }
+    ];
+
     function escapeHtml(v) {
       return String(v == null ? '' : v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
     }
-    function currentT() {
-      return i18n[document.documentElement.getAttribute('lang')] || i18n.en;
+    function currentLang() {
+      return document.documentElement.getAttribute('lang') || 'en';
+    }
+    function renderDoc(d, lang) {
+      const external = /^https?:\/\//i.test(d.url);
+      const meta = [d.date, d.lang].filter(Boolean).map(escapeHtml).join(' · ');
+      let openKey = 'lib_open';
+      let access = '';
+      if (d.access === 'restricted') {
+        openKey = 'lib_get_access';
+        access = `<span class="doc-access restricted" data-i18n="lib_access_restricted">${tr(lang, 'lib_access_restricted')}</span>`;
+      } else if (d.access === 'open') {
+        if (d.pdf) openKey = 'lib_open_pdf';
+        access = `<span class="doc-access open" data-i18n="lib_access_open">${tr(lang, 'lib_access_open')}</span>`;
+      }
+      return `<li class="doc-item"><a class="doc-link" href="${escapeHtml(d.url)}"${external ? ' target="_blank" rel="noopener"' : ''}>
+          <div class="doc-meta">${d.type ? `<span class="doc-type">${escapeHtml(d.type)}</span>` : ''}${meta}${access}</div>
+          <div><div class="doc-title">${escapeHtml(d.title)}</div>${d.author ? `<p class="doc-author">${escapeHtml(d.author)}</p>` : ''}${d.description ? `<p class="doc-desc">${escapeHtml(d.description)}</p>` : ''}</div>
+          <span class="doc-open" data-i18n="${openKey}">${tr(lang, openKey)}</span>
+        </a>${!external && /\.html?$/i.test(d.url) ? `<a class="doc-reader" href="${escapeHtml(d.url)}?view=reader">Aa · <span data-i18n="lib_reader">${tr(lang, 'lib_reader')}</span></a>` : ''}</li>`;
     }
     async function loadLibrary() {
       const list = document.getElementById('doc-list');
@@ -882,19 +949,19 @@
       } catch (e) {}
       docs = (Array.isArray(docs) ? docs : []).filter(d => d && d.title && d.url);
       docs.sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')));
-      const t = currentT();
+      const lang = currentLang();
       if (!docs.length) {
-        list.innerHTML = `<li class="doc-empty" data-i18n="lib_empty">${t.lib_empty}</li>`;
+        list.innerHTML = `<li class="doc-empty" data-i18n="lib_empty">${tr(lang, 'lib_empty')}</li>`;
         return;
       }
-      list.innerHTML = docs.map(d => {
-        const external = /^https?:\/\//i.test(d.url);
-        const meta = [d.date, d.lang].filter(Boolean).map(escapeHtml).join(' · ');
-        return `<li class="doc-item"><a class="doc-link" href="${escapeHtml(d.url)}"${external ? ' target="_blank" rel="noopener"' : ''}>
-          <div class="doc-meta">${d.type ? `<span class="doc-type">${escapeHtml(d.type)}</span>` : ''}${meta}</div>
-          <div><div class="doc-title">${escapeHtml(d.title)}</div>${d.description ? `<p class="doc-desc">${escapeHtml(d.description)}</p>` : ''}</div>
-          <span class="doc-open" data-i18n="lib_open">${t.lib_open}</span>
-        </a>${!external && /\.html?$/i.test(d.url) ? `<a class="doc-reader" href="${escapeHtml(d.url)}?view=reader">Aa · <span data-i18n="lib_reader">${t.lib_reader}</span></a>` : ''}</li>`;
+      const known = LIB_GROUPS.map(g => g.key);
+      list.innerHTML = LIB_GROUPS.map(g => {
+        const items = docs.filter(d => (known.includes(d.category || '') ? (d.category || '') : '') === g.key);
+        if (!items.length) return '';
+        const heading = g.label
+          ? `<li class="doc-group"><h3 class="doc-group-title" data-i18n="${g.label}">${tr(lang, g.label)}</h3></li>`
+          : '';
+        return heading + items.map(d => renderDoc(d, lang)).join('');
       }).join('');
     }
     loadLibrary();
