@@ -227,6 +227,28 @@
     body[lang="ar"] .doc-reader { margin:-14px 172px 22px 0; }
     .doc-empty { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.1em; color: var(--muted); padding: 28px 0; border-bottom: 1px solid var(--line); }
 
+    /* EVENTS */
+    .events { background: var(--off-black); }
+    .events-intro { color: var(--smoke); max-width: 620px; margin-bottom: 40px; font-size: 1.05rem; }
+    .ev-list { list-style: none; border-top: 1px solid var(--line); }
+    .ev-group-title { font-family: var(--font-display); font-weight: 400; font-size: clamp(1.3rem, 2.4vw, 1.7rem); letter-spacing: 0.06em; color: var(--accent); padding: 40px 0 14px; border-bottom: 1px solid var(--line); }
+    .ev-list > li:first-child .ev-group-title { padding-top: 24px; }
+    .ev-item { border-bottom: 1px solid var(--line); }
+    .ev-link { display: grid; grid-template-columns: 140px 1fr auto; gap: 32px; align-items: baseline; padding: 28px 0; transition: background 0.2s; }
+    .ev-link:hover { background: var(--charcoal); }
+    .ev-link:hover .ev-title { color: var(--accent); }
+    .ev-when { font-family: var(--font-display); font-size: 1.5rem; line-height: 1.05; letter-spacing: 0.04em; color: var(--white); }
+    .ev-status { display: inline-block; margin-top: 10px; font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; padding: 3px 8px; border: 1px solid var(--mid); color: var(--muted); }
+    .ev-status.upcoming { border-color: var(--accent2); color: var(--accent2); }
+    .ev-status.now { border-color: var(--accent); color: var(--white); background: var(--accent); }
+    .ev-meta { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+    .ev-meta .ev-type { color: var(--accent); }
+    .ev-title { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.05; letter-spacing: 0.03em; color: var(--white); transition: color 0.2s; }
+    .ev-desc { color: var(--smoke); font-size: 0.95rem; margin-top: 8px; max-width: 680px; }
+    .ev-open { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+    .ev-link:hover .ev-open { color: var(--accent2); }
+    .ev-item.past .ev-when, .ev-item.past .ev-title { color: var(--smoke); }
+
     /* INSTAGRAM */
     .instagram { background: var(--black); }
     .feed-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 36px; flex-wrap: wrap; gap: 16px; }
@@ -286,6 +308,7 @@
       .doc-link { grid-template-columns: 1fr; gap: 10px; padding: 24px 0; }
       .doc-reader, body[lang="ar"] .doc-reader { margin: -10px 0 20px 0; }
       .doc-group-title { padding-top: 36px; }
+      .ev-link { grid-template-columns: 1fr; gap: 10px; padding: 24px 0; }
     }
   </style>
 </head>
@@ -298,6 +321,7 @@
       <ul class="nav-links">
         <li><a href="#about" data-i18n="nav_about">About</a></li>
         <li><a href="#library" data-i18n="nav_library">Library</a></li>
+        <li><a href="#events" data-i18n="nav_events">Events</a></li>
         <li hidden><a href="#instagram">Instagram</a></li> <!-- Instagram hidden until an account is linked -->
         <li><a href="#flickr" data-i18n="nav_gallery">Gallery</a></li>
         <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
@@ -383,6 +407,15 @@
     <div class="divider"></div>
     <p class="library-intro" data-i18n="lib_intro">Important articles, statements and documents published by our collective.</p>
     <ul class="doc-list" id="doc-list"></ul>
+  </section>
+
+  <!-- EVENTS: live events, rallies, commemorations, exhibitions (list lives in events.json) -->
+  <section class="events" id="events">
+    <p class="section-label" data-i18n="ev_label">Live Events</p>
+    <h2 class="section-title" data-i18n="ev_title">Events &amp;<br>Actions</h2>
+    <div class="divider"></div>
+    <p class="events-intro" data-i18n="ev_intro">Rallies, commemorations, festivals and exhibitions in the homeland and across the diaspora.</p>
+    <ul class="ev-list" id="ev-list"></ul>
   </section>
 
   <!-- INSTAGRAM -->
@@ -502,6 +535,7 @@
         lib_empty: 'Nothing published yet — check back soon.', lib_open: 'Open ↗', lib_reader: 'Reader view',
         lib_cat_books: 'Key Books', lib_cat_theses: 'Dissertations &amp; Theses', lib_cat_articles: 'Journal Articles &amp; Papers',
         lib_open_pdf: 'Open PDF ↗', lib_get_access: 'Get access ↗',
+        nav_events: 'Events', ev_label: 'Live Events', ev_title: 'Events &amp;<br>Actions', ev_intro: 'Rallies, commemorations, festivals and exhibitions in the homeland and across the diaspora.', ev_upcoming: 'Upcoming', ev_now: 'Now on', ev_past: 'Past events', ev_empty: 'No events listed yet — check back soon.', ev_more: 'Details ↗',
         lib_access_open: 'Open access', lib_access_restricted: 'Restricted · buy or request access', lib_buy: 'Buy ↗', lib_access_buy: 'In print · available to buy', lib_original: 'Original edition',
         stat1: 'Years active', stat2: 'Events documented', stat3: 'Cities reached', stat4: 'Reasons to fight',
         ig_label: 'Latest Posts', flickr_label: 'Photo Archive', flickr_title: 'Gallery',
@@ -583,6 +617,7 @@
         lib_empty: 'Пока ничего не опубликовано.', lib_open: 'Открыть ↗', lib_reader: 'Режим чтения',
         lib_cat_books: 'Ключевые книги', lib_cat_theses: 'Диссертации', lib_cat_articles: 'Научные статьи и доклады',
         lib_open_pdf: 'Открыть PDF ↗', lib_get_access: 'Получить доступ ↗',
+        nav_events: 'События', ev_label: 'Живые события', ev_title: 'События и<br>Акции', ev_intro: 'Митинги, памятные акции, фестивали и выставки на родине и в диаспоре.', ev_upcoming: 'Скоро', ev_now: 'Идёт сейчас', ev_past: 'Прошедшие события', ev_empty: 'Пока нет событий.', ev_more: 'Подробнее ↗',
         lib_access_open: 'Открытый доступ', lib_access_restricted: 'Ограниченный доступ · купить или запросить', lib_buy: 'Купить ↗', lib_access_buy: 'Печатное издание · можно купить', lib_original: 'Оригинальное издание',
         stat1: 'Лет активности', stat2: 'Задокументировано событий', stat3: 'Городов', stat4: 'Причин бороться',
         ig_label: 'Последние посты', flickr_label: 'Фотоархив', flickr_title: 'Галерея',
@@ -610,6 +645,7 @@
         lib_empty: 'Henüz yayımlanmış bir şey yok.', lib_open: 'Aç ↗', lib_reader: 'Okuma görünümü',
         lib_cat_books: 'Temel Kitaplar', lib_cat_theses: 'Tezler', lib_cat_articles: 'Akademik Makaleler ve Bildiriler',
         lib_open_pdf: 'PDF’i aç ↗', lib_get_access: 'Erişim ↗',
+        nav_events: 'Etkinlikler', ev_label: 'Canlı Etkinlikler', ev_title: 'Etkinlikler ve<br>Eylemler', ev_intro: 'Anavatanda ve diasporada mitingler, anmalar, festivaller ve sergiler.', ev_upcoming: 'Yaklaşan', ev_now: 'Şu an sürüyor', ev_past: 'Geçmiş etkinlikler', ev_empty: 'Henüz etkinlik yok.', ev_more: 'Ayrıntılar ↗',
         lib_access_open: 'Açık erişim', lib_access_restricted: 'Kısıtlı erişim · satın al veya erişim iste', lib_buy: 'Satın al ↗', lib_access_buy: 'Basılı · satın alınabilir', lib_original: 'Orijinal baskı',
         stat1: 'Yıl aktif', stat2: 'Belgelenen etkinlik', stat3: 'Şehir', stat4: 'Mücadele sebebi',
         ig_label: 'Son Paylaşımlar', flickr_label: 'Fotoğraf Arşivi', flickr_title: 'Galeri',
@@ -637,6 +673,7 @@
         lib_empty: 'Noch nichts veröffentlicht.', lib_open: 'Öffnen ↗', lib_reader: 'Leseansicht',
         lib_cat_books: 'Grundlegende Bücher', lib_cat_theses: 'Dissertationen &amp; Abschlussarbeiten', lib_cat_articles: 'Fachartikel &amp; Aufsätze',
         lib_open_pdf: 'PDF öffnen ↗', lib_get_access: 'Zugang ↗',
+        nav_events: 'Termine', ev_label: 'Live-Events', ev_title: 'Events &amp;<br>Aktionen', ev_intro: 'Kundgebungen, Gedenkveranstaltungen, Festivals und Ausstellungen in der Heimat und in der Diaspora.', ev_upcoming: 'Demnächst', ev_now: 'Läuft gerade', ev_past: 'Vergangene Termine', ev_empty: 'Noch keine Termine.', ev_more: 'Details ↗',
         lib_access_open: 'Frei zugänglich', lib_access_restricted: 'Zugang beschränkt · kaufen oder Zugang beantragen', lib_buy: 'Kaufen ↗', lib_access_buy: 'Gedruckt · im Handel erhältlich', lib_original: 'Originalausgabe',
         stat1: 'Jahre aktiv', stat2: 'Dokumentierte Ereignisse', stat3: 'Städte erreicht', stat4: 'Gründe zu kämpfen',
         ig_label: 'Neueste Beiträge', flickr_label: 'Fotoarchiv', flickr_title: 'Galerie',
@@ -664,6 +701,7 @@
         lib_empty: 'لم يُنشر شيء بعد.', lib_open: 'فتح ↗', lib_reader: 'وضع القراءة',
         lib_cat_books: 'كتب أساسية', lib_cat_theses: 'أطروحات ورسائل جامعية', lib_cat_articles: 'مقالات ودراسات أكاديمية',
         lib_open_pdf: 'فتح PDF ↗', lib_get_access: 'الحصول على الوصول ↗',
+        nav_events: 'الفعاليات', ev_label: 'فعاليات حية', ev_title: 'فعاليات<br>وتحركات', ev_intro: 'مسيرات وفعاليات إحياء ذكرى ومهرجانات ومعارض في الوطن الأم وفي الشتات.', ev_upcoming: 'قريباً', ev_now: 'جارية الآن', ev_past: 'فعاليات سابقة', ev_empty: 'لا توجد فعاليات بعد.', ev_more: 'التفاصيل ↗',
         lib_access_open: 'وصول مفتوح', lib_access_restricted: 'وصول مقيّد · شراء أو طلب الوصول', lib_buy: 'شراء ↗', lib_access_buy: 'نسخة مطبوعة · متاحة للشراء', lib_original: 'الطبعة الأصلية',
         stat1: 'سنوات نشاط', stat2: 'فعالية موثّقة', stat3: 'مدينة', stat4: 'أسباب للنضال',
         ig_label: 'آخر المنشورات', flickr_label: 'أرشيف الصور', flickr_title: 'المعرض',
@@ -723,6 +761,7 @@
 
       // re-render the library so per-language editions switch too
       if (typeof renderLibrary === 'function') renderLibrary();
+      if (typeof renderEvents === 'function') renderEvents();
 
       // close dropdown
       document.getElementById('langSwitcher').classList.remove('open');
@@ -996,6 +1035,98 @@
       renderLibrary();
     }
     loadLibrary();
+
+    /* ═══════════════════════════════════════════
+       EVENTS — live events, rallies, commemorations, exhibitions
+       To publish: add an entry to events.json.
+       Fields: title, date (YYYY-MM-DD, required); end (YYYY-MM-DD, for
+       multi-day events); place; type (e.g. Rally, Festival, Exhibition,
+       Commemoration); description; url (event page or report);
+       lang (language of the linked page); langs: ["tr"] to list an entry
+       only on those language versions; editions: { "tr": { title, description, url } }.
+       Upcoming and ongoing events are listed first, then past ones.
+       If events.json is missing, the EVENTS_SEED list below is shown.
+    ═══════════════════════════════════════════ */
+    const EVENTS_SEED = [
+      { "title": "Peoples of Russia. Adyghe (Circassians) — Exhibition", "date": "2026-11-11", "end": "2027-02-15", "place": "State Historical Museum, Moscow", "type": "Exhibition", "lang": "RU", "url": "https://rg.ru/2026/11/02/reg-ufo/kulturnoe-nasledie-adygov-predstaviat-v-odnom-iz-glavnyh-muzeev-rossii.html", "description": "Exhibition of Adyghe archaeology, period art and crafts alongside work by contemporary Adyghe makers, with the cherkeska and Adyghe Khabze at its centre. Prepared with the National Museum of the Republic of Adygea." },
+      { "title": "Istanbul Circassian Gathering", "date": "2026-10-24", "end": "2026-10-25", "place": "Müze Gazhane, Kadıköy, Istanbul", "type": "Festival", "lang": "TR", "url": "https://jinepsgazetesi.com/2026/11/istanbul-cerkes-bulusmasi/", "description": "Two-day free festival hosted by İBB Kültür with the Istanbul Caucasian and Abkhaz cultural associations: talks on Xabze, Circassian publishing, cuisine, music and dance; screenings including “1864: Büyük Sürgün ve Soykırım”; concerts, dance groups, workshops and a book fair with some 25 publishers." },
+      { "title": "Circassian March in Berlin for the Right of Return", "date": "2026-10-24", "place": "Berlin", "type": "Rally", "lang": "EN", "url": "https://www.eng.kavkaz-uzel.eu/articles/79694", "description": "Several dozen Circassians, many in traditional dress, marched through central Berlin with Circassian flags and delivered a demand at the Russian embassy for recognition of their right to return to the historic homeland." }
+    ];
+
+    const LOCALES = { en: 'en-GB', kbd: 'ru-RU', ady: 'ru-RU', ru: 'ru-RU', tr: 'tr-TR', de: 'de-DE', ar: 'ar' };
+    function parseDay(s) {
+      const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(s || ''));
+      return m ? new Date(+m[1], +m[2] - 1, +m[3]) : null;
+    }
+    function fmtDay(d, lang, opts) {
+      try { return new Intl.DateTimeFormat(LOCALES[lang] || 'en-GB', opts).format(d); }
+      catch (e) { return d.toISOString().slice(0, 10); }
+    }
+    function fmtRange(ev, lang) {
+      const a = parseDay(ev.date), b = parseDay(ev.end);
+      if (!a) return escapeHtml(ev.date || '');
+      const full = { day: 'numeric', month: 'short', year: 'numeric' };
+      if (!b || b.getTime() === a.getTime()) return fmtDay(a, lang, full);
+      if (a.getFullYear() === b.getFullYear() && a.getMonth() === b.getMonth())
+        return a.getDate() + '–' + fmtDay(b, lang, full);
+      if (a.getFullYear() === b.getFullYear())
+        return fmtDay(a, lang, { day: 'numeric', month: 'short' }) + ' – ' + fmtDay(b, lang, full);
+      return fmtDay(a, lang, full) + ' – ' + fmtDay(b, lang, full);
+    }
+    function eventStatus(ev) {
+      const today = new Date(); today.setHours(0, 0, 0, 0);
+      const a = parseDay(ev.date), b = parseDay(ev.end) || a;
+      if (!a) return 'past';
+      if (a > today) return 'upcoming';
+      if (b >= today) return 'now';
+      return 'past';
+    }
+    function renderEvent(entry, lang) {
+      const ev = localized(entry, lang);
+      const st = eventStatus(ev);
+      const badgeKey = st === 'now' ? 'ev_now' : st === 'upcoming' ? 'ev_upcoming' : '';
+      const badge = badgeKey ? `<span class="ev-status ${st}" data-i18n="${badgeKey}">${tr(lang, badgeKey)}</span>` : '';
+      const meta = [ev.type ? `<span class="ev-type">${escapeHtml(ev.type)}</span>` : '', escapeHtml(ev.place || ''), escapeHtml(ev.lang || '')].filter(Boolean).join(' · ');
+      const inner = `<div><div class="ev-when">${fmtRange(ev, lang)}</div>${badge}</div>
+          <div>${meta ? `<p class="ev-meta">${meta}</p>` : ''}<div class="ev-title">${escapeHtml(ev.title)}</div>${ev.description ? `<p class="ev-desc">${escapeHtml(ev.description)}</p>` : ''}</div>
+          ${ev.url ? `<span class="ev-open" data-i18n="ev_more">${tr(lang, 'ev_more')}</span>` : '<span></span>'}`;
+      const body = ev.url
+        ? `<a class="ev-link" href="${escapeHtml(ev.url)}" target="_blank" rel="noopener">${inner}</a>`
+        : `<div class="ev-link">${inner}</div>`;
+      return `<li class="ev-item ${st}">${body}</li>`;
+    }
+    var EVENTS = null;   // var: setLang may run before this line
+    function renderEvents() {
+      const list = document.getElementById('ev-list');
+      if (!list || !Array.isArray(EVENTS)) return;
+      const lang = currentLang();
+      const items = EVENTS.filter(e => !Array.isArray(e.langs) || e.langs.includes(lang));
+      if (!items.length) {
+        list.innerHTML = `<li class="doc-empty" data-i18n="ev_empty">${tr(lang, 'ev_empty')}</li>`;
+        return;
+      }
+      const coming = items.filter(e => eventStatus(e) !== 'past')
+        .sort((a, b) => String(a.date).localeCompare(String(b.date)));
+      const past = items.filter(e => eventStatus(e) === 'past')
+        .sort((a, b) => String(b.date).localeCompare(String(a.date)));
+      let html = coming.map(e => renderEvent(e, lang)).join('');
+      if (past.length) {
+        html += `<li><h3 class="ev-group-title" data-i18n="ev_past">${tr(lang, 'ev_past')}</h3></li>`;
+        html += past.map(e => renderEvent(e, lang)).join('');
+      }
+      list.innerHTML = html;
+    }
+    async function loadEvents() {
+      let evs = null;
+      try {
+        const res = await fetch('events.json', { cache: 'no-cache' });
+        if (res.ok) evs = await res.json();
+      } catch (e) {}
+      if (!Array.isArray(evs)) evs = EVENTS_SEED;
+      EVENTS = evs.filter(e => e && e.title && e.date);
+      renderEvents();
+    }
+    loadEvents();
   </script>
 </body>
 </html>
