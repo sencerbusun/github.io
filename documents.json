@@ -16,7 +16,19 @@
     "lang": "EN",
     "access": "restricted",
     "url": "https://muse.jhu.edu/books/9780813560694/",
-    "description": "Rutgers University Press monograph on the Russo-Circassian War, the genocidal campaigns of 1821–22 and 1863–64, and five generations of diaspora up to the Sochi Olympics. Read via Project MUSE with library access, or purchase."
+    "description": "Rutgers University Press monograph on the Russo-Circassian War, the genocidal campaigns of 1821–22 and 1863–64, and five generations of diaspora up to the Sochi Olympics. Read via Project MUSE with library access, or purchase.",
+    "editions": {
+      "tr": {
+        "title": "Çerkes Soykırımı",
+        "author": "Walter Richmond · Çeviri: Erdoğan Boz · Koyu Siyah Kitap · ISBN 978-605-81855-1-7 · 272 s.",
+        "type": "Kitap",
+        "date": "",
+        "lang": "TR",
+        "access": "buy",
+        "url": "https://www.koyusiyahkitap.com/cerkes-soykirimi.html",
+        "description": "Rutgers University Press'in 2013'te yayımladığı The Circassian Genocide'ın Türkçe çevirisi. Rus–Çerkes Savaşı'nı, 1821–22 ve 1863–64'teki soykırım harekâtlarını, daha önce kullanılmamış arşiv belgelerine dayanarak anlatıyor; sürgün edilen Çerkeslerin diasporadaki beş kuşaklık var olma mücadelesini ve 2014 Soçi Kış Olimpiyatları etrafındaki tartışmaları ele alıyor. Yayınevinden satın alınabilir."
+      }
+    }
   },
   {
     "category": "books",
