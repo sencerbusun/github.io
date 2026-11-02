@@ -186,5 +186,34 @@
         "description": "Fransız kökenli etnograf ve dilbilimci Leonti Lyulye'nin 1857, 1862 ve 1866'da Rus Coğrafya Kurumu Kafkasya Şubesi'nin yayın organında çıkan makalelerinin Rusçadan çevirisi. Çerkeslerin, Abhazların ve komşu dağlı halkların yerleşim alanlarını, toplumsal kurumlarını, inançlarını, dini törenlerini ve geleneklerini, Çerkes bağımsızlık mücadelesinin son yıllarından bir tanık olarak anlatıyor. Yayınevinden satın alınabilir."
       }
     }
+  },
+  {
+    "category": "books",
+    "type": "Книга",
+    "title": "Последний год войны Черкесии за независимость. 1863–1864 гг.",
+    "author": "А. Фонвилль · Из записок участника-иностранца · ред. Х. Г. Кармоков · Нальчик: журнал «Адыги», 1991",
+    "date": "1863–1864",
+    "lang": "RU",
+    "access": "open",
+    "pdf": true,
+    "langs": [
+      "ru",
+      "tr"
+    ],
+    "url": "https://aheku.net/f1jok/files/3640/1-fonvil.pdf",
+    "description": "Записки француза, находившегося среди черкесов на черноморском побережье в последний год их борьбы за независимость, 1863–1864. Свидетельство очевидца о последних сражениях западных черкесов против Российской империи и о трагедии народа накануне изгнания.",
+    "editions": {
+      "tr": {
+        "title": "Çerkesya Bağımsızlık Savaşının Son Yılı (1863–1864)",
+        "author": "Arthur de Fonvielle · Çeviri: Murat Topçu · ISBN 9786259568324 · 104 s.",
+        "type": "Kitap",
+        "date": "",
+        "lang": "TR",
+        "access": "buy",
+        "pdf": false,
+        "url": "https://www.koyusiyahkitap.com/cerkesya-bagimsizlik-savasinin-son-yili-1863-1864.html",
+        "description": "1863–1864'te Karadeniz kıyısında direnen Çerkeslerin arasında bulunan Fransız yazar Arthur de Fonvielle'in tanıklığı. Batı Çerkeslerinin Rus İmparatorluğu'na karşı bağımsızlık mücadelesinin son dönemini, yok oluşla karşı karşıya kalan bir halkın onurunu koruma çabasıyla birlikte anlatıyor. Yayınevinden satın alınabilir."
+      }
+    }
   }
 ]
