@@ -157,5 +157,34 @@
     "pdf": true,
     "url": "https://aheku.net/f1jok/files//3947/1-colonial_atrocities.pdf",
     "description": "Paper presented at the Circassian Day in the European Parliament, Brussels, on Russian colonial policy and ethnic cleansing in the Northwest Caucasus and Europe's share of responsibility."
+  },
+  {
+    "category": "books",
+    "type": "Книга",
+    "title": "Черкесия: историко-этнографические статьи",
+    "author": "Л. Я. Люлье · переиздание: «Возрождение», 1990",
+    "date": "1857–1866",
+    "lang": "RU",
+    "access": "open",
+    "pdf": true,
+    "langs": [
+      "ru",
+      "tr"
+    ],
+    "url": "https://aheku.net/f1jok/files/3727/1-lulie.pdf",
+    "description": "Сборник четырёх статей Леонтия Люлье, впервые опубликованных в «Записках Кавказского отдела Русского географического общества» (кн. IV, 1857; кн. V, 1862; кн. VII, 1866): общий обзор земель черкесов, абхазов и соседних горских народов; о натухайцах, шапсугах и абадзехах; верования, религиозные обряды и предрассудки черкесов; учреждения и народные обычаи шапсугов и натухайцев. Свидетельство очевидца последних лет независимости Черкесии.",
+    "editions": {
+      "tr": {
+        "title": "Çerkesya: Tarihi–Etnografik Makaleler (1857–1862–1866)",
+        "author": "Leonti Lyulye · Çeviri: Murat Topçu · ISBN 9786259568379 · 115 s.",
+        "type": "Kitap",
+        "date": "",
+        "lang": "TR",
+        "access": "buy",
+        "pdf": false,
+        "url": "https://www.koyusiyahkitap.com/cerkesya-tarihi-etnografik-makaleler-1857-1862-1866.html",
+        "description": "Fransız kökenli etnograf ve dilbilimci Leonti Lyulye'nin 1857, 1862 ve 1866'da Rus Coğrafya Kurumu Kafkasya Şubesi'nin yayın organında çıkan makalelerinin Rusçadan çevirisi. Çerkeslerin, Abhazların ve komşu dağlı halkların yerleşim alanlarını, toplumsal kurumlarını, inançlarını, dini törenlerini ve geleneklerini, Çerkes bağımsızlık mücadelesinin son yıllarından bir tanık olarak anlatıyor. Yayınevinden satın alınabilir."
+      }
+    }
   }
 ]

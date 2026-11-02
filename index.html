@@ -913,6 +913,7 @@
        access ("open" | "restricted" | "buy"), pdf (true if url is a PDF file),
        editions: { "tr": { title, author, url, ... } } to show another
        edition when the site is viewed in that language.
+       langs: ["tr", "ru"] to list an entry only on those language versions.
     ═══════════════════════════════════════════ */
     const LIB_GROUPS = [
       { key: '',         label: null },              // the collective's own publications, no heading
@@ -970,7 +971,9 @@
       }
       const known = LIB_GROUPS.map(g => g.key);
       list.innerHTML = LIB_GROUPS.map(g => {
-        const items = LIB_DOCS.filter(d => (known.includes(d.category || '') ? (d.category || '') : '') === g.key);
+        const items = LIB_DOCS
+          .filter(d => !Array.isArray(d.langs) || d.langs.includes(lang))   // "langs": show only on these site languages
+          .filter(d => (known.includes(d.category || '') ? (d.category || '') : '') === g.key);
         if (!items.length) return '';
         const heading = g.label
           ? `<li class="doc-group"><h3 class="doc-group-title" data-i18n="${g.label}">${tr(lang, g.label)}</h3></li>`
