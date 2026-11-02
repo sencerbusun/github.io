@@ -951,14 +951,15 @@
         if (d.pdf) openKey = 'lib_open_pdf';
         access = `<span class="doc-access open" data-i18n="lib_access_open">${tr(lang, 'lib_access_open')}</span>`;
       }
-      const original = d.original && d.original.url !== d.url
+      const sameDoc = d.original && d.original.url.split('?')[0] === d.url.split('?')[0];   // a translation of our own article, not another edition
+      const original = d.original && !sameDoc
         ? `<a class="doc-reader" href="${escapeHtml(d.original.url)}" target="_blank" rel="noopener"><span data-i18n="lib_original">${tr(lang, 'lib_original')}</span>${d.original.lang ? ' (' + escapeHtml(d.original.lang) + ')' : ''} ↗</a>`
         : '';
       return `<li class="doc-item"><a class="doc-link" href="${escapeHtml(d.url)}"${external ? ' target="_blank" rel="noopener"' : ''}>
           <div class="doc-meta">${d.type ? `<span class="doc-type">${escapeHtml(d.type)}</span>` : ''}${meta}${access}</div>
           <div><div class="doc-title">${escapeHtml(d.title)}</div>${d.author ? `<p class="doc-author">${escapeHtml(d.author)}</p>` : ''}${d.description ? `<p class="doc-desc">${escapeHtml(d.description)}</p>` : ''}</div>
           <span class="doc-open" data-i18n="${openKey}">${tr(lang, openKey)}</span>
-        </a>${!external && /\.html?$/i.test(d.url) ? `<a class="doc-reader" href="${escapeHtml(d.url)}?view=reader">Aa · <span data-i18n="lib_reader">${tr(lang, 'lib_reader')}</span></a>` : ''}${original}</li>`;
+        </a>${!external && /\.html?(\?|$)/i.test(d.url) ? `<a class="doc-reader" href="${escapeHtml(d.url + (d.url.includes('?') ? '&' : '?') + 'view=reader')}">Aa · <span data-i18n="lib_reader">${tr(lang, 'lib_reader')}</span></a>` : ''}${original}</li>`;
     }
     var LIB_DOCS = null;   // loaded once, re-rendered whenever the language changes (var: setLang may run before this line)
     function renderLibrary() {

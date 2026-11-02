@@ -5,7 +5,45 @@
     "type": "Article",
     "lang": "EN · TR · КАБ · РУС · DE · عر · АДЫ",
     "description": "Caucasian Review, Munich, 1956. A critique of the Soviet claim that Kabarda voluntarily joined Russia in 1557.",
-    "url": "articles/namitok-1956.html"
+    "url": "articles/namitok-1956.html",
+    "editions": {
+      "tr": {
+        "title": "Aytek Namitok — Kabarda’nın (Doğu Çerkesya’nın) Rusya’ya “Gönüllü” Katılımı",
+        "description": "Caucasian Review, Münih, Sayı 2, 1956, s. 17 vd. Aytek Namitok, 1956 tarihli bu makalesinde Kabardey’in 1557’de Rusya’ya gönüllü olarak katıldığı yönündeki Sovyet dönemi anlatısını sorgular. Namitok’a göre mevcut belgeler, açık ve karşılıklı rızaya dayanan tek bir katılım kararını kesin biçimde ortaya koymaz; sonraki siyasi anlatılar ise çok daha karmaşık bir tarihi basitleştirmiştir.",
+        "type": "Makale",
+        "url": "articles/namitok-1956.html?lang=tr"
+      },
+      "kbd": {
+        "title": "Айтек Намиток — Къэбэрдейр Урысейм «и фӏэфӏкӏэ» зэрыгуэхьар",
+        "description": "Caucasian Review, Мюнхен, № 2, 1956. 1956 гъэм итха мы тхыгъэм Айтек Намиток Совет зэманым къагупсысауэ Къэбэрдейр 1557 гъэм Урысейм и фӏэфӏкӏэ гуэхьауэ жаӏэм пэщӏоувэ. Абы и гугъэмкӏэ, тхылъхэм къагъэлъагъуэркъым а гуэхьэныгъэр зэгурыӏуэу, хуиту зэрекӏуэкӏар; иужькӏэ политикэм тхыдэ гугъур тыншу ищӏащ.",
+        "type": "Тхыгъэ",
+        "url": "articles/namitok-1956.html?lang=kbd"
+      },
+      "ru": {
+        "title": "Айтек Намиток — «Добровольное» присоединение Кабарды (Восточной Черкесии) к России",
+        "description": "Caucasian Review, Мюнхен, № 2, 1956, с. 17 и далее. В этой статье 1956 года Айтек Намиток оспаривает утверждение советской эпохи о том, что Кабарда добровольно присоединилась к России в 1557 году. По его мнению, имеющиеся источники не подтверждают ясного и обоюдно согласованного акта присоединения, а позднейшие политические трактовки упростили гораздо более сложную историю.",
+        "type": "Статья",
+        "url": "articles/namitok-1956.html?lang=ru"
+      },
+      "de": {
+        "title": "Aytek Namitok — Der „freiwillige“ Anschluss Kabardas (Ost-Tscherkessiens) an Russland",
+        "description": "Caucasian Review, München, Nr. 2, 1956, S. 17 ff. In diesem Artikel aus dem Jahr 1956 widerspricht Aytek Namitok der sowjetischen Behauptung, Kabarda habe sich 1557 freiwillig Russland angeschlossen. Seiner Ansicht nach belegen die Quellen keinen klaren, einvernehmlichen Anschlussakt; spätere politische Darstellungen hätten eine weit komplexere Geschichte vereinfacht.",
+        "type": "Artikel",
+        "url": "articles/namitok-1956.html?lang=de"
+      },
+      "ar": {
+        "title": "آيتك ناميتوك — الانضمام «الطوعي» لقبردا (شركيسيا الشرقية) إلى روسيا",
+        "description": "مجلة Caucasian Review، ميونخ، العدد 2، 1956، ص 17 وما بعدها. يفنّد آيتك ناميتوك في مقاله هذا المنشور عام 1956 الادعاء السوفييتي بأن قبردا انضمت طوعًا إلى روسيا عام 1557. ويرى أن الوثائق المتوفرة لا تثبت فعلَ انضمامٍ واضحًا قائمًا على رضا الطرفين، وأن الروايات السياسية اللاحقة بسّطت تاريخًا أكثر تعقيدًا بكثير.",
+        "type": "مقالة",
+        "url": "articles/namitok-1956.html?lang=ar"
+      },
+      "ady": {
+        "title": "Айтэкъо Нэмытӏыкъу — Къэбэртаир Урысыем «шӀоигъоныгъэкӀэ» зэрэхэхьагъэр",
+        "description": "Caucasian Review, Мюнхен, № 2, 1956. 1956 илъэсым тхыгъэ мыщ Айтэкъо Нэмытӏыкъу Совет лъэхъаным къаӀуагъэу Къэбэртаир 1557 илъэсым Урысыем ежь ышӀоигъоу хэхьагъэу зэраӀорэм пэуцужьы. Авторым зэрилъытэрэмкӀэ, тхылъхэм а шӀоигъоныгъэр къаушыхьатырэп, ыужыкӀэ политикэм итарихъ шъыпкъэр къызэрыкӀо ышӀыгъ.",
+        "type": "Тхыгъэ",
+        "url": "articles/namitok-1956.html?lang=ady"
+      }
+    }
   },
   {
     "category": "books",
