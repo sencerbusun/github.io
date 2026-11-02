@@ -7,7 +7,45 @@
     "type": "Exhibition",
     "lang": "RU",
     "url": "https://rg.ru/2026/11/02/reg-ufo/kulturnoe-nasledie-adygov-predstaviat-v-odnom-iz-glavnyh-muzeev-rossii.html",
-    "description": "Exhibition of Adyghe archaeology, period art and crafts alongside work by contemporary Adyghe makers, with the cherkeska and Adyghe Khabze at its centre. Prepared with the National Museum of the Republic of Adygea."
+    "description": "Exhibition of Adyghe archaeology, period art and crafts alongside work by contemporary Adyghe makers, with the cherkeska and Adyghe Khabze at its centre. Prepared with the National Museum of the Republic of Adygea.",
+    "editions": {
+      "tr": {
+        "title": "Rusya Halkları. Adigeler (Çerkesler) — Sergi",
+        "place": "Devlet Tarih Müzesi, Moskova",
+        "type": "Sergi",
+        "description": "Adige arkeolojisini, dönem sanatını ve el sanatlarını çağdaş Adige ustalarının eserleriyle bir araya getiren sergi; merkezinde çerkeska ve Adige Xabze var. Adigey Cumhuriyeti Ulusal Müzesi ile birlikte hazırlandı."
+      },
+      "ru": {
+        "title": "«Народы России. Адыги (черкесы)» — выставка",
+        "place": "Государственный исторический музей, Москва",
+        "type": "Выставка",
+        "description": "Адыгская археология, искусство и ремёсла прошлых эпох рядом с работами современных адыгских мастеров; в центре экспозиции — черкеска и Адыгэ Хабзэ. Подготовлена вместе с Национальным музеем Республики Адыгея."
+      },
+      "de": {
+        "title": "Völker Russlands. Adygen (Tscherkessen) — Ausstellung",
+        "place": "Staatliches Historisches Museum, Moskau",
+        "type": "Ausstellung",
+        "description": "Adygische Archäologie, Kunst und Handwerk vergangener Epochen neben Arbeiten heutiger adygischer Kunsthandwerker, mit der Tscherkeska und dem Adyghe Khabze im Mittelpunkt. Gemeinsam mit dem Nationalmuseum der Republik Adygeja vorbereitet."
+      },
+      "ar": {
+        "title": "شعوب روسيا. الأديغة (الشركس) — معرض",
+        "place": "متحف الدولة التاريخي، موسكو",
+        "type": "معرض",
+        "description": "آثار الأديغة وفنونهم وحرفهم عبر العصور إلى جانب أعمال حرفيين أديغة معاصرين، وفي مركز المعرض الزي الشركسي (التشيركيسكا) وأديغة خابزه. أُعدّ بالتعاون مع المتحف الوطني لجمهورية الأديغي."
+      },
+      "kbd": {
+        "title": "Урысейм и лъэпкъхэр. Адыгэхэр — гъэлъэгъуэныгъэ",
+        "place": "Къэрал Тхыдэ музей, Москва",
+        "type": "Гъэлъэгъуэныгъэ",
+        "description": "Адыгэ археологиер, блэкӏа зэманым и гъуазджэмрэ ӏэщӏагъэхэмрэ, нобэрей адыгэ ӏэпщӏэлъапщӏэхэм я лэжьыгъэхэр зэхэту; и курыкупсэр цейрэ Адыгэ Хабзэмрэщ. Адыгэ Республикэм и Лъэпкъ музейм и гъусэу ягъэхьэзыращ."
+      },
+      "ady": {
+        "title": "Урысыем илъэпкъхэр. Адыгэхэр — къэгъэлъэгъон",
+        "place": "Къэралыгъо Тарихъ музей, Москва",
+        "type": "Къэгъэлъэгъон",
+        "description": "Адыгэ археологиер, блэкӀыгъэ лъэхъэнэхэм яискусствэ ыкӀи ясэнэхьатхэр, непэрэ адыгэ ӀэпэӀасэхэм яӀофшӀагъэхэр зэхэтэу; игупчэ цыемрэ Адыгэ Хабзэмрэ ит. Адыгэ Республикэм и Лъэпкъ музей игъусэу агъэхьазырыгъ."
+      }
+    }
   },
   {
     "title": "Istanbul Circassian Gathering",
@@ -17,7 +55,45 @@
     "type": "Festival",
     "lang": "TR",
     "url": "https://jinepsgazetesi.com/2026/11/istanbul-cerkes-bulusmasi/",
-    "description": "Two-day free festival hosted by İBB Kültür with the Istanbul Caucasian and Abkhaz cultural associations: talks on Xabze, Circassian publishing, cuisine, music and dance; screenings including “1864: Büyük Sürgün ve Soykırım”; concerts, dance groups, workshops and a book fair with some 25 publishers."
+    "description": "Two-day free festival hosted by İBB Kültür with the Istanbul Caucasian and Abkhaz cultural associations: talks on Xabze, Circassian publishing, cuisine, music and dance; screenings including “1864: Büyük Sürgün ve Soykırım”; concerts, dance groups, workshops and a book fair with some 25 publishers.",
+    "editions": {
+      "tr": {
+        "title": "İstanbul Çerkes Buluşması",
+        "place": "Müze Gazhane, Kadıköy, İstanbul",
+        "type": "Festival",
+        "description": "İBB Kültür'ün İstanbul'daki Kafkas ve Abhaz kültür dernekleriyle düzenlediği iki günlük ücretsiz festival: Xabze, Çerkes yayıncılığı, mutfak, müzik ve dans üzerine söyleşiler; “1864: Büyük Sürgün ve Soykırım” dahil film gösterimleri; konserler, dans grupları, atölyeler ve yaklaşık 25 yayınevinin katıldığı kitap fuarı."
+      },
+      "ru": {
+        "title": "Стамбульская черкесская встреча",
+        "place": "Müze Gazhane, Кадыкёй, Стамбул",
+        "type": "Фестиваль",
+        "description": "Двухдневный бесплатный фестиваль İBB Kültür вместе со стамбульскими кавказскими и абхазскими культурными обществами: беседы о Хабзэ, черкесском книгоиздании, кухне, музыке и танце; показы фильмов, в том числе «1864: Büyük Sürgün ve Soykırım»; концерты, танцевальные ансамбли, мастер-классы и книжная ярмарка около 25 издательств."
+      },
+      "de": {
+        "title": "Istanbuler Tscherkessisches Treffen",
+        "place": "Müze Gazhane, Kadıköy, Istanbul",
+        "type": "Festival",
+        "description": "Zweitägiges kostenloses Festival von İBB Kültür mit den kaukasischen und abchasischen Kulturvereinen Istanbuls: Gespräche über Xabze, tscherkessisches Verlagswesen, Küche, Musik und Tanz; Filmvorführungen, darunter „1864: Büyük Sürgün ve Soykırım“; Konzerte, Tanzgruppen, Workshops und eine Buchmesse mit rund 25 Verlagen."
+      },
+      "ar": {
+        "title": "ملتقى الشركس في إسطنبول",
+        "place": "متحف غازهانه، قاضي كوي، إسطنبول",
+        "type": "مهرجان",
+        "description": "مهرجان مجاني لمدة يومين نظّمته İBB Kültür مع الجمعيات الثقافية القوقازية والأبخازية في إسطنبول: ندوات عن الخابزه والنشر الشركسي والمطبخ والموسيقى والرقص، وعروض أفلام منها «1864: Büyük Sürgün ve Soykırım»، وحفلات وفرق رقص وورش عمل ومعرض كتاب بمشاركة نحو 25 دار نشر."
+      },
+      "kbd": {
+        "title": "Истамбыл адыгэ зэхуэзэ",
+        "place": "Müze Gazhane, Кадыкёй, Истамбыл",
+        "type": "Фестиваль",
+        "description": "İBB Kültür-мрэ Истамбыл и Кавказ, абхъаз щэнхабзэ зэгухьэныгъэхэмрэ ягъэхьэзыра махуитӏ фестиваль пщӏэншэ: Хабзэм, адыгэ тхылъ тедзэным, шхыныгъуэхэм, уэрэдым, къафэм теухуа псэлъэныгъэхэр; «1864: Büyük Sürgün ve Soykırım» фильмыр хэту кинохэр; концертхэр, къафэ гупхэр, мастер-классхэр, тедзапӏэ 25 хуэдиз хэта тхылъ ярмаркэ."
+      },
+      "ady": {
+        "title": "Истамбул адыгэ зэӀукӀ",
+        "place": "Müze Gazhane, Кадыкёй, Истамбул",
+        "type": "Фестиваль",
+        "description": "İBB Kültür-мрэ Истамбул иКавказ ыкӀи иабхъаз шэнхабзэ зэхахьэхэмрэ зэхащэгъэ мэфитӀу фестиваль уасэ хэмылъэу: Хабзэм, адыгэ тхылъ къыдэгъэкӀыным, шхыныгъохэм, орэдым, къэшъом афэгъэхьыгъэ гущыӀэгъухэр; «1864: Büyük Sürgün ve Soykırım» фильмыр зыхэт кинохэр; концертхэр, къэшъокӀо купхэр, мастер-классхэр, тедзапӀэ 25 фэдиз зыхэлэжьэгъэ тхылъ ярмаркэ."
+      }
+    }
   },
   {
     "title": "Circassian March in Berlin for the Right of Return",
@@ -26,6 +102,44 @@
     "type": "Rally",
     "lang": "EN",
     "url": "https://www.eng.kavkaz-uzel.eu/articles/79694",
-    "description": "Several dozen Circassians, many in traditional dress, marched through central Berlin with Circassian flags and delivered a demand at the Russian embassy for recognition of their right to return to the historic homeland."
+    "description": "Several dozen Circassians, many in traditional dress, marched through central Berlin with Circassian flags and delivered a demand at the Russian embassy for recognition of their right to return to the historic homeland.",
+    "editions": {
+      "tr": {
+        "title": "Berlin'de Geri Dönüş Hakkı İçin Çerkes Yürüyüşü",
+        "place": "Berlin",
+        "type": "Miting",
+        "description": "Çoğu geleneksel kıyafetli onlarca Çerkes, Çerkes bayraklarıyla Berlin'in merkezinde yürüdü ve Rusya Büyükelçiliği'ne, tarihi anavatana dönüş haklarının tanınması talebini iletti."
+      },
+      "ru": {
+        "title": "Черкесский марш в Берлине за право на возвращение",
+        "place": "Берлин",
+        "type": "Митинг",
+        "description": "Несколько десятков черкесов, многие в национальной одежде, прошли по центру Берлина с черкесскими флагами и передали в посольство России требование признать их право на возвращение на историческую родину."
+      },
+      "de": {
+        "title": "Tscherkessischer Marsch in Berlin für das Recht auf Rückkehr",
+        "place": "Berlin",
+        "type": "Kundgebung",
+        "description": "Mehrere Dutzend Tscherkessen, viele in traditioneller Kleidung, zogen mit tscherkessischen Fahnen durch die Berliner Innenstadt und übergaben an der russischen Botschaft die Forderung, ihr Recht auf Rückkehr in die historische Heimat anzuerkennen."
+      },
+      "ar": {
+        "title": "مسيرة شركسية في برلين من أجل حق العودة",
+        "place": "برلين",
+        "type": "مسيرة",
+        "description": "سار عشرات الشركس، كثيرون منهم بالزي التقليدي، في وسط برلين حاملين الأعلام الشركسية، وسلّموا السفارة الروسية مطالبةً بالاعتراف بحقهم في العودة إلى الوطن التاريخي."
+      },
+      "kbd": {
+        "title": "Берлин щекӏуэкӏа адыгэ марш — хэкум къэгъэзэжыным и хуитыныгъэм папщӏэ",
+        "place": "Берлин",
+        "type": "Митинг",
+        "description": "Адыгэ пщӏы бжыгъэхэр, нэхъыбэр адыгэ фащэкӏэ хуэпауэ, адыгэ ныпхэр яӏыгъыу Берлин и курыкупсэм щызекӏуащ, Урысейм и посольствэм тхыдэ хэкум къагъэзэжыным и хуитыныгъэр къалъытэну лъэӏу тхылъ ирагъэхьащ."
+      },
+      "ady": {
+        "title": "Берлин щыкӀогъэ адыгэ марш — хэкум гъэзэжьыным ифитыныгъэ фэшӀ",
+        "place": "Берлин",
+        "type": "Митинг",
+        "description": "Адыгэ пшӀы пчъагъэхэр, анахьыбэр адыгэ шъуашэм хэтхэу, адыгэ быракъхэр аӀыгъэу Берлин игупчэ щызекӀуагъэх, Урысыем ипосольствэ тарихъ хэкум агъэзэжьыным ифитыныгъэ алъытэнэу лъэӀу тхылъ раӀэкӀагъэхьагъ."
+      }
+    }
   }
 ]
