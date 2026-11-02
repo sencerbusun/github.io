@@ -960,10 +960,10 @@
           <span class="doc-open" data-i18n="${openKey}">${tr(lang, openKey)}</span>
         </a>${!external && /\.html?$/i.test(d.url) ? `<a class="doc-reader" href="${escapeHtml(d.url)}?view=reader">Aa · <span data-i18n="lib_reader">${tr(lang, 'lib_reader')}</span></a>` : ''}${original}</li>`;
     }
-    let LIB_DOCS = null;   // loaded once, re-rendered whenever the language changes
+    var LIB_DOCS = null;   // loaded once, re-rendered whenever the language changes (var: setLang may run before this line)
     function renderLibrary() {
       const list = document.getElementById('doc-list');
-      if (!list || LIB_DOCS === null) return;
+      if (!list || !Array.isArray(LIB_DOCS)) return;
       const lang = currentLang();
       if (!LIB_DOCS.length) {
         list.innerHTML = `<li class="doc-empty" data-i18n="lib_empty">${tr(lang, 'lib_empty')}</li>`;
