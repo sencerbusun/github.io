@@ -65,6 +65,26 @@
         "access": "buy",
         "url": "https://www.koyusiyahkitap.com/cerkes-soykirimi.html",
         "description": "Rutgers University Press'in 2013'te yayımladığı The Circassian Genocide'ın Türkçe çevirisi. Rus–Çerkes Savaşı'nı, 1821–22 ve 1863–64'teki soykırım harekâtlarını, daha önce kullanılmamış arşiv belgelerine dayanarak anlatıyor; sürgün edilen Çerkeslerin diasporadaki beş kuşaklık var olma mücadelesini ve 2014 Soçi Kış Olimpiyatları etrafındaki tartışmaları ele alıyor. Yayınevinden satın alınabilir."
+      },
+      "ru": {
+        "description": "Монография издательства Rutgers University Press о Русско-Черкесской войне, геноцидных кампаниях 1821–1822 и 1863–1864 годов и пяти поколениях диаспоры вплоть до Олимпиады в Сочи. Доступна на Project MUSE через библиотеку или для покупки.",
+        "type": "Книга"
+      },
+      "de": {
+        "description": "Monografie bei Rutgers University Press über den Russisch-Tscherkessischen Krieg, die Völkermordkampagnen von 1821–22 und 1863–64 und fünf Generationen Diaspora bis zu den Olympischen Spielen in Sotschi. Über Project MUSE mit Bibliothekszugang lesbar oder käuflich.",
+        "type": "Buch"
+      },
+      "ar": {
+        "description": "دراسة صادرة عن مطبعة جامعة روتجرز حول الحرب الروسية الشركسية وحملتي الإبادة في 1821–1822 و1863–1864 وخمسة أجيال من الشتات حتى أولمبياد سوتشي. متاحة عبر Project MUSE بوصول مكتبي أو للشراء.",
+        "type": "كتاب"
+      },
+      "kbd": {
+        "description": "Rutgers University Press тедзапӏэм къыдигъэкӏа монографиещ: Урыс-адыгэ зауэр, 1821–1822 гъэхэмрэ 1863–1864 гъэхэмрэ екӏуэкӏа геноцид зекӏуэхэр, диаспорэм и лъэужитху Сочи Олимпиадэм нэс. Project MUSE-м библиотекэкӏэ щеджэ е къыщащэху хъунущ.",
+        "type": "Тхылъ"
+      },
+      "ady": {
+        "description": "Rutgers University Press къыдигъэкӀыгъэ монографие: Урыс-адыгэ заор, 1821–1822 ыкӀи 1863–1864 илъэсхэм рекӀокӀыгъэ геноцид зекӀохэр, диаспорэм илъэуж тфы Сочи Олимпиадэм нэс. Project MUSE-м библиотекэкӀэ щеджэн е къыщэпщэфын плъэкӀыщт.",
+        "type": "Тхылъ"
       }
     }
   },
@@ -77,7 +97,33 @@
     "lang": "EN",
     "access": "restricted",
     "url": "https://www.berghahnbooks.com/title/9781571819352",
-    "description": "Chapter 7 of The Massacre in History, edited by Mark Levene and Penny Roberts (Berghahn Books, War and Genocide vol. 1). Examines the massacres and deportations of the 1860s and asks whether they amount to genocide. Available from the publisher."
+    "description": "Chapter 7 of The Massacre in History, edited by Mark Levene and Penny Roberts (Berghahn Books, War and Genocide vol. 1). Examines the massacres and deportations of the 1860s and asks whether they amount to genocide. Available from the publisher.",
+    "editions": {
+      "tr": {
+        "description": "Mark Levene ve Penny Roberts'ın derlediği The Massacre in History (Berghahn Books, War and Genocide dizisi, 1. cilt) kitabının 7. bölümü. 1860'lardaki katliamları ve sürgünleri inceliyor ve bunların soykırım sayılıp sayılmayacağını soruyor. Yayınevinden temin edilebilir.",
+        "type": "Kitap bölümü"
+      },
+      "ru": {
+        "description": "Глава 7 сборника The Massacre in History под редакцией Марка Левина и Пенни Робертс (Berghahn Books, серия War and Genocide, т. 1). Рассматривает массовые убийства и депортации 1860-х годов и ставит вопрос, являются ли они геноцидом. Доступна у издателя.",
+        "type": "Глава в книге"
+      },
+      "de": {
+        "description": "Kapitel 7 des Sammelbands The Massacre in History, hrsg. von Mark Levene und Penny Roberts (Berghahn Books, Reihe War and Genocide, Bd. 1). Untersucht die Massaker und Deportationen der 1860er-Jahre und fragt, ob sie einen Völkermord darstellen. Beim Verlag erhältlich.",
+        "type": "Buchkapitel"
+      },
+      "ar": {
+        "description": "الفصل السابع من كتاب The Massacre in History بتحرير مارك ليفين وبيني روبرتس (دار Berghahn Books، سلسلة War and Genocide، المجلد الأول). يدرس مجازر ستينيات القرن التاسع عشر وعمليات التهجير ويتساءل عمّا إذا كانت ترقى إلى الإبادة الجماعية. متاح لدى الناشر.",
+        "type": "فصل في كتاب"
+      },
+      "kbd": {
+        "description": "Марк Левинрэ Пенни Робертсрэ зэхагъэува The Massacre in History тхылъым (Berghahn Books) и ебланэ Ӏыхьэ. 1860 гъэхэм екӏуэкӏа укӏыгъэхэмрэ ирахуэкӏыгъэхэмрэ зэпеплъыхь, ахэр геноциду плъытэ хъуну пӏэрэ жиӏэу упщӏэ къегъэув. Тедзапӏэм къыщащэху хъунущ.",
+        "type": "Тхылъым щыщ Ӏыхьэ"
+      },
+      "ady": {
+        "description": "Марк Левинрэ Пенни Робертсрэ зэхагъэуцогъэ The Massacre in History тхылъым (Berghahn Books) иябланэрэ Ӏахь. 1860-рэ илъэсхэм рекӀокӀыгъэ укӀыгъэхэр ыкӀи рафыжьыгъэхэр зэхефы, ахэр геноцидэу плъытэн плъэкӀыщта упчӀэр къеӀэты. ТедзапӀэм къыщыпщэфын плъэкӀыщт.",
+        "type": "Тхылъым щыщ Ӏахь"
+      }
+    }
   },
   {
     "category": "theses",
@@ -88,7 +134,33 @@
     "lang": "EN",
     "access": "open",
     "url": "https://purl.stanford.edu/cy920sj2617",
-    "description": "How the Ottoman state resettled about a million North Caucasian refugees in the Balkans, Anatolia and the Levant, based on archives in Turkey, Jordan, Bulgaria, Russia, Georgia and the UK. Free to download (CC BY-NC-ND) from the Stanford Digital Repository."
+    "description": "How the Ottoman state resettled about a million North Caucasian refugees in the Balkans, Anatolia and the Levant, based on archives in Turkey, Jordan, Bulgaria, Russia, Georgia and the UK. Free to download (CC BY-NC-ND) from the Stanford Digital Repository.",
+    "editions": {
+      "tr": {
+        "description": "Osmanlı devletinin yaklaşık bir milyon Kuzey Kafkasyalı mülteciyi Balkanlar, Anadolu ve Levant'ta nasıl iskân ettiği; Türkiye, Ürdün, Bulgaristan, Rusya, Gürcistan ve Birleşik Krallık arşivlerine dayanıyor. Stanford Dijital Deposu'ndan ücretsiz indirilebilir (CC BY-NC-ND).",
+        "type": "Doktora tezi"
+      },
+      "ru": {
+        "description": "Как Османское государство расселило около миллиона беженцев с Северного Кавказа на Балканах, в Анатолии и Леванте — на основе архивов Турции, Иордании, Болгарии, России, Грузии и Великобритании. Свободно доступна в цифровом репозитории Стэнфорда (CC BY-NC-ND).",
+        "type": "Диссертация (PhD)"
+      },
+      "de": {
+        "description": "Wie der osmanische Staat rund eine Million Geflüchtete aus dem Nordkaukasus auf dem Balkan, in Anatolien und in der Levante ansiedelte – auf Grundlage von Archiven in der Türkei, Jordanien, Bulgarien, Russland, Georgien und Großbritannien. Frei herunterladbar (CC BY-NC-ND) im Stanford Digital Repository.",
+        "type": "Dissertation"
+      },
+      "ar": {
+        "description": "كيف وطّنت الدولة العثمانية نحو مليون لاجئ من شمال القوقاز في البلقان والأناضول وبلاد الشام، استنادًا إلى أرشيفات في تركيا والأردن وبلغاريا وروسيا وجورجيا والمملكة المتحدة. متاحة للتنزيل مجانًا (CC BY-NC-ND) من المستودع الرقمي لجامعة ستانفورد.",
+        "type": "أطروحة دكتوراه"
+      },
+      "kbd": {
+        "description": "Уэсмэн къэралыгъуэм Ишхъэрэ Кавказым къикӏа мелуан хуэдиз щӏыпӏэншэхэр Балканхэм, Анатолэм, Левантым зэрыщитӏысхьар — Тыркум, Иорданием, Болгарием, Урысейм, Грузием, Инджылызым я архивхэм тету. Стэнфорд и цифрэ хъумапӏэм пщӏэншэу къыщыпх хъунущ (CC BY-NC-ND).",
+        "type": "Доктор диссертацэ"
+      },
+      "ady": {
+        "description": "Усманыкъо къэралыгъом Темыр Кавказым къикӀыгъэ мелуан фэдиз хэкужъ зыбгынагъэхэр Балканхэм, Анатолием, Левантым зэрэщигъэтӀысхьагъэхэр — Тыркуем, Иорданием, Болгарием, Урысыем, Грузием, Британием яархивхэм атетэу. Стэнфорд ицифрэ хъумапӀэ уасэ хэмылъэу къыщыпхын плъэкӀыщт (CC BY-NC-ND).",
+        "type": "Доктор диссертацие"
+      }
+    }
   },
   {
     "category": "theses",
@@ -99,7 +171,33 @@
     "lang": "EN",
     "access": "restricted",
     "url": "https://test01.ku.dk/:obvius/pureproxy/3974268/da/publications/the-circassian-revival-a-quest-for-recognition-mediated-transnati",
-    "description": "Transnational Circassian mobilisation and memorialisation, and the campaign to have the 1864 exile recognised as genocide. The thesis is unpublished: request a copy through the University of Copenhagen library or from the author."
+    "description": "Transnational Circassian mobilisation and memorialisation, and the campaign to have the 1864 exile recognised as genocide. The thesis is unpublished: request a copy through the University of Copenhagen library or from the author.",
+    "editions": {
+      "tr": {
+        "description": "Çerkeslerin ulusötesi örgütlenmesi ve anma pratikleri ile 1864 sürgününün soykırım olarak tanınması mücadelesi. Tez yayımlanmamıştır: bir kopyasını Kopenhag Üniversitesi kütüphanesinden ya da yazardan isteyebilirsiniz.",
+        "type": "Doktora tezi"
+      },
+      "ru": {
+        "description": "Транснациональная мобилизация и мемориализация черкесов и кампания за признание изгнания 1864 года геноцидом. Диссертация не опубликована: копию можно запросить через библиотеку Копенгагенского университета или у автора.",
+        "type": "Диссертация (PhD)"
+      },
+      "de": {
+        "description": "Transnationale Mobilisierung und Erinnerungskultur der Tscherkessen sowie die Kampagne, das Exil von 1864 als Völkermord anerkennen zu lassen. Unveröffentlicht: eine Kopie kann über die Bibliothek der Universität Kopenhagen oder beim Autor angefragt werden.",
+        "type": "Dissertation"
+      },
+      "ar": {
+        "description": "التعبئة الشركسية العابرة للحدود وإحياء الذاكرة، وحملة الاعتراف بتهجير عام 1864 إبادةً جماعية. الأطروحة غير منشورة: يمكن طلب نسخة عبر مكتبة جامعة كوبنهاغن أو من المؤلف.",
+        "type": "أطروحة دكتوراه"
+      },
+      "kbd": {
+        "description": "Адыгэхэр къэрал зэмылӏэужьыгъуэхэм зэрыщызэгухьэр, гукъэкӏыжыр, 1864 гъэм хэкум зэрырахуар геноциду къалъытэным папщӏэ бэнэныгъэр. Диссертацэр къыдагъэкӏакъым: и копиер Копенгаген университетым и библиотекэм е авторым лъыщӏэ хъунущ.",
+        "type": "Доктор диссертацэ"
+      },
+      "ady": {
+        "description": "Адыгэхэр къэралыгъо зэфэшъхьафхэм зэращызэхахьэрэр, агу къэкӀыжьыныр, 1864-рэ илъэсым хэкум зэрарафыжьыгъэр геноцидэу алъытэным пае бэнэныгъэр. Диссертацием къыдагъэкӀыгъэп: икопие Копенгаген университетым ибиблиотекэ е авторым епщэн плъэкӀыщт.",
+        "type": "Доктор диссертацие"
+      }
+    }
   },
   {
     "category": "theses",
@@ -110,7 +208,33 @@
     "lang": "EN",
     "access": "open",
     "url": "https://eprints.soas.ac.uk/24388/",
-    "description": "The Circassian diaspora in Anatolia from the last Ottoman years to the early Turkish Republic. Free to download (CC BY-NC-ND) from the SOAS research repository."
+    "description": "The Circassian diaspora in Anatolia from the last Ottoman years to the early Turkish Republic. Free to download (CC BY-NC-ND) from the SOAS research repository.",
+    "editions": {
+      "tr": {
+        "description": "Osmanlı'nın son yıllarından erken Cumhuriyet dönemine Anadolu'daki Çerkes diasporası. SOAS araştırma deposundan ücretsiz indirilebilir (CC BY-NC-ND).",
+        "type": "Doktora tezi"
+      },
+      "ru": {
+        "description": "Черкесская диаспора в Анатолии от последних лет Османской империи до ранней Турецкой Республики. Свободно доступна в репозитории SOAS (CC BY-NC-ND).",
+        "type": "Диссертация (PhD)"
+      },
+      "de": {
+        "description": "Die tscherkessische Diaspora in Anatolien von den letzten osmanischen Jahren bis zur frühen Türkischen Republik. Frei herunterladbar (CC BY-NC-ND) im Repositorium der SOAS.",
+        "type": "Dissertation"
+      },
+      "ar": {
+        "description": "الشتات الشركسي في الأناضول من السنوات العثمانية الأخيرة حتى بدايات الجمهورية التركية. متاحة للتنزيل مجانًا (CC BY-NC-ND) من مستودع SOAS.",
+        "type": "أطروحة دكتوراه"
+      },
+      "kbd": {
+        "description": "Уэсмэн къэралыгъуэм и иужьрей илъэсхэм щегъэжьауэ Тырку Республикэм и япэ илъэсхэм нэс Анатолэм щыӏа адыгэ диаспорэр. SOAS и хъумапӏэм пщӏэншэу къыщыпх хъунущ (CC BY-NC-ND).",
+        "type": "Доктор диссертацэ"
+      },
+      "ady": {
+        "description": "Усманыкъо къэралыгъом иилъэс кӀэужхэм къыщегъэжьагъэу Тырку Республикэм иапэрэ илъэсхэм нэс Анатолием щыӀэгъэ адыгэ диаспорэр. SOAS ихъумапӀэ уасэ хэмылъэу къыщыпхын плъэкӀыщт (CC BY-NC-ND).",
+        "type": "Доктор диссертацие"
+      }
+    }
   },
   {
     "category": "theses",
@@ -122,7 +246,33 @@
     "access": "open",
     "pdf": true,
     "url": "https://aheku.net/f1jok/files/3948/1-isla_thesis.pdf",
-    "description": "The arrival of Circassian refugees in Ottoman Black Sea ports and the Ottoman response, based on the reports of British consuls, journalists and other eyewitnesses."
+    "description": "The arrival of Circassian refugees in Ottoman Black Sea ports and the Ottoman response, based on the reports of British consuls, journalists and other eyewitnesses.",
+    "editions": {
+      "tr": {
+        "description": "Çerkes mültecilerin Osmanlı Karadeniz limanlarına varışı ve Osmanlı'nın tepkisi; İngiliz konsoloslarının, gazetecilerin ve diğer görgü tanıklarının raporlarına dayanıyor.",
+        "type": "Yüksek lisans tezi"
+      },
+      "ru": {
+        "description": "Прибытие черкесских беженцев в османские черноморские порты и реакция Османской империи — по донесениям британских консулов, журналистов и других очевидцев.",
+        "type": "Магистерская диссертация"
+      },
+      "de": {
+        "description": "Die Ankunft tscherkessischer Geflüchteter in den osmanischen Schwarzmeerhäfen und die Reaktion des Osmanischen Reiches, auf Grundlage von Berichten britischer Konsuln, Journalisten und anderer Augenzeugen.",
+        "type": "Masterarbeit"
+      },
+      "ar": {
+        "description": "وصول اللاجئين الشركس إلى الموانئ العثمانية على البحر الأسود واستجابة الدولة العثمانية، استنادًا إلى تقارير القناصل البريطانيين والصحفيين وشهود عيان آخرين.",
+        "type": "رسالة ماجستير"
+      },
+      "kbd": {
+        "description": "Адыгэ щӏыпӏэншэхэр Уэсмэн къэралыгъуэм и Хы Фӏыцӏэ Ӏуфэ къалэхэм зэрынэсар, Уэсмэн къэралыгъуэр абы зэрыхущытар — инджылыз консулхэм, журналистхэм, нэгъуэщӏ щыхьэтхэм я хъыбархэм тету.",
+        "type": "Магистр диссертацэ"
+      },
+      "ady": {
+        "description": "Адыгэ хэкужъ зыбгынагъэхэр Усманыкъо къэралыгъом иХы ШӀуцӀэ Ӏушъо къалэхэм зэрэнэсыгъэхэр ыкӀи Усманыкъо къэралыгъор ащ зэрэфыщытыгъэр — британ консулхэм, журналистхэм, нэмыкӀ шыхьатхэм ятхыгъэхэм атетэу.",
+        "type": "Магистр диссертацие"
+      }
+    }
   },
   {
     "category": "articles",
@@ -134,7 +284,33 @@
     "access": "open",
     "pdf": true,
     "url": "https://dergipark.org.tr/tr/download/article-file/4742902",
-    "description": "How Georgia (2011) and Ukraine have recognised the Circassian genocide, and what these recognitions mean for the politics of memory and for stateless peoples resisting Russian rule."
+    "description": "How Georgia (2011) and Ukraine have recognised the Circassian genocide, and what these recognitions mean for the politics of memory and for stateless peoples resisting Russian rule.",
+    "editions": {
+      "tr": {
+        "description": "Gürcistan'ın (2011) ve Ukrayna'nın Çerkes soykırımını nasıl tanıdığı ve bu tanımaların bellek siyaseti ile Rus egemenliğine direnen devletsiz halklar için ne anlama geldiği.",
+        "type": "Makale"
+      },
+      "ru": {
+        "description": "Как Грузия (2011) и Украина признали геноцид черкесов и что эти признания значат для политики памяти и для народов без государства, противостоящих российскому господству.",
+        "type": "Научная статья"
+      },
+      "de": {
+        "description": "Wie Georgien (2011) und die Ukraine den Völkermord an den Tscherkessen anerkannt haben und was diese Anerkennungen für die Erinnerungspolitik und für staatenlose Völker im Widerstand gegen russische Herrschaft bedeuten.",
+        "type": "Fachartikel"
+      },
+      "ar": {
+        "description": "كيف اعترفت جورجيا (2011) وأوكرانيا بالإبادة الجماعية للشركس، وما الذي تعنيه هذه الاعترافات لسياسات الذاكرة وللشعوب عديمة الدولة التي تقاوم الهيمنة الروسية.",
+        "type": "مقالة علمية"
+      },
+      "kbd": {
+        "description": "Грузиемрэ (2011) Украинэмрэ адыгэ геноцидыр зэрыкъалъытар, а къэлъытэныгъэхэм гукъэкӏыж политикэмрэ Урысейм и унафэм пэщӏэт къэралыгъуэншэ лъэпкъхэмрэ папщӏэ мыхьэнэуэ яӏэр.",
+        "type": "Щӏэныгъэ тхыгъэ"
+      },
+      "ady": {
+        "description": "Грузиемрэ (2011) Украинэмрэ адыгэ геноцидыр зэралъытагъэр ыкӀи ащ гукъэкӀыжь политикэм, Урысыем ихабзэ пэуцужьырэ къэралыгъо зимыӀэ лъэпкъхэм апае мэхьанэу иӀэр.",
+        "type": "ШӀэныгъэ тхыгъэ"
+      }
+    }
   },
   {
     "category": "articles",
@@ -146,7 +322,33 @@
     "access": "open",
     "pdf": true,
     "url": "https://journal-vniispk.ru/2542-212X/article/download/364860/338238",
-    "description": "Based on British diplomatic correspondence: how the Foreign Office handled the mass exodus of 1863–64, and why London declined to act. Article in Russian with an English abstract."
+    "description": "Based on British diplomatic correspondence: how the Foreign Office handled the mass exodus of 1863–64, and why London declined to act. Article in Russian with an English abstract.",
+    "editions": {
+      "tr": {
+        "description": "İngiliz diplomatik yazışmalarına dayanarak Dışişleri Bakanlığı'nın (Foreign Office) 1863–1864 toplu göçünü nasıl ele aldığını ve Londra'nın neden harekete geçmediğini inceliyor. Rusça makale, İngilizce özetli.",
+        "type": "Makale"
+      },
+      "ru": {
+        "description": "На основе британской дипломатической переписки: как Форин-офис реагировал на массовый исход черкесов в 1863–1864 годах и почему Лондон в итоге отказался действовать. Статья на русском языке с английской аннотацией.",
+        "type": "Научная статья"
+      },
+      "de": {
+        "description": "Auf Grundlage britischer diplomatischer Korrespondenz: wie das Foreign Office mit dem Massenexodus von 1863–64 umging und warum London letztlich nicht handelte. Russischsprachiger Artikel mit englischer Zusammenfassung.",
+        "type": "Fachartikel"
+      },
+      "ar": {
+        "description": "استنادًا إلى المراسلات الدبلوماسية البريطانية: كيف تعاملت وزارة الخارجية البريطانية مع النزوح الجماعي في 1863–1864 ولماذا امتنعت لندن في النهاية عن التحرك. مقال بالروسية مع ملخص بالإنجليزية.",
+        "type": "مقالة علمية"
+      },
+      "kbd": {
+        "description": "Инджылыз дипломатхэм я тхыгъэхэм тету: Инджылызым и Хамэ Ӏуэхухэмкӏэ министерствэр 1863–1864 гъэхэм екӏуэкӏа хэкуирахуэм зэрыхущытар, Лондон Ӏуэху зэрызимыхуар. Урысыбзэкӏэ тхащ, инджылызыбзэкӏэ кӏэщӏу иӏэщ.",
+        "type": "Щӏэныгъэ тхыгъэ"
+      },
+      "ady": {
+        "description": "Британ дипломатхэм ятхыгъэхэм атетэу: Британием икӀыб ӀофхэмкӀэ министерствэр 1863–1864-рэ илъэсхэм хэкум рафыжьыгъэхэм зэрафыщытыгъэр ыкӀи Лондон Ӏоф зыкӀимышӀагъэр. УрысыбзэкӀэ тхыгъэ, инджылызыбзэкӀэ кӀэкӀэу иӀ.",
+        "type": "ШӀэныгъэ тхыгъэ"
+      }
+    }
   },
   {
     "category": "articles",
@@ -158,7 +360,33 @@
     "access": "open",
     "pdf": true,
     "url": "https://dergipark.org.tr/tr/download/article-file/114262",
-    "description": "A detailed reconstruction from Foreign Office files (FO 97/424, FO 881) of the expulsion, the refugee camps at Trabzon and Samsun, mortality at sea and the settlement of survivors across the Ottoman Empire."
+    "description": "A detailed reconstruction from Foreign Office files (FO 97/424, FO 881) of the expulsion, the refugee camps at Trabzon and Samsun, mortality at sea and the settlement of survivors across the Ottoman Empire.",
+    "editions": {
+      "tr": {
+        "description": "İngiliz Dışişleri belgelerine (FO 97/424, FO 881) dayanarak sürgünün, Trabzon ve Samsun'daki mülteci kamplarının, denizdeki ölümlerin ve hayatta kalanların Osmanlı topraklarına iskânının ayrıntılı bir yeniden kurgusu.",
+        "type": "Makale"
+      },
+      "ru": {
+        "description": "Подробная реконструкция по документам Форин-офиса (FO 97/424, FO 881): изгнание, лагеря беженцев в Трабзоне и Самсуне, гибель людей в море и расселение выживших по Османской империи.",
+        "type": "Научная статья"
+      },
+      "de": {
+        "description": "Detaillierte Rekonstruktion anhand von Akten des Foreign Office (FO 97/424, FO 881): die Vertreibung, die Flüchtlingslager in Trabzon und Samsun, das Sterben auf See und die Ansiedlung der Überlebenden im Osmanischen Reich.",
+        "type": "Fachartikel"
+      },
+      "ar": {
+        "description": "إعادة بناء مفصّلة استنادًا إلى ملفات وزارة الخارجية البريطانية (FO 97/424 وFO 881): التهجير، ومخيمات اللاجئين في طرابزون وسامسون، والوفيات في البحر، وتوطين الناجين في أنحاء الدولة العثمانية.",
+        "type": "مقالة علمية"
+      },
+      "kbd": {
+        "description": "Инджылызым и Хамэ Ӏуэхухэмкӏэ министерствэм и тхылъхэм (FO 97/424, FO 881) тету: хэкуирахуэр, Трапезунтрэ Самсунрэ щыӏа щӏыпӏэншэ лагерхэр, хым щыкӏуэдахэр, псэууэ къэнахэр Уэсмэн къэралыгъуэм зэрыщитӏысхьар.",
+        "type": "Щӏэныгъэ тхыгъэ"
+      },
+      "ady": {
+        "description": "Британием икӀыб ӀофхэмкӀэ министерствэ идокументхэм (FO 97/424, FO 881) атетэу: хэкум рафыжьыгъэхэр, Трапезунт ыкӀи Самсун ащыӀэгъэ лагерьхэр, хым щыхэкӀодагъэхэр, псаоу къэнагъэхэр Усманыкъо къэралыгъом зэрэщагъэтӀысхьагъэхэр.",
+        "type": "ШӀэныгъэ тхыгъэ"
+      }
+    }
   },
   {
     "category": "articles",
@@ -170,7 +398,33 @@
     "access": "open",
     "pdf": true,
     "url": "https://dergipark.org.tr/tr/download/article-file/114178",
-    "description": "The sequel to the Circassian exodus: the removal of the Prince of Abkhazia, the forced emigration of 1867 and the separation of families, as recorded by British consuls."
+    "description": "The sequel to the Circassian exodus: the removal of the Prince of Abkhazia, the forced emigration of 1867 and the separation of families, as recorded by British consuls.",
+    "editions": {
+      "tr": {
+        "description": "Çerkes sürgününün devamı: Abhazya prensinin uzaklaştırılması, 1867 zorunlu göçü ve ailelerin parçalanması; İngiliz konsoloslarının kayıtlarına göre.",
+        "type": "Makale"
+      },
+      "ru": {
+        "description": "Продолжение черкесского исхода: устранение владетеля Абхазии, вынужденная эмиграция 1867 года и разлучение семей — по донесениям британских консулов.",
+        "type": "Научная статья"
+      },
+      "de": {
+        "description": "Die Fortsetzung des tscherkessischen Exodus: die Absetzung des Fürsten von Abchasien, die erzwungene Auswanderung von 1867 und die Trennung von Familien, wie britische Konsuln sie festhielten.",
+        "type": "Fachartikel"
+      },
+      "ar": {
+        "description": "تتمّة النزوح الشركسي: إقصاء أمير أبخازيا، والهجرة القسرية عام 1867، وتفريق العائلات، كما وثّقها القناصل البريطانيون.",
+        "type": "مقالة علمية"
+      },
+      "kbd": {
+        "description": "Адыгэ хэкуирахуэм и пыщэныгъэ: Абхъаз пщым и тепщэныгъэр зэрытрахар, 1867 гъэм хэкум зэрырахуар, унагъуэхэр зэрызэпаудар — инджылыз консулхэм зэратхам тету.",
+        "type": "Щӏэныгъэ тхыгъэ"
+      },
+      "ady": {
+        "description": "Адыгэ хэкум рафыжьыгъэхэм ылъыкӀуагъэр: Абхъаз пщым ипащэныгъэ зэрэтырахыгъэр, 1867-рэ илъэсым хэкум зэрарафыжьыгъэхэр, унагъохэр зэрэзэпагъэкӀыгъэхэр — британ консулхэм зэратхыгъэм тетэу.",
+        "type": "ШӀэныгъэ тхыгъэ"
+      }
+    }
   },
   {
     "category": "articles",
@@ -182,7 +436,33 @@
     "access": "open",
     "pdf": true,
     "url": "https://commons.clarku.edu/cgi/viewcontent.cgi?article=1073&context=chgs_papers",
-    "description": "Paper from Clark University's Strassler Center for Holocaust and Genocide Studies on the politics of recognising the Circassian genocide."
+    "description": "Paper from Clark University's Strassler Center for Holocaust and Genocide Studies on the politics of recognising the Circassian genocide.",
+    "editions": {
+      "tr": {
+        "description": "Clark Üniversitesi Strassler Holokost ve Soykırım Araştırmaları Merkezi'nden, Çerkes soykırımının tanınması siyaseti üzerine bir bildiri.",
+        "type": "Bildiri"
+      },
+      "ru": {
+        "description": "Доклад Центра изучения Холокоста и геноцида им. Страсслера (Университет Кларка) о политике признания геноцида черкесов.",
+        "type": "Доклад"
+      },
+      "de": {
+        "description": "Beitrag des Strassler Center for Holocaust and Genocide Studies der Clark University zur Politik der Anerkennung des Völkermords an den Tscherkessen.",
+        "type": "Konferenzbeitrag"
+      },
+      "ar": {
+        "description": "ورقة صادرة عن مركز ستراسلر لدراسات الهولوكوست والإبادة الجماعية في جامعة كلارك حول سياسات الاعتراف بالإبادة الجماعية للشركس.",
+        "type": "ورقة مؤتمر"
+      },
+      "kbd": {
+        "description": "Кларк университетым и Холокостымрэ геноцидхэмрэ я Страсслер центрым къыбгъэдэкӏа доклад, адыгэ геноцидыр къэлъытэным и политикэм теухуауэ.",
+        "type": "Доклад"
+      },
+      "ady": {
+        "description": "Кларк университетым иХолокостымрэ геноцидхэмрэ язэгъэшӀэн иСтрасслер гупчэ къыбгъэдэкӀыгъэ доклад, адыгэ геноцидыр алъытэным иполитикэ ехьылӀагъэу.",
+        "type": "Доклад"
+      }
+    }
   },
   {
     "category": "articles",
@@ -194,7 +474,33 @@
     "access": "open",
     "pdf": true,
     "url": "https://aheku.net/f1jok/files//3947/1-colonial_atrocities.pdf",
-    "description": "Paper presented at the Circassian Day in the European Parliament, Brussels, on Russian colonial policy and ethnic cleansing in the Northwest Caucasus and Europe's share of responsibility."
+    "description": "Paper presented at the Circassian Day in the European Parliament, Brussels, on Russian colonial policy and ethnic cleansing in the Northwest Caucasus and Europe's share of responsibility.",
+    "editions": {
+      "tr": {
+        "description": "Brüksel'de Avrupa Parlamentosu'ndaki Çerkes Günü'nde sunulan bildiri: Kuzeybatı Kafkasya'daki Rus sömürge politikası ve etnik temizlik ile Avrupa'nın bundaki sorumluluk payı.",
+        "type": "Bildiri"
+      },
+      "ru": {
+        "description": "Доклад, представленный на Дне черкесов в Европейском парламенте (Брюссель), о российской колониальной политике и этнических чистках на Северо-Западном Кавказе и о доле ответственности Европы.",
+        "type": "Доклад"
+      },
+      "de": {
+        "description": "Vortrag beim Tscherkessischen Tag im Europäischen Parlament in Brüssel über die russische Kolonialpolitik und ethnische Säuberungen im Nordwestkaukasus sowie über Europas Mitverantwortung.",
+        "type": "Konferenzbeitrag"
+      },
+      "ar": {
+        "description": "ورقة قُدّمت في اليوم الشركسي بالبرلمان الأوروبي في بروكسل حول السياسة الاستعمارية الروسية والتطهير العرقي في شمال غرب القوقاز ونصيب أوروبا من المسؤولية.",
+        "type": "ورقة مؤتمر"
+      },
+      "kbd": {
+        "description": "Брюссель, Европэ Парламентым щекӏуэкӏа Адыгэ Махуэм къыщаӏа доклад: Ишхъэрэ-Къухьэпӏэ Кавказым Урысейм щригъэкӏуэкӏа колониал политикэмрэ лъэпкъ гъэкъэбзэныгъэмрэ, Европэм абы и жэуап Ӏыхьэу хэлъыр.",
+        "type": "Доклад"
+      },
+      "ady": {
+        "description": "Брюссель, Европэ Парламентым щыкӀогъэ Адыгэ Мафэм къыщаӀогъэ доклад: Темыр-КъохьапӀэ Кавказым Урысыем щызэрихьэгъэ колониальнэ политикэр ыкӀи лъэпкъ гъэкъэбзэныгъэр, Европэм ащкӀэ иджэуап Ӏахь.",
+        "type": "Доклад"
+      }
+    }
   },
   {
     "category": "books",
