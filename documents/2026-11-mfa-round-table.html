@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hand in Hand With Whom? · May21.org</title>
+  <meta name="description" content="A critique of the Russian Foreign Ministry's round table 'Through the centuries hand in hand with Russia', held on 28 October 2026 with the International Circassian Association and diaspora federations." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400;500&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --black:#0a0a0a; --off-black:#111; --charcoal:#1c1c1c; --dim:#2a2a2a; --mid:#444;
+      --muted:#888; --smoke:#bbb; --white:#f0ede8; --accent:#c8382a; --accent2:#d47c2b;
+      --line:rgba(255,255,255,0.08);
+      --font-display:'Bebas Neue',sans-serif; --font-body:'DM Sans',sans-serif; --font-mono:'DM Mono',monospace;
+      --bg:var(--black); --fg:var(--white); --soft:var(--smoke);
+    }
+    *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--bg); color:var(--fg); font-family:var(--font-body); font-weight:300; line-height:1.75; }
+    a { color:var(--accent2); }
+    img { display:block; max-width:100%; }
+
+    .top { padding:18px 24px; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap; }
+    .top a { text-decoration:none; color:var(--fg); }
+    .logo { font-family:var(--font-display); font-size:1.5rem; letter-spacing:0.06em; }
+    .logo span { color:var(--accent); }
+    .top-links { display:flex; gap:20px; font-family:var(--font-mono); font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; }
+    .top-links a { color:var(--muted); }
+    .top-links a:hover { color:var(--accent2); }
+
+    article { max-width:760px; margin:0 auto; padding:64px 24px 96px; }
+    .eyebrow { font-family:var(--font-mono); font-size:0.7rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--accent); margin-bottom:16px; }
+    h1 { font-family:var(--font-display); font-weight:400; font-size:clamp(2.6rem,8vw,4.6rem); line-height:0.95; letter-spacing:0.02em; }
+    .dek { margin-top:24px; font-size:1.15rem; color:var(--soft); border-left:2px solid var(--accent); padding-left:18px; }
+    .byline { margin-top:28px; font-family:var(--font-mono); font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); }
+    .divider { width:48px; height:2px; background:var(--accent); margin:40px 0; }
+
+    article h2 { font-family:var(--font-display); font-weight:400; font-size:clamp(1.7rem,4vw,2.3rem); letter-spacing:0.03em; line-height:1.05; margin:56px 0 16px; }
+    article p { margin-bottom:20px; font-size:1.05rem; color:var(--soft); }
+    article p strong { color:var(--fg); font-weight:500; }
+    article blockquote { margin:28px 0; padding:4px 0 4px 20px; border-left:2px solid var(--accent2); }
+    article blockquote p { color:var(--fg); font-size:1.05rem; margin-bottom:6px; }
+    article blockquote .ru { font-family:var(--font-mono); font-size:0.78rem; color:var(--muted); }
+    article ul { margin:0 0 24px 20px; color:var(--soft); }
+    article li { margin-bottom:10px; }
+
+    figure { margin:40px 0; }
+    figure img { width:100%; background:var(--charcoal); }
+    figcaption { margin-top:10px; font-family:var(--font-mono); font-size:0.7rem; letter-spacing:0.05em; color:var(--muted); line-height:1.7; }
+    figcaption a { color:var(--muted); }
+    .pair { display:grid; grid-template-columns:1fr 1fr; gap:6px; }
+    .pair img { aspect-ratio:4/3; object-fit:cover; }
+
+    .facts { background:var(--charcoal); border:1px solid var(--dim); padding:24px 26px; margin:32px 0; font-size:0.95rem; }
+    .facts h3 { font-family:var(--font-mono); font-weight:400; font-size:0.7rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--accent); margin-bottom:12px; }
+    .facts dl { display:grid; grid-template-columns:130px 1fr; gap:8px 16px; color:var(--soft); }
+    .facts dt { font-family:var(--font-mono); font-size:0.72rem; letter-spacing:0.06em; color:var(--muted); text-transform:uppercase; padding-top:3px; }
+
+    .refs { margin-top:64px; padding-top:24px; border-top:1px solid var(--line); }
+    .refs h2 { margin-top:0; }
+    .refs ol { margin-left:20px; font-size:0.9rem; color:var(--soft); }
+    .refs li { margin-bottom:10px; }
+    sup a { text-decoration:none; font-family:var(--font-mono); font-size:0.7em; }
+
+    footer { padding:32px 24px; border-top:1px solid var(--line); font-family:var(--font-mono); font-size:0.65rem; letter-spacing:0.1em; color:var(--muted); text-align:center; }
+
+    /* reader view (?view=reader): light, serif, no chrome */
+    body.reader { --bg:#f7f4ee; --fg:#1a1a1a; --soft:#2b2b2b; --muted:#6b6b6b; --charcoal:#ece7de; --dim:#d9d2c6; --line:rgba(0,0,0,0.1); }
+    body.reader article p, body.reader article li, body.reader .dek { font-family:'Source Serif 4',Georgia,serif; font-size:1.12rem; }
+    body.reader a { color:#9a2a1f; }
+
+    @media (max-width:640px) {
+      article { padding:40px 16px 72px; }
+      .pair { grid-template-columns:1fr; }
+      .facts dl { grid-template-columns:1fr; gap:2px 0; }
+      .facts dd { margin-bottom:10px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <a href="../index.html" class="logo">May21<span>.</span>org</a>
+    <nav class="top-links">
+      <a href="../index.html#library">← Library</a>
+      <a href="?view=reader" id="reader-toggle">Reader view</a>
+    </nav>
+  </header>
+
+  <article>
+    <p class="eyebrow">Critique · Memory politics</p>
+    <h1>Hand in Hand With Whom?</h1>
+    <p class="dek">On 28 October the Russian Foreign Ministry gathered officials and loyal Circassian organisations to celebrate "centuries hand in hand with Russia". What was left out of the room says more than anything said in it.</p>
+    <p class="byline">May21.org Collective · 3 November 2026</p>
+
+    <div class="divider"></div>
+
+    <!-- Event photos: save the photos from the MFA post (t.me/MID_Russia/95033) as
+         img/mfa-roundtable-1.jpg and img/mfa-roundtable-2.jpg. If a file is missing,
+         its figure hides itself. -->
+    <figure class="event-photo">
+      <img src="img/mfa-roundtable-1.jpg" alt="Participants of the round table pose for a group photo in a hall of the Russian Foreign Ministry mansion, 28 October 2026" onerror="this.closest('figure').remove()" />
+      <figcaption>Group photo of officials, diaspora delegates and guests of the round table "Through the centuries hand in hand with Russia, earning honour and glory", Foreign Ministry mansion, Moscow, 28 October 2026. Photo: Russian MFA (<a href="https://t.me/MID_Russia/95033" target="_blank" rel="noopener">official channel</a>), reproduced for critique and commentary.</figcaption>
+    </figure>
+
+    <h2>What happened</h2>
+    <p>On 28 October 2026 the Russian Foreign Ministry hosted a round table in its Moscow mansion under the title <strong>"Through the centuries hand in hand with Russia, earning honour and glory"</strong>. It was organised jointly by the ministry, Rossotrudnichestvo — the state agency for "humanitarian cooperation" abroad — and the International Circassian Association (MChA). The occasion, in the ministry's words, was the <em>Year of Unity of the Peoples of Russia</em> and the approaching "470th anniversary of Kabardino-Balkaria's entry into the Russian state".<sup><a href="#r1">1</a></sup></p>
+
+    <div class="facts">
+      <h3>Who was in the room</h3>
+      <dl>
+        <dt>Opened by</dt><dd>Mikhail Shvydkoy, the President's special representative for international cultural cooperation, reading a greeting from Foreign Minister Sergei Lavrov</dd>
+        <dt>Greeting</dt><dd>Igor Chaika, head of Rossotrudnichestvo</dd>
+        <dt>Speakers</dt><dd>Senators Alexei Pushkov and Arsen Kanokov (former head of Kabardino-Balkaria); Duma deputy S. Kovalev; S. Bedkin, deputy head of the Federal Agency for Nationalities Affairs; Kh. Sokhrokov, president of the MChA</dd>
+        <dt>Diaspora</dt><dd>The leadership of the Federation of Caucasian Associations (Turkey), the Circassian charity societies of Jordan and Syria, the "Circassia" heritage centre (Israel) and the federation of Circassian Khases of Europe (Germany)</dd>
+        <dt>Moderator</dt><dd>V. Arakcheev, director of the Russian State Archive of Ancient Acts</dd>
+      </dl>
+    </div>
+
+    <p>According to the ministry's readout, speakers stressed "the contribution of the Circassians to the history of Russia" and the need to strengthen inter-ethnic unity "through a deeper understanding of the shared past". The Circassian participants, it says, "expressed gratitude to Russia" for its care for Circassian heritage and native languages. The discussion was "open and constructive, in a spirit of trust and mutual understanding".<sup><a href="#r1">1</a></sup></p>
+
+    <h2>An anniversary invented in 1957</h2>
+    <p>The date being celebrated rests on a single event: in 1557 an embassy of Kabardian princes went to Moscow and concluded an alliance with Ivan IV, mainly against the Crimean Khanate. Kabarda was then a sovereign land with its own princes and its own foreign policy, and remained one for two more centuries. Alliances of this kind were made and broken many times, with Moscow, with Crimea and with the Ottomans.</p>
+    <p>The formula of "voluntary entry into Russia" was not written in 1557. It was fixed by Soviet historiography and staged as a state holiday in 1957 for the 400th anniversary — complete with a monument in Nalchik literally called <em>"Forever with Russia"</em>. Circassian historians have been taking that formula apart ever since, and the 2007 jubilee was openly criticised inside the republic.<sup><a href="#r5">5</a></sup> Even in Kabardino-Balkaria the "entry" of Kabarda and of Balkaria are marked on different dates, a reminder that this is an administrative calendar, not a shared memory.<sup><a href="#r6">6</a></sup> Kabarda did not "enter" Russia. It was conquered: by the line of forts pushed into its territory in the late 18th century, and by the campaigns of the 1810s and 1820s under generals such as Yermolov, which burned villages and reduced the Kabardian population to a fraction of its former size.</p>
+    <p>Choosing the archive director as moderator was fitting. The round table was not a discussion of history; it was the archive certifying the official version of it.</p>
+
+    <h2>A century of war, erased in one title</h2>
+    <p>"Through the centuries hand in hand" leaves no room for the hundred years between 1763 and 1864, when the Russian Empire waged war on the Circassians. It ended on <strong>21 May 1864</strong> at Kbaada (today's Krasnaya Polyana), with the expulsion of most of the surviving population to the Ottoman Empire. Hundreds of thousands died — in the war, in the forced marches to the Black Sea coast, in the overcrowded boats and in the refugee camps of the Ottoman shore. That is why the overwhelming majority of Circassians live outside their homeland today, and why the "diaspora" organisations at this round table exist at all. In 2011 the Parliament of Georgia recognised these events as genocide.<sup><a href="#r4">4</a></sup></p>
+    <p>Neither the ministry's readout nor Lavrov's greeting mentions the war, the expulsion, the exile or the right of return. Lavrov writes that the history of the Circassians is "inseparably tied to the various stages of national statehood", and that Circassians distinguished themselves "in state service, culture, science and military affairs".<sup><a href="#r2">2</a></sup> That is true of individuals. Used as a summary of a people's history, it is a way of not saying what happened to that people.</p>
+
+    <blockquote>
+      <p>"Russia is a multinational, multi-confessional power, a state-civilisation, where representatives of different peoples and religions have lived in peace and harmony since time immemorial."</p>
+      <p class="ru">— Sergei Lavrov's greeting to the round table, 28 October 2026<sup><a href="#r2">2</a></sup></p>
+    </blockquote>
+
+    <p>"Since time immemorial" and "in peace and harmony" — written about a people whose homeland on the Black Sea coast was emptied of its inhabitants by that same state's army.</p>
+
+    <figure>
+      <img src="https://live.staticflickr.com/2890/8781034840_67bc59a09d_c.jpg" alt="Circassian activists protest at the Permanent Mission of Russia to the UN, New York, 21 May 2013" loading="lazy" />
+      <figcaption>Circassian activists protest at the United Nations and the Permanent Mission of Russia to the UN on Circassian Genocide Memorial Day, New York, 21 May 2013. Photo: <a href="https://www.flickr.com/photos/76905328@N05/8781034840/" target="_blank" rel="noopener">May21.org archive</a>.</figcaption>
+    </figure>
+
+    <h2>Why the Foreign Ministry?</h2>
+    <p>A domestic anniversary of a Russian republic does not need a foreign ministry. A diaspora does. The guest list explains the venue: federations from Turkey, Jordan, Syria, Israel and Germany, brought to Moscow by the ministry and by Rossotrudnichestvo, the agency whose job is to cultivate influence abroad. Lavrov's greeting names the goal outright: "the further development of the potential of public, people's diplomacy", and Russia's readiness to "share its invaluable experience with foreign partners".<sup><a href="#r2">2</a></sup></p>
+    <p>This is not new. The ministry has courted the MChA for years; in 2016 Lavrov publicly called for closer work with it,<sup><a href="#r7">7</a></sup> and in June 2026 the ministry gave its president an award "for contribution to international cooperation".<sup><a href="#r3">3</a></sup> The pattern is consistent: diaspora organisations are welcomed as partners on the condition that they speak the language of gratitude — and never the language of 1864.</p>
+    <p>The timing matters too. Circassian civil society in the diaspora has spent two decades building the case for recognition, for May 21 as a day of mourning, and for the right of return. A group photo in a gilded hall of the Foreign Ministry, with the leaders of diaspora federations standing beside senators and ministry officials under a state-written slogan about "centuries hand in hand", is worth more to that state than any statement it could issue itself.</p>
+
+    <h2>What the room did not hear</h2>
+    <p>The participants thanked Russia for its "attention to preserving the historical and cultural heritage of the Circassian people" and its "support for native languages". Some of what was missing from that conversation:</p>
+    <ul>
+      <li><strong>Commemoration.</strong> In Kabardino-Balkaria, May 21 mourning events have been restricted and participants of the memorial procession in Nalchik detained.<sup><a href="#r8">8</a></sup></li>
+      <li><strong>Prosecution of activists.</strong> In March 2026 a resident of Adygea was sentenced to 11 years over alleged involvement with the "Council of United Circassia".<sup><a href="#r9">9</a></sup> Diaspora organisations in Turkey have themselves called for an end to the criminal case against a Circassian activist in Russia.<sup><a href="#r10">10</a></sup></li>
+      <li><strong>Repatriation.</strong> Circassians abroad still have no recognised right of return. Even the authorities of Kabardino-Balkaria have sent Moscow proposals to change the repatriation rules.<sup><a href="#r11">11</a></sup> During the war in Syria, only a small fraction of the Syrian Circassians who asked to come home were able to resettle.</li>
+      <li><strong>Language.</strong> Since 2018 the study of native languages in Russian schools has been made voluntary, a change Circassian and other activists warned would accelerate their decline. "Support for native languages" is a strange thing to be grateful for under that law.</li>
+    </ul>
+
+    <figure class="pair">
+      <img src="https://live.staticflickr.com/7245/7265374488_ae788f5d51_h.jpg" alt="Circassian demonstration at the Permanent Mission of Russia to the UN, New York, 21 May 2012" loading="lazy" />
+      <img src="https://live.staticflickr.com/8264/8752915615_bbc0ef88bf_h.jpg" alt="May 21 commemoration in Istanbul, 2013" loading="lazy" />
+      <figcaption>Left: Permanent Mission of Russia to the UN, New York, 21 May 2012. Right: May 21 commemoration, Istanbul, 2013. Photos: <a href="https://www.flickr.com/photos/76905328@N05/albums/" target="_blank" rel="noopener">May21.org archive</a>.</figcaption>
+    </figure>
+
+    <h2>Unity that requires forgetting</h2>
+    <p>The Year of Unity of the Peoples of Russia could have been an occasion for an honest conversation: about a conquest that is still called a "voluntary union", about a genocide that is still unnamed, about a people still mostly abroad. Instead, unity was defined as agreement with the state's version of history, and Circassian organisations were invited to endorse it.</p>
+    <p>We do not doubt that many in that room care about Circassian culture and language. But no one can speak for Circassians about a "shared past" while that past cannot be named in Nalchik or Maykop without risk. Real partnership would start elsewhere:</p>
+    <ul>
+      <li>acknowledgement of the war of 1763–1864 and the expulsion of 1864 for what they were;</li>
+      <li>a free and safe May 21 in the homeland, without bans or detentions;</li>
+      <li>a real, simple path of return for the descendants of the exiles;</li>
+      <li>an end to the prosecution of Circassian activists;</li>
+      <li>native-language education as a right, not an option.</li>
+    </ul>
+    <p>Until then, "hand in hand with Russia" will describe the hands that were invited to the table — not the people who were not.</p>
+
+    <section class="refs">
+      <h2>Sources</h2>
+      <ol>
+        <li id="r1">Russian Foreign Ministry, readout of the round table «Сквозь века рука об руку с Россией, снискав почёт и славу», 28 Oct 2026. <a href="https://www.mid.ru/ru/foreign_policy/news/2158215/" target="_blank" rel="noopener">mid.ru/ru/foreign_policy/news/2158215</a>; also on the ministry's channel: <a href="https://t.me/MID_Russia/95033" target="_blank" rel="noopener">t.me/MID_Russia/95033</a>.</li>
+        <li id="r2">Greeting of Foreign Minister S. V. Lavrov to the organisers, participants and guests of the round table, 28 Oct 2026. <a href="https://mid.ru/ru/foreign_policy/news/2157960/" target="_blank" rel="noopener">mid.ru/ru/foreign_policy/news/2157960</a>; <a href="https://t.me/MID_Russia/94939" target="_blank" rel="noopener">t.me/MID_Russia/94939</a>.</li>
+        <li id="r3">Russian Foreign Ministry, award "for contribution to international cooperation" to the president of the International Circassian Association, June 2026. <a href="https://t.me/MID_Russia/84836" target="_blank" rel="noopener">t.me/MID_Russia/84836</a>.</li>
+        <li id="r4">"Circassian genocide", overview with references, incl. the resolution of the Parliament of Georgia of 20 May 2011. <a href="https://en.wikipedia.org/wiki/Circassian_genocide" target="_blank" rel="noopener">Wikipedia</a>.</li>
+        <li id="r5">Radio Liberty / Kavkaz.Realii, «Кабарда – Россия, 460 лет вместе». <a href="https://www.kavkazr.com/a/nalchik-russia-selebration/28735260.html" target="_blank" rel="noopener">kavkazr.com</a>; Jamestown Foundation, "Kremlin-backed anniversary in Kabardino-Balkaria". <a href="https://jamestown.org/kremlin-backed-anniversary-in-kabardino-balkaria-fails-to-deter-insurgents/" target="_blank" rel="noopener">jamestown.org</a>.</li>
+        <li id="r6">Caucasian Knot, "In Kabardino-Balkaria, Days of Kabarda's and Balkaria's entry into Russia celebrated separately". <a href="https://amp.eng.kavkaz-uzel.eu/articles/22117" target="_blank" rel="noopener">eng.kavkaz-uzel.eu</a>.</li>
+        <li id="r7">Eurasia Review, "A Circassian breakthrough: Lavrov wants to work with their International Association", 24 Jul 2016. <a href="https://www.eurasiareview.com/24072016-a-circassian-breakthrough-lavrov-wants-to-work-with-their-international-association-oped/" target="_blank" rel="noopener">eurasiareview.com</a>; Jamestown Foundation, "Moscow continues efforts to penetrate Circassian diaspora". <a href="https://jamestown.org/program/moscow-continues-efforts-to-penetrate-circassian-diaspora/" target="_blank" rel="noopener">jamestown.org</a>.</li>
+        <li id="r8">Novoe Delo, "'SVO' displaces memory. Participants in a funeral procession detained in Nalchik". <a href="https://newdosh.media/en/news/svo-vytesnaet-pamat-v-nalcike-zaderzali-ucastnikov-traurnogo-sestvia" target="_blank" rel="noopener">newdosh.media</a>; "The authorities of the KBR banned events in memory of the victims of the Caucasian war". <a href="https://newdosh.media/en/news/vlasti-kbr-zapretili-provodit-meropriatia-v-pamat-o-zertvah-kavkazskoj-vojny" target="_blank" rel="noopener">newdosh.media</a>.</li>
+        <li id="r9">Novoe Delo, "An Adygea resident was sentenced to 11 years in prison for involvement in the 'Council of United Circassia'", 17 Mar 2026. <a href="https://newdosh.media/en/news/zitelu-adygei-dali-11-let-po-obvineniu-v-pricastnosti-k-sovetu-obedinennoj-cerkesii" target="_blank" rel="noopener">newdosh.media</a>.</li>
+        <li id="r10">Novoe Delo, "The North Caucasus diaspora in Turkey has demanded an end to the criminal prosecution of a Circassian activist in Russia", 8 Dec 2025. <a href="https://newdosh.media/en/news/severokavkazskaa-diaspora-v-turcii-potrebovala-prekratit-ugolovnoe-presledovanie-v-rossii-cerkesskoj-aktivistki" target="_blank" rel="noopener">newdosh.media</a>.</li>
+        <li id="r11">Novoe Delo, "The Kabardino-Balkarian authorities sent recommendations to Moscow to amend the law on the repatriation of Circassians", 12 Jun 2025. <a href="https://newdosh.media/en/news/vlasti-kbr-napravili-v-moskvu-rekomendacii-po-izmeneniu-zakona-o-repatriacii-cerkesov" target="_blank" rel="noopener">newdosh.media</a>.</li>
+      </ol>
+    </section>
+  </article>
+
+  <footer>© 2026 May21.org · Quotations from Russian state sources are translated by May21.org for the purpose of critique.</footer>
+
+  <script>
+    // reader view: ?view=reader switches to a light, serif layout
+    (function () {
+      var reader = new URLSearchParams(location.search).get('view') === 'reader';
+      var t = document.getElementById('reader-toggle');
+      if (reader) { document.body.classList.add('reader'); t.textContent = 'Standard view'; t.href = location.pathname; }
+    })();
+  </script>
+</body>
+</html>

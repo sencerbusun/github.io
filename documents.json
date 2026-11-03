@@ -1,5 +1,46 @@
 [
   {
+    "type": "Critique",
+    "title": "Hand in Hand With Whom?",
+    "author": "May21.org Collective",
+    "date": "2026-11-03",
+    "lang": "EN",
+    "url": "documents/2026-11-mfa-round-table.html",
+    "description": "On the Russian Foreign Ministry's round table of 28 October 2026, “Through the centuries hand in hand with Russia”, and what was left out of the room.",
+    "editions": {
+      "tr": {
+        "type": "Eleştiri",
+        "title": "Kiminle El Ele?",
+        "description": "Rusya Dışişleri Bakanlığı’nın 28 Ekim 2026’da düzenlediği “Yüzyıllar boyunca Rusya ile el ele” yuvarlak masa toplantısı ve o salonda söylenmeyenler üzerine. (İngilizce)"
+      },
+      "kbd": {
+        "type": "Критикэ",
+        "title": "Хэт и Ӏэпэр Яубыдар?",
+        "description": "Урысейм и Ӏэщӏыб Ӏуэхухэмкӏэ министерствэм 2026 гъэм жэпуэгъуэм и 28-м ищӏа «Лӏэщӏыгъуэ куэдкӏэ Урысейм Ӏэпэр иубыдауэ» зэхуэсымрэ абы щыжамыӏахэмрэ теухуауэ. (Инджылызыбзэкӏэ)"
+      },
+      "ady": {
+        "type": "Критикэ",
+        "title": "Хэт ИӀэ Аубытыгъ?",
+        "description": "Урысыем ИӀэкӀыб ӀофхэмкӀэ министерствэ 2026 илъэсым чъэпыогъум и 28-м зэхищэгъэ «ЛӀэшӀэгъу пчъагъэкӀэ Урысыем ыӀэ ыубытэу» зэхэсыгъомрэ ащ щамыӀуагъэхэмрэ афэгъэхьыгъ. (ИнджылызыбзэкӀэ)"
+      },
+      "ru": {
+        "type": "Критика",
+        "title": "Рука об руку — с кем?",
+        "description": "О круглом столе МИД России «Сквозь века рука об руку с Россией» 28 октября 2026 года и о том, что в этом зале не прозвучало. (На английском)"
+      },
+      "de": {
+        "type": "Kritik",
+        "title": "Hand in Hand – mit wem?",
+        "description": "Über den Runden Tisch des russischen Außenministeriums vom 28. Oktober 2026, „Durch die Jahrhunderte Hand in Hand mit Russland“, und darüber, was in diesem Saal nicht zur Sprache kam. (Englisch)"
+      },
+      "ar": {
+        "type": "نقد",
+        "title": "يدًا بيد… مع مَن؟",
+        "description": "عن الطاولة المستديرة التي نظّمتها وزارة الخارجية الروسية في 28 تشرين الأول/أكتوبر 2026 بعنوان «عبر القرون يدًا بيد مع روسيا»، وعمّا غاب عن تلك القاعة. (بالإنجليزية)"
+      }
+    }
+  },
+  {
     "title": "Aytek Namitok — The “Voluntary” Adherence of Kabarda (Eastern Circassia) to Russia",
     "date": "1956",
     "type": "Article",
