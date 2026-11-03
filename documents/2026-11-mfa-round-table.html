@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hand in Hand With Whom? · May21.org</title>
-  <meta name="description" content="A critique of the Russian Foreign Ministry's round table 'Through the centuries hand in hand with Russia', held on 28 October 2026 with the International Circassian Association and diaspora federations." />
+  <meta name="description" content="A critique of the Russian Foreign Ministry's round table 'Through the centuries hand in hand with Russia', held on 28 October 2026 with the International Circassian Association and diaspora federations. In English, Turkish, Russian, German and Arabic, with Kabardian and Adyghe summaries." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400;500&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400;500&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=Noto+Sans+Arabic:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
     :root {
       --black:#0a0a0a; --off-black:#111; --charcoal:#1c1c1c; --dim:#2a2a2a; --mid:#444;
@@ -76,28 +76,45 @@
       .facts dl { grid-template-columns:1fr; gap:2px 0; }
       .facts dd { margin-bottom:10px; }
     }
+
+    .top-right { display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+    .tabs { display:flex; flex-wrap:wrap; gap:4px; }
+    .tabs button { background:transparent; border:1px solid var(--mid); color:var(--muted); font-family:var(--font-mono); font-size:0.66rem; letter-spacing:0.1em; padding:5px 9px; cursor:pointer; }
+    .tabs button:hover { border-color:var(--soft); color:var(--fg); }
+    .tabs button[aria-pressed="true"] { background:var(--accent); border-color:var(--accent); color:#fff; }
+    .status { font-family:var(--font-mono); font-size:0.75rem; line-height:1.8; color:var(--soft); background:var(--charcoal); border:1px solid var(--accent2); padding:14px 18px; margin:0 0 32px; }
+    [dir="rtl"] { font-family:'Noto Sans Arabic',var(--font-body); }
+    [dir="rtl"] .dek { border-left:none; border-right:2px solid var(--accent); padding-left:0; padding-right:18px; }
+    [dir="rtl"] article blockquote, article [dir="rtl"] blockquote { border-left:none; border-right:2px solid var(--accent2); padding:4px 20px 4px 0; }
+    [dir="rtl"] ul { margin:0 20px 24px 0; }
+    [dir="rtl"] .eyebrow, [dir="rtl"] .byline, [dir="rtl"] .facts dt, [dir="rtl"] figcaption { letter-spacing:0; }
+    [dir="rtl"] h1, [dir="rtl"] h2 { font-family:'Noto Sans Arabic',sans-serif; font-weight:500; letter-spacing:0; line-height:1.3; }
+    [dir="rtl"] h1 { font-size:clamp(2.2rem,6vw,3.4rem); }
+    [dir="rtl"] article p, [dir="rtl"] article li { font-size:1.12rem; line-height:2; }
+    body.reader [dir="rtl"] article p, body.reader [dir="rtl"] p, body.reader [dir="rtl"] li { font-family:'Noto Sans Arabic',sans-serif; }
+    .refs-ar-note { display:none; }
   </style>
 </head>
 <body>
   <header class="top">
     <a href="../index.html" class="logo">May21<span>.</span>org</a>
-    <nav class="top-links">
-      <a href="../index.html#library">← Library</a>
-      <a href="?view=reader" id="reader-toggle">Reader view</a>
-    </nav>
+    <div class="top-right">
+      <nav class="tabs" aria-label="Language"><button type="button" data-lang="en" title="English">EN</button><button type="button" data-lang="tr" title="Türkçe">TR</button><button type="button" data-lang="kbd" title="Адыгэбзэ (Къэбэрдей)">КАБ</button><button type="button" data-lang="ru" title="Русский">РУС</button><button type="button" data-lang="de" title="Deutsch">DE</button><button type="button" data-lang="ar" title="العربية">عر</button><button type="button" data-lang="ady" title="Адыгабзэ">АДЫ</button></nav>
+      <nav class="top-links">
+        <a href="../index.html#library" id="lib-link">← Library</a>
+        <a href="?view=reader" id="reader-toggle">Reader view</a>
+      </nav>
+    </div>
   </header>
 
   <article>
+    <div class="panel" id="lang-en" lang="en" hidden>
     <p class="eyebrow">Critique · Memory politics</p>
     <h1>Hand in Hand With Whom?</h1>
     <p class="dek">On 28 October the Russian Foreign Ministry gathered officials and loyal Circassian organisations to celebrate "centuries hand in hand with Russia". What was left out of the room says more than anything said in it.</p>
     <p class="byline">May21.org Collective · 3 November 2026</p>
 
     <div class="divider"></div>
-
-    <!-- Event photos: save the photos from the MFA post (t.me/MID_Russia/95033) as
-         img/mfa-roundtable-1.jpg and img/mfa-roundtable-2.jpg. If a file is missing,
-         its figure hides itself. -->
     <figure class="event-photo">
       <img src="img/mfa-roundtable-1.jpg" alt="Participants of the round table pose for a group photo in a hall of the Russian Foreign Ministry mansion, 28 October 2026" onerror="this.closest('figure').remove()" />
       <figcaption>Group photo of officials, diaspora delegates and guests of the round table "Through the centuries hand in hand with Russia, earning honour and glory", Foreign Ministry mansion, Moscow, 28 October 2026. Photo: Russian MFA (<a href="https://t.me/MID_Russia/95033" target="_blank" rel="noopener">official channel</a>), reproduced for critique and commentary.</figcaption>
@@ -171,9 +188,378 @@
       <li>native-language education as a right, not an option.</li>
     </ul>
     <p>Until then, "hand in hand with Russia" will describe the hands that were invited to the table — not the people who were not.</p>
+    </div>
+<div class="panel" id="lang-tr" lang="tr" hidden>
+    <p class="eyebrow">Eleştiri · Bellek siyaseti</p>
+    <h1>Kiminle El Ele?</h1>
+    <p class="dek">28 Ekim’de Rusya Dışişleri Bakanlığı, “yüzyıllar boyunca Rusya ile el ele” geçen bir tarihi kutlamak için yetkilileri ve sadık Çerkes kuruluşlarını bir araya getirdi. O salonun dışında bırakılanlar, içeride söylenen her şeyden daha çok şey anlatıyor.</p>
+    <p class="byline">May21.org Kolektifi · 3 Kasım 2026</p>
+
+    <div class="divider"></div>
+
+    <figure class="event-photo">
+      <img src="img/mfa-roundtable-1.jpg" alt="Yuvarlak masa katılımcıları Rusya Dışişleri Bakanlığı konağının bir salonunda toplu fotoğraf çektiriyor, 28 Ekim 2026" onerror="this.closest('figure').remove()" />
+      <figcaption>“Yüzyıllar boyunca Rusya ile el ele, onur ve şan kazanarak” başlıklı yuvarlak masa toplantısının yetkilileri, diaspora delegeleri ve konuklarının toplu fotoğrafı, Dışişleri Bakanlığı konağı, Moskova, 28 Ekim 2026. Fotoğraf: Rusya Dışişleri Bakanlığı (<a href="https://t.me/MID_Russia/95033" target="_blank" rel="noopener">resmî kanal</a>), eleştiri ve yorum amacıyla yayımlanmıştır.</figcaption>
+    </figure>
+
+    <h2>Ne oldu?</h2>
+    <p>28 Ekim 2026’da Rusya Dışişleri Bakanlığı, Moskova’daki konağında <strong>“Yüzyıllar boyunca Rusya ile el ele, onur ve şan kazanarak”</strong> başlıklı bir yuvarlak masa toplantısına ev sahipliği yaptı. Toplantıyı bakanlık, yurt dışında “insani işbirliğinden” sorumlu devlet ajansı Rossotrudniçestvo ve Uluslararası Çerkes Birliği (UÇB) birlikte düzenledi. Bakanlığın ifadesiyle vesile, <em>Rusya Halklarının Birliği Yılı</em> ve yaklaşan “Kabardey-Balkarya’nın Rus devletine katılışının 470. yıldönümü”ydü.<sup><a href="#r1">1</a></sup></p>
+
+    <div class="facts">
+      <h3>Salonda kimler vardı?</h3>
+      <dl>
+        <dt>Açılış</dt><dd>Devlet Başkanı’nın uluslararası kültürel işbirliğinden sorumlu özel temsilcisi Mihail Şvıdkoy; Dışişleri Bakanı Sergey Lavrov’un selamlama mesajını okudu</dd>
+        <dt>Selamlama</dt><dd>Rossotrudniçestvo Başkanı İgor Çayka</dd>
+        <dt>Konuşmacılar</dt><dd>Senatörler Aleksey Puşkov ve Arsen Kanokov (Kabardey-Balkarya’nın eski başkanı); Duma milletvekili S. Kovalev; Federal Milliyetler Ajansı başkan yardımcısı S. Bedkin; UÇB Başkanı H. Sohrokov</dd>
+        <dt>Diaspora</dt><dd>Kafkas Dernekleri Federasyonu (Türkiye), Ürdün ve Suriye Çerkes hayır dernekleri, “Çerkesya” miras merkezi (İsrail) ve Avrupa Çerkes Haseleri federasyonu (Almanya) yönetimleri</dd>
+        <dt>Moderatör</dt><dd>Rusya Devlet Eski Belgeler Arşivi müdürü V. Arakçeyev</dd>
+      </dl>
+    </div>
+
+    <p>Bakanlığın açıklamasına göre konuşmacılar “Çerkeslerin Rusya tarihine katkısını” ve etnik gruplar arası birliğin “ortak geçmişin daha derin kavranması yoluyla” güçlendirilmesi gerektiğini vurguladı. Açıklamaya göre Çerkes katılımcılar, Çerkes mirasına ve ana dillere gösterdiği özen için “Rusya’ya şükranlarını ifade etti”. Görüşmeler “açık ve yapıcı, güven ve karşılıklı anlayış ruhu içinde” geçti.<sup><a href="#r1">1</a></sup></p>
+
+    <h2>1957’de icat edilen bir yıldönümü</h2>
+    <p>Kutlanan tarih tek bir olaya dayanıyor: 1557’de Kabardey prenslerinden oluşan bir elçilik heyeti Moskova’ya gitti ve IV. İvan ile, esas olarak Kırım Hanlığı’na karşı bir ittifak kurdu. Kabarda o dönemde kendi prensleri ve kendi dış politikası olan egemen bir ülkeydi ve iki yüzyıl daha öyle kaldı. Bu tür ittifaklar Moskova ile, Kırım ile ve Osmanlılarla defalarca kuruldu ve bozuldu.</p>
+    <p>“Rusya’ya gönüllü katılım” formülü 1557’de yazılmadı. Sovyet tarih yazımı tarafından sabitlendi ve 1957’de 400. yıldönümü için bir devlet bayramı olarak sahnelendi — Nalçik’te adı tam anlamıyla <em>“Sonsuza dek Rusya ile”</em> olan bir anıtla birlikte. Çerkes tarihçiler o günden beri bu formülü çürütüyor; 2007’deki jübile de cumhuriyetin içinde açıkça eleştirildi.<sup><a href="#r5">5</a></sup> Kabardey-Balkarya’da bile Kabarda’nın ve Balkarya’nın “katılışı” farklı tarihlerde anılıyor; bu, söz konusu olanın ortak bir bellek değil, idari bir takvim olduğunu hatırlatıyor.<sup><a href="#r6">6</a></sup> Kabarda Rusya’ya “katılmadı”. Fethedildi: XVIII. yüzyılın sonunda topraklarının içine doğru ilerletilen kale hattıyla ve 1810’lar ile 1820’lerde Yermolov gibi generallerin komutasında köyleri yakan ve Kabardey nüfusunu eskisinin küçük bir kesrine indiren seferlerle.</p>
+    <p>Arşiv müdürünün moderatör seçilmesi yerindeydi. Yuvarlak masa bir tarih tartışması değildi; arşivin, tarihin resmî versiyonunu onaylamasıydı.</p>
+
+    <h2>Tek bir başlıkla silinen bir asırlık savaş</h2>
+    <p>“Yüzyıllar boyunca el ele” ifadesi, Rus İmparatorluğu’nun Çerkeslere karşı savaş yürüttüğü 1763–1864 arasındaki yüz yıla yer bırakmıyor. Savaş <strong>21 Mayıs 1864</strong>’te Kbaada’da (bugünkü Krasnaya Polyana) sona erdi ve hayatta kalan nüfusun çoğu Osmanlı İmparatorluğu’na sürüldü. Yüz binlerce insan öldü — savaşta, Karadeniz kıyısına yapılan zorunlu yürüyüşlerde, aşırı kalabalık teknelerde ve Osmanlı kıyısındaki mülteci kamplarında. Bugün Çerkeslerin ezici çoğunluğunun anavatanları dışında yaşamasının ve bu yuvarlak masadaki “diaspora” kuruluşlarının var olmasının nedeni budur. 2011’de Gürcistan Parlamentosu bu olayları soykırım olarak tanıdı.<sup><a href="#r4">4</a></sup></p>
+    <p>Ne bakanlığın açıklaması ne de Lavrov’un mesajı savaştan, sürgünden, gurbetten ya da geri dönüş hakkından söz ediyor. Lavrov, Çerkeslerin tarihinin “ulusal devletçiliğin çeşitli aşamalarıyla ayrılmaz biçimde bağlantılı” olduğunu ve Çerkeslerin “devlet hizmetinde, kültürde, bilimde ve askerlikte” öne çıktığını yazıyor.<sup><a href="#r2">2</a></sup> Bu, bireyler için doğru. Bir halkın tarihinin özeti olarak kullanıldığında ise o halkın başına geleni söylememenin bir yoludur.</p>
+
+    <blockquote>
+      <p>“Rusya çok uluslu, çok dinli bir güç, bir devlet-uygarlıktır; farklı halkların ve dinlerin temsilcileri burada ezelden beri barış ve uyum içinde yaşamaktadır.”</p>
+      <p class="ru">— Sergey Lavrov’un yuvarlak masaya selamlama mesajı, 28 Ekim 2026<sup><a href="#r2">2</a></sup></p>
+    </blockquote>
+
+    <p>“Ezelden beri” ve “barış ve uyum içinde” — Karadeniz kıyısındaki yurdu aynı devletin ordusu tarafından sakinlerinden boşaltılmış bir halk hakkında yazılmış sözler.</p>
+
+    <figure>
+      <img src="https://live.staticflickr.com/2890/8781034840_67bc59a09d_c.jpg" alt="Çerkes aktivistler Rusya’nın BM Daimi Temsilciliği önünde protesto yapıyor, New York, 21 Mayıs 2013" loading="lazy" />
+      <figcaption>Çerkes aktivistler Çerkes Soykırımı Anma Günü’nde Birleşmiş Milletler ve Rusya’nın BM Daimi Temsilciliği önünde protesto yapıyor, New York, 21 Mayıs 2013. Fotoğraf: <a href="https://www.flickr.com/photos/76905328@N05/8781034840/" target="_blank" rel="noopener">May21.org arşivi</a>.</figcaption>
+    </figure>
+
+    <h2>Neden Dışişleri Bakanlığı?</h2>
+    <p>Bir Rus cumhuriyetinin iç yıldönümü bir dışişleri bakanlığına ihtiyaç duymaz. Bir diaspora duyar. Konuk listesi mekânı açıklıyor: Türkiye, Ürdün, Suriye, İsrail ve Almanya’dan federasyonlar, bakanlık ve işi yurt dışında nüfuz geliştirmek olan Rossotrudniçestvo tarafından Moskova’ya getirildi. Lavrov’un mesajı hedefi açıkça söylüyor: “kamu diplomasisinin, halk diplomasisinin potansiyelinin daha da geliştirilmesi” ve Rusya’nın “paha biçilmez deneyimini yabancı ortaklarla paylaşmaya” hazır olması.<sup><a href="#r2">2</a></sup></p>
+    <p>Bu yeni değil. Bakanlık yıllardır UÇB’ye kur yapıyor; 2016’da Lavrov onunla daha yakın çalışılması çağrısında bulundu,<sup><a href="#r7">7</a></sup> Haziran 2026’da ise bakanlık UÇB başkanına “uluslararası işbirliğine katkı” ödülü verdi.<sup><a href="#r3">3</a></sup> Örüntü tutarlı: diaspora kuruluşları, şükran dilini konuşmaları — ve asla 1864’ün dilini konuşmamaları — koşuluyla ortak olarak ağırlanıyor.</p>
+    <p>Zamanlama da önemli. Diasporadaki Çerkes sivil toplumu yirmi yıldır tanınma, 21 Mayıs’ın yas günü olması ve geri dönüş hakkı için çalışıyor. Diaspora federasyonlarının liderlerinin, devletin yazdığı “yüzyıllar boyunca el ele” sloganı altında senatörler ve bakanlık yetkilileriyle yan yana durduğu, Dışişleri Bakanlığı’nın yaldızlı bir salonunda çekilmiş bir toplu fotoğraf, o devlet için kendi yapabileceği her açıklamadan daha değerlidir.</p>
+
+    <h2>Salonda duyulmayanlar</h2>
+    <p>Katılımcılar Rusya’ya “Çerkes halkının tarihî ve kültürel mirasının korunmasına gösterdiği ilgi” ve “ana dillere desteği” için teşekkür etti. Bu konuşmada eksik olanlardan bazıları:</p>
+    <ul>
+      <li><strong>Anma.</strong> Kabardey-Balkarya’da 21 Mayıs yas etkinlikleri kısıtlandı ve Nalçik’teki anma yürüyüşünün katılımcıları gözaltına alındı.<sup><a href="#r8">8</a></sup></li>
+      <li><strong>Aktivistlerin yargılanması.</strong> Mart 2026’da Adıgey’de yaşayan bir kişi, “Birleşik Çerkesya Konseyi” ile iddia edilen bağlantısı nedeniyle 11 yıl hapse mahkûm edildi.<sup><a href="#r9">9</a></sup> Türkiye’deki diaspora kuruluşları da Rusya’daki bir Çerkes aktiviste yönelik ceza davasının sona erdirilmesi çağrısında bulundu.<sup><a href="#r10">10</a></sup></li>
+      <li><strong>Geri dönüş.</strong> Yurt dışındaki Çerkeslerin hâlâ tanınmış bir geri dönüş hakkı yok. Kabardey-Balkarya yetkilileri bile Moskova’ya geri dönüş kurallarının değiştirilmesi için öneriler gönderdi.<sup><a href="#r11">11</a></sup> Suriye’deki savaş sırasında anavatana dönmek isteyen Suriyeli Çerkeslerin yalnızca küçük bir kısmı yerleşebildi.</li>
+      <li><strong>Dil.</strong> 2018’den beri Rusya okullarında ana dil eğitimi isteğe bağlı hâle getirildi; Çerkes ve diğer aktivistler bunun dillerin gerilemesini hızlandıracağı uyarısında bulunmuştu. Bu yasa yürürlükteyken “ana dillere destek” için şükran duymak tuhaf bir şey.</li>
+    </ul>
+
+    <figure class="pair">
+      <img src="https://live.staticflickr.com/7245/7265374488_ae788f5d51_h.jpg" alt="Rusya’nın BM Daimi Temsilciliği önünde Çerkes gösterisi, New York, 21 Mayıs 2012" loading="lazy" />
+      <img src="https://live.staticflickr.com/8264/8752915615_bbc0ef88bf_h.jpg" alt="İstanbul’da 21 Mayıs anması, 2013" loading="lazy" />
+      <figcaption>Solda: Rusya’nın BM Daimi Temsilciliği, New York, 21 Mayıs 2012. Sağda: 21 Mayıs anması, İstanbul, 2013. Fotoğraflar: <a href="https://www.flickr.com/photos/76905328@N05/albums/" target="_blank" rel="noopener">May21.org arşivi</a>.</figcaption>
+    </figure>
+
+    <h2>Unutmayı şart koşan birlik</h2>
+    <p>Rusya Halklarının Birliği Yılı dürüst bir konuşma için fırsat olabilirdi: hâlâ “gönüllü birleşme” denen bir fetih hakkında, hâlâ adı konmamış bir soykırım hakkında, hâlâ çoğunluğu yurt dışında yaşayan bir halk hakkında. Bunun yerine birlik, devletin tarih versiyonuyla mutabakat olarak tanımlandı ve Çerkes kuruluşları onu onaylamaya davet edildi.</p>
+    <p>O salondaki pek çok kişinin Çerkes kültürünü ve dilini önemsediğinden şüphe etmiyoruz. Ancak bu geçmiş Nalçik’te ya da Maykop’ta risk almadan adlandırılamadığı sürece hiç kimse Çerkesler adına bir “ortak geçmiş”ten söz edemez. Gerçek ortaklık başka bir yerden başlar:</p>
+    <ul>
+      <li>1763–1864 savaşının ve 1864 sürgününün ne olduysa o olarak kabul edilmesi;</li>
+      <li>anavatanda yasaksız ve gözaltısız, özgür ve güvenli bir 21 Mayıs;</li>
+      <li>sürgünlerin torunları için gerçek ve basit bir geri dönüş yolu;</li>
+      <li>Çerkes aktivistlerin yargılanmasına son verilmesi;</li>
+      <li>ana dilde eğitimin bir seçenek değil, bir hak olması.</li>
+    </ul>
+    <p>O güne dek “Rusya ile el ele”, masaya davet edilen elleri anlatacak — davet edilmeyen halkı değil.</p>
+    </div>
+<div class="panel" id="lang-kbd" lang="kbd" hidden>
+    <p class="eyebrow">Критикэ · Гукъэкӏыж политикэ</p>
+    <h1>Хэт и Ӏэпэр Яубыдар?</h1>
+    <p class="dek">Жэпуэгъуэм и 28-м Урысейм и Ӏэщӏыб Ӏуэхухэмкӏэ министерствэм къызэхуишэсащ лӏыкӏуэхэмрэ абы и лъэныкъуэ адыгэ зэгухьэныгъэхэмрэ «лӏэщӏыгъуэ куэдкӏэ Урысейм Ӏэпэр иубыдауэ» дыщыпсэуащ жаӏэу гуфӏэну.</p>
+    <p class="byline">May21.org · 2026 гъэм шэкӏуэгъуэм и 3</p>
+
+    <div class="divider"></div>
+
+    <figure class="event-photo">
+      <img src="img/mfa-roundtable-1.jpg" alt="Зэхуэсым хэта цӏыхухэр Урысейм и Ӏэщӏыб Ӏуэхухэмкӏэ министерствэм и унэм зэгъусэу сурэт щытрахыу, 2026 гъэм жэпуэгъуэм и 28" onerror="this.closest('figure').remove()" />
+      <figcaption>Зэхуэсым хэтахэм я сурэт, Москва, 2026 гъэм жэпуэгъуэм и 28. Сурэтыр: Урысейм и Ӏэщӏыб Ӏуэхухэмкӏэ министерствэ (<a href="https://t.me/MID_Russia/95033" target="_blank" rel="noopener">и канал</a>).</figcaption>
+    </figure>
+
+    <p class="status warn">Мыбдеж тхыгъэм и кӏэщӏу къэӏуэтэныгъэр щыӏэщ. Тхыгъэ псор нэгъуэщӏ бзэхэмкӏэ щыӏэщ.</p>
+
+    <h2>КӀэщӀу</h2>
+    <p>Министерствэм, Россотрудничествэм, Дунейпсо Адыгэ Хасэм зэхашат зэхуэсыр. Абы хэтащ Урысейм и чиновникхэр, Тыркум, Иорданием, Сирием, Израилым, Германием къикӏа хасэхэм я унафэщӏхэр. Ар зытеухуар 1557 гъэм Къэбэрдейр Урысейм «и фӏэфӏкӏэ» гуэхьауэ зэрыжаӏэ хъыбарым и гъэ 470-рщ.</p>
+    <p>Ди тхыгъэм къыщыдгъэлъагъуэ: а хъыбарыр 1957 гъэм Совет историографием къигупсысащ; Къэбэрдейр «гуэхьакъым» — зауэкӏэ къаубыдащ. 1763–1864 гъэхэм Урысей империем адыгэхэм зауэ яригъэкӏуэкӏащ, 1864 гъэм накъыгъэм и 21-м ар иухащ, адыгэ лъэпкъым и нэхъыбэр Осман империем ирахуащ. А зауэм, а ирахуэныгъэм, хэкум къэгъэзэжыным зэхуэсым зы псалъэ щыжамыӏащ.</p>
+    <p>Зэхуэсым жамыӏахэр: Налшык накъыгъэм и 21-м щекӏуэкӏ гукъэкӏыж Ӏуэхухэр зэрызэпагъэур, адыгэ активистхэр зэрагъэтӏысыр, хэкум къэзыгъэзэжыну хуейхэм гъуэгу зэрамыӏэр, анэдэлъхубзэр еджапӏэхэм зэрыщытекӏыр. Пэжу зэныбжьэгъуныгъэр а Ӏуэхухэр къыщыхуагъэфащэкӏэрщ къыщежьэнур.</p>
+    </div>
+<div class="panel" id="lang-ru" lang="ru" hidden>
+    <p class="eyebrow">Критика · Политика памяти</p>
+    <h1>Рука об руку — с кем?</h1>
+    <p class="dek">28 октября МИД России собрал чиновников и лояльные черкесские организации, чтобы отметить «века рука об руку с Россией». То, что осталось за дверями зала, говорит больше, чем всё, что было сказано внутри.</p>
+    <p class="byline">Коллектив May21.org · 3 ноября 2026</p>
+
+    <div class="divider"></div>
+
+    <figure class="event-photo">
+      <img src="img/mfa-roundtable-1.jpg" alt="Участники круглого стола на групповом фото в зале особняка МИД России, 28 октября 2026 года" onerror="this.closest('figure').remove()" />
+      <figcaption>Групповое фото официальных лиц, делегатов диаспоры и гостей круглого стола «Сквозь века рука об руку с Россией, снискав почёт и славу», особняк МИД, Москва, 28 октября 2026 года. Фото: МИД России (<a href="https://t.me/MID_Russia/95033" target="_blank" rel="noopener">официальный канал</a>), воспроизведено в целях критики и комментария.</figcaption>
+    </figure>
+
+    <h2>Что произошло</h2>
+    <p>28 октября 2026 года МИД России провёл в своём московском особняке круглый стол под названием <strong>«Сквозь века рука об руку с Россией, снискав почёт и славу»</strong>. Его организовали совместно министерство, Россотрудничество — государственное агентство по «гуманитарному сотрудничеству» за рубежом — и Международная черкесская ассоциация (МЧА). Поводом, по словам министерства, стали <em>Год единства народов России</em> и приближающееся «470-летие вхождения Кабардино-Балкарии в состав Российского государства».<sup><a href="#r1">1</a></sup></p>
+
+    <div class="facts">
+      <h3>Кто был в зале</h3>
+      <dl>
+        <dt>Открыл</dt><dd>Михаил Швыдкой, специальный представитель Президента по международному культурному сотрудничеству, зачитавший приветствие министра иностранных дел Сергея Лаврова</dd>
+        <dt>Приветствие</dt><dd>Игорь Чайка, руководитель Россотрудничества</dd>
+        <dt>Выступили</dt><dd>Сенаторы Алексей Пушков и Арсен Каноков (бывший глава Кабардино-Балкарии); депутат Госдумы С. Ковалёв; С. Бедкин, заместитель руководителя Федерального агентства по делам национальностей; Х. Сохроков, президент МЧА</dd>
+        <dt>Диаспора</dt><dd>Руководство Федерации кавказских обществ (Турция), черкесских благотворительных обществ Иордании и Сирии, центра наследия «Черкесия» (Израиль) и федерации черкесских хасэ Европы (Германия)</dd>
+        <dt>Модератор</dt><dd>В. Аракчеев, директор Российского государственного архива древних актов</dd>
+      </dl>
+    </div>
+
+    <p>Согласно сообщению министерства, выступавшие подчеркнули «вклад черкесов в историю России» и необходимость укреплять межнациональное единство «через более глубокое понимание общего прошлого». Черкесские участники, говорится там, «выразили благодарность России» за заботу о черкесском наследии и родных языках. Обсуждение прошло «в открытом и конструктивном ключе, в атмосфере доверия и взаимопонимания».<sup><a href="#r1">1</a></sup></p>
+
+    <h2>Юбилей, придуманный в 1957 году</h2>
+    <p>Отмечаемая дата опирается на одно-единственное событие: в 1557 году посольство кабардинских князей прибыло в Москву и заключило с Иваном IV союз, направленный прежде всего против Крымского ханства. Кабарда была тогда суверенной землёй со своими князьями и собственной внешней политикой — и оставалась такой ещё два столетия. Подобные союзы заключались и расторгались много раз — с Москвой, с Крымом, с османами.</p>
+    <p>Формула «добровольного вхождения в Россию» была написана не в 1557 году. Её закрепила советская историография и превратила в государственный праздник в 1957 году, к 400-летию, — вместе с памятником в Нальчике, который так и называется: <em>«Навеки с Россией»</em>. Черкесские историки с тех пор разбирают эту формулу по частям, а юбилей 2007 года открыто критиковали в самой республике.<sup><a href="#r5">5</a></sup> Даже в Кабардино-Балкарии «вхождение» Кабарды и Балкарии отмечают в разные дни — напоминание о том, что это административный календарь, а не общая память.<sup><a href="#r6">6</a></sup> Кабарда не «вошла» в Россию. Её завоевали: линией крепостей, вдвинутой в её территорию в конце XVIII века, и походами 1810–1820-х годов под командованием таких генералов, как Ермолов, — походами, в которых жгли аулы и население Кабарды сократилось до малой доли прежнего.</p>
+    <p>Выбор директора архива в качестве модератора был очень к месту. Круглый стол не был обсуждением истории — это архив заверял её официальную версию.</p>
+
+    <h2>Век войны, стёртый одним названием</h2>
+    <p>«Сквозь века рука об руку» не оставляет места для ста лет — с 1763 по 1864 год, — в течение которых Российская империя вела войну с черкесами. Она закончилась <strong>21 мая 1864 года</strong> в Кбааде (нынешняя Красная Поляна) изгнанием большей части уцелевшего населения в Османскую империю. Сотни тысяч людей погибли — на войне, в вынужденных переходах к черноморскому побережью, в переполненных лодках и в лагерях беженцев на османском берегу. Именно поэтому подавляющее большинство черкесов сегодня живёт за пределами родины, и именно поэтому вообще существуют «диаспорные» организации, сидевшие за этим столом. В 2011 году Парламент Грузии признал эти события геноцидом.<sup><a href="#r4">4</a></sup></p>
+    <p>Ни сообщение министерства, ни приветствие Лаврова не упоминают ни войну, ни изгнание, ни изгнанничество, ни право на возвращение. Лавров пишет, что история черкесов «неразрывно связана с различными этапами отечественной государственности» и что черкесы проявили себя «на государственной службе, в культуре, науке, военном деле».<sup><a href="#r2">2</a></sup> Об отдельных людях это правда. Но как итог истории целого народа это способ не говорить о том, что с этим народом произошло.</p>
+
+    <blockquote>
+      <p>«Россия — многонациональная, многоконфессиональная держава, государство-цивилизация, где испокон веков в мире и согласии живут представители разных народов и религий».</p>
+      <p class="ru">— Приветствие Сергея Лаврова участникам круглого стола, 28 октября 2026 года<sup><a href="#r2">2</a></sup></p>
+    </blockquote>
+
+    <p>«Испокон веков» и «в мире и согласии» — это написано о народе, чья родина на черноморском побережье была опустошена армией того же самого государства.</p>
+
+    <figure>
+      <img src="https://live.staticflickr.com/2890/8781034840_67bc59a09d_c.jpg" alt="Черкесские активисты протестуют у Постоянного представительства России при ООН, Нью-Йорк, 21 мая 2013 года" loading="lazy" />
+      <figcaption>Черкесские активисты протестуют у здания ООН и Постоянного представительства России при ООН в День памяти жертв черкесского геноцида, Нью-Йорк, 21 мая 2013 года. Фото: <a href="https://www.flickr.com/photos/76905328@N05/8781034840/" target="_blank" rel="noopener">архив May21.org</a>.</figcaption>
+    </figure>
+
+    <h2>Почему МИД?</h2>
+    <p>Внутреннему юбилею российской республики министерство иностранных дел не нужно. Диаспоре — нужно. Список гостей объясняет выбор площадки: федерации из Турции, Иордании, Сирии, Израиля и Германии, которых привезли в Москву министерство и Россотрудничество — агентство, чья задача состоит в наращивании влияния за рубежом. Приветствие Лаврова прямо называет цель: «дальнейшее развитие потенциала общественной, народной дипломатии» и готовность России «делиться своим бесценным опытом с зарубежными партнёрами».<sup><a href="#r2">2</a></sup></p>
+    <p>Это не ново. Министерство годами обхаживает МЧА: в 2016 году Лавров публично призвал теснее с ней работать,<sup><a href="#r7">7</a></sup> а в июне 2026 года министерство наградило её президента «за вклад в международное сотрудничество».<sup><a href="#r3">3</a></sup> Схема неизменна: диаспорные организации принимают как партнёров при условии, что они говорят на языке благодарности — и никогда на языке 1864 года.</p>
+    <p>Важен и момент. Черкесское гражданское общество в диаспоре два десятилетия добивается признания, превращения 21 мая в день траура и права на возвращение. Групповое фото в позолоченном зале МИД, где лидеры диаспорных федераций стоят рядом с сенаторами и чиновниками министерства под написанным государством лозунгом о «веках рука об руку», стоит для этого государства больше любого заявления, которое оно могло бы сделать само.</p>
+
+    <h2>Чего в зале не услышали</h2>
+    <p>Участники благодарили Россию за «внимание к сохранению историко-культурного наследия черкесского народа» и за «поддержку родных языков». Вот кое-что из того, чего в этом разговоре не было:</p>
+    <ul>
+      <li><strong>Память.</strong> В Кабардино-Балкарии траурные мероприятия 21 мая ограничивали, а участников траурного шествия в Нальчике задерживали.<sup><a href="#r8">8</a></sup></li>
+      <li><strong>Преследование активистов.</strong> В марте 2026 года жителя Адыгеи приговорили к 11 годам по обвинению в причастности к «Совету объединённой Черкесии».<sup><a href="#r9">9</a></sup> Диаспорные организации в Турции сами призывали прекратить уголовное дело против черкесской активистки в России.<sup><a href="#r10">10</a></sup></li>
+      <li><strong>Репатриация.</strong> У черкесов за рубежом по-прежнему нет признанного права на возвращение. Даже власти Кабардино-Балкарии направляли в Москву предложения изменить правила репатриации.<sup><a href="#r11">11</a></sup> Во время войны в Сирии переселиться смогла лишь малая часть сирийских черкесов, просивших вернуться на родину.</li>
+      <li><strong>Язык.</strong> С 2018 года изучение родных языков в российских школах стало добровольным — изменение, которое, как предупреждали черкесские и другие активисты, ускорит их упадок. При таком законе благодарить за «поддержку родных языков» странно.</li>
+    </ul>
+
+    <figure class="pair">
+      <img src="https://live.staticflickr.com/7245/7265374488_ae788f5d51_h.jpg" alt="Черкесская демонстрация у Постоянного представительства России при ООН, Нью-Йорк, 21 мая 2012 года" loading="lazy" />
+      <img src="https://live.staticflickr.com/8264/8752915615_bbc0ef88bf_h.jpg" alt="Траурная акция 21 мая в Стамбуле, 2013 год" loading="lazy" />
+      <figcaption>Слева: Постоянное представительство России при ООН, Нью-Йорк, 21 мая 2012 года. Справа: траурная акция 21 мая, Стамбул, 2013 год. Фото: <a href="https://www.flickr.com/photos/76905328@N05/albums/" target="_blank" rel="noopener">архив May21.org</a>.</figcaption>
+    </figure>
+
+    <h2>Единство, которое требует забвения</h2>
+    <p>Год единства народов России мог бы стать поводом для честного разговора — о завоевании, которое до сих пор называют «добровольным союзом», о геноциде, который до сих пор не назван, о народе, который до сих пор в основном живёт за рубежом. Вместо этого единство определили как согласие с государственной версией истории, а черкесские организации пригласили её одобрить.</p>
+    <p>Мы не сомневаемся, что многим в этом зале дороги черкесская культура и язык. Но никто не может говорить от имени черкесов об «общем прошлом», пока это прошлое нельзя без риска назвать по имени в Нальчике или Майкопе. Настоящее партнёрство начиналось бы иначе:</p>
+    <ul>
+      <li>с признания войны 1763–1864 годов и изгнания 1864 года тем, чем они были;</li>
+      <li>со свободного и безопасного 21 мая на родине — без запретов и задержаний;</li>
+      <li>с реального и простого пути возвращения для потомков изгнанников;</li>
+      <li>с прекращения преследования черкесских активистов;</li>
+      <li>с обучения на родном языке как права, а не опции.</li>
+    </ul>
+    <p>До тех пор «рука об руку с Россией» будет описывать руки, которые пригласили к столу, — а не народ, который не пригласили.</p>
+    </div>
+<div class="panel" id="lang-de" lang="de" hidden>
+    <p class="eyebrow">Kritik · Erinnerungspolitik</p>
+    <h1>Hand in Hand – mit wem?</h1>
+    <p class="dek">Am 28. Oktober versammelte das russische Außenministerium Funktionäre und loyale tscherkessische Organisationen, um „Jahrhunderte Hand in Hand mit Russland“ zu feiern. Was draußen blieb, sagt mehr als alles, was drinnen gesagt wurde.</p>
+    <p class="byline">Kollektiv May21.org · 3. November 2026</p>
+
+    <div class="divider"></div>
+
+    <figure class="event-photo">
+      <img src="img/mfa-roundtable-1.jpg" alt="Teilnehmende des Runden Tisches beim Gruppenfoto in einem Saal der Villa des russischen Außenministeriums, 28. Oktober 2026" onerror="this.closest('figure').remove()" />
+      <figcaption>Gruppenfoto von Funktionären, Diaspora-Delegierten und Gästen des Runden Tisches „Durch die Jahrhunderte Hand in Hand mit Russland, Ehre und Ruhm erwerbend“, Villa des Außenministeriums, Moskau, 28. Oktober 2026. Foto: Russisches Außenministerium (<a href="https://t.me/MID_Russia/95033" target="_blank" rel="noopener">offizieller Kanal</a>), wiedergegeben zum Zweck der Kritik und Kommentierung.</figcaption>
+    </figure>
+
+    <h2>Was geschah</h2>
+    <p>Am 28. Oktober 2026 lud das russische Außenministerium in seine Moskauer Villa zu einem Runden Tisch unter dem Titel <strong>„Durch die Jahrhunderte Hand in Hand mit Russland, Ehre und Ruhm erwerbend“</strong>. Veranstalter waren gemeinsam das Ministerium, Rossotrudnitschestwo – die staatliche Agentur für „humanitäre Zusammenarbeit“ im Ausland – und die Internationale Tscherkessische Assoziation (ITA). Anlass waren nach den Worten des Ministeriums das <em>Jahr der Einheit der Völker Russlands</em> und der bevorstehende „470. Jahrestag des Eintritts Kabardino-Balkariens in den russischen Staat“.<sup><a href="#r1">1</a></sup></p>
+
+    <div class="facts">
+      <h3>Wer im Saal war</h3>
+      <dl>
+        <dt>Eröffnung</dt><dd>Michail Schwydkoi, Sonderbeauftragter des Präsidenten für internationale kulturelle Zusammenarbeit; er verlas ein Grußwort von Außenminister Sergei Lawrow</dd>
+        <dt>Grußwort</dt><dd>Igor Tschaika, Leiter von Rossotrudnitschestwo</dd>
+        <dt>Redner</dt><dd>Die Senatoren Alexei Puschkow und Arsen Kanokow (ehemaliges Oberhaupt Kabardino-Balkariens); Duma-Abgeordneter S. Kowaljow; S. Bedkin, stellvertretender Leiter der Föderalen Agentur für Nationalitätenfragen; Ch. Sochrokow, Präsident der ITA</dd>
+        <dt>Diaspora</dt><dd>Die Führung der Föderation Kaukasischer Vereine (Türkei), der tscherkessischen Wohltätigkeitsvereine Jordaniens und Syriens, des Kulturerbezentrums „Tscherkessien“ (Israel) und der Föderation der tscherkessischen Chasse Europas (Deutschland)</dd>
+        <dt>Moderation</dt><dd>W. Araktschejew, Direktor des Russischen Staatsarchivs Alter Akten</dd>
+      </dl>
+    </div>
+
+    <p>Laut der Mitteilung des Ministeriums betonten die Redner „den Beitrag der Tscherkessen zur Geschichte Russlands“ und die Notwendigkeit, die interethnische Einheit „durch ein tieferes Verständnis der gemeinsamen Vergangenheit“ zu stärken. Die tscherkessischen Teilnehmer hätten „Russland ihren Dank ausgesprochen“ für seine Fürsorge um das tscherkessische Erbe und die Muttersprachen. Die Diskussion sei „offen und konstruktiv, im Geiste des Vertrauens und gegenseitigen Verständnisses“ verlaufen.<sup><a href="#r1">1</a></sup></p>
+
+    <h2>Ein 1957 erfundenes Jubiläum</h2>
+    <p>Das gefeierte Datum beruht auf einem einzigen Ereignis: 1557 reiste eine Gesandtschaft kabardinischer Fürsten nach Moskau und schloss mit Iwan IV. ein Bündnis, vor allem gegen das Krim-Khanat. Kabarda war damals ein souveränes Land mit eigenen Fürsten und eigener Außenpolitik – und blieb es noch zwei Jahrhunderte lang. Bündnisse dieser Art wurden viele Male geschlossen und gebrochen, mit Moskau, mit der Krim und mit den Osmanen.</p>
+    <p>Die Formel vom „freiwilligen Eintritt in Russland“ wurde nicht 1557 geschrieben. Die sowjetische Geschichtsschreibung hat sie festgeschrieben und 1957 zum 400. Jahrestag als Staatsfeiertag inszeniert – samt einem Denkmal in Naltschik, das buchstäblich <em>„Für immer mit Russland“</em> heißt. Tscherkessische Historiker nehmen diese Formel seither auseinander, und das Jubiläum von 2007 wurde in der Republik selbst offen kritisiert.<sup><a href="#r5">5</a></sup> Selbst in Kabardino-Balkarien werden der „Eintritt“ Kabardas und der Balkariens an verschiedenen Tagen begangen – eine Erinnerung daran, dass es sich um einen Verwaltungskalender handelt, nicht um ein gemeinsames Gedächtnis.<sup><a href="#r6">6</a></sup> Kabarda ist nicht in Russland „eingetreten“. Es wurde erobert: durch die Festungslinie, die Ende des 18. Jahrhunderts in sein Gebiet vorgeschoben wurde, und durch die Feldzüge der 1810er- und 1820er-Jahre unter Generälen wie Jermolow, die Dörfer niederbrannten und die kabardinische Bevölkerung auf einen Bruchteil ihrer früheren Größe schrumpfen ließen.</p>
+    <p>Dass ausgerechnet der Archivdirektor moderierte, passte. Der Runde Tisch war keine Diskussion über Geschichte; es war das Archiv, das deren offizielle Fassung beglaubigte.</p>
+
+    <h2>Ein Jahrhundert Krieg, ausgelöscht in einem Titel</h2>
+    <p>„Durch die Jahrhunderte Hand in Hand“ lässt keinen Platz für die hundert Jahre zwischen 1763 und 1864, in denen das Russische Reich Krieg gegen die Tscherkessen führte. Er endete am <strong>21. Mai 1864</strong> in Kbaada (heute Krasnaja Poljana) mit der Vertreibung des größten Teils der überlebenden Bevölkerung ins Osmanische Reich. Hunderttausende starben – im Krieg, auf den erzwungenen Märschen zur Schwarzmeerküste, in den überfüllten Booten und in den Flüchtlingslagern an der osmanischen Küste. Darum lebt heute die überwältigende Mehrheit der Tscherkessen außerhalb ihrer Heimat, und darum gibt es die „Diaspora“-Organisationen an diesem Runden Tisch überhaupt. 2011 erkannte das georgische Parlament diese Ereignisse als Völkermord an.<sup><a href="#r4">4</a></sup></p>
+    <p>Weder die Mitteilung des Ministeriums noch Lawrows Grußwort erwähnen den Krieg, die Vertreibung, das Exil oder das Recht auf Rückkehr. Lawrow schreibt, die Geschichte der Tscherkessen sei „untrennbar mit den verschiedenen Etappen der vaterländischen Staatlichkeit verbunden“ und Tscherkessen hätten sich „im Staatsdienst, in Kultur, Wissenschaft und Militärwesen“ hervorgetan.<sup><a href="#r2">2</a></sup> Für Einzelne stimmt das. Als Zusammenfassung der Geschichte eines Volkes ist es eine Art, nicht zu sagen, was diesem Volk widerfahren ist.</p>
+
+    <blockquote>
+      <p>„Russland ist eine multinationale, multikonfessionelle Macht, ein Staat-Zivilisation, in dem seit jeher Vertreter verschiedener Völker und Religionen in Frieden und Eintracht leben.“</p>
+      <p class="ru">— Grußwort Sergei Lawrows an den Runden Tisch, 28. Oktober 2026<sup><a href="#r2">2</a></sup></p>
+    </blockquote>
+
+    <p>„Seit jeher“ und „in Frieden und Eintracht“ – geschrieben über ein Volk, dessen Heimat an der Schwarzmeerküste von der Armee eben dieses Staates entvölkert wurde.</p>
+
+    <figure>
+      <img src="https://live.staticflickr.com/2890/8781034840_67bc59a09d_c.jpg" alt="Tscherkessische Aktivisten protestieren vor der Ständigen Vertretung Russlands bei den Vereinten Nationen, New York, 21. Mai 2013" loading="lazy" />
+      <figcaption>Tscherkessische Aktivisten protestieren am Gedenktag des tscherkessischen Völkermords vor den Vereinten Nationen und der Ständigen Vertretung Russlands bei der UNO, New York, 21. Mai 2013. Foto: <a href="https://www.flickr.com/photos/76905328@N05/8781034840/" target="_blank" rel="noopener">Archiv May21.org</a>.</figcaption>
+    </figure>
+
+    <h2>Warum das Außenministerium?</h2>
+    <p>Ein innenpolitisches Jubiläum einer russischen Republik braucht kein Außenministerium. Eine Diaspora schon. Die Gästeliste erklärt den Ort: Föderationen aus der Türkei, Jordanien, Syrien, Israel und Deutschland, nach Moskau geholt vom Ministerium und von Rossotrudnitschestwo, der Agentur, deren Aufgabe es ist, Einfluss im Ausland aufzubauen. Lawrows Grußwort benennt das Ziel offen: „die weitere Entfaltung des Potenzials der öffentlichen, der Volksdiplomatie“ und Russlands Bereitschaft, „seine unschätzbare Erfahrung mit ausländischen Partnern zu teilen“.<sup><a href="#r2">2</a></sup></p>
+    <p>Das ist nicht neu. Das Ministerium umwirbt die ITA seit Jahren; 2016 rief Lawrow öffentlich zu einer engeren Zusammenarbeit mit ihr auf,<sup><a href="#r7">7</a></sup> und im Juni 2026 zeichnete das Ministerium ihren Präsidenten „für den Beitrag zur internationalen Zusammenarbeit“ aus.<sup><a href="#r3">3</a></sup> Das Muster ist beständig: Diaspora-Organisationen sind als Partner willkommen, sofern sie die Sprache der Dankbarkeit sprechen – und niemals die Sprache von 1864.</p>
+    <p>Auch der Zeitpunkt zählt. Die tscherkessische Zivilgesellschaft in der Diaspora arbeitet seit zwei Jahrzehnten für Anerkennung, für den 21. Mai als Trauertag und für das Recht auf Rückkehr. Ein Gruppenfoto im vergoldeten Saal des Außenministeriums, auf dem die Vorsitzenden von Diaspora-Föderationen neben Senatoren und Ministerialbeamten stehen, unter einem vom Staat verfassten Slogan über „Jahrhunderte Hand in Hand“, ist diesem Staat mehr wert als jede Erklärung, die er selbst abgeben könnte.</p>
+
+    <h2>Was im Saal nicht zu hören war</h2>
+    <p>Die Teilnehmer dankten Russland für seine „Aufmerksamkeit für die Bewahrung des historischen und kulturellen Erbes des tscherkessischen Volkes“ und seine „Unterstützung der Muttersprachen“. Einiges, was in diesem Gespräch fehlte:</p>
+    <ul>
+      <li><strong>Gedenken.</strong> In Kabardino-Balkarien wurden Trauerveranstaltungen zum 21. Mai eingeschränkt und Teilnehmer des Gedenkzugs in Naltschik festgenommen.<sup><a href="#r8">8</a></sup></li>
+      <li><strong>Verfolgung von Aktivisten.</strong> Im März 2026 wurde ein Einwohner Adygeas wegen angeblicher Beteiligung am „Rat des Vereinten Tscherkessien“ zu 11 Jahren Haft verurteilt.<sup><a href="#r9">9</a></sup> Diaspora-Organisationen in der Türkei forderten selbst die Einstellung des Strafverfahrens gegen eine tscherkessische Aktivistin in Russland.<sup><a href="#r10">10</a></sup></li>
+      <li><strong>Rückkehr.</strong> Tscherkessen im Ausland haben noch immer kein anerkanntes Rückkehrrecht. Selbst die Behörden Kabardino-Balkariens haben Moskau Vorschläge zur Änderung der Repatriierungsregeln geschickt.<sup><a href="#r11">11</a></sup> Während des Krieges in Syrien konnte sich nur ein kleiner Teil der syrischen Tscherkessen, die um Rückkehr baten, in der Heimat ansiedeln.</li>
+      <li><strong>Sprache.</strong> Seit 2018 ist der Unterricht in den Muttersprachen an russischen Schulen freiwillig – eine Änderung, vor der tscherkessische und andere Aktivisten warnten, weil sie den Niedergang dieser Sprachen beschleunige. Unter diesem Gesetz für „Unterstützung der Muttersprachen“ zu danken, ist seltsam.</li>
+    </ul>
+
+    <figure class="pair">
+      <img src="https://live.staticflickr.com/7245/7265374488_ae788f5d51_h.jpg" alt="Tscherkessische Demonstration vor der Ständigen Vertretung Russlands bei den Vereinten Nationen, New York, 21. Mai 2012" loading="lazy" />
+      <img src="https://live.staticflickr.com/8264/8752915615_bbc0ef88bf_h.jpg" alt="Gedenken zum 21. Mai in Istanbul, 2013" loading="lazy" />
+      <figcaption>Links: Ständige Vertretung Russlands bei den Vereinten Nationen, New York, 21. Mai 2012. Rechts: Gedenken zum 21. Mai, Istanbul, 2013. Fotos: <a href="https://www.flickr.com/photos/76905328@N05/albums/" target="_blank" rel="noopener">Archiv May21.org</a>.</figcaption>
+    </figure>
+
+    <h2>Einheit, die Vergessen verlangt</h2>
+    <p>Das Jahr der Einheit der Völker Russlands hätte Anlass für ein ehrliches Gespräch sein können: über eine Eroberung, die noch immer „freiwillige Vereinigung“ heißt, über einen Völkermord, der noch immer nicht benannt wird, über ein Volk, das noch immer größtenteils im Ausland lebt. Stattdessen wurde Einheit als Zustimmung zur staatlichen Version der Geschichte definiert, und tscherkessische Organisationen wurden eingeladen, sie zu bestätigen.</p>
+    <p>Wir bezweifeln nicht, dass vielen in diesem Saal die tscherkessische Kultur und Sprache am Herzen liegen. Aber niemand kann im Namen der Tscherkessen von einer „gemeinsamen Vergangenheit“ sprechen, solange diese Vergangenheit in Naltschik oder Maikop nicht ohne Risiko beim Namen genannt werden kann. Echte Partnerschaft würde anderswo beginnen:</p>
+    <ul>
+      <li>mit der Anerkennung des Krieges von 1763–1864 und der Vertreibung von 1864 als das, was sie waren;</li>
+      <li>mit einem freien und sicheren 21. Mai in der Heimat, ohne Verbote und Festnahmen;</li>
+      <li>mit einem echten, einfachen Rückkehrweg für die Nachkommen der Vertriebenen;</li>
+      <li>mit einem Ende der Verfolgung tscherkessischer Aktivisten;</li>
+      <li>mit muttersprachlicher Bildung als Recht, nicht als Option.</li>
+    </ul>
+    <p>Bis dahin wird „Hand in Hand mit Russland“ die Hände beschreiben, die an den Tisch geladen wurden – nicht das Volk, das nicht geladen wurde.</p>
+    </div>
+<div class="panel" id="lang-ar" lang="ar" dir="rtl" hidden>
+    <p class="eyebrow">نقد · سياسات الذاكرة</p>
+    <h1>يدًا بيد… مع مَن؟</h1>
+    <p class="dek">في 28 تشرين الأول/أكتوبر جمعت وزارة الخارجية الروسية مسؤولين ومنظمات شركسية موالية للاحتفال بـ«قرون يدًا بيد مع روسيا». وما تُرك خارج تلك القاعة يقول أكثر مما قيل داخلها.</p>
+    <p class="byline">تجمّع May21.org · 3 تشرين الثاني/نوفمبر 2026</p>
+
+    <div class="divider"></div>
+
+    <figure class="event-photo">
+      <img src="img/mfa-roundtable-1.jpg" alt="المشاركون في الطاولة المستديرة في صورة جماعية بإحدى قاعات قصر وزارة الخارجية الروسية، 28 تشرين الأول/أكتوبر 2026" onerror="this.closest('figure').remove()" />
+      <figcaption>صورة جماعية للمسؤولين ومندوبي الشتات وضيوف الطاولة المستديرة «عبر القرون يدًا بيد مع روسيا، نائلين الشرف والمجد»، قصر وزارة الخارجية، موسكو، 28 تشرين الأول/أكتوبر 2026. الصورة: وزارة الخارجية الروسية (<a href="https://t.me/MID_Russia/95033" target="_blank" rel="noopener">القناة الرسمية</a>)، منشورة لأغراض النقد والتعليق.</figcaption>
+    </figure>
+
+    <h2>ماذا حدث؟</h2>
+    <p>في 28 تشرين الأول/أكتوبر 2026 استضافت وزارة الخارجية الروسية في قصرها بموسكو طاولة مستديرة بعنوان <strong>«عبر القرون يدًا بيد مع روسيا، نائلين الشرف والمجد»</strong>. ونظّمتها الوزارة بالاشتراك مع «روسوترودنيتشيستفو» — الوكالة الحكومية المعنية بـ«التعاون الإنساني» في الخارج — والجمعية الشركسية العالمية. وكانت المناسبة، بحسب تعبير الوزارة، <em>عام وحدة شعوب روسيا</em> واقتراب «الذكرى السبعين بعد الأربعمئة لدخول قبردينو-بلقاريا في الدولة الروسية».<sup><a href="#r1">1</a></sup></p>
+
+    <div class="facts">
+      <h3>مَن كان في القاعة؟</h3>
+      <dl>
+        <dt>الافتتاح</dt><dd>ميخائيل شفيدكوي، الممثل الخاص للرئيس للتعاون الثقافي الدولي، الذي قرأ رسالة تحية من وزير الخارجية سيرغي لافروف</dd>
+        <dt>تحية</dt><dd>إيغور تشايكا، رئيس «روسوترودنيتشيستفو»</dd>
+        <dt>المتحدثون</dt><dd>عضوا مجلس الاتحاد أليكسي بوشكوف وأرسين كانوكوف (الرئيس السابق لقبردينو-بلقاريا)؛ نائب مجلس الدوما س. كوفاليوف؛ س. بيدكين، نائب رئيس الوكالة الاتحادية لشؤون القوميات؛ خ. سوخروكوف، رئيس الجمعية الشركسية العالمية</dd>
+        <dt>الشتات</dt><dd>قيادات اتحاد الجمعيات القوقازية (تركيا)، والجمعيات الخيرية الشركسية في الأردن وسوريا، ومركز التراث «شركيسيا» (إسرائيل)، واتحاد الخاسات الشركسية في أوروبا (ألمانيا)</dd>
+        <dt>إدارة الجلسة</dt><dd>ف. أراكتشييف، مدير الأرشيف الحكومي الروسي للوثائق القديمة</dd>
+      </dl>
+    </div>
+
+    <p>بحسب بيان الوزارة، شدّد المتحدثون على «إسهام الشركس في تاريخ روسيا» وعلى ضرورة تعزيز الوحدة بين القوميات «من خلال فهم أعمق للماضي المشترك». ويقول البيان إن المشاركين الشركس «أعربوا عن امتنانهم لروسيا» لعنايتها بالتراث الشركسي واللغات الأم، وإن النقاش جرى «بروح منفتحة وبنّاءة، في أجواء من الثقة والتفاهم المتبادل».<sup><a href="#r1">1</a></sup></p>
+
+    <h2>ذكرى اختُرعت عام 1957</h2>
+    <p>يستند التاريخ المحتفى به إلى حدث واحد: ففي عام 1557 توجّهت سفارة من أمراء القبرداي إلى موسكو وعقدت مع إيفان الرابع تحالفًا كان موجّهًا أساسًا ضد خانية القرم. كانت قبردا آنذاك أرضًا ذات سيادة، لها أمراؤها وسياستها الخارجية الخاصة، وبقيت كذلك قرنين آخرين. وقد عُقدت مثل هذه التحالفات ونُقضت مرات كثيرة — مع موسكو ومع القرم ومع العثمانيين.</p>
+    <p>لم تُكتب صيغة «الدخول الطوعي في روسيا» عام 1557. بل ثبّتها التأريخ السوفييتي، وحوّلها عام 1957 إلى عيد رسمي بمناسبة الذكرى الأربعمئة — مع نُصب في نالتشيك يحمل حرفيًّا اسم <em>«مع روسيا إلى الأبد»</em>. ومنذ ذلك الحين والمؤرخون الشركس يفنّدون هذه الصيغة، وقد انتُقد احتفال عام 2007 علنًا داخل الجمهورية نفسها.<sup><a href="#r5">5</a></sup> بل إن «دخول» قبردا و«دخول» بلقاريا يُحتفل بهما في قبردينو-بلقاريا في يومين مختلفين، وفي ذلك تذكير بأن الأمر تقويم إداري لا ذاكرة مشتركة.<sup><a href="#r6">6</a></sup> لم «تدخل» قبردا روسيا، بل غُزيت: بخط الحصون الذي دُفع داخل أراضيها في أواخر القرن الثامن عشر، وبحملات العقدين الثاني والثالث من القرن التاسع عشر بقيادة جنرالات مثل يرمولوف، التي أحرقت القرى وقلّصت سكان قبردا إلى جزء يسير مما كانوا عليه.</p>
+    <p>وكان اختيار مدير الأرشيف لإدارة الجلسة في محلّه؛ فالطاولة المستديرة لم تكن نقاشًا للتاريخ، بل كانت الأرشيف وهو يصادق على روايته الرسمية.</p>
+
+    <h2>قرنٌ من الحرب يُمحى في عنوان واحد</h2>
+    <p>عبارة «عبر القرون يدًا بيد» لا تترك مكانًا للأعوام المئة بين 1763 و1864، التي شنّت فيها الإمبراطورية الروسية الحرب على الشركس. وقد انتهت تلك الحرب في <strong>21 أيار/مايو 1864</strong> في قباادا (كراسنايا بوليانا اليوم) بتهجير معظم من بقي من السكان إلى الدولة العثمانية. ومات مئات الآلاف — في الحرب، وفي المسيرات القسرية إلى ساحل البحر الأسود، وفي القوارب المكتظة، وفي مخيمات اللاجئين على الساحل العثماني. ولهذا يعيش الغالبية الساحقة من الشركس اليوم خارج وطنهم، ولهذا توجد أصلًا منظمات «الشتات» التي جلست إلى هذه الطاولة. وفي عام 2011 اعترف برلمان جورجيا بهذه الأحداث إبادةً جماعية.<sup><a href="#r4">4</a></sup></p>
+    <p>لا يذكر بيان الوزارة ولا رسالة لافروف الحرب ولا التهجير ولا المنفى ولا حق العودة. يكتب لافروف أن تاريخ الشركس «مرتبط ارتباطًا وثيقًا بمختلف مراحل الدولة الوطنية»، وأن الشركس برزوا «في الخدمة العامة والثقافة والعلم والشؤون العسكرية».<sup><a href="#r2">2</a></sup> وهذا صحيح عن أفراد. أما حين يُقدَّم خلاصةً لتاريخ شعب، فهو طريقة لعدم قول ما حلّ بذلك الشعب.</p>
+
+    <blockquote>
+      <p>«روسيا دولة متعددة القوميات والأديان، دولة-حضارة، يعيش فيها ممثلو الشعوب والأديان المختلفة منذ أقدم العصور في سلام ووئام».</p>
+      <p class="ru">— رسالة سيرغي لافروف إلى الطاولة المستديرة، 28 تشرين الأول/أكتوبر 2026<sup><a href="#r2">2</a></sup></p>
+    </blockquote>
+
+    <p>«منذ أقدم العصور» و«في سلام ووئام» — كلماتٌ كُتبت عن شعبٍ أفرغ جيشُ الدولة نفسها وطنَه على ساحل البحر الأسود من أهله.</p>
+
+    <figure>
+      <img src="https://live.staticflickr.com/2890/8781034840_67bc59a09d_c.jpg" alt="ناشطون شركس يحتجّون أمام البعثة الدائمة لروسيا لدى الأمم المتحدة، نيويورك، 21 أيار/مايو 2013" loading="lazy" />
+      <figcaption>ناشطون شركس يحتجّون أمام الأمم المتحدة والبعثة الدائمة لروسيا لدى الأمم المتحدة في يوم ذكرى الإبادة الشركسية، نيويورك، 21 أيار/مايو 2013. الصورة: <a href="https://www.flickr.com/photos/76905328@N05/8781034840/" target="_blank" rel="noopener">أرشيف May21.org</a>.</figcaption>
+    </figure>
+
+    <h2>لماذا وزارة الخارجية؟</h2>
+    <p>الذكرى الداخلية لجمهورية روسية لا تحتاج إلى وزارة خارجية، أما الشتات فيحتاج إليها. وقائمة الضيوف تفسّر المكان: اتحادات من تركيا والأردن وسوريا وإسرائيل وألمانيا، جاءت بها إلى موسكو الوزارةُ و«روسوترودنيتشيستفو»، الوكالة التي تتمثل مهمتها في بناء النفوذ في الخارج. ورسالة لافروف تسمّي الهدف صراحةً: «مواصلة تطوير إمكانات الدبلوماسية العامة، الدبلوماسية الشعبية»، واستعداد روسيا «لتقاسم تجربتها التي لا تُقدّر بثمن مع الشركاء الأجانب».<sup><a href="#r2">2</a></sup></p>
+    <p>وليس هذا جديدًا؛ فالوزارة تتودّد إلى الجمعية الشركسية العالمية منذ سنوات: ففي عام 2016 دعا لافروف علنًا إلى تعاون أوثق معها،<sup><a href="#r7">7</a></sup> وفي حزيران/يونيو 2026 منحت الوزارة رئيسها جائزة «تقديرًا لإسهامه في التعاون الدولي».<sup><a href="#r3">3</a></sup> والنمط ثابت: تُستقبل منظمات الشتات شركاءَ بشرط أن تتكلم لغة الامتنان — ولا تتكلم أبدًا لغة عام 1864.</p>
+    <p>والتوقيت مهم أيضًا. فالمجتمع المدني الشركسي في الشتات يعمل منذ عقدين من أجل الاعتراف، ومن أجل جعل 21 أيار/مايو يومًا للحداد، ومن أجل حق العودة. وصورة جماعية في قاعة مذهّبة لوزارة الخارجية، يقف فيها قادة اتحادات الشتات إلى جانب أعضاء مجلس الاتحاد ومسؤولي الوزارة تحت شعار كتبته الدولة عن «قرون يدًا بيد»، تساوي عند تلك الدولة أكثر من أي بيان يمكن أن تصدره بنفسها.</p>
+
+    <h2>ما لم يُسمع في القاعة</h2>
+    <p>شكر المشاركون روسيا على «اهتمامها بصون التراث التاريخي والثقافي للشعب الشركسي» و«دعمها للغات الأم». ومن بين ما غاب عن هذا الحديث:</p>
+    <ul>
+      <li><strong>إحياء الذكرى.</strong> في قبردينو-بلقاريا قُيّدت فعاليات الحداد في 21 أيار/مايو، واحتُجز المشاركون في مسيرة الذكرى في نالتشيك.<sup><a href="#r8">8</a></sup></li>
+      <li><strong>ملاحقة الناشطين.</strong> في آذار/مارس 2026 حُكم على أحد سكان الأديغي بالسجن 11 عامًا بتهمة الارتباط المزعوم بـ«مجلس شركيسيا الموحدة».<sup><a href="#r9">9</a></sup> ومنظمات الشتات في تركيا نفسها طالبت بوقف القضية الجنائية ضد ناشطة شركسية في روسيا.<sup><a href="#r10">10</a></sup></li>
+      <li><strong>العودة.</strong> لا يزال الشركس في الخارج بلا حق معترف به في العودة. بل إن سلطات قبردينو-بلقاريا نفسها أرسلت إلى موسكو مقترحات لتعديل قواعد العودة.<sup><a href="#r11">11</a></sup> وخلال الحرب في سوريا لم يتمكن من الاستقرار في الوطن إلا جزء صغير من الشركس السوريين الذين طلبوا العودة.</li>
+      <li><strong>اللغة.</strong> منذ عام 2018 أصبح تعلّم اللغات الأم في المدارس الروسية اختياريًّا، وهو تغيير حذّر الناشطون الشركس وغيرهم من أنه سيعجّل بتراجعها. ومن الغريب أن يُشكر أحدٌ على «دعم اللغات الأم» في ظل هذا القانون.</li>
+    </ul>
+
+    <figure class="pair">
+      <img src="https://live.staticflickr.com/7245/7265374488_ae788f5d51_h.jpg" alt="تظاهرة شركسية أمام البعثة الدائمة لروسيا لدى الأمم المتحدة، نيويورك، 21 أيار/مايو 2012" loading="lazy" />
+      <img src="https://live.staticflickr.com/8264/8752915615_bbc0ef88bf_h.jpg" alt="إحياء ذكرى 21 أيار/مايو في إسطنبول، 2013" loading="lazy" />
+      <figcaption>يمينًا: البعثة الدائمة لروسيا لدى الأمم المتحدة، نيويورك، 21 أيار/مايو 2012. يسارًا: إحياء ذكرى 21 أيار/مايو، إسطنبول، 2013. الصور: <a href="https://www.flickr.com/photos/76905328@N05/albums/" target="_blank" rel="noopener">أرشيف May21.org</a>.</figcaption>
+    </figure>
+
+    <h2>وحدة تشترط النسيان</h2>
+    <p>كان يمكن لعام وحدة شعوب روسيا أن يكون مناسبةً لحديث صادق: عن غزوٍ لا يزال يُسمّى «اتحادًا طوعيًّا»، وعن إبادةٍ لا تزال بلا اسم، وعن شعبٍ لا يزال معظمه في الخارج. وبدلًا من ذلك عُرّفت الوحدة بأنها الموافقة على رواية الدولة للتاريخ، ودُعيت المنظمات الشركسية إلى المصادقة عليها.</p>
+    <p>لا نشكّ في أن كثيرين في تلك القاعة يهتمون بالثقافة واللغة الشركسيتين. لكن لا يحق لأحد أن يتحدث باسم الشركس عن «ماضٍ مشترك» ما دام هذا الماضي لا يمكن تسميته في نالتشيك أو مايكوب دون مخاطرة. أما الشراكة الحقيقية فتبدأ من مكان آخر:</p>
+    <ul>
+      <li>من الاعتراف بحرب 1763–1864 وتهجير 1864 على حقيقتهما؛</li>
+      <li>من 21 أيار/مايو حرّ وآمن في الوطن، بلا حظر ولا اعتقالات؛</li>
+      <li>من طريق حقيقي وبسيط للعودة لأحفاد المهجّرين؛</li>
+      <li>من وقف ملاحقة الناشطين الشركس؛</li>
+      <li>من التعليم باللغة الأم حقًّا لا خيارًا.</li>
+    </ul>
+    <p>وإلى ذلك الحين، ستصف عبارة «يدًا بيد مع روسيا» الأيدي التي دُعيت إلى الطاولة — لا الشعب الذي لم يُدعَ.</p>
+    </div>
+<div class="panel" id="lang-ady" lang="ady" hidden>
+    <p class="eyebrow">Критикэ · ГукъэкӀыжым иполитикэ</p>
+    <h1>Хэт ИӀэ Аубытыгъ?</h1>
+    <p class="dek">Чъэпыогъум и 28-м Урысыем ИӀэкӀыб ӀофхэмкӀэ министерствэ чиновникхэр ыкӀи ащ ыдэжь щыт адыгэ зэгухьэныгъэхэр зэхищэгъагъэх «лӀэшӀэгъу пчъагъэкӀэ Урысыем ыӀэ тыубытэу» тыщыпсэугъ аӀоу агъэмэфэкӀыным пае.</p>
+    <p class="byline">May21.org · 2026 илъэсым шэкӀогъум и 3</p>
+
+    <div class="divider"></div>
+
+    <figure class="event-photo">
+      <img src="img/mfa-roundtable-1.jpg" alt="Зэхэсыгъом хэлэжьагъэхэр Урысыем ИӀэкӀыб ӀофхэмкӀэ министерствэ иунэ зэгъусэхэу сурэт зыщатырахы, 2026 илъэсым чъэпыогъум и 28" onerror="this.closest('figure').remove()" />
+      <figcaption>Зэхэсыгъом хэлэжьагъэхэм ясурэт, Москва, 2026 илъэсым чъэпыогъум и 28. Сурэтыр: Урысыем ИӀэкӀыб ӀофхэмкӀэ министерствэ (<a href="https://t.me/MID_Russia/95033" target="_blank" rel="noopener">иканал</a>).</figcaption>
+    </figure>
+
+    <p class="status warn">Мыщ зэхэугуфыкӀыгъэ закъор ит. Тхыгъэ псаур нэмыкӀыбзэхэмкӀэ щыӀ.</p>
+
+    <h2>ЗэхэугуфыкӀыгъэ</h2>
+    <p>Зэхэсыгъор зэхащэгъагъ министерствэм, Россотрудничествэм ыкӀи Дунэе Адыгэ Хасэм. Ащ хэлэжьагъэх Урысыем ичиновникхэр, Тыркуем, Иорданием, Сирием, Израиль, Германием къарыкӀыгъэ хасэхэм яталэхэр. Ар зыфэгъэхьыгъагъэр 1557 илъэсым Къэбэртаир Урысыем «шӀоигъоныгъэкӀэ» хэхьагъэу зэраӀорэм илъэс 470-рэ зэрэхъурэр ары.</p>
+    <p>Титхыгъэ къыщытэгъэлъагъо: а тхыдэр 1957 илъэсым Совет тхыдэтхэм къагупшысыгъ; Къэбэртаир «хэхьагъэп» — заокӀэ аштагъ. 1763 – 1864 илъэсхэм Урысые империем адыгэхэм заор адишӀыгъ, 1864 илъэсым мэлылъфэгъум и 21-м ар аухыгъ, адыгэ лъэпкъым инахьыбэр Тырку империем ырагъэфыгъ. А заом, а ирагъэфыныгъэм, хэкум къэгъэзэжьыным зэхэсыгъом гущыӀэ закъо щаӀуагъэп.</p>
+    <p>Зэхэсыгъом щамыӀуагъэхэр: Налщык мэлылъфэгъум и 21-м щыкӀорэ гукъэкӀыжь Ӏофтхьабзэхэр зэрагъэуцурэр, адыгэ активистхэр хьапс зэрарагъэтӀысхьэхэрэр, хэкум къэгъэзэжьын зышӀоигъохэм гъогу зэрямыӀэр, ныдэлъфыбзэр еджапӀэхэм зэрэщычӀэкӀырэр. Ныбджэгъуныгъэ шъыпкъэр а Ӏофыгъохэр къызыщалъытэхэкӀэ ары къызщежьэщтыр.</p>
+    </div>
 
     <section class="refs">
-      <h2>Sources</h2>
+      <h2 id="refs-title">Sources</h2>
       <ol>
         <li id="r1">Russian Foreign Ministry, readout of the round table «Сквозь века рука об руку с Россией, снискав почёт и славу», 28 Oct 2026. <a href="https://www.mid.ru/ru/foreign_policy/news/2158215/" target="_blank" rel="noopener">mid.ru/ru/foreign_policy/news/2158215</a>; also on the ministry's channel: <a href="https://t.me/MID_Russia/95033" target="_blank" rel="noopener">t.me/MID_Russia/95033</a>.</li>
         <li id="r2">Greeting of Foreign Minister S. V. Lavrov to the organisers, participants and guests of the round table, 28 Oct 2026. <a href="https://mid.ru/ru/foreign_policy/news/2157960/" target="_blank" rel="noopener">mid.ru/ru/foreign_policy/news/2157960</a>; <a href="https://t.me/MID_Russia/94939" target="_blank" rel="noopener">t.me/MID_Russia/94939</a>.</li>
@@ -190,14 +576,54 @@
     </section>
   </article>
 
-  <footer>© 2026 May21.org · Quotations from Russian state sources are translated by May21.org for the purpose of critique.</footer>
+  <footer id="foot">© 2026 May21.org · Quotations from Russian state sources are translated by May21.org for the purpose of critique.</footer>
 
   <script>
-    // reader view: ?view=reader switches to a light, serif layout
-    (function () {
-      var reader = new URLSearchParams(location.search).get('view') === 'reader';
+    var LANGS = ["en", "tr", "kbd", "ru", "de", "ar", "ady"];
+    var UI = {"en": ["← Library", "Reader view", "Standard view", "Sources", "© 2026 May21.org · Quotations from Russian state sources are translated by May21.org for the purpose of critique."], "tr": ["← Kütüphane", "Okuma görünümü", "Standart görünüm", "Kaynaklar", "© 2026 May21.org · Rus devlet kaynaklarından alıntılar May21.org tarafından eleştiri amacıyla çevrilmiştir."], "kbd": ["← Тхылъхэр", "Еджэн", "Хабзэм тету", "Тхылъхэр", "© 2026 May21.org"], "ru": ["← Библиотека", "Режим чтения", "Обычный вид", "Источники", "© 2026 May21.org · Цитаты из российских государственных источников приведены в обратном переводе May21.org в целях критики; точные формулировки — по ссылкам в разделе «Источники»."], "de": ["← Bibliothek", "Leseansicht", "Standardansicht", "Quellen", "© 2026 May21.org · Zitate aus russischen staatlichen Quellen wurden von May21.org zum Zweck der Kritik übersetzt."], "ar": ["→ المكتبة", "وضع القراءة", "العرض العادي", "المصادر", "© 2026 May21.org · ترجم موقع May21.org الاقتباسات من المصادر الرسمية الروسية لأغراض النقد."], "ady": ["← Тхылъхэр", "Еджэн", "Шапхъэм тетэу", "Тхылъхэр", "© 2026 May21.org"]};
+    var TITLE = {"en": "Hand in Hand With Whom?", "tr": "Kiminle El Ele?", "kbd": "Хэт и Ӏэпэр Яубыдар?", "ru": "Рука об руку — с кем?", "de": "Hand in Hand – mit wem?", "ar": "يدًا بيد… مع مَن؟", "ady": "Хэт ИӀэ Аубытыгъ?"};
+    var params = new URLSearchParams(location.search);
+    var reader = params.get('view') === 'reader';
+    if (reader) document.body.classList.add('reader');
+    var current = 'en';
+    function link(lang, readerOn) {
+      var q = '?lang=' + lang + (readerOn ? '&view=reader' : '');
+      return location.pathname + q;
+    }
+    function show(lang) {
+      if (LANGS.indexOf(lang) < 0) lang = 'en';
+      current = lang;
+      document.querySelectorAll('.panel').forEach(function (p) { p.hidden = p.id !== 'lang-' + lang; });
+      document.querySelectorAll('.tabs button').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.lang === lang); });
+      document.documentElement.lang = lang;
+      var u = UI[lang];
+      document.getElementById('lib-link').textContent = u[0];
       var t = document.getElementById('reader-toggle');
-      if (reader) { document.body.classList.add('reader'); t.textContent = 'Standard view'; t.href = location.pathname; }
+      t.textContent = reader ? u[2] : u[1];
+      t.href = link(lang, !reader);
+      document.getElementById('refs-title').textContent = u[3];
+      document.getElementById('foot').textContent = u[4];
+      document.title = TITLE[lang] + ' · May21.org';
+      try { history.replaceState(null, '', link(lang, reader) + location.hash); } catch (e) {}
+    }
+    document.querySelectorAll('.tabs button').forEach(function (b) {
+      b.addEventListener('click', function () {
+        show(b.dataset.lang);
+        try { localStorage.setItem('may21_lang', b.dataset.lang); } catch (e) {}
+      });
+    });
+    (function () {
+      var q = params.get('lang');
+      if (q) return show(q);
+      var saved = null;
+      try { saved = localStorage.getItem('may21_lang'); } catch (e) {}
+      if (saved && LANGS.indexOf(saved) >= 0) return show(saved);
+      var prefs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || 'en'];
+      for (var i = 0; i < prefs.length; i++) {
+        var c = String(prefs[i]).toLowerCase().split('-')[0];
+        if (LANGS.indexOf(c) >= 0) return show(c);
+      }
+      show('en');
     })();
   </script>
 </body>
