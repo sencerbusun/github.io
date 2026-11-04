@@ -1,5 +1,58 @@
 [
   {
+    "type": "News",
+    "title": "Not in Our Name",
+    "author": "May21.org Collective",
+    "date": "2026-11-04",
+    "lang": "EN · TR · РУС · DE · عر · КАБ · АДЫ",
+    "url": "documents/2026-11-association-reactions.html?lang=en",
+    "description": "A federation and four Circassian associations in Turkey publicly reject the Moscow round table of 28 October and the “voluntary accession” narrative it celebrated.",
+    "editions": {
+      "tr": {
+        "type": "Haber",
+        "title": "Bizim Adımıza Değil",
+        "description": "Türkiye’den bir federasyon ve dört Çerkes derneği, 28 Ekim’deki Moskova yuvarlak masasını ve “gönüllü katılım” anlatısını kamuoyu önünde reddetti.",
+        "url": "documents/2026-11-association-reactions.html?lang=tr",
+        "lang": "TR"
+      },
+      "kbd": {
+        "type": "Хъыбар",
+        "title": "Ди ЦӀэкӀэ – Хьэуэ",
+        "description": "Тыркум щыӀэ адыгэ федерацэ зыщрэ хасэ плӀырэ Москва жэпуэгъуэм и 28-м щекӀуэкӀа зэхуэсыр къызэрамыщтэр.",
+        "url": "documents/2026-11-association-reactions.html?lang=kbd",
+        "lang": "КАБ"
+      },
+      "ady": {
+        "type": "Къэбар",
+        "title": "Ти ЦӀэкӀэ – Хьау",
+        "description": "Тыркуем щыӀэ адыгэ федерацие закъорэ хасэ плӀырэ Москва чъэпыогъум и 28-м щыкӀогъэ зэхэсыгъор зэрамыштэрэр.",
+        "url": "documents/2026-11-association-reactions.html?lang=ady",
+        "lang": "АДЫ"
+      },
+      "ru": {
+        "type": "Новости",
+        "title": "Не от нашего имени",
+        "description": "Федерация и четыре черкесские организации Турции публично отвергли московский круглый стол 28 октября и миф о «добровольном вхождении».",
+        "url": "documents/2026-11-association-reactions.html?lang=ru",
+        "lang": "РУС"
+      },
+      "de": {
+        "type": "Nachrichten",
+        "title": "Nicht in unserem Namen",
+        "description": "Eine Föderation und vier tscherkessische Vereine in der Türkei weisen den Moskauer Runden Tisch vom 28. Oktober und die Erzählung vom „freiwilligen Anschluss“ öffentlich zurück.",
+        "url": "documents/2026-11-association-reactions.html?lang=de",
+        "lang": "DE"
+      },
+      "ar": {
+        "type": "أخبار",
+        "title": "ليس باسمنا",
+        "description": "اتحادٌ وأربع جمعيات شركسية في تركيا ترفض علنًا طاولة موسكو المستديرة في 28 تشرين الأول/أكتوبر ورواية «الانضمام الطوعي».",
+        "url": "documents/2026-11-association-reactions.html?lang=ar",
+        "lang": "عر"
+      }
+    }
+  },
+  {
     "type": "Critique",
     "title": "Hand in Hand With Whom?",
     "author": "May21.org Collective",

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Not in Our Name · May21.org</title>
+  <meta name="description" content="Within days of the Russian Foreign Ministry's round table of 28 October 2026, a federation and four Circassian associations in Turkey publicly rejected it and the 'voluntary accession' narrative it celebrated. In English, Turkish, Russian, German and Arabic, with Kabardian and Adyghe summaries." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400;500&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=Noto+Sans+Arabic:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --black:#0a0a0a; --off-black:#111; --charcoal:#1c1c1c; --dim:#2a2a2a; --mid:#444;
+      --muted:#888; --smoke:#bbb; --white:#f0ede8; --accent:#c8382a; --accent2:#d47c2b;
+      --line:rgba(255,255,255,0.08);
+      --font-display:'Bebas Neue',sans-serif; --font-body:'DM Sans',sans-serif; --font-mono:'DM Mono',monospace;
+      --bg:var(--black); --fg:var(--white); --soft:var(--smoke);
+    }
+    *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--bg); color:var(--fg); font-family:var(--font-body); font-weight:300; line-height:1.75; }
+    a { color:var(--accent2); }
+    img { display:block; max-width:100%; }
+
+    .top { padding:18px 24px; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap; }
+    .top a { text-decoration:none; color:var(--fg); }
+    .logo { font-family:var(--font-display); font-size:1.5rem; letter-spacing:0.06em; }
+    .logo span { color:var(--accent); }
+    .top-links { display:flex; gap:20px; font-family:var(--font-mono); font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; }
+    .top-links a { color:var(--muted); }
+    .top-links a:hover { color:var(--accent2); }
+
+    article { max-width:760px; margin:0 auto; padding:64px 24px 96px; }
+    .eyebrow { font-family:var(--font-mono); font-size:0.7rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--accent); margin-bottom:16px; }
+    h1 { font-family:var(--font-display); font-weight:400; font-size:clamp(2.6rem,8vw,4.6rem); line-height:0.95; letter-spacing:0.02em; }
+    .dek { margin-top:24px; font-size:1.15rem; color:var(--soft); border-left:2px solid var(--accent); padding-left:18px; }
+    .byline { margin-top:28px; font-family:var(--font-mono); font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); }
+    .divider { width:48px; height:2px; background:var(--accent); margin:40px 0; }
+
+    article h2 { font-family:var(--font-display); font-weight:400; font-size:clamp(1.7rem,4vw,2.3rem); letter-spacing:0.03em; line-height:1.05; margin:56px 0 16px; }
+    article h3.who { font-family:var(--font-body); font-weight:500; font-size:1.1rem; color:var(--fg); margin:32px 0 8px; }
+    article h3.who span { font-family:var(--font-mono); font-weight:400; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); margin-left:8px; }
+    article p { margin-bottom:20px; font-size:1.05rem; color:var(--soft); }
+    article p strong { color:var(--fg); font-weight:500; }
+    article blockquote { margin:28px 0; padding:4px 0 4px 20px; border-left:2px solid var(--accent2); }
+    article blockquote p { color:var(--fg); font-size:1.05rem; margin-bottom:6px; }
+    article blockquote .ru { font-family:var(--font-mono); font-size:0.78rem; color:var(--muted); }
+    article ul { margin:0 0 24px 20px; color:var(--soft); }
+    article li { margin-bottom:10px; }
+
+    .facts { background:var(--charcoal); border:1px solid var(--dim); padding:24px 26px; margin:32px 0; font-size:0.95rem; }
+    .facts h3 { font-family:var(--font-mono); font-weight:400; font-size:0.7rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--accent); margin-bottom:12px; }
+    .facts dl { display:grid; grid-template-columns:170px 1fr; gap:8px 16px; color:var(--soft); }
+    .facts dt { font-family:var(--font-mono); font-size:0.72rem; letter-spacing:0.06em; color:var(--muted); text-transform:uppercase; padding-top:3px; }
+
+    .refs { margin-top:64px; padding-top:24px; border-top:1px solid var(--line); }
+    .refs h2 { margin-top:0; }
+    .refs ol { margin-left:20px; font-size:0.9rem; color:var(--soft); }
+    .refs li { margin-bottom:10px; }
+    sup a { text-decoration:none; font-family:var(--font-mono); font-size:0.7em; }
+
+    footer { padding:32px 24px; border-top:1px solid var(--line); font-family:var(--font-mono); font-size:0.65rem; letter-spacing:0.1em; color:var(--muted); text-align:center; }
+
+    body.reader { --bg:#f7f4ee; --fg:#1a1a1a; --soft:#2b2b2b; --muted:#6b6b6b; --charcoal:#ece7de; --dim:#d9d2c6; --line:rgba(0,0,0,0.1); }
+    body.reader article p, body.reader article li, body.reader .dek { font-family:'Source Serif 4',Georgia,serif; font-size:1.12rem; }
+    body.reader a { color:#9a2a1f; }
+
+    @media (max-width:640px) {
+      article { padding:40px 16px 72px; }
+      .facts dl { grid-template-columns:1fr; gap:2px 0; }
+      .facts dd { margin-bottom:10px; }
+    }
+
+    .top-right { display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+    .tabs { display:flex; flex-wrap:wrap; gap:4px; }
+    .tabs button { background:transparent; border:1px solid var(--mid); color:var(--muted); font-family:var(--font-mono); font-size:0.66rem; letter-spacing:0.1em; padding:5px 9px; cursor:pointer; }
+    .tabs button:hover { border-color:var(--soft); color:var(--fg); }
+    .tabs button[aria-pressed="true"] { background:var(--accent); border-color:var(--accent); color:#fff; }
+    .status { font-family:var(--font-mono); font-size:0.75rem; line-height:1.8; color:var(--soft); background:var(--charcoal); border:1px solid var(--accent2); padding:14px 18px; margin:0 0 32px; }
+    [dir="rtl"] { font-family:'Noto Sans Arabic',var(--font-body); }
+    [dir="rtl"] .dek { border-left:none; border-right:2px solid var(--accent); padding-left:0; padding-right:18px; }
+    [dir="rtl"] article blockquote, article [dir="rtl"] blockquote { border-left:none; border-right:2px solid var(--accent2); padding:4px 20px 4px 0; }
+    [dir="rtl"] ul { margin:0 20px 24px 0; }
+    [dir="rtl"] h3.who span { margin-left:0; margin-right:8px; letter-spacing:0; }
+    [dir="rtl"] .eyebrow, [dir="rtl"] .byline, [dir="rtl"] .facts dt { letter-spacing:0; }
+    [dir="rtl"] h1, [dir="rtl"] h2 { font-family:'Noto Sans Arabic',sans-serif; font-weight:500; letter-spacing:0; line-height:1.3; }
+    [dir="rtl"] h1 { font-size:clamp(2.2rem,6vw,3.4rem); }
+    [dir="rtl"] article p, [dir="rtl"] article li { font-size:1.12rem; line-height:2; }
+    body.reader [dir="rtl"] article p, body.reader [dir="rtl"] p, body.reader [dir="rtl"] li { font-family:'Noto Sans Arabic',sans-serif; }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <a href="../index.html" class="logo">May21<span>.</span>org</a>
+    <div class="top-right">
+      <nav class="tabs" aria-label="Language"><button type="button" data-lang="en" title="English">EN</button><button type="button" data-lang="tr" title="Türkçe">TR</button><button type="button" data-lang="kbd" title="Адыгэбзэ (Къэбэрдей)">КАБ</button><button type="button" data-lang="ru" title="Русский">РУС</button><button type="button" data-lang="de" title="Deutsch">DE</button><button type="button" data-lang="ar" title="العربية">عر</button><button type="button" data-lang="ady" title="Адыгабзэ">АДЫ</button></nav>
+      <nav class="top-links">
+        <a href="../index.html#library" id="lib-link">← Library</a>
+        <a href="?view=reader" id="reader-toggle">Reader view</a>
+      </nav>
+    </div>
+  </header>
+
+  <article>
+<!-- ============================ EN ============================ -->
+    <div class="panel" id="lang-en" lang="en" hidden>
+    <p class="eyebrow">News · Diaspora</p>
+    <h1>Not in Our Name</h1>
+    <p class="dek">Within days of the Moscow round table of 28 October, a federation and four Circassian associations in Turkey publicly rejected it — and the story of "voluntary accession" it was built on.</p>
+    <p class="byline">May21.org Collective · 4 November 2026</p>
+
+    <div class="divider"></div>
+
+    <h2>What prompted it</h2>
+    <p>On 28 October 2026 the Russian Foreign Ministry, Rossotrudnichestvo and the International Circassian Association (MChA) held a round table in Moscow titled <strong>"Through the centuries hand in hand with Russia, earning honour and glory"</strong>, timed to the "470th anniversary" of Kabardino-Balkaria's "entry" into Russia. The leadership of the Federation of Caucasian Associations (KAFFED), Turkey's largest Circassian umbrella body, took part and presented the event at home as a "historic meeting with the Russian Federation". We set out our own critique in <a href="2026-11-mfa-round-table.html">Hand in Hand With Whom?</a><sup><a href="#r6">6</a></sup></p>
+    <p>The response from Circassian civil society in Turkey came quickly.</p>
+
+    <div class="facts">
+      <h3>Who has spoken so far</h3>
+      <dl>
+        <dt>ÇERKES-FED</dt><dd>Federation of Circassian Associations · public statement, around 31 October<sup><a href="#r1">1</a></sup></dd>
+        <dt>Kayseri</dt><dd>Kayseri Kafkas Derneği, which left KAFFED · statement adopted unanimously by an extraordinary general assembly, 31 October<sup><a href="#r2">2</a></sup></dd>
+        <dt>İstanbul</dt><dd>İstanbul Kafkas Kültür Derneği (İKKD), relations with KAFFED suspended since January 2024 · public announcement, 1 November<sup><a href="#r3">3</a></sup></dd>
+        <dt>Ankara</dt><dd>Ankara Çerkes Derneği, KAFFED member · public statement, early November<sup><a href="#r4">4</a></sup></dd>
+        <dt>Çorum</dt><dd>Çorum Kafkas Kültür Derneği, KAFFED member · public statement, 1 November<sup><a href="#r5">5</a></sup></dd>
+      </dl>
+    </div>
+
+    <h2>Where they agree</h2>
+    <ul>
+      <li><strong>No "voluntary accession".</strong> All five reject the premise of the round table: that Circassians joined Russia of their own free will in 1557. Kayseri points out that a dynastic marriage cannot be turned into the voluntary submission of a people — had it been so, there would have been no 101 years of war, genocide and exile. ÇERKES-FED calls presenting 1557 as the start of a voluntary union a distortion of history.</li>
+      <li><strong>No "gratitude".</strong> According to the ministry, Circassian participants thanked Russia for caring for their heritage and languages. Kayseri says this gratitude has no standing among Circassians as a whole and is unacceptable. İKKD and ÇERKES-FED answer with the record: native-language study made optional in 2017–2018, Russian declared the "state-forming" language in 2020, the republics' leaders stripped of the title of president and no longer directly elected.</li>
+      <li><strong>No mandate.</strong> None of the organisations at the table can speak for all Circassians. Ankara and Çorum — both KAFFED members — add that most member associations were neither informed nor consulted beforehand.</li>
+      <li><strong>Not against dialogue.</strong> Each statement stresses that it does not oppose relations with Russia — only relations bought with historical truth and Circassian rights.</li>
+    </ul>
+
+    <h2>Five voices</h2>
+
+    <h3 class="who">ÇERKES-FED <span>Federation</span></h3>
+    <p>The most political of the statements. It reads the meeting as a deliberate effort, timed to Russia's "Year of Unity of the Peoples of Russia", to fold the diaspora into the state's historical narrative, lend that narrative legitimacy through diaspora organisations and redefine the Circassian question in line with Russian foreign policy. It sets out five demands: no story of friendship without facing the genocide and exile; no 1557 as a symbol of submission; legal guarantees for language and culture, not words; Circassian history surrendered to no state's interests; and an account from the participating organisations of what concrete gains they brought back from the table. It is not an enemy of the Russian people, it writes, but wants the Russian state to face its history.</p>
+
+    <h3 class="who">Kayseri Kafkas Derneği <span>Left KAFFED</span></h3>
+    <p>Adopted unanimously at an extraordinary general assembly, Kayseri's six-point statement ends with its sharpest charge: being part of a meeting that legitimises and glorifies the "1557 construct", and presenting it differently to the diaspora, is the greatest disrespect to ancestors who fought, died and were exiled defending their homeland. It also notes that such meetings and "so-called negotiations" have repeatedly been followed by new losses of rights in the homeland.</p>
+
+    <h3 class="who">İstanbul Kafkas Kültür Derneği <span>Relations suspended</span></h3>
+    <p>İKKD puts the two accounts of the meeting side by side. The ministry published the title, the anniversary and the thanks; KAFFED's report mentioned none of them — and KAFFED's points on return, scholarships and language are missing from the ministry's readout. "The showcase is one thing," it writes, "the record another." In its view KAFFED's ties to the homeland now run through the MChA and the Foreign Ministry rather than the Circassian people, and the diaspora in Turkey is being turned into a branch of the MChA and part of the "Russkiy Mir". Its suspension of relations with KAFFED stays in force.</p>
+
+    <h3 class="who">Ankara Çerkes Derneği <span>KAFFED member</span></h3>
+    <p>Ankara objects not to talks with Russia but to the narrative and political frame in which they took place: the presence of KAFFED and the MChA at an event built on the "voluntary accession" thesis risks legitimising it, and selling it as a diplomatic success is troubling in itself. Decisions taken without member associations, it says, cannot be presented as the common position of the diaspora; the right to represent comes from trust, not titles.</p>
+
+    <h3 class="who">Çorum Kafkas Kültür Derneği <span>KAFFED member</span></h3>
+    <p>Close in wording to Ankara's, Çorum's statement insists that the genocide and exile cannot be overshadowed by any diplomatic contact, and that KAFFED is not just its leadership but the collective will of its members. It closes with a line that sums up the week: representation is not only a seat at the table, but carrying the will of those represented to it.</p>
+
+    <h2>Pressure from inside</h2>
+    <p>The statements come days before KAFFED's general assembly on 7–8 November. Two come from associations that have already broken with the federation, two from current members. Under the Ankara and Çorum posts, readers asked both to go further and follow Kayseri, Eskişehir and İKKD out of KAFFED. At the time of writing we have not found a public response from KAFFED to any of the five.</p>
+    <p>What the week shows is simple. In Moscow, a handful of organisations were photographed under a slogan about "centuries hand in hand". In Turkey, home to the largest Circassian diaspora, the answer from a broad range of its organisations was that they had not been asked — and that the history in that slogan is not theirs.</p>
+    </div>
+
+<!-- ============================ TR ============================ -->
+    <div class="panel" id="lang-tr" lang="tr" hidden>
+    <p class="eyebrow">Haber · Diaspora</p>
+    <h1>Bizim Adımıza Değil</h1>
+    <p class="dek">28 Ekim’deki Moskova yuvarlak masasının ardından birkaç gün içinde Türkiye’den bir federasyon ve dört Çerkes derneği toplantıyı — ve dayandığı “gönüllü katılım” anlatısını — kamuoyu önünde reddetti.</p>
+    <p class="byline">May21.org Kolektifi · 4 Kasım 2026</p>
+
+    <div class="divider"></div>
+
+    <h2>Ne oldu?</h2>
+    <p>28 Ekim 2026’da Rusya Dışişleri Bakanlığı, Rossotrudniçestvo ve Uluslararası Çerkes Birliği (UÇB/DÇB), Kabardey-Balkarya’nın Rusya’ya “katılışının 470. yıldönümü” vesilesiyle Moskova’da <strong>“Yüzyıllar boyunca Rusya ile el ele, onur ve şan kazanarak”</strong> başlıklı bir yuvarlak masa düzenledi. Türkiye’nin en büyük Çerkes çatı örgütü Kafkas Dernekleri Federasyonu’nun (KAFFED) yönetimi toplantıya katıldı ve onu kamuoyuna “Rusya Federasyonu ile Tarihi Toplantı” olarak duyurdu. Kendi değerlendirmemizi <a href="2026-11-mfa-round-table.html?lang=tr">Kiminle El Ele?</a> başlıklı yazımızda ortaya koymuştuk.<sup><a href="#r6">6</a></sup></p>
+    <p>Türkiye’deki Çerkes sivil toplumunun yanıtı gecikmedi.</p>
+
+    <div class="facts">
+      <h3>Şimdiye kadar kimler açıklama yaptı?</h3>
+      <dl>
+        <dt>ÇERKES-FED</dt><dd>Çerkes Dernekleri Federasyonu · kamuoyu açıklaması, 31 Ekim civarı<sup><a href="#r1">1</a></sup></dd>
+        <dt>Kayseri</dt><dd>KAFFED’den ayrılan Kayseri Kafkas Derneği · olağanüstü genel kurulda oybirliğiyle kabul edilen açıklama, 31 Ekim<sup><a href="#r2">2</a></sup></dd>
+        <dt>İstanbul</dt><dd>Ocak 2024’ten beri KAFFED ile ilişkilerini askıya almış olan İstanbul Kafkas Kültür Derneği (İKKD) · kamuoyuna duyuru, 1 Kasım<sup><a href="#r3">3</a></sup></dd>
+        <dt>Ankara</dt><dd>KAFFED üyesi Ankara Çerkes Derneği · kamuoyuna açıklama, Kasım başı<sup><a href="#r4">4</a></sup></dd>
+        <dt>Çorum</dt><dd>KAFFED üyesi Çorum Kafkas Kültür Derneği · kamuoyuna açıklama, 1 Kasım<sup><a href="#r5">5</a></sup></dd>
+      </dl>
+    </div>
+
+    <h2>Ortak noktalar</h2>
+    <ul>
+      <li><strong>“Gönüllü katılım” yok.</strong> Beş açıklamanın tamamı, yuvarlak masanın dayandığı tezi — Çerkeslerin 1557’de Rusya’ya kendi istekleriyle katıldığını — reddediyor. Kayseri, bir hanedan evliliğinden bir halkın gönüllü teslimiyetinin çıkarılamayacağını; öyle olsaydı 101 yıllık savaşın, soykırımın ve sürgünün yaşanmayacağını hatırlatıyor. ÇERKES-FED, 1557’yi gönüllü birlikteliğin başlangıcı gibi sunmayı tarihin çarpıtılması olarak niteliyor.</li>
+      <li><strong>“Minnet” yok.</strong> Bakanlığa göre Çerkes katılımcılar, mirasa ve ana dillere gösterilen özen için Rusya’ya teşekkür etti. Kayseri bu minnetin Çerkes toplumunun tamamı nezdinde bir karşılığı olmadığını ve kabul edilemez olduğunu söylüyor. İKKD ve ÇERKES-FED ise kayıtlarla yanıt veriyor: 2017–2018’de ana dil eğitimi isteğe bağlı hâle getirildi, 2020’de Rusça “devlet kurucu halkın dili” ilan edildi, cumhuriyet liderlerinin başkan unvanı kaldırıldı ve artık halk tarafından seçilmiyorlar.</li>
+      <li><strong>Temsil yetkisi yok.</strong> Masadaki hiçbir kurum bütün Çerkesler adına konuşamaz. KAFFED üyesi Ankara ve Çorum, üye derneklerin büyük kısmının önceden ne bilgilendirildiğini ne de görüşünün alındığını ekliyor.</li>
+      <li><strong>Diyaloğa karşı değil.</strong> Her açıklama, Rusya ile ilişkilere karşı olmadığını vurguluyor — yeter ki bu ilişkiler tarihsel gerçeklerin ve Çerkes haklarının bedeli olmasın.</li>
+    </ul>
+
+    <h2>Beş ses</h2>
+
+    <h3 class="who">ÇERKES-FED <span>Federasyon</span></h3>
+    <p>Açıklamaların en siyasi olanı. Toplantıyı, Rusya’nın “Rusya Halklarının Birliği Yılı” ile zamanlanmış, diasporayı devletin tarih anlatısına entegre etme, bu anlatıya diaspora kurumları üzerinden meşruiyet kazandırma ve Çerkes meselesini Rusya’nın dış politika çıkarlarına göre yeniden tanımlama girişimi olarak okuyor. Beş talep sıralıyor: soykırım ve sürgünle yüzleşilmeden dostluk anlatısı kabul edilmemeli; 1557 teslimiyetin simgesi olarak sunulmamalı; dil ve kültür için söz değil hukuki güvence verilmeli; Çerkes tarihi hiçbir devletin çıkarına teslim edilmemeli; masaya oturan kurumlar hangi somut kazanımla kalktıklarını açıklamalı. Rus halkının düşmanı olmadığını, ancak Rus devletinin tarihiyle yüzleşmesini istediğini yazıyor.</p>
+
+    <h3 class="who">Kayseri Kafkas Derneği <span>KAFFED’den ayrıldı</span></h3>
+    <p>Olağanüstü genel kurulda oybirliğiyle kabul edilen altı maddelik açıklama en ağır eleştirisiyle bitiyor: “1557 kurgusunu” meşrulaştıran ve yücelten bir toplantının parçası olmak ve bunu diasporaya farklı aktarmak, vatanı için savaşan, can veren ve sürgün edilen atalara karşı en büyük saygısızlıktır. Açıklama ayrıca bu tür toplantıların ve “sözde müzakerelerin” ardından anavatanda sık sık yeni hak kayıpları yaşandığını hatırlatıyor.</p>
+
+    <h3 class="who">İstanbul Kafkas Kültür Derneği <span>İlişkiler askıda</span></h3>
+    <p>İKKD toplantının iki versiyonunu yan yana koyuyor. Bakanlık başlığı, yıldönümünü ve şükranı yayımladı; KAFFED’in metninde ise bunların hiçbiri yok — KAFFED’in aktardığı dönüş, burs ve anadil talepleri de bakanlığın açıklamasında yer almıyor. Derneğin ifadesiyle kamuoyuna gösterilen vitrin başka, kayda geçen gerçek başka. İKKD’ye göre KAFFED’in anavatanla ilişkisi artık Çerkes halkıyla değil, DÇB ve Rus Dışişleri üzerinden kuruluyor ve Türkiye diasporası DÇB’nin bir şubesi, “Russkiy Mir”in bir parçası hâline getirilmek isteniyor. KAFFED ile ilişkilerin askıya alınması kararı yürürlükte kalıyor.</p>
+
+    <h3 class="who">Ankara Çerkes Derneği <span>KAFFED üyesi</span></h3>
+    <p>Ankara’nın itirazı Rusya ile görüşmelere değil, bu görüşmelerin yürütüldüğü tarihsel anlatı ve siyasi çerçeveye: “gönüllü katılım” tezine dayanan bir organizasyonda KAFFED ve DÇB’nin yer alması bu teze meşruiyet kazandırma riski taşıyor; bunun diplomatik başarı olarak sunulması ise ayrıca düşündürücü. Üye derneklerin iradesine başvurulmadan alınan kararlar diasporanın ortak tutumu gibi sunulamaz; temsil yetkisi unvandan değil güvenden doğar.</p>
+
+    <h3 class="who">Çorum Kafkas Kültür Derneği <span>KAFFED üyesi</span></h3>
+    <p>Ankara’nınkine çok yakın bir dille yazılan açıklama, soykırım ve sürgün gerçeğinin hiçbir diplomatik temasın gölgesinde bırakılamayacağını ve KAFFED’in yalnızca yöneticilerinden değil üyelerinin toplu iradesinden ibaret olduğunu vurguluyor. Haftayı özetleyen bir cümleyle bitiyor: temsil yalnızca bir masada bulunmak değil, temsil edilenlerin iradesini o masaya taşıyabilmektir.</p>
+
+    <h2>İçeriden gelen baskı</h2>
+    <p>Açıklamalar KAFFED’in 7–8 Kasım’daki genel kurulundan günler önce geldi. İkisi federasyonla zaten yollarını ayırmış derneklerden, ikisi mevcut üyelerden. Ankara ve Çorum’un paylaşımlarının altında okurlar iki dernekten daha ileri gitmelerini, Kayseri, Eskişehir ve İKKD gibi KAFFED’den ayrılmalarını istedi. Bu yazının yazıldığı sırada KAFFED’in beş açıklamadan herhangi birine kamuoyu önünde verdiği bir yanıt bulamadık.</p>
+    <p>Bu haftanın gösterdiği basit: Moskova’da birkaç kurum “yüzyıllar boyunca el ele” sloganı altında fotoğraf verdi. Dünyanın en büyük Çerkes diasporasının yaşadığı Türkiye’de ise geniş bir kurumlar yelpazesinin yanıtı, kendilerine sorulmadığı — ve o slogandaki tarihin kendilerine ait olmadığı — oldu.</p>
+    </div>
+
+<!-- ============================ KBD ============================ -->
+    <div class="panel" id="lang-kbd" lang="kbd" hidden>
+    <p class="eyebrow">Хъыбар · Диаспорэ</p>
+    <h1>Ди ЦӀэкӀэ – Хьэуэ</h1>
+    <p class="dek">Москва жэпуэгъуэм и 28-м щекӀуэкӀа зэхуэсым и ужькӀэ, Тыркум щыӀэ адыгэ федерацэ зыщрэ хасэ плӀырэ ар къызэрамыщтэр утыку къыщрахьащ.</p>
+    <p class="byline">May21.org · 2026 гъэм шэкӀуэгъуэм и 4</p>
+
+    <div class="divider"></div>
+
+    <p class="status warn">Мыбдеж тхыгъэм и кӀэщӀу къэӀуэтэныгъэр щыӀэщ. Тхыгъэ псор нэгъуэщӀ бзэхэмкӀэ щыӀэщ.</p>
+
+    <h2>КӀэщӀу</h2>
+    <p>Тхьэусыхафэ къэзыӀэтахэр: ЧЕРКЕС-ФЕД федерацэр, Кайсери Кавказ хасэр, Истамбыл Кавказ щэнхабзэ хасэр, Анкара Адыгэ хасэр, Чорум Кавказ щэнхабзэ хасэр. Псоми жаӀэ: 1557 гъэм адыгэхэр Урысейм «и фӀэфӀкӀэ» гуэхьакъым; 1763–1864 гъэхэм зауэ екӀуэкӀащ, итӀанэ лъэпкъыр ирахуащ. Зэхуэсым хэта зэгухьэныгъэхэм адыгэ псом я цӀэкӀэ псалъэ яӀэкъым.</p>
+    <p>Анкара, Чорум хасэхэр КАФФЕД-м хэтщ, ауэ жаӀэ хасэ нэхъыбэм зэхуэсым и хъыбар къаӀэрымыхьауэ. Урысейм зэпыщӀэныгъэ хуиӀэным пэщӀэтыкъым — ауэ тхыдэ пэжымрэ адыгэ хуитыныгъэхэмрэ я уасэкӀэ хъунукъым. КАФФЕД-м и зэхуэс нэхъыщхьэр шэкӀуэгъуэм и 7–8-м екӀуэкӀынущ.</p>
+    </div>
+
+<!-- ============================ RU ============================ -->
+    <div class="panel" id="lang-ru" lang="ru" hidden>
+    <p class="eyebrow">Новости · Диаспора</p>
+    <h1>Не от нашего имени</h1>
+    <p class="dek">Через несколько дней после московского круглого стола 28 октября одна федерация и четыре черкесские организации Турции публично отвергли его — и миф о «добровольном вхождении», на котором он был построен.</p>
+    <p class="byline">Коллектив May21.org · 4 ноября 2026</p>
+
+    <div class="divider"></div>
+
+    <h2>Что произошло</h2>
+    <p>28 октября 2026 года МИД России, Россотрудничество и Международная черкесская ассоциация (МЧА) провели в Москве круглый стол <strong>«Сквозь века рука об руку с Россией, снискав почёт и славу»</strong>, приуроченный к «470-летию вхождения» Кабардино-Балкарии в состав России. В нём участвовало руководство Федерации кавказских обществ (KAFFED), крупнейшего черкесского объединения Турции, которое представило мероприятие у себя дома как «историческую встречу с Российской Федерацией». Наш собственный разбор — в тексте <a href="2026-11-mfa-round-table.html?lang=ru">«Рука об руку — с кем?»</a>.<sup><a href="#r6">6</a></sup></p>
+    <p>Ответ черкесского гражданского общества Турции не заставил себя ждать.</p>
+
+    <div class="facts">
+      <h3>Кто уже высказался</h3>
+      <dl>
+        <dt>ЧеркесФЕД</dt><dd>Федерация черкесских обществ · публичное заявление, около 31 октября<sup><a href="#r1">1</a></sup></dd>
+        <dt>Кайсери</dt><dd>Kayseri Kafkas Derneği, вышедшее из KAFFED · заявление, единогласно принятое внеочередным общим собранием, 31 октября<sup><a href="#r2">2</a></sup></dd>
+        <dt>Стамбул</dt><dd>Стамбульское кавказское культурное общество (İKKD), с января 2024 года приостановившее отношения с KAFFED · обращение к общественности, 1 ноября<sup><a href="#r3">3</a></sup></dd>
+        <dt>Анкара</dt><dd>Черкесское общество Анкары, член KAFFED · публичное заявление, начало ноября<sup><a href="#r4">4</a></sup></dd>
+        <dt>Чорум</dt><dd>Кавказское культурное общество Чорума, член KAFFED · публичное заявление, 1 ноября<sup><a href="#r5">5</a></sup></dd>
+      </dl>
+    </div>
+
+    <h2>В чём они сходятся</h2>
+    <ul>
+      <li><strong>Никакого «добровольного вхождения».</strong> Все пять отвергают исходный тезис круглого стола — что черкесы по своей воле вошли в состав России в 1557 году. Кайсери напоминает, что династический брак нельзя выдавать за добровольную покорность народа: будь это так, не было бы 101 года войны, геноцида и изгнания. ЧеркесФЕД называет представление 1557 года началом добровольного союза искажением истории.</li>
+      <li><strong>Никакой «благодарности».</strong> По словам МИД, черкесские участники благодарили Россию за заботу о наследии и родных языках. Кайсери заявляет, что у этой благодарности нет никакой опоры среди черкесов в целом и что она неприемлема. İKKD и ЧеркесФЕД отвечают фактами: в 2017–2018 годах изучение родных языков сделали добровольным, в 2020 году русский объявили языком «государствообразующего народа», главы республик лишились титула президента и больше не избираются напрямую.</li>
+      <li><strong>Никакого мандата.</strong> Ни одна из организаций за столом не может говорить от имени всех черкесов. Анкара и Чорум — оба члены KAFFED — добавляют, что большинство членских обществ заранее не информировали и с ними не советовались.</li>
+      <li><strong>Не против диалога.</strong> Каждое заявление подчёркивает: авторы не против отношений с Россией — но не ценой исторической правды и прав черкесов.</li>
+    </ul>
+
+    <h2>Пять голосов</h2>
+
+    <h3 class="who">ЧеркесФЕД <span>Федерация</span></h3>
+    <p>Самое политическое из заявлений. Встреча в нём прочитана как сознательная попытка, приуроченная к «Году единства народов России», встроить диаспору в государственный исторический нарратив, придать ему легитимность через диаспорные организации и переопределить черкесский вопрос в интересах российской внешней политики. Федерация выдвигает пять требований: никакого нарратива дружбы без признания геноцида и изгнания; никакого 1557 года как символа покорности; правовые гарантии для языка и культуры вместо слов; черкесская история не отдаётся в залог ничьим государственным интересам; участники встречи должны отчитаться, с какими конкретными результатами они вышли из-за стола. Федерация пишет, что не является врагом русского народа, но хочет, чтобы российское государство посмотрело в лицо своей истории.</p>
+
+    <h3 class="who">Kayseri Kafkas Derneği <span>Вышло из KAFFED</span></h3>
+    <p>Заявление из шести пунктов, единогласно принятое внеочередным общим собранием, заканчивается самым жёстким обвинением: участвовать во встрече, которая легитимирует и прославляет «конструкцию 1557 года», и преподносить её диаспоре иначе — величайшее неуважение к предкам, которые сражались, гибли и были изгнаны, защищая родину. Общество также напоминает, что за такими встречами и «так называемыми переговорами» не раз следовали новые потери прав на родине.</p>
+
+    <h3 class="who">İstanbul Kafkas Kültür Derneği <span>Отношения приостановлены</span></h3>
+    <p>İKKD сопоставляет две версии встречи. МИД опубликовал название, юбилей и слова благодарности; в отчёте KAFFED нет ничего из этого — а пунктов KAFFED о возвращении, стипендиях и языке нет в сообщении министерства. Витрина для публики — одно, зафиксированная правда — другое, пишет общество. По его мнению, связи KAFFED с родиной теперь идут не через черкесский народ, а через МЧА и МИД России, а турецкую диаспору пытаются превратить в филиал МЧА и часть «Русского мира». Решение о приостановке отношений с KAFFED остаётся в силе.</p>
+
+    <h3 class="who">Черкесское общество Анкары <span>Член KAFFED</span></h3>
+    <p>Анкара возражает не против переговоров с Россией, а против исторического нарратива и политической рамки, в которых они велись: участие KAFFED и МЧА в мероприятии, построенном на тезисе о «добровольном вхождении», рискует придать ему легитимность, а подача этого как дипломатического успеха вызывает отдельные вопросы. Решения, принятые без членских обществ, нельзя выдавать за общую позицию диаспоры; право представлять рождается из доверия, а не из должностей.</p>
+
+    <h3 class="who">Кавказское культурное общество Чорума <span>Член KAFFED</span></h3>
+    <p>Заявление Чорума, очень близкое по формулировкам к анкарскому, настаивает, что правда о геноциде и изгнании не может оставаться в тени никаких дипломатических контактов, а KAFFED — это не только руководство, но коллективная воля членов. Оно заканчивается фразой, которая подытоживает неделю: представительство — это не просто место за столом, а способность донести до этого стола волю тех, кого представляешь.</p>
+
+    <h2>Давление изнутри</h2>
+    <p>Заявления прозвучали за несколько дней до общего собрания KAFFED 7–8 ноября. Два из них исходят от обществ, уже порвавших с федерацией, два — от нынешних членов. Под публикациями Анкары и Чорума читатели призывали оба общества пойти дальше и, вслед за Кайсери, Эскишехиром и İKKD, выйти из KAFFED. На момент написания мы не нашли публичного ответа KAFFED ни на одно из пяти заявлений.</p>
+    <p>Итог недели прост. В Москве горстка организаций сфотографировалась под лозунгом о «веках рука об руку». В Турции, где живёт крупнейшая черкесская диаспора, широкий круг её организаций ответил, что их не спрашивали — и что история, записанная в этом лозунге, не их история.</p>
+    </div>
+
+<!-- ============================ DE ============================ -->
+    <div class="panel" id="lang-de" lang="de" hidden>
+    <p class="eyebrow">Nachrichten · Diaspora</p>
+    <h1>Nicht in unserem Namen</h1>
+    <p class="dek">Wenige Tage nach dem Moskauer Runden Tisch vom 28. Oktober haben eine Föderation und vier tscherkessische Vereine in der Türkei ihn öffentlich zurückgewiesen – und mit ihm die Erzählung vom „freiwilligen Anschluss“, auf der er beruhte.</p>
+    <p class="byline">Kollektiv May21.org · 4. November 2026</p>
+
+    <div class="divider"></div>
+
+    <h2>Der Anlass</h2>
+    <p>Am 28. Oktober 2026 veranstalteten das russische Außenministerium, Rossotrudnitschestwo und die Internationale Tscherkessische Assoziation (ITA) in Moskau einen Runden Tisch unter dem Titel <strong>„Durch die Jahrhunderte Hand in Hand mit Russland, Ehre und Ruhm erwerbend“</strong>, angesetzt zum „470. Jahrestag des Eintritts“ Kabardino-Balkariens in den russischen Staat. Die Führung der Föderation Kaukasischer Vereine (KAFFED), des größten tscherkessischen Dachverbands der Türkei, nahm teil und präsentierte die Veranstaltung zu Hause als „historisches Treffen mit der Russischen Föderation“. Unsere eigene Kritik steht in <a href="2026-11-mfa-round-table.html?lang=de">Hand in Hand – mit wem?</a><sup><a href="#r6">6</a></sup></p>
+    <p>Die Antwort der tscherkessischen Zivilgesellschaft in der Türkei ließ nicht lange auf sich warten.</p>
+
+    <div class="facts">
+      <h3>Wer sich bisher geäußert hat</h3>
+      <dl>
+        <dt>ÇERKES-FED</dt><dd>Föderation Tscherkessischer Vereine · öffentliche Erklärung, um den 31. Oktober<sup><a href="#r1">1</a></sup></dd>
+        <dt>Kayseri</dt><dd>Kayseri Kafkas Derneği, aus KAFFED ausgetreten · Erklärung, einstimmig von einer außerordentlichen Mitgliederversammlung beschlossen, 31. Oktober<sup><a href="#r2">2</a></sup></dd>
+        <dt>Istanbul</dt><dd>Istanbuler Kaukasischer Kulturverein (İKKD), Beziehungen zu KAFFED seit Januar 2024 ausgesetzt · öffentliche Bekanntmachung, 1. November<sup><a href="#r3">3</a></sup></dd>
+        <dt>Ankara</dt><dd>Tscherkessischer Verein Ankara, KAFFED-Mitglied · öffentliche Erklärung, Anfang November<sup><a href="#r4">4</a></sup></dd>
+        <dt>Çorum</dt><dd>Kaukasischer Kulturverein Çorum, KAFFED-Mitglied · öffentliche Erklärung, 1. November<sup><a href="#r5">5</a></sup></dd>
+      </dl>
+    </div>
+
+    <h2>Worin sie übereinstimmen</h2>
+    <ul>
+      <li><strong>Kein „freiwilliger Anschluss“.</strong> Alle fünf weisen die Prämisse des Runden Tisches zurück, die Tscherkessen hätten sich 1557 aus freien Stücken Russland angeschlossen. Kayseri erinnert daran, dass sich aus einer Dynastenheirat keine freiwillige Unterwerfung eines Volkes ableiten lässt – wäre es so gewesen, hätte es keine 101 Jahre Krieg, Völkermord und Vertreibung gegeben. ÇERKES-FED nennt es eine Verfälschung der Geschichte, 1557 als Beginn einer freiwilligen Union darzustellen.</li>
+      <li><strong>Keine „Dankbarkeit“.</strong> Laut Ministerium dankten tscherkessische Teilnehmer Russland für die Fürsorge um Erbe und Muttersprachen. Kayseri erklärt, diese Dankbarkeit habe bei den Tscherkessen insgesamt keinerlei Rückhalt und sei inakzeptabel. İKKD und ÇERKES-FED antworten mit Fakten: 2017–2018 wurde der Muttersprachunterricht freiwillig, 2020 wurde Russisch zur Sprache des „staatsbildenden Volkes“ erklärt, die Oberhäupter der Republiken verloren den Präsidententitel und werden nicht mehr direkt gewählt.</li>
+      <li><strong>Kein Mandat.</strong> Keine der Organisationen am Tisch kann für alle Tscherkessen sprechen. Ankara und Çorum – beide KAFFED-Mitglieder – ergänzen, dass die meisten Mitgliedsvereine vorab weder informiert noch konsultiert wurden.</li>
+      <li><strong>Nicht gegen Dialog.</strong> Jede Erklärung betont, man sei nicht gegen Beziehungen zu Russland – nur nicht um den Preis der historischen Wahrheit und der Rechte der Tscherkessen.</li>
+    </ul>
+
+    <h2>Fünf Stimmen</h2>
+
+    <h3 class="who">ÇERKES-FED <span>Föderation</span></h3>
+    <p>Die politischste der Erklärungen. Sie liest das Treffen als gezielten Versuch, zeitlich abgestimmt auf Russlands „Jahr der Einheit der Völker Russlands“, die Diaspora in das staatliche Geschichtsnarrativ einzugliedern, diesem über Diaspora-Organisationen Legitimität zu verschaffen und die tscherkessische Frage im Sinne der russischen Außenpolitik umzudeuten. Sie stellt fünf Forderungen: keine Freundschaftserzählung ohne Auseinandersetzung mit Völkermord und Vertreibung; 1557 nicht als Symbol der Unterwerfung; rechtliche Garantien für Sprache und Kultur statt Worte; die tscherkessische Geschichte wird keinen Staatsinteressen ausgeliefert; die beteiligten Organisationen sollen offenlegen, mit welchen konkreten Ergebnissen sie vom Tisch aufgestanden sind. Man sei kein Feind des russischen Volkes, schreibt die Föderation, wolle aber, dass sich der russische Staat seiner Geschichte stellt.</p>
+
+    <h3 class="who">Kayseri Kafkas Derneği <span>Aus KAFFED ausgetreten</span></h3>
+    <p>Die einstimmig beschlossene Sechs-Punkte-Erklärung endet mit ihrem schärfsten Vorwurf: Teil eines Treffens zu sein, das die „Konstruktion von 1557“ legitimiert und verherrlicht, und dies der Diaspora anders darzustellen, sei die größte Respektlosigkeit gegenüber den Vorfahren, die für ihre Heimat gekämpft, ihr Leben gelassen und die Vertreibung erlitten haben. Zudem hält der Verein fest, dass auf solche Treffen und „sogenannte Verhandlungen“ wiederholt neue Rechtsverluste in der Heimat gefolgt seien.</p>
+
+    <h3 class="who">İstanbul Kafkas Kültür Derneği <span>Beziehungen ausgesetzt</span></h3>
+    <p>İKKD stellt die beiden Darstellungen des Treffens nebeneinander. Das Ministerium veröffentlichte Titel, Jahrestag und Dank; im Bericht von KAFFED fehlt all das – und die von KAFFED genannten Punkte zu Rückkehr, Stipendien und Sprache fehlen in der Mitteilung des Ministeriums. Das Schaufenster für die Öffentlichkeit sei das eine, die dokumentierte Wirklichkeit das andere, schreibt der Verein. Aus seiner Sicht laufen die Beziehungen von KAFFED zur Heimat inzwischen nicht über das tscherkessische Volk, sondern über die ITA und das russische Außenministerium; die Diaspora in der Türkei solle zu einer Filiale der ITA und einem Teil der „Russkij Mir“ gemacht werden. Die Aussetzung der Beziehungen zu KAFFED bleibt bestehen.</p>
+
+    <h3 class="who">Tscherkessischer Verein Ankara <span>KAFFED-Mitglied</span></h3>
+    <p>Ankara wendet sich nicht gegen Gespräche mit Russland, sondern gegen das Geschichtsnarrativ und den politischen Rahmen, in dem sie stattfanden: Die Teilnahme von KAFFED und ITA an einer Veranstaltung, die auf der These vom „freiwilligen Anschluss“ beruht, drohe dieser These Legitimität zu verleihen; sie als diplomatischen Erfolg zu verkaufen, sei für sich schon bedenklich. Entscheidungen ohne die Mitgliedsvereine könnten nicht als gemeinsame Position der Diaspora ausgegeben werden; das Recht zur Vertretung entstehe aus Vertrauen, nicht aus Ämtern.</p>
+
+    <h3 class="who">Kaukasischer Kulturverein Çorum <span>KAFFED-Mitglied</span></h3>
+    <p>Im Wortlaut eng an Ankara angelehnt, besteht die Erklärung aus Çorum darauf, dass die Wahrheit über Völkermord und Vertreibung von keinem diplomatischen Kontakt überschattet werden darf und dass KAFFED nicht nur aus seiner Führung besteht, sondern aus dem gemeinsamen Willen seiner Mitglieder. Sie schließt mit einem Satz, der die Woche zusammenfasst: Vertretung heißt nicht nur, an einem Tisch zu sitzen, sondern den Willen der Vertretenen an diesen Tisch zu tragen.</p>
+
+    <h2>Druck von innen</h2>
+    <p>Die Erklärungen erschienen wenige Tage vor der Generalversammlung von KAFFED am 7. und 8. November. Zwei stammen von Vereinen, die bereits mit der Föderation gebrochen haben, zwei von aktuellen Mitgliedern. Unter den Beiträgen aus Ankara und Çorum forderten Leser beide Vereine auf, weiterzugehen und wie Kayseri, Eskişehir und İKKD aus KAFFED auszutreten. Zum Zeitpunkt der Veröffentlichung haben wir keine öffentliche Reaktion von KAFFED auf eine der fünf Erklärungen gefunden.</p>
+    <p>Was diese Woche zeigt, ist einfach: In Moskau ließ sich eine Handvoll Organisationen unter einem Slogan über „Jahrhunderte Hand in Hand“ fotografieren. In der Türkei, wo die größte tscherkessische Diaspora lebt, antwortete ein breites Spektrum ihrer Organisationen, man sei nicht gefragt worden – und die Geschichte in diesem Slogan sei nicht die ihre.</p>
+    </div>
+
+<!-- ============================ AR ============================ -->
+    <div class="panel" id="lang-ar" lang="ar" dir="rtl" hidden>
+    <p class="eyebrow">أخبار · الشتات</p>
+    <h1>ليس باسمنا</h1>
+    <p class="dek">في غضون أيام من الطاولة المستديرة التي عُقدت في موسكو في 28 تشرين الأول/أكتوبر، رفض اتحادٌ وأربع جمعيات شركسية في تركيا هذا اللقاء علنًا — ورفضت معه رواية «الانضمام الطوعي» التي قام عليها.</p>
+    <p class="byline">تجمّع May21.org · 4 تشرين الثاني/نوفمبر 2026</p>
+
+    <div class="divider"></div>
+
+    <h2>ما الذي حدث؟</h2>
+    <p>في 28 تشرين الأول/أكتوبر 2026 عقدت وزارة الخارجية الروسية و«روسوترودنيتشيستفو» والجمعية الشركسية العالمية في موسكو طاولة مستديرة بعنوان <strong>«عبر القرون يدًا بيد مع روسيا، نائلين الشرف والمجد»</strong>، بمناسبة «الذكرى الـ470 لدخول» قبردينو-بلقاريا في الدولة الروسية. وشاركت فيها قيادة اتحاد الجمعيات القوقازية (KAFFED)، أكبر هيئة شركسية جامعة في تركيا، التي قدّمت اللقاء في الداخل على أنه «لقاء تاريخي مع روسيا الاتحادية». وقد عرضنا قراءتنا النقدية في مقال <a href="2026-11-mfa-round-table.html?lang=ar">«يدًا بيد… مع مَن؟»</a>.<sup><a href="#r6">6</a></sup></p>
+    <p>ولم يتأخر ردّ المجتمع المدني الشركسي في تركيا.</p>
+
+    <div class="facts">
+      <h3>مَن أصدر بيانات حتى الآن؟</h3>
+      <dl>
+        <dt>ÇERKES-FED</dt><dd>اتحاد الجمعيات الشركسية · بيان للرأي العام، نحو 31 تشرين الأول/أكتوبر<sup><a href="#r1">1</a></sup></dd>
+        <dt>قيصري</dt><dd>جمعية قيصري القوقازية التي غادرت KAFFED · بيان أقرّته جمعية عمومية استثنائية بالإجماع، 31 تشرين الأول/أكتوبر<sup><a href="#r2">2</a></sup></dd>
+        <dt>إسطنبول</dt><dd>جمعية إسطنبول الثقافية القوقازية (İKKD)، التي علّقت علاقاتها مع KAFFED منذ كانون الثاني/يناير 2024 · إعلان للرأي العام، 1 تشرين الثاني/نوفمبر<sup><a href="#r3">3</a></sup></dd>
+        <dt>أنقرة</dt><dd>الجمعية الشركسية في أنقرة، عضو في KAFFED · بيان للرأي العام، مطلع تشرين الثاني/نوفمبر<sup><a href="#r4">4</a></sup></dd>
+        <dt>تشوروم</dt><dd>جمعية تشوروم الثقافية القوقازية، عضو في KAFFED · بيان للرأي العام، 1 تشرين الثاني/نوفمبر<sup><a href="#r5">5</a></sup></dd>
+      </dl>
+    </div>
+
+    <h2>نقاط الاتفاق</h2>
+    <ul>
+      <li><strong>لا «انضمام طوعي».</strong> ترفض البيانات الخمسة المنطلق الذي قامت عليه الطاولة المستديرة: أن الشركس انضمّوا إلى روسيا بإرادتهم عام 1557. وتذكّر جمعية قيصري بأن زواجًا بين أسرتين حاكمتين لا يمكن أن يتحوّل إلى خضوع طوعي لشعب بأكمله، ولو كان الأمر كذلك لما كانت هناك 101 سنة من الحرب والإبادة والتهجير. ويصف ÇERKES-FED تقديم عام 1557 بداية لاتحاد طوعي بأنه تزوير للتاريخ.</li>
+      <li><strong>لا «امتنان».</strong> بحسب الوزارة، شكر المشاركون الشركس روسيا على عنايتها بالتراث واللغات الأم. وتقول جمعية قيصري إن هذا الامتنان لا يجد أي صدى لدى الشركس عمومًا وإنه مرفوض. ويردّ İKKD وÇERKES-FED بالوقائع: في 2017–2018 صار تعلّم اللغة الأم اختياريًّا، وفي 2020 أُعلنت الروسية لغة «الشعب المؤسِّس للدولة»، وجُرّد رؤساء الجمهوريات من لقب الرئيس ولم يعودوا يُنتخبون مباشرة.</li>
+      <li><strong>لا تفويض.</strong> لا يحق لأيّ من المنظمات التي جلست إلى الطاولة أن تتحدث باسم الشركس جميعًا. وتضيف جمعيتا أنقرة وتشوروم — وكلتاهما عضو في KAFFED — أن معظم الجمعيات الأعضاء لم تُبلَّغ ولم تُستشر مسبقًا.</li>
+      <li><strong>ليس ضد الحوار.</strong> يؤكد كل بيان أنه لا يعارض العلاقات مع روسيا — شرط ألّا تكون ثمنها الحقيقة التاريخية وحقوق الشركس.</li>
+    </ul>
+
+    <h2>خمسة أصوات</h2>
+
+    <h3 class="who">ÇERKES-FED <span>اتحاد</span></h3>
+    <p>هو أكثر البيانات طابعًا سياسيًّا. يقرأ اللقاء على أنه محاولة متعمّدة، جرى توقيتها مع «عام وحدة شعوب روسيا»، لدمج الشتات في الرواية التاريخية للدولة، وإكسابها الشرعية عبر منظمات الشتات، وإعادة تعريف القضية الشركسية بما يخدم السياسة الخارجية الروسية. ويطرح خمسة مطالب: لا رواية صداقة من دون مواجهة الإبادة والتهجير؛ لا تقديم لعام 1557 رمزًا للخضوع؛ ضمانات قانونية للغة والثقافة لا وعود؛ لا تسليم للتاريخ الشركسي لمصالح أي دولة؛ وعلى المنظمات المشاركة أن توضح بأي مكاسب ملموسة غادرت الطاولة. ويكتب الاتحاد أنه ليس عدوًّا للشعب الروسي، لكنه يريد من الدولة الروسية أن تواجه تاريخها.</p>
+
+    <h3 class="who">جمعية قيصري القوقازية <span>غادرت KAFFED</span></h3>
+    <p>ينتهي البيان المؤلف من ست نقاط، الذي أُقرّ بالإجماع، بأشدّ اتهاماته: أن تكون جزءًا من لقاء يُضفي الشرعية على «سردية 1557» ويمجّدها، ثم تنقل ذلك إلى الشتات بصورة مغايرة، هو أكبر إساءة إلى الأجداد الذين قاتلوا وماتوا وهُجّروا دفاعًا عن وطنهم. ويشير البيان كذلك إلى أن مثل هذه اللقاءات و«المفاوضات المزعومة» كثيرًا ما تبعتها خسائر جديدة في الحقوق في الوطن.</p>
+
+    <h3 class="who">جمعية إسطنبول الثقافية القوقازية <span>العلاقات معلّقة</span></h3>
+    <p>تضع الجمعية روايتي اللقاء جنبًا إلى جنب. فقد نشرت الوزارة العنوان والذكرى وعبارات الشكر، بينما خلا تقرير KAFFED من كل ذلك — كما غابت عن بيان الوزارة النقاط التي قال KAFFED إنه طرحها بشأن العودة والمنح واللغة. وتكتب الجمعية أن الواجهة المعروضة على الناس شيء، والحقيقة المسجّلة شيء آخر. وترى أن علاقة KAFFED بالوطن باتت تمرّ عبر الجمعية الشركسية العالمية والخارجية الروسية لا عبر الشعب الشركسي، وأن هناك سعيًا لتحويل الشتات في تركيا إلى فرعٍ لتلك الجمعية وجزءٍ من «العالم الروسي». ويبقى قرار تعليق العلاقات مع KAFFED ساريًا.</p>
+
+    <h3 class="who">الجمعية الشركسية في أنقرة <span>عضو في KAFFED</span></h3>
+    <p>لا تعترض أنقرة على المحادثات مع روسيا، بل على الرواية التاريخية والإطار السياسي اللذين جرت فيهما: فمشاركة KAFFED والجمعية الشركسية العالمية في فعالية قائمة على أطروحة «الانضمام الطوعي» تنطوي على خطر إضفاء الشرعية عليها، وتقديم ذلك نجاحًا دبلوماسيًّا أمر مثير للقلق في حد ذاته. وتقول إن القرارات المتخذة من دون الجمعيات الأعضاء لا يمكن تقديمها موقفًا مشتركًا للشتات، فحق التمثيل ينبع من الثقة لا من المناصب.</p>
+
+    <h3 class="who">جمعية تشوروم الثقافية القوقازية <span>عضو في KAFFED</span></h3>
+    <p>يشدد بيان تشوروم، القريب جدًّا في صياغته من بيان أنقرة، على أن حقيقة الإبادة والتهجير لا يجوز أن تبقى في ظل أي اتصال دبلوماسي، وأن KAFFED ليس قيادته فحسب، بل الإرادة الجماعية لأعضائه. ويختم بعبارة تلخّص الأسبوع: التمثيل ليس مجرد الجلوس إلى طاولة، بل القدرة على حمل إرادة الممثَّلين إليها.</p>
+
+    <h2>ضغطٌ من الداخل</h2>
+    <p>صدرت البيانات قبل أيام من الجمعية العمومية لـKAFFED في 7 و8 تشرين الثاني/نوفمبر. اثنان منها من جمعيات قطعت علاقتها بالاتحاد، واثنان من أعضاء حاليين. وتحت منشورَي أنقرة وتشوروم طالب قرّاء الجمعيتين بالذهاب أبعد ومغادرة KAFFED على غرار قيصري وأسكي شهير وİKKD. وحتى ساعة كتابة هذه السطور لم نعثر على ردّ علني من KAFFED على أيٍّ من البيانات الخمسة.</p>
+    <p>ما يكشفه هذا الأسبوع بسيط: في موسكو التُقطت صورة لحفنة من المنظمات تحت شعار «قرون يدًا بيد». وفي تركيا، حيث يعيش أكبر شتات شركسي، جاء ردّ طيف واسع من منظماته بأن أحدًا لم يسألها — وأن التاريخ المكتوب في ذلك الشعار ليس تاريخها.</p>
+    </div>
+
+<!-- ============================ ADY ============================ -->
+    <div class="panel" id="lang-ady" lang="ady" hidden>
+    <p class="eyebrow">Къэбар · Диаспорэ</p>
+    <h1>Ти ЦӀэкӀэ – Хьау</h1>
+    <p class="dek">Москва чъэпыогъум и 28-м щыкӀогъэ зэхэсыгъом ыуж, Тыркуем щыӀэ адыгэ федерацие закъорэ хасэ плӀырэ ар зэрамыштэрэр къаӀуагъ.</p>
+    <p class="byline">May21.org · 2026 илъэсым шэкӀогъум и 4</p>
+
+    <div class="divider"></div>
+
+    <p class="status warn">Мыщ зэхэугуфыкӀыгъэ закъор ит. Тхыгъэ псаур нэмыкӀыбзэхэмкӀэ щыӀ.</p>
+
+    <h2>ЗэхэугуфыкӀыгъэ</h2>
+    <p>Ащ пэуцужьыгъэх: ЧЕРКЕС-ФЕД федерациер, Кайсери Кавказ хасэр, Истамбул Кавказ шэн-хабзэ хасэр, Анкара Адыгэ хасэр, Чорум Кавказ шэн-хабзэ хасэр. Зэкӏэми аӀо: 1557 илъэсым адыгэхэр Урысыем «шӀоигъоныгъэкӀэ» хэхьагъэхэп; 1763 – 1864 илъэсхэм заор кӀуагъэ, етӀанэ лъэпкъыр ырагъэфыгъ. Зэхэсыгъом хэлэжьагъэ зэгухьэныгъэхэм адыгэ пстэуми ацӀэкӀэ гущыӀэнхэ фитыныгъэ яӀэп.</p>
+    <p>Анкара ыкӀи Чорум хасэхэр КАФФЕД-м хэтых, ау аӀо хасэ нахьыбэм зэхэсыгъом икъэбар къаӀэкӀэмыхьагъэу. Урысыем зэпхыныгъэ дыряӀэным пэуцужьхэрэп — ау тхыдэ шъыпкъэмрэ адыгэ фитыныгъэхэмрэ ауасэкӀэ хъущтэп. КАФФЕД-м изэхэсыгъо шъхьаӀэ шэкӀогъум и 7 – 8-м щыӀэщт.</p>
+    </div>
+
+    <section class="refs">
+      <h2 id="refs-title">Sources</h2>
+      <ol>
+        <li id="r1">Çerkes Dernekleri Federasyonu (ÇERKES-FED), «Çerkes Dernekleri Federasyonu Kamuoyu Açıklaması», October 2026. <a href="https://www.facebook.com/CerkesDernekleriFederasyonu/posts/pfbid02HHL96mszyWPrZ7nBnhMxpAgxrGVtDbWBKmeCsLEtyd47Z7c5b2dEQVA7x6vay4v9l" target="_blank" rel="noopener">facebook.com/CerkesDernekleriFederasyonu</a>; also at <a href="https://cerkesfed.tr/" target="_blank" rel="noopener">cerkesfed.tr</a>.</li>
+        <li id="r2">Kayseri Kafkas Derneği, statement of the extraordinary general assembly of 31 October 2026, full text in Kayseri Gerçek Haber, «Kafkas Derneği’nden Olağanüstü Genel Kurul», 3 Nov 2026. <a href="https://kayserigercekhaber.com/haber/-kafkas-derneginden-olaganustu-genel-kurul--64919" target="_blank" rel="noopener">kayserigercekhaber.com</a>; see also Kayseri Günaydın, «Kayseri Kafkas Derneği’nden KAFFED ve DÇB’ye Moskova Tepkisi», 31 Oct 2026. <a href="https://www.kayserigunaydin.com/kayseri-kafkas-derneginden-kaffed-ve-dcbye-moskova-tepkisi" target="_blank" rel="noopener">kayserigunaydin.com</a>.</li>
+        <li id="r3">İstanbul Kafkas Kültür Derneği (İKKD), «Kamuoyuna Duyuru», 1 Nov 2026. <a href="https://www.facebook.com/istanbulkafkaskulturdernegi/posts/pfbid0eHa3kkr8NP6nuXDgTVYKkHrbrxPm7r1xcwTeLPWtUU9zizkcb87MQ7FBUjkoLnXvl" target="_blank" rel="noopener">facebook.com/istanbulkafkaskulturdernegi</a>. On the 2024 suspension of relations: KAFFED, «İstanbul Kafkas Kültür Derneğimizi Ziyaret Ettik», 19 Feb 2024. <a href="https://kaffed.org/2024/02/19/istanbul-kafkas-kultur-dernegimizi-ziyaret-ettik/" target="_blank" rel="noopener">kaffed.org</a>.</li>
+        <li id="r4">Ankara Çerkes Derneği, «Kamuoyuna Açıklama», November 2026. <a href="https://www.facebook.com/CerkesDernegi/posts/pfbid032zkargAeANrnN3QmTUA3YUABbJJdQG2NB1xqof8TTwRqg5c2RN75PUZ99u7poJF7l" target="_blank" rel="noopener">facebook.com/CerkesDernegi</a>.</li>
+        <li id="r5">Çorum Kafkas Kültür Derneği, «Kamuoyuna Açıklama», 1 Nov 2026. <a href="https://www.facebook.com/corumkafder/posts/pfbid02d8jU1W3tmssmFuYRrjy9ZC3c1xZH4p45QwJfbQfAWo61yUPPypGPF8r8o7VSUBPJl" target="_blank" rel="noopener">facebook.com/corumkafder</a>.</li>
+        <li id="r6">May21.org, «Hand in Hand With Whom?», 3 Nov 2026 — with sources on the round table, the Foreign Ministry readout and Lavrov's greeting. <a href="2026-11-mfa-round-table.html">may21.org/documents/2026-11-mfa-round-table.html</a>.</li>
+      </ol>
+    </section>
+  </article>
+
+  <footer id="foot">© 2026 May21.org · Quotations from the associations' statements are translated by May21.org.</footer>
+
+  <script>
+    var LANGS = ["en", "tr", "kbd", "ru", "de", "ar", "ady"];
+    var UI = {"en": ["← Library", "Reader view", "Standard view", "Sources", "© 2026 May21.org · Quotations from the associations' statements are translated by May21.org."], "tr": ["← Kütüphane", "Okuma görünümü", "Standart görünüm", "Kaynaklar", "© 2026 May21.org · Açıklamalardan yapılan alıntılar özgün Türkçe metinlerden aktarılmıştır."], "kbd": ["← Тхылъхэр", "Еджэн", "Хабзэм тету", "Тхылъхэр", "© 2026 May21.org"], "ru": ["← Библиотека", "Режим чтения", "Обычный вид", "Источники", "© 2026 May21.org · Цитаты из заявлений обществ переведены May21.org с турецкого."], "de": ["← Bibliothek", "Leseansicht", "Standardansicht", "Quellen", "© 2026 May21.org · Zitate aus den Erklärungen der Vereine wurden von May21.org aus dem Türkischen übersetzt."], "ar": ["→ المكتبة", "وضع القراءة", "العرض العادي", "المصادر", "© 2026 May21.org · ترجم موقع May21.org الاقتباسات من بيانات الجمعيات عن التركية."], "ady": ["← Тхылъхэр", "Еджэн", "Шапхъэм тетэу", "Тхылъхэр", "© 2026 May21.org"]};
+    var TITLE = {"en": "Not in Our Name", "tr": "Bizim Adımıza Değil", "kbd": "Ди ЦӀэкӀэ – Хьэуэ", "ru": "Не от нашего имени", "de": "Nicht in unserem Namen", "ar": "ليس باسمنا", "ady": "Ти ЦӀэкӀэ – Хьау"};
+    var params = new URLSearchParams(location.search);
+    var reader = params.get('view') === 'reader';
+    if (reader) document.body.classList.add('reader');
+    var current = 'en';
+    function link(lang, readerOn) {
+      var q = '?lang=' + lang + (readerOn ? '&view=reader' : '');
+      return location.pathname + q;
+    }
+    function show(lang) {
+      if (LANGS.indexOf(lang) < 0) lang = 'en';
+      current = lang;
+      document.querySelectorAll('.panel').forEach(function (p) { p.hidden = p.id !== 'lang-' + lang; });
+      document.querySelectorAll('.tabs button').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.lang === lang); });
+      document.documentElement.lang = lang;
+      var u = UI[lang];
+      document.getElementById('lib-link').textContent = u[0];
+      var t = document.getElementById('reader-toggle');
+      t.textContent = reader ? u[2] : u[1];
+      t.href = link(lang, !reader);
+      document.getElementById('refs-title').textContent = u[3];
+      document.getElementById('foot').textContent = u[4];
+      document.title = TITLE[lang] + ' · May21.org';
+      try { history.replaceState(null, '', link(lang, reader) + location.hash); } catch (e) {}
+    }
+    document.querySelectorAll('.tabs button').forEach(function (b) {
+      b.addEventListener('click', function () {
+        show(b.dataset.lang);
+        try { localStorage.setItem('may21_lang', b.dataset.lang); } catch (e) {}
+      });
+    });
+    (function () {
+      var q = params.get('lang');
+      if (q) return show(q);
+      var saved = null;
+      try { saved = localStorage.getItem('may21_lang'); } catch (e) {}
+      if (saved && LANGS.indexOf(saved) >= 0) return show(saved);
+      var prefs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || 'en'];
+      for (var i = 0; i < prefs.length; i++) {
+        var c = String(prefs[i]).toLowerCase().split('-')[0];
+        if (LANGS.indexOf(c) >= 0) return show(c);
+      }
+      show('en');
+    })();
+  </script>
+  <script data-goatcounter="https://may21.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>
