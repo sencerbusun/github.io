@@ -250,6 +250,12 @@
 
     /* INSTAGRAM */
     .instagram { background: var(--black); }
+    .ig-card { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 18px; padding: 56px 24px; background: var(--charcoal); border: 1px solid var(--dim); transition: border-color 0.2s; }
+    .ig-card:hover { border-color: var(--accent); }
+    .ig-card:hover .btn { background: var(--accent); color: var(--black); }
+    .ig-icon { width: 56px; height: 56px; color: var(--accent); }
+    .ig-handle { font-family: var(--font-display); font-size: clamp(2.2rem, 6vw, 3.6rem); letter-spacing: 0.04em; line-height: 1; }
+    .ig-text { color: var(--smoke); max-width: 520px; }
     .feed-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 36px; flex-wrap: wrap; gap: 16px; }
     .feed-link { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--mid); padding-bottom: 2px; }
     .feed-link:hover { color: var(--accent2); border-color: var(--accent2); }
@@ -321,7 +327,7 @@
         <li><a href="#about" data-i18n="nav_about">About</a></li>
         <li><a href="#library" data-i18n="nav_library">Library</a></li>
         <li><a href="#events" data-i18n="nav_events">Events</a></li>
-        <li hidden><a href="#instagram">Instagram</a></li> <!-- Instagram hidden until an account is linked -->
+        <li><a href="#instagram">Instagram</a></li>
         <li><a href="#flickr" data-i18n="nav_gallery">Gallery</a></li>
         <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
       </ul>
@@ -418,15 +424,14 @@
   </section>
 
   <!-- INSTAGRAM -->
-  <!-- Hidden until an Instagram account is linked: remove the "hidden" attribute to show it again -->
-  <section class="instagram" id="instagram" hidden>
+  <section class="instagram" id="instagram">
     <div class="feed-header">
       <div>
-        <p class="section-label" data-i18n="ig_label">Latest Posts</p>
+        <p class="section-label" data-i18n="ig_label">Follow us</p>
         <h2 class="section-title">Instagram</h2>
       </div>
-      <a href="https://instagram.com/YOUR_INSTAGRAM_HANDLE" target="_blank" rel="noopener" class="feed-link">
-        @YOUR_INSTAGRAM_HANDLE ↗
+      <a href="https://www.instagram.com/may21_org/" target="_blank" rel="noopener" class="feed-link">
+        @may21_org ↗
       </a>
     </div>
     <!--
@@ -440,12 +445,13 @@
       <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/POST_ID/"></blockquote>
       <script async src="https://www.instagram.com/embed.js"></script>
     -->
-    <div class="ig-setup-note">
-      <strong>Instagram feed not yet configured.</strong><br>
-      · <a href="https://behold.so" target="_blank">behold.so</a> — auto-updating grid, free tier<br>
-      · <a href="https://snapwidget.com" target="_blank">snapwidget.com</a> — free tier available<br>
-      See HTML comments for step-by-step instructions.
-    </div>
+    <!-- To show a live grid of posts later, paste a Behold.so or SnapWidget embed here (see comment above). -->
+    <a class="ig-card" href="https://www.instagram.com/may21_org/" target="_blank" rel="noopener">
+      <svg class="ig-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor"/></svg>
+      <span class="ig-handle">@may21_org</span>
+      <span class="ig-text" data-i18n="ig_text">Short videos on the Circassian question, history and today’s cultural and political issues.</span>
+      <span class="btn" data-i18n="ig_follow">Follow on Instagram</span>
+    </a>
   </section>
 
   <!-- FLICKR -->
@@ -479,7 +485,7 @@
         <div class="contact-detail-label" data-i18n="contact_follow_label">Follow</div>
         <div class="contact-detail-value">
           <div class="social-row" style="margin-top:4px">
-            <a href="https://instagram.com/YOUR_HANDLE" target="_blank" rel="noopener" hidden>Instagram</a>
+            <a href="https://www.instagram.com/may21_org/" target="_blank" rel="noopener">Instagram</a>
             <a href="https://www.flickr.com/photos/76905328@N05/albums/" target="_blank" rel="noopener">Flickr</a>
             <a href="https://www.facebook.com/May21org/" target="_blank" rel="noopener">Facebook</a>
           </div>
@@ -504,7 +510,7 @@
     <div class="logo-small">May21<span>.</span>org</div>
     <p>&copy; 2025 May21.org &middot; All rights reserved</p>
     <div class="social-row">
-      <a href="https://instagram.com/YOUR_HANDLE" target="_blank" rel="noopener" hidden>Instagram</a>
+      <a href="https://www.instagram.com/may21_org/" target="_blank" rel="noopener">Instagram</a>
       <a href="https://www.flickr.com/photos/76905328@N05/albums/" target="_blank" rel="noopener">Flickr</a>
       <a href="https://www.facebook.com/May21org/" target="_blank" rel="noopener">Facebook</a>
     </div>
@@ -537,7 +543,7 @@
         nav_events: 'Events', ev_label: 'Live Events', ev_title: 'Events &amp;<br>Actions', ev_intro: 'Rallies, commemorations, festivals and exhibitions in the homeland and across the diaspora.', ev_upcoming: 'Upcoming', ev_now: 'Now on', ev_past: 'Past events', ev_empty: 'No events listed yet — check back soon.', ev_more: 'Details ↗',
         lib_access_open: 'Open access', lib_access_restricted: 'Restricted · buy or request access', lib_buy: 'Buy ↗', lib_access_buy: 'In print · available to buy', lib_original: 'Original edition',
         stat1: 'Years active', stat2: 'Events documented', stat3: 'Cities reached', stat4: 'Reasons to fight',
-        ig_label: 'Latest Posts', flickr_label: 'Photo Archive', flickr_title: 'Gallery',
+        ig_label: 'Follow us', ig_text: 'Short videos on the Circassian question, history and today’s cultural and political issues.', ig_follow: 'Follow on Instagram', flickr_label: 'Photo Archive', flickr_title: 'Gallery',
         flickr_link: 'Full archive ↗', flickr_loading: 'Loading from Flickr…',
         contact_label: 'Reach Us', contact_title: 'Get<br>In Touch',
         contact_email_label: 'Email', contact_follow_label: 'Follow',
@@ -565,7 +571,7 @@
         lib_access_open: 'Пщӏэншэу', lib_access_restricted: 'Хуитыныгъэ гъэтӏылъащ · къэщэхун е лъэӏун', lib_access_buy: 'Тедзащ · къащэху хъунущ',
         nav_events: 'Зэхыхьэхэр', ev_label: 'Зэхыхьэхэр', ev_title: 'Зэхыхьэхэр &amp;<br>Акцэхэр', ev_intro: 'Митингхэр, гукъэкӏыж зэхыхьэхэр, фестивалхэр, гъэлъэгъуэныгъэхэр — хэкужьми диаспорэми.', ev_upcoming: 'Къэблагъэ', ev_now: 'Иджы йокӏуэкӏ', ev_past: 'Екӏуэкӏа зэхыхьэхэр', ev_empty: 'Иджыри зэхыхьэ щыӏэкъым.', ev_more: 'Нэхъыбэ ↗',
         stat1: 'Илъэс лэжьащ', stat2: 'Хъыбарзехьэ', stat3: 'Къалэ', stat4: 'Зэпэщӏэтыным и щхьэусыгъуэ',
-        ig_label: 'ЗэрыкӀуэцӀылъ', flickr_label: 'Сурэт Архив', flickr_title: 'Галерей',
+        ig_label: 'ДыкӀэлъыплъ', ig_text: 'Адыгэ Ӏуэхум, тхыдэм, иджырей щэнхабзэ, политикэ Ӏуэхухэм теухуа видео кӀэщӀхэр.', ig_follow: 'Instagram-м дыщыкӀэлъыплъ', flickr_label: 'Сурэт Архив', flickr_title: 'Галерей',
         flickr_link: 'Архив псор ↗', flickr_loading: 'Flickr-м щыщ солъагъу…',
         contact_label: 'Зэпыщӏэныгъэ', contact_title: 'Зэпыщӏэ<br>Дызэрыгъэ',
         contact_email_label: 'Имэил', contact_follow_label: 'Кӏэлъыплъ',
@@ -593,7 +599,7 @@
         lib_access_open: 'Уасэ хэмылъэу', lib_access_restricted: 'ЗэфэшӀыгъ · къэщэфын е елъэӀун', lib_access_buy: 'Къыдэкӏыгъ · къэпщэфын плъэкӏыщт',
         nav_events: 'Зэхахьэхэр', ev_label: 'Зэхахьэхэр', ev_title: 'Зэхахьэхэр &amp;<br>Акциехэр', ev_intro: 'Митингхэр, гукъэкӀыжь зэхахьэхэр, фестивальхэр, къэгъэлъэгъонхэр — хэкужъми диаспорэми.', ev_upcoming: 'Къэблагъэ', ev_now: 'Джы макӀо', ev_past: 'КӀогъэ зэхахьэхэр', ev_empty: 'Джыри зэхахьэ щыӀэп.', ev_more: 'НахьыбэкӀэ ↗',
         stat1: 'ИлъэскӀэ Іоф ашӀагъ', stat2: 'Хъытыу зэхащагъ', stat3: 'Къалэ', stat4: 'Пэуцужьыным ищхьэусыгъо',
-        ig_label: 'ИкӀэрыкӀэ', flickr_label: 'Сурэт Архив', flickr_title: 'Галерей',
+        ig_label: 'ТыкӀэлъыплъ', ig_text: 'Адыгэ Ӏофым, тарихъым, джырэ шэн-хабзэ ыкӀи политикэ Ӏофыгъохэм афэгъэхьыгъэ видео кӀэкӀхэр.', ig_follow: 'Instagram-м тыщыкӀэлъыплъ', flickr_label: 'Сурэт Архив', flickr_title: 'Галерей',
         flickr_link: 'Архив пстэури ↗', flickr_loading: 'Flickr-м щыщ солъэгъу…',
         contact_label: 'Зэпхэныгъэ', contact_title: 'Зэпхэ<br>Тызэрыгъэ',
         contact_email_label: 'Имэил', contact_follow_label: 'КӀэлъыплъ',
@@ -621,7 +627,7 @@
         nav_events: 'События', ev_label: 'Живые события', ev_title: 'События и<br>Акции', ev_intro: 'Митинги, памятные акции, фестивали и выставки на родине и в диаспоре.', ev_upcoming: 'Скоро', ev_now: 'Идёт сейчас', ev_past: 'Прошедшие события', ev_empty: 'Пока нет событий.', ev_more: 'Подробнее ↗',
         lib_access_open: 'Открытый доступ', lib_access_restricted: 'Ограниченный доступ · купить или запросить', lib_buy: 'Купить ↗', lib_access_buy: 'Печатное издание · можно купить', lib_original: 'Оригинальное издание',
         stat1: 'Лет активности', stat2: 'Задокументировано событий', stat3: 'Городов', stat4: 'Причин бороться',
-        ig_label: 'Последние посты', flickr_label: 'Фотоархив', flickr_title: 'Галерея',
+        ig_label: 'Подписывайтесь', ig_text: 'Короткие видео о черкесском вопросе, истории и сегодняшних культурных и политических проблемах.', ig_follow: 'Подписаться в Instagram', flickr_label: 'Фотоархив', flickr_title: 'Галерея',
         flickr_link: 'Весь архив ↗', flickr_loading: 'Загрузка с Flickr…',
         contact_label: 'Связаться', contact_title: 'Напишите<br>Нам',
         contact_email_label: 'Email', contact_follow_label: 'Следите',
@@ -649,7 +655,7 @@
         nav_events: 'Etkinlikler', ev_label: 'Canlı Etkinlikler', ev_title: 'Etkinlikler ve<br>Eylemler', ev_intro: 'Anavatanda ve diasporada mitingler, anmalar, festivaller ve sergiler.', ev_upcoming: 'Yaklaşan', ev_now: 'Şu an sürüyor', ev_past: 'Geçmiş etkinlikler', ev_empty: 'Henüz etkinlik yok.', ev_more: 'Ayrıntılar ↗',
         lib_access_open: 'Açık erişim', lib_access_restricted: 'Kısıtlı erişim · satın al veya erişim iste', lib_buy: 'Satın al ↗', lib_access_buy: 'Basılı · satın alınabilir', lib_original: 'Orijinal baskı',
         stat1: 'Yıl aktif', stat2: 'Belgelenen etkinlik', stat3: 'Şehir', stat4: 'Mücadele sebebi',
-        ig_label: 'Son Paylaşımlar', flickr_label: 'Fotoğraf Arşivi', flickr_title: 'Galeri',
+        ig_label: 'Bizi takip edin', ig_text: 'Çerkes meselesi, tarih ve bugünün kültürel ve siyasi meseleleri üzerine kısa videolar.', ig_follow: 'Instagram’da takip et', flickr_label: 'Fotoğraf Arşivi', flickr_title: 'Galeri',
         flickr_link: 'Tam arşiv ↗', flickr_loading: 'Flickr\'dan yükleniyor…',
         contact_label: 'Bize Ulaşın', contact_title: 'İletişime<br>Geçin',
         contact_email_label: 'E-posta', contact_follow_label: 'Takip Et',
@@ -677,7 +683,7 @@
         nav_events: 'Termine', ev_label: 'Live-Events', ev_title: 'Events &amp;<br>Aktionen', ev_intro: 'Kundgebungen, Gedenkveranstaltungen, Festivals und Ausstellungen in der Heimat und in der Diaspora.', ev_upcoming: 'Demnächst', ev_now: 'Läuft gerade', ev_past: 'Vergangene Termine', ev_empty: 'Noch keine Termine.', ev_more: 'Details ↗',
         lib_access_open: 'Frei zugänglich', lib_access_restricted: 'Zugang beschränkt · kaufen oder Zugang beantragen', lib_buy: 'Kaufen ↗', lib_access_buy: 'Gedruckt · im Handel erhältlich', lib_original: 'Originalausgabe',
         stat1: 'Jahre aktiv', stat2: 'Dokumentierte Ereignisse', stat3: 'Städte erreicht', stat4: 'Gründe zu kämpfen',
-        ig_label: 'Neueste Beiträge', flickr_label: 'Fotoarchiv', flickr_title: 'Galerie',
+        ig_label: 'Folgt uns', ig_text: 'Kurze Videos zur tscherkessischen Frage, zur Geschichte und zu aktuellen kulturellen und politischen Themen.', ig_follow: 'Auf Instagram folgen', flickr_label: 'Fotoarchiv', flickr_title: 'Galerie',
         flickr_link: 'Vollständiges Archiv ↗', flickr_loading: 'Lade von Flickr…',
         contact_label: 'Kontakt', contact_title: 'Schreibt<br>uns',
         contact_email_label: 'E-Mail', contact_follow_label: 'Folgen',
@@ -705,7 +711,7 @@
         nav_events: 'الفعاليات', ev_label: 'فعاليات حية', ev_title: 'فعاليات<br>وتحركات', ev_intro: 'مسيرات وفعاليات إحياء ذكرى ومهرجانات ومعارض في الوطن الأم وفي الشتات.', ev_upcoming: 'قريباً', ev_now: 'جارية الآن', ev_past: 'فعاليات سابقة', ev_empty: 'لا توجد فعاليات بعد.', ev_more: 'التفاصيل ↗',
         lib_access_open: 'وصول مفتوح', lib_access_restricted: 'وصول مقيّد · شراء أو طلب الوصول', lib_buy: 'شراء ↗', lib_access_buy: 'نسخة مطبوعة · متاحة للشراء', lib_original: 'الطبعة الأصلية',
         stat1: 'سنوات نشاط', stat2: 'فعالية موثّقة', stat3: 'مدينة', stat4: 'أسباب للنضال',
-        ig_label: 'آخر المنشورات', flickr_label: 'أرشيف الصور', flickr_title: 'المعرض',
+        ig_label: 'تابعونا', ig_text: 'مقاطع فيديو قصيرة عن القضية الشركسية والتاريخ والقضايا الثقافية والسياسية الراهنة.', ig_follow: 'تابعونا على إنستغرام', flickr_label: 'أرشيف الصور', flickr_title: 'المعرض',
         flickr_link: 'الأرشيف الكامل ↗', flickr_loading: 'جارٍ التحميل من Flickr…',
         contact_label: 'تواصل معنا', contact_title: 'ابقَ<br>على تواصل',
         contact_email_label: 'البريد الإلكتروني', contact_follow_label: 'تابعنا',
