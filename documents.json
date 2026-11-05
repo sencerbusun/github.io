@@ -1,5 +1,58 @@
 [
   {
+    "type": "Critique",
+    "title": "A Timeline Is Not an Answer",
+    "author": "May21.org Collective",
+    "date": "2026-11-05",
+    "lang": "EN · TR · РУС · DE · عر · КАБ · АДЫ",
+    "url": "documents/2026-11-kaffed-statement-critique.html?lang=en",
+    "description": "On KAFFED's statement about its delegation to the Moscow round table — and what the MChA's president told Putin about the trip.",
+    "editions": {
+      "tr": {
+        "type": "Eleştiri",
+        "title": "Takvim Cevap Değildir",
+        "description": "KAFFED’in Moskova yuvarlak masasına katılan heyetine ilişkin açıklaması — ve DÇB Başkanı’nın gezi hakkında Putin’e anlattıkları üzerine.",
+        "url": "documents/2026-11-kaffed-statement-critique.html?lang=tr",
+        "lang": "TR"
+      },
+      "kbd": {
+        "type": "Критикэ",
+        "title": "Хронологиер Жэуапкъым",
+        "description": "КАФФЕД-м Москва зекӀуэм теухуауэ къыдигъэкӀа тхыгъэмрэ ДАХ-м и унафэщӀым Путин жриӀамрэ.",
+        "url": "documents/2026-11-kaffed-statement-critique.html?lang=kbd",
+        "lang": "КАБ"
+      },
+      "ady": {
+        "type": "Критикэ",
+        "title": "Хронологиер Джэуапэп",
+        "description": "КАФФЕД-м Москва зекӀом фэгъэхьыгъэу къыдигъэкӀыгъэ тхыгъэмрэ ДАХ-м итхьаматэ Путиным риӀуагъэмрэ.",
+        "url": "documents/2026-11-kaffed-statement-critique.html?lang=ady",
+        "lang": "АДЫ"
+      },
+      "ru": {
+        "type": "Критика",
+        "title": "Хронология — не ответ",
+        "description": "О заявлении KAFFED по поводу её делегации на московском круглом столе — и о том, что президент МЧА рассказал о поездке Путину.",
+        "url": "documents/2026-11-kaffed-statement-critique.html?lang=ru",
+        "lang": "РУС"
+      },
+      "de": {
+        "type": "Kritik",
+        "title": "Eine Chronologie ist keine Antwort",
+        "description": "Zur Erklärung von KAFFED über ihre Delegation beim Moskauer Runden Tisch – und dazu, was der ITA-Präsident Putin über die Reise erzählte.",
+        "url": "documents/2026-11-kaffed-statement-critique.html?lang=de",
+        "lang": "DE"
+      },
+      "ar": {
+        "type": "نقد",
+        "title": "التسلسل الزمني ليس جوابًا",
+        "description": "عن بيان KAFFED بشأن وفده إلى طاولة موسكو المستديرة — وعمّا قاله رئيس الجمعية الشركسية العالمية لبوتين عن الرحلة.",
+        "url": "documents/2026-11-kaffed-statement-critique.html?lang=ar",
+        "lang": "عر"
+      }
+    }
+  },
+  {
     "type": "News",
     "title": "Not in Our Name",
     "author": "May21.org Collective",
