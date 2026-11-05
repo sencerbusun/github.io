@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Timeline Is Not an Answer · May21.org</title>
+  <meta name="description" content="A critique of KAFFED's statement of 5 November 2026 on its delegation's visit to the Russian Foreign Ministry round table. In English and Turkish." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400;500&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=Noto+Sans+Arabic:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --black:#0a0a0a; --off-black:#111; --charcoal:#1c1c1c; --dim:#2a2a2a; --mid:#444;
+      --muted:#888; --smoke:#bbb; --white:#f0ede8; --accent:#c8382a; --accent2:#d47c2b;
+      --line:rgba(255,255,255,0.08);
+      --font-display:'Bebas Neue',sans-serif; --font-body:'DM Sans',sans-serif; --font-mono:'DM Mono',monospace;
+      --bg:var(--black); --fg:var(--white); --soft:var(--smoke);
+    }
+    *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--bg); color:var(--fg); font-family:var(--font-body); font-weight:300; line-height:1.75; }
+    a { color:var(--accent2); }
+    img { display:block; max-width:100%; }
+
+    .top { padding:18px 24px; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap; }
+    .top a { text-decoration:none; color:var(--fg); }
+    .logo { font-family:var(--font-display); font-size:1.5rem; letter-spacing:0.06em; }
+    .logo span { color:var(--accent); }
+    .top-links { display:flex; gap:20px; font-family:var(--font-mono); font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; }
+    .top-links a { color:var(--muted); }
+    .top-links a:hover { color:var(--accent2); }
+
+    article { max-width:760px; margin:0 auto; padding:64px 24px 96px; }
+    .eyebrow { font-family:var(--font-mono); font-size:0.7rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--accent); margin-bottom:16px; }
+    h1 { font-family:var(--font-display); font-weight:400; font-size:clamp(2.6rem,8vw,4.6rem); line-height:0.95; letter-spacing:0.02em; }
+    .dek { margin-top:24px; font-size:1.15rem; color:var(--soft); border-left:2px solid var(--accent); padding-left:18px; }
+    .byline { margin-top:28px; font-family:var(--font-mono); font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); }
+    .divider { width:48px; height:2px; background:var(--accent); margin:40px 0; }
+
+    article h2 { font-family:var(--font-display); font-weight:400; font-size:clamp(1.7rem,4vw,2.3rem); letter-spacing:0.03em; line-height:1.05; margin:56px 0 16px; }
+    article h3.who { font-family:var(--font-body); font-weight:500; font-size:1.1rem; color:var(--fg); margin:32px 0 8px; }
+    article h3.who span { font-family:var(--font-mono); font-weight:400; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); margin-left:8px; }
+    article p { margin-bottom:20px; font-size:1.05rem; color:var(--soft); }
+    article p strong { color:var(--fg); font-weight:500; }
+    article blockquote { margin:28px 0; padding:4px 0 4px 20px; border-left:2px solid var(--accent2); }
+    article blockquote p { color:var(--fg); font-size:1.05rem; margin-bottom:6px; }
+    article blockquote .ru { font-family:var(--font-mono); font-size:0.78rem; color:var(--muted); }
+    article ul { margin:0 0 24px 20px; color:var(--soft); }
+    article li { margin-bottom:10px; }
+
+    .facts { background:var(--charcoal); border:1px solid var(--dim); padding:24px 26px; margin:32px 0; font-size:0.95rem; }
+    .facts h3 { font-family:var(--font-mono); font-weight:400; font-size:0.7rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--accent); margin-bottom:12px; }
+    .facts dl { display:grid; grid-template-columns:170px 1fr; gap:8px 16px; color:var(--soft); }
+    .facts dt { font-family:var(--font-mono); font-size:0.72rem; letter-spacing:0.06em; color:var(--muted); text-transform:uppercase; padding-top:3px; }
+
+    .refs { margin-top:64px; padding-top:24px; border-top:1px solid var(--line); }
+    .refs h2 { margin-top:0; }
+    .refs ol { margin-left:20px; font-size:0.9rem; color:var(--soft); }
+    .refs li { margin-bottom:10px; }
+    sup a { text-decoration:none; font-family:var(--font-mono); font-size:0.7em; }
+
+    footer { padding:32px 24px; border-top:1px solid var(--line); font-family:var(--font-mono); font-size:0.65rem; letter-spacing:0.1em; color:var(--muted); text-align:center; }
+
+    body.reader { --bg:#f7f4ee; --fg:#1a1a1a; --soft:#2b2b2b; --muted:#6b6b6b; --charcoal:#ece7de; --dim:#d9d2c6; --line:rgba(0,0,0,0.1); }
+    body.reader article p, body.reader article li, body.reader .dek { font-family:'Source Serif 4',Georgia,serif; font-size:1.12rem; }
+    body.reader a { color:#9a2a1f; }
+
+    @media (max-width:640px) {
+      article { padding:40px 16px 72px; }
+      .facts dl { grid-template-columns:1fr; gap:2px 0; }
+      .facts dd { margin-bottom:10px; }
+    }
+
+    .top-right { display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+    .tabs { display:flex; flex-wrap:wrap; gap:4px; }
+    .tabs button { background:transparent; border:1px solid var(--mid); color:var(--muted); font-family:var(--font-mono); font-size:0.66rem; letter-spacing:0.1em; padding:5px 9px; cursor:pointer; }
+    .tabs button:hover { border-color:var(--soft); color:var(--fg); }
+    .tabs button[aria-pressed="true"] { background:var(--accent); border-color:var(--accent); color:#fff; }
+    .status { font-family:var(--font-mono); font-size:0.75rem; line-height:1.8; color:var(--soft); background:var(--charcoal); border:1px solid var(--accent2); padding:14px 18px; margin:0 0 32px; }
+    [dir="rtl"] { font-family:'Noto Sans Arabic',var(--font-body); }
+    [dir="rtl"] .dek { border-left:none; border-right:2px solid var(--accent); padding-left:0; padding-right:18px; }
+    [dir="rtl"] article blockquote, article [dir="rtl"] blockquote { border-left:none; border-right:2px solid var(--accent2); padding:4px 20px 4px 0; }
+    [dir="rtl"] ul { margin:0 20px 24px 0; }
+    [dir="rtl"] h3.who span { margin-left:0; margin-right:8px; letter-spacing:0; }
+    [dir="rtl"] .eyebrow, [dir="rtl"] .byline, [dir="rtl"] .facts dt { letter-spacing:0; }
+    [dir="rtl"] h1, [dir="rtl"] h2 { font-family:'Noto Sans Arabic',sans-serif; font-weight:500; letter-spacing:0; line-height:1.3; }
+    [dir="rtl"] h1 { font-size:clamp(2.2rem,6vw,3.4rem); }
+    [dir="rtl"] article p, [dir="rtl"] article li { font-size:1.12rem; line-height:2; }
+    body.reader [dir="rtl"] article p, body.reader [dir="rtl"] p, body.reader [dir="rtl"] li { font-family:'Noto Sans Arabic',sans-serif; }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <a href="../index.html" class="logo">May21<span>.</span>org</a>
+    <div class="top-right">
+      <nav class="tabs" aria-label="Language"><button type="button" data-lang="en" title="English">EN</button><button type="button" data-lang="tr" title="Türkçe">TR</button></nav>
+      <nav class="top-links">
+        <a href="../index.html#library" id="lib-link">← Library</a>
+        <a href="?view=reader" id="reader-toggle">Reader view</a>
+      </nav>
+    </div>
+  </header>
+
+  <article>
+<!-- ============================ EN ============================ -->
+    <div class="panel" id="lang-en" lang="en" hidden>
+    <p class="eyebrow">Critique · Diaspora</p>
+    <h1>A Timeline Is Not an Answer</h1>
+    <p class="dek">KAFFED has replied to the criticism of its Moscow trip. The statement explains how the trip was organised. It does not answer what the critics asked.</p>
+    <p class="byline">May21.org Collective · 5 November 2026</p>
+
+    <div class="divider"></div>
+
+    <p>On 5 November the Federation of Caucasian Associations (KAFFED) published a statement on the round table held at the Russian Foreign Ministry on 28 October.<sup><a href="#r1">1</a></sup> It comes after a week in which ÇERKES-FED and the Kayseri, İstanbul, Ankara and Çorum associations rejected the meeting and the story of "voluntary accession" it celebrated,<sup><a href="#r2">2</a></sup> and two days before KAFFED's general assembly.</p>
+    <p>The statement deserves a careful reading. It is calm, detailed and, in places, more revealing than its authors may have intended.</p>
+
+    <h2>What it gets right</h2>
+    <p>First, credit where it is due. KAFFED sets out a timeline with dates and names, which is more than most organisations offer when criticised. It admits it had "justified reservations" about the meeting's title. It says relations with the homeland must rest on mutual respect, and that their value lies in concrete results, not in the fact that a meeting took place. And it ends with a sentence we fully agree with: <strong>"Protecting our historical memory and building our future are not alternatives to each other."</strong></p>
+    <p>The problem is what the statement does with that sentence — which is nothing.</p>
+
+    <h2>What the timeline reveals</h2>
+    <p>Read closely, KAFFED's own chronology confirms much of what its critics said:</p>
+    <ul>
+      <li><strong>The invitation came from the Russian embassy</strong> on 17 June, under a programme called "Russia – Land of Opportunities", with all costs paid by the host. It was planned, the embassy said, together with the Russian Foreign Ministry, the Russian President's plenipotentiary representations and the Turkish Foreign Ministry.</li>
+      <li><strong>The embassy asked for the list of participants within one day.</strong> It was drawn up on the chairman's decision, after calls to regional coordinator associations, and sent on 18 June. The member associations as a whole — the point Ankara and Çorum raised — were not asked.</li>
+      <li><strong>The Moscow leg was added five days before departure,</strong> on 20 October, by the president of the International Circassian Association (MChA/DÇB), Khauti Sokhrokov. He also named four people to be added: KAFFED's chairman, two deputy chairmen and an MChA board member — all four holding posts in the MChA. (One deputy chairman was already on the list, so KAFFED's secretary general took that seat.)</li>
+      <li><strong>The embassy decided who could come.</strong> When three regional participants dropped out, KAFFED's request to replace them was refused because the "approval processes" for participants had been completed.</li>
+    </ul>
+    <p>In other words: a cultural trip to the republics, paid for and vetted by the Russian state, became — at the MChA's initiative — a photo opportunity at the Foreign Ministry, with KAFFED's leadership in the front row. This is exactly what İKKD described when it wrote that KAFFED's relationship with the homeland now runs through the MChA and the Russian Foreign Ministry rather than through the Circassian people.<sup><a href="#r2">2</a></sup> KAFFED's statement does not dispute it. It documents it.</p>
+
+    <h2>A title is not packaging</h2>
+    <p>KAFFED says it learned the meeting's name — "Through the centuries hand in hand with Russia, earning honour and glory" — only a day before travelling, conveyed its unease to the MChA's leaders, and went anyway:</p>
+    <blockquote>
+      <p>"We took part in the meeting in the belief that its content was too important to be sacrificed to our justified reservations about its name."</p>
+      <p class="ru">— KAFFED statement, 5 November 2026</p>
+    </blockquote>
+    <p>Name and content, the statement argues, should be judged separately. But for the host, the name <em>is</em> the content. What the Russian state published afterwards was the title, the anniversary, the group photo and a readout in which Circassians thank Russia. What it did not publish were KAFFED's points on return and language. The title, the photo and the readout are the record; the speeches are not. A delegation that stands under a slogan it objects to, and objects only in private, has let the host write the record.</p>
+    <p>KAFFED's own report did not help. At home it presented the event as a "Historic meeting with the Russian Federation", without the title, without the anniversary.<sup><a href="#r3">3</a></sup> The new statement does not explain that choice. Instead it borrows the same word from Senator Arsen Kanokov — one of the speakers at the round table — who called the meeting "a historic first step".</p>
+
+    <h2>If Moscow misquoted you, tell Moscow</h2>
+    <p>On the two points that caused the most anger, KAFFED's answer is that neither was said in the room. The "470th anniversary", it writes, "was used only in the news item published by the Russian Foreign Ministry after the meeting." As for gratitude, no such expression was used in KAFFED's speech and, "unless there was a difference in translation, to our knowledge", not in the other Circassian speeches either; there were only courteous thanks to the hosts and the MChA.</p>
+    <p>Suppose that is true. Then a foreign ministry has published an account of a meeting that attributes to Circassian representatives a framing they did not use and gratitude they did not express — and that account now stands as the official record. The obvious response would be to ask the ministry, publicly, to correct it. The statement does not say KAFFED has done so. Its only reported objection — about the title — went privately to the MChA. Its warnings are addressed not to the ministry that may have misrepresented it, but to its Circassian critics.</p>
+
+    <h2>The words that are missing</h2>
+    <p>The five statements of last week had one point in common: Circassians did not join Russia voluntarily, and 1557 cannot be turned into a symbol of submission after a century of war, genocide and exile. That was the question put to KAFFED.</p>
+    <p>The answer runs to more than a thousand words. It contains the words "embassy", "programme", "diplomatic courtesy" and "470". It does not contain the words <strong>genocide</strong>, <strong>exile</strong>, <strong>1864</strong>, <strong>1557</strong> or <strong>voluntary</strong>. It does not say that KAFFED rejects the thesis of voluntary accession. It speaks of "historical memory" and "historical events" without once saying what those events were.</p>
+    <p>This is the same federation that filled Yenikapı in 2022 and Ankara in 2023 under the banner <em>"Bunun Adı Soykırım!"</em> — "Its name is genocide!"<sup><a href="#r4">4</a></sup> If the word could be said in Yenikapı, it can be said in a statement about a meeting in Moscow.</p>
+
+    <h2>The Caucasus is not the Foreign Ministry</h2>
+    <p>KAFFED closes by quoting its bylaws: the federation "avoids any attitude that may negatively affect relations with the Caucasus" and supports initiatives that improve them. The quotation is meant to show that the trip was in line with KAFFED's principles. It shows the opposite of what is intended. The bylaws speak of relations with the Caucasus and its peoples — not with the Russian state's foreign ministry and its agency for influence abroad. Treating the two as the same thing is precisely what the critics object to. The bylaws also commit KAFFED (Article 2) to contributing to human rights; the statement has nothing to say about the May 21 mourners detained in Nalchik or the Circassian sentenced to eleven years in Adygea in March.<sup><a href="#r5">5</a></sup></p>
+
+    <h2>Criticism and tone</h2>
+    <p>The statement welcomes criticism in principle, then warns that insults, personal attacks and baseless accusations have no place in Circassian custom. That is true, and it applies to everyone. But the statements of ÇERKES-FED and the four associations were not insults. They were reasoned, signed and specific, and two of them came from KAFFED's own members. Answering them with a lesson in manners, rather than on the substance, is a way of not answering them.</p>
+    <p>KAFFED also stresses its democratic mechanisms. Its own account shows how they worked here: the list was settled in a day on the chairman's decision; the Moscow leg was settled by the MChA; the board and the council of presidents met on 4 November — after the delegation had come home.</p>
+
+    <h2>What an answer would look like</h2>
+    <p>KAFFED is right that the question now is how to make relations with the homeland serve the future of the Circassian people. An answer that does that would be short:</p>
+    <ul>
+      <li>say plainly that KAFFED rejects the thesis of "voluntary accession" and that what happened in 1864 was genocide and exile;</li>
+      <li>ask the Russian Foreign Ministry, publicly, to correct its readout if it misrepresented the Circassian speakers;</li>
+      <li>publish the full text of KAFFED's speech in Moscow, the programme and the correspondence with the embassy and the MChA;</li>
+      <li>explain how the delegation was chosen and why the Russian embassy had the final say over it;</li>
+      <li>say what, concretely, was promised on return, language and rights — and by whom.</li>
+    </ul>
+    <p>"Protecting our historical memory and building our future are not alternatives to each other," KAFFED writes. We agree. The first step in protecting that memory is to name it.</p>
+    </div>
+
+<!-- ============================ TR ============================ -->
+    <div class="panel" id="lang-tr" lang="tr" hidden>
+    <p class="eyebrow">Eleştiri · Diaspora</p>
+    <h1>Takvim Cevap Değildir</h1>
+    <p class="dek">KAFFED, Moskova ziyaretine yönelik eleştirilere yanıt verdi. Açıklama, ziyaretin nasıl düzenlendiğini anlatıyor. Eleştirenlerin sorduğu soruyu ise yanıtlamıyor.</p>
+    <p class="byline">May21.org Kolektifi · 5 Kasım 2026</p>
+
+    <div class="divider"></div>
+
+    <p>Kafkas Dernekleri Federasyonu (KAFFED), 5 Kasım’da Rusya Dışişleri Bakanlığı’nda 28 Ekim’de yapılan yuvarlak masa toplantısına ilişkin bir açıklama yayımladı.<sup><a href="#r1">1</a></sup> Açıklama, ÇERKES-FED ile Kayseri, İstanbul, Ankara ve Çorum derneklerinin toplantıyı ve kutladığı “gönüllü katılım” anlatısını reddettiği bir haftanın ardından,<sup><a href="#r2">2</a></sup> KAFFED genel kurulundan iki gün önce geldi.</p>
+    <p>Açıklama dikkatli bir okumayı hak ediyor. Sakin, ayrıntılı ve yer yer yazarlarının amaçladığından daha fazlasını ortaya koyuyor.</p>
+
+    <h2>Doğru olanlar</h2>
+    <p>Önce hakkını verelim. KAFFED tarihleri ve isimleriyle bir takvim paylaşıyor; bu, eleştirilen kurumların çoğunun yaptığından fazlası. Toplantının adına ilişkin “haklı çekinceleri” olduğunu kabul ediyor. Anavatanla ilişkilerin karşılıklı saygıya dayanması gerektiğini, önemin toplantının yapılmış olmasında değil somut sonuçlarında aranması gerektiğini söylüyor. Ve tamamen katıldığımız bir cümleyle bitiyor: <strong>“Tarihsel hafızamızı korumakla geleceğimizi inşa etmek birbirinin alternatifi değildir.”</strong></p>
+    <p>Sorun, açıklamanın bu cümleyle ne yaptığı — yani hiçbir şey yapmaması.</p>
+
+    <h2>Takvimin ortaya koydukları</h2>
+    <p>Dikkatle okunduğunda KAFFED’in kendi kronolojisi, eleştirilerin çoğunu doğruluyor:</p>
+    <ul>
+      <li><strong>Davet Rusya Büyükelçiliği’nden geldi:</strong> 17 Haziran’da, “Rusya – Fırsatlar Ülkesi” adlı bir program kapsamında, tüm masraflar ev sahibince karşılanmak üzere. Büyükelçiliğe göre program, Türkiye Cumhuriyeti Dışişleri Bakanlığı, Rusya Dışişleri Bakanlığı ve Rusya Cumhurbaşkanlığı Yetkili Temsilcilikleriyle iş birliği içinde planlanmıştı.</li>
+      <li><strong>Büyükelçilik katılımcı listesini bir gün içinde istedi.</strong> Liste, Genel Başkan’ın kararıyla, Bölge Koordinatör Dernekleriyle yapılan görüşmelerin ardından oluşturuldu ve 18 Haziran’da bildirildi. Ankara ve Çorum’un altını çizdiği gibi, üye derneklerin geneline sorulmadı.</li>
+      <li><strong>Moskova ayağı yolculuktan beş gün önce eklendi:</strong> 20 Ekim’de, Dünya Çerkes Birliği (DÇB) Başkanı Hauti Sohrokov tarafından. Sohrokov heyete eklenecek dört ismi de bildirdi: KAFFED Genel Başkanı, iki Genel Başkan Yardımcısı ve bir DÇB Yönetim Kurulu üyesi — dördü de DÇB’de görev yapıyor. (Genel Başkan Yardımcılarından biri ilk listede zaten bulunduğu için onun yerine Genel Sekreter eklendi.)</li>
+      <li><strong>Kimin gideceğine büyükelçilik karar verdi.</strong> Bölgelerden üç katılımcı programdan çekilince, yerlerine yeni isimler eklenmesi talebi, katılımcılara ilişkin “onay süreçlerinin tamamlandığı” gerekçesiyle Büyükelçilik tarafından kabul edilmedi.</li>
+    </ul>
+    <p>Yani: Rus devleti tarafından finanse edilen ve katılımcıları onaylanan bir kültür gezisi, DÇB’nin girişimiyle, KAFFED yönetiminin ön sırada yer aldığı bir Dışişleri Bakanlığı fotoğrafına dönüştü. Bu, İKKD’nin “KAFFED’in anavatanla ilişkisi artık Çerkes halkıyla değil, DÇB ve Rus Dışişleri üzerinden kurulmaktadır” sözleriyle anlattığı şeyin ta kendisi.<sup><a href="#r2">2</a></sup> KAFFED’in açıklaması bunu çürütmüyor; belgeliyor.</p>
+
+    <h2>Başlık bir ambalaj değildir</h2>
+    <p>KAFFED, toplantının adını — “Yüzyıllar boyunca Rusya ile el ele, onur ve şan kazanarak” — yolculuktan bir gün önce öğrendiğini, rahatsızlığını DÇB yöneticilerine ilettiğini ve yine de katıldığını söylüyor:</p>
+    <blockquote>
+      <p>“Toplantının içeriğinin, adlandırılmasına ilişkin haklı çekincelerimize feda edilemeyecek kadar önemli olduğu düşüncesiyle görüşmeye katılım sağlanmıştır.”</p>
+      <p class="ru">— KAFFED açıklaması, 5 Kasım 2026</p>
+    </blockquote>
+    <p>Açıklamaya göre ad ile içerik ayrı değerlendirilmeli. Ama ev sahibi için ad, içeriğin ta kendisidir. Rus devletinin toplantıdan sonra yayımladığı şey; başlık, yıldönümü, toplu fotoğraf ve Çerkeslerin Rusya’ya teşekkür ettiği bir haberdi. Yayımlamadığı şey ise KAFFED’in dönüş ve anadil talepleriydi. Kayda geçen; başlık, fotoğraf ve haberdir, konuşmalar değil. İtiraz ettiği bir sloganın altında duran ve itirazını yalnızca kapalı kapılar ardında dile getiren bir heyet, kaydı ev sahibine yazdırmış olur.</p>
+    <p>KAFFED’in kendi duyurusu da yardımcı olmadı. Federasyon toplantıyı içeride, başlıktan ve yıldönümünden söz etmeden “Rusya Federasyonu ile Tarihi Toplantı” olarak duyurmuştu.<sup><a href="#r3">3</a></sup> Yeni açıklama bu tercihi açıklamıyor. Bunun yerine aynı nitelemeyi, yuvarlak masanın konuşmacılarından Senatör Arsen Kanokov’dan ödünç alıyor: toplantı “tarihî öneme sahip bir ilk adım”.</p>
+
+    <h2>Moskova sözlerinizi çarpıttıysa, Moskova’ya söyleyin</h2>
+    <p>En çok tepki çeken iki konuda KAFFED’in yanıtı, ikisinin de salonda dile getirilmediği. “470. yıl” ibaresi, açıklamaya göre “sadece Rusya Federasyonu Dışişleri Bakanlığı tarafından toplantıdan sonra yayınlanan haberde kullanılmıştır.” “Minnet” konusunda ise KAFFED’in konuşmasında böyle bir ifade yer almamış; “çeviriden kaynaklanan bir farklılık bulunmadığı takdirde, bilgimiz dahilinde” diğer Çerkes temsilcilerinin konuşmalarında da yer almamış; yalnızca ev sahiplerine ve DÇB’ye diplomatik nezaket çerçevesinde teşekkür edilmiş.</p>
+    <p>Bunun doğru olduğunu varsayalım. O hâlde bir dışişleri bakanlığı, Çerkes temsilcilerine kullanmadıkları bir çerçeveyi ve ifade etmedikleri bir minneti atfeden bir haber yayımlamış — ve bu haber resmî kayıt olarak duruyor. Akla gelen ilk adım, bakanlıktan bunu açıkça düzeltmesini istemek olurdu. Açıklama KAFFED’in bunu yaptığını söylemiyor. Aktarılan tek itiraz — başlığa ilişkin olan — kapalı kapılar ardında DÇB’ye iletilmiş. Açıklamadaki uyarılar ise kendisini yanlış aktarmış olabilecek bakanlığa değil, Çerkes eleştirmenlere yöneltilmiş.</p>
+
+    <h2>Eksik kelimeler</h2>
+    <p>Geçen haftaki beş açıklamanın ortak noktası tekti: Çerkesler Rusya’ya gönüllü katılmadı ve bir asırlık savaşın, soykırımın ve sürgünün ardından 1557 teslimiyetin simgesine dönüştürülemez. KAFFED’e sorulan soru buydu.</p>
+    <p>Yanıt bin kelimeyi aşıyor. İçinde “Büyükelçilik”, “program”, “diplomatik nezaket” ve “470” kelimeleri var. <strong>Soykırım</strong>, <strong>sürgün</strong>, <strong>1864</strong>, <strong>1557</strong> ve <strong>gönüllü</strong> kelimeleri yok. KAFFED’in gönüllü katılım tezini reddettiğine dair tek bir cümle yok. “Tarihsel hafıza”dan ve “tarihsel olaylar”dan söz ediliyor, ama bu olayların ne olduğu bir kez bile söylenmiyor.</p>
+    <p>Bu, 2022’de Yenikapı’yı ve 2023’te Ankara’yı <em>“Bunun Adı Soykırım!”</em> sloganıyla dolduran federasyonun ta kendisi.<sup><a href="#r4">4</a></sup> O kelime Yenikapı’da söylenebiliyorsa, Moskova’daki bir toplantıya ilişkin açıklamada da söylenebilir.</p>
+
+    <h2>Kafkasya, Dışişleri Bakanlığı değildir</h2>
+    <p>KAFFED açıklamasını tüzüğünden alıntılarla bitiriyor: Federasyon “Kafkasya ile ilişkileri olumsuz yönde etkileyebilecek her türlü tutum ve davranıştan kaçınır”, bu ilişkileri geliştiren girişimleri destekler. Alıntı, ziyaretin KAFFED ilkelerine uygun olduğunu göstermek için yapılmış. Gösterdiği ise tersi. Tüzük Kafkasya’dan ve Kafkas halklarından söz ediyor — Rus devletinin dışişleri bakanlığından ve yurt dışında nüfuz geliştirmekle görevli ajansından değil. Bu ikisini aynı şey saymak, eleştirilerin tam da itiraz ettiği şey. Tüzük (2. madde) KAFFED’e insan haklarının gelişmesine katkıda bulunma görevini de veriyor; açıklamada Nalçik’te gözaltına alınan 21 Mayıs anmacılarına ya da Mart’ta Adıgey’de on bir yıl hapis cezası alan Çerkese dair tek söz yok.<sup><a href="#r5">5</a></sup></p>
+
+    <h2>Eleştiri ve üslup</h2>
+    <p>Açıklama eleştiriyi ilke olarak kabul ediyor, ardından hakaretin, kişiselleştirilmiş saldırıların ve dayanaksız ithamların Çerkes kültüründe yeri olmadığını hatırlatıyor. Bu doğru ve herkes için geçerli. Ancak ÇERKES-FED’in ve dört derneğin açıklamaları hakaret değildi. Gerekçeli, imzalı ve somuttular; ikisi de KAFFED’in kendi üyelerinden geldi. Bunlara içerikle değil bir görgü dersiyle yanıt vermek, onları yanıtlamamanın bir yoludur.</p>
+    <p>KAFFED demokratik mekanizmalarının da altını çiziyor. Kendi anlatımı bu mekanizmaların burada nasıl işlediğini gösteriyor: liste bir günde Genel Başkan’ın kararıyla belirlendi; Moskova ayağını DÇB belirledi; Yönetim Kurulu ve Başkanlar Kurulu 4 Kasım’da — heyet döndükten sonra — toplandı.</p>
+
+    <h2>Bir yanıt nasıl olurdu?</h2>
+    <p>KAFFED, asıl sorunun anavatanla ilişkileri halkımızın geleceğine hizmet eder hâle nasıl getireceğimiz olduğunu söylerken haklı. Bunu yapan bir yanıt kısa olurdu:</p>
+    <ul>
+      <li>KAFFED’in “gönüllü katılım” tezini reddettiğini ve 1864’te yaşananın soykırım ve sürgün olduğunu açıkça söylemek;</li>
+      <li>Rusya Dışişleri Bakanlığı Çerkes konuşmacıları yanlış aktardıysa, bakanlıktan haberini düzeltmesini açıkça istemek;</li>
+      <li>KAFFED’in Moskova’daki konuşmasının tam metnini, programı ve Büyükelçilik ile DÇB arasındaki yazışmaları yayımlamak;</li>
+      <li>Heyetin nasıl belirlendiğini ve son sözün neden Rusya Büyükelçiliği’nde olduğunu açıklamak;</li>
+      <li>Dönüş, anadil ve haklar konusunda somut olarak neyin, kim tarafından vaat edildiğini söylemek.</li>
+    </ul>
+    <p>KAFFED “Tarihsel hafızamızı korumakla geleceğimizi inşa etmek birbirinin alternatifi değildir” diyor. Katılıyoruz. O hafızayı korumanın ilk adımı, ona adını koymaktır.</p>
+    </div>
+
+    <section class="refs">
+      <h2 id="refs-title">Sources</h2>
+      <ol>
+        <li id="r1">Kafkas Dernekleri Federasyonu (KAFFED), «Rusya Federasyonu Dışişleri Bakanlığında Yapılan Toplantıya İlişkin Açıklama», 5 Nov 2026. All quotations from the statement are translated by May21.org.</li>
+        <li id="r2">May21.org, «Not in Our Name» — summary of the statements of ÇERKES-FED and the Kayseri, İstanbul, Ankara and Çorum associations, with links to each, 4 Nov 2026. <a href="2026-11-association-reactions.html">may21.org/documents/2026-11-association-reactions.html</a>.</li>
+        <li id="r3">On KAFFED's description of the event as a «Rusya Federasyonu ile Tarihi Toplantı»: Kayseri Kafkas Derneği, statement of 31 Oct 2026, in <a href="https://kayserigercekhaber.com/haber/-kafkas-derneginden-olaganustu-genel-kurul--64919" target="_blank" rel="noopener">Kayseri Gerçek Haber</a>; Ankara Çerkes Derneği, <a href="https://www.facebook.com/CerkesDernegi/posts/pfbid032zkargAeANrnN3QmTUA3YUABbJJdQG2NB1xqof8TTwRqg5c2RN75PUZ99u7poJF7l" target="_blank" rel="noopener">public statement</a>; İstanbul Kafkas Kültür Derneği, <a href="https://www.facebook.com/istanbulkafkaskulturdernegi/posts/pfbid0eHa3kkr8NP6nuXDgTVYKkHrbrxPm7r1xcwTeLPWtUU9zizkcb87MQ7FBUjkoLnXvl" target="_blank" rel="noopener">«Kamuoyuna Duyuru»</a>, 1 Nov 2026.</li>
+        <li id="r4">Evrensel, «Çerkesler soykırım ve sürgünün 159’uncu yılında: Bunun adı soykırım diyecek», 20 May 2023. <a href="https://www.evrensel.net/haber/490432/cerkesler-soykirim-ve-surgunun-159uncu-yilinda-bunun-adi-soykirim-diyecek" target="_blank" rel="noopener">evrensel.net</a>; Haberler.com, KAFFED's call for the «Çerkes Soykırımı ve Sürgünü» rally in Yenikapı, May 2022. <a href="https://www.haberler.com/guncel/kafkas-dernekleri-federasyonu-21-mayis-ta-14940020-haberi/" target="_blank" rel="noopener">haberler.com</a>.</li>
+        <li id="r5">Novoe Delo, «'SVO' displaces memory. Participants in a funeral procession detained in Nalchik». <a href="https://newdosh.media/en/news/svo-vytesnaet-pamat-v-nalcike-zaderzali-ucastnikov-traurnogo-sestvia" target="_blank" rel="noopener">newdosh.media</a>; «An Adygea resident was sentenced to 11 years in prison for involvement in the 'Council of United Circassia'», 17 Mar 2026. <a href="https://newdosh.media/en/news/zitelu-adygei-dali-11-let-po-obvineniu-v-pricastnosti-k-sovetu-obedinennoj-cerkesii" target="_blank" rel="noopener">newdosh.media</a>. See also May21.org, <a href="2026-11-mfa-round-table.html">«Hand in Hand With Whom?»</a>.</li>
+      </ol>
+    </section>
+  </article>
+
+  <footer id="foot">© 2026 May21.org · Quotations from KAFFED's statement are translated by May21.org.</footer>
+
+  <script>
+    var LANGS = ["en", "tr"];
+    var UI = {"en": ["← Library", "Reader view", "Standard view", "Sources", "© 2026 May21.org · Quotations from KAFFED's statement are translated by May21.org."], "tr": ["← Kütüphane", "Okuma görünümü", "Standart görünüm", "Kaynaklar", "© 2026 May21.org · KAFFED açıklamasından alıntılar özgün metinden aktarılmıştır."]};
+    var TITLE = {"en": "A Timeline Is Not an Answer", "tr": "Takvim Cevap Değildir"};
+    var params = new URLSearchParams(location.search);
+    var reader = params.get('view') === 'reader';
+    if (reader) document.body.classList.add('reader');
+    var current = 'en';
+    function link(lang, readerOn) {
+      var q = '?lang=' + lang + (readerOn ? '&view=reader' : '');
+      return location.pathname + q;
+    }
+    function show(lang) {
+      if (LANGS.indexOf(lang) < 0) lang = 'en';
+      current = lang;
+      document.querySelectorAll('.panel').forEach(function (p) { p.hidden = p.id !== 'lang-' + lang; });
+      document.querySelectorAll('.tabs button').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.lang === lang); });
+      document.documentElement.lang = lang;
+      var u = UI[lang];
+      document.getElementById('lib-link').textContent = u[0];
+      var t = document.getElementById('reader-toggle');
+      t.textContent = reader ? u[2] : u[1];
+      t.href = link(lang, !reader);
+      document.getElementById('refs-title').textContent = u[3];
+      document.getElementById('foot').textContent = u[4];
+      document.title = TITLE[lang] + ' · May21.org';
+      try { history.replaceState(null, '', link(lang, reader) + location.hash); } catch (e) {}
+    }
+    document.querySelectorAll('.tabs button').forEach(function (b) {
+      b.addEventListener('click', function () {
+        show(b.dataset.lang);
+        try { localStorage.setItem('may21_lang', b.dataset.lang); } catch (e) {}
+      });
+    });
+    (function () {
+      var q = params.get('lang');
+      if (q) return show(q);
+      var saved = null;
+      try { saved = localStorage.getItem('may21_lang'); } catch (e) {}
+      if (saved && LANGS.indexOf(saved) >= 0) return show(saved);
+      var prefs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || 'en'];
+      for (var i = 0; i < prefs.length; i++) {
+        var c = String(prefs[i]).toLowerCase().split('-')[0];
+        if (LANGS.indexOf(c) >= 0) return show(c);
+      }
+      show('en');
+    })();
+  </script>
+  <script data-goatcounter="https://may21.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>
