@@ -4,7 +4,7 @@
     "title": "Not in Our Name — Joint Statement of 44 Diaspora Organisations",
     "author": "44 Circassian/Caucasian diaspora organisations",
     "date": "2026-11-06",
-    "lang": "EN · TR · РУС",
+    "lang": "EN · TR · РУС · DE · عر · КАБ · АДЫ",
     "url": "documents/2026-11-joint-statement-44.html?lang=en",
     "description": "44 Circassian and Caucasian diaspora organisations protest the Moscow meeting of 28 October 2026, reject the “voluntary accession” narrative and declare that its participants do not speak for the Circassian people.",
     "editions": {
@@ -25,16 +25,30 @@
       "de": {
         "type": "Erklärung",
         "title": "Nicht in unserem Namen — Gemeinsame Erklärung von 44 Diaspora-Organisationen",
-        "description": "44 tscherkessische und kaukasische Diaspora-Organisationen protestieren gegen das Moskauer Treffen vom 28. Oktober 2026, weisen die Erzählung vom „freiwilligen Anschluss“ zurück und erklären, dass die Teilnehmer nicht für das tscherkessische Volk sprechen. (Text auf Englisch, Türkisch und Russisch.)",
-        "url": "documents/2026-11-joint-statement-44.html?lang=en",
-        "lang": "EN"
+        "description": "44 tscherkessische und kaukasische Diaspora-Organisationen protestieren gegen das Moskauer Treffen vom 28. Oktober 2026, weisen die Erzählung vom „freiwilligen Anschluss“ zurück und erklären, dass die Teilnehmer nicht für das tscherkessische Volk sprechen.",
+        "url": "documents/2026-11-joint-statement-44.html?lang=de",
+        "lang": "DE"
       },
       "ar": {
         "type": "بيان",
         "title": "ليس باسمنا — بيان مشترك لـ44 منظمة من الشتات",
-        "description": "44 منظمة شركسية وقوقازية في الشتات تحتج على لقاء موسكو في 28 تشرين الأول/أكتوبر 2026، وترفض رواية «الانضمام الطوعي»، وتعلن أن المشاركين فيه لا يمثلون الشعب الشركسي. (النص بالإنجليزية والتركية والروسية.)",
-        "url": "documents/2026-11-joint-statement-44.html?lang=en",
-        "lang": "EN"
+        "description": "44 منظمة شركسية وقوقازية في الشتات تحتج على لقاء موسكو في 28 تشرين الأول/أكتوبر 2026، وترفض رواية «الانضمام الطوعي»، وتعلن أن المشاركين فيه لا يمثلون الشعب الشركسي.",
+        "url": "documents/2026-11-joint-statement-44.html?lang=ar",
+        "lang": "عر"
+      },
+      "kbd": {
+        "type": "Тхыгъэ",
+        "title": "Ди ЦӀэкӀэ – Хьэуэ",
+        "description": "Диаспорэм щыӀэ адыгэ, кавказ зэгухьэныгъэ 44-м Москва жэпуэгъуэм и 28-м щекӀуэкӀа зэхуэсыр къызэрамыщтэр утыку къыщрахьащ.",
+        "url": "documents/2026-11-joint-statement-44.html?lang=kbd",
+        "lang": "КАБ"
+      },
+      "ady": {
+        "type": "Тхыгъэ",
+        "title": "Ти ЦӀэкӀэ – Хьау",
+        "description": "Диаспорэм щыӀэ адыгэ, кавказ зэгухьэныгъэ 44-мэ Москва чъэпыогъум и 28-м щыкӀогъэ зэхэсыгъор зэрамыштэрэр къаӀуагъ.",
+        "url": "documents/2026-11-joint-statement-44.html?lang=ady",
+        "lang": "АДЫ"
       }
     }
   },
