@@ -1,5 +1,44 @@
 [
   {
+    "type": "Statement",
+    "title": "Not in Our Name — Joint Statement of 44 Diaspora Organisations",
+    "author": "44 Circassian/Caucasian diaspora organisations",
+    "date": "2026-11-06",
+    "lang": "EN · TR · РУС",
+    "url": "documents/2026-11-joint-statement-44.html?lang=en",
+    "description": "44 Circassian and Caucasian diaspora organisations protest the Moscow meeting of 28 October 2026, reject the “voluntary accession” narrative and declare that its participants do not speak for the Circassian people.",
+    "editions": {
+      "tr": {
+        "type": "Açıklama",
+        "title": "Bizim Adımıza Değil — 44 Diaspora Kuruluşundan Ortak Açıklama",
+        "description": "44 Çerkes/Kafkas diaspora kuruluşu, 28 Ekim 2026 Moskova toplantısını protesto ediyor, “gönüllü katılım” anlatısını reddediyor ve katılımcıların Çerkes halkını temsil etmediğini ilan ediyor.",
+        "url": "documents/2026-11-joint-statement-44.html?lang=tr",
+        "lang": "TR"
+      },
+      "ru": {
+        "type": "Заявление",
+        "title": "Не от нашего имени — совместное заявление 44 организаций диаспоры",
+        "description": "44 организации черкесской и кавказской диаспоры протестуют против московской встречи 28 октября 2026 года, отвергают нарратив о «добровольном вхождении» и заявляют, что её участники не представляют черкесский народ.",
+        "url": "documents/2026-11-joint-statement-44.html?lang=ru",
+        "lang": "РУС"
+      },
+      "de": {
+        "type": "Erklärung",
+        "title": "Nicht in unserem Namen — Gemeinsame Erklärung von 44 Diaspora-Organisationen",
+        "description": "44 tscherkessische und kaukasische Diaspora-Organisationen protestieren gegen das Moskauer Treffen vom 28. Oktober 2026, weisen die Erzählung vom „freiwilligen Anschluss“ zurück und erklären, dass die Teilnehmer nicht für das tscherkessische Volk sprechen. (Text auf Englisch, Türkisch und Russisch.)",
+        "url": "documents/2026-11-joint-statement-44.html?lang=en",
+        "lang": "EN"
+      },
+      "ar": {
+        "type": "بيان",
+        "title": "ليس باسمنا — بيان مشترك لـ44 منظمة من الشتات",
+        "description": "44 منظمة شركسية وقوقازية في الشتات تحتج على لقاء موسكو في 28 تشرين الأول/أكتوبر 2026، وترفض رواية «الانضمام الطوعي»، وتعلن أن المشاركين فيه لا يمثلون الشعب الشركسي. (النص بالإنجليزية والتركية والروسية.)",
+        "url": "documents/2026-11-joint-statement-44.html?lang=en",
+        "lang": "EN"
+      }
+    }
+  },
+  {
     "type": "Critique",
     "title": "A Timeline Is Not an Answer",
     "author": "May21.org Collective",
