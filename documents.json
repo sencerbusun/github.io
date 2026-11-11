@@ -1,6 +1,59 @@
 [
   {
     "type": "Statement",
+    "title": "No One Will Write Our History for Us — Circassian Tribal Council in Syria",
+    "author": "Circassian Tribal Council in Syria",
+    "date": "2026-11-10",
+    "lang": "عر · EN · TR · РУС · DE · КАБ · АДЫ",
+    "url": "documents/2026-11-syria-tribal-council.html?lang=en",
+    "description": "The Circassian Tribal Council in Syria rejects the Moscow programme of 25 October – 3 November 2026 and the narrative of “voluntary accession” in 1557, and declares that nothing issued there binds or represents the Circassians of Syria.",
+    "editions": {
+      "tr": {
+        "type": "Açıklama",
+        "title": "Tarihimizi Kimse Bizim Yerimize Yazamaz — Suriye Çerkes Kabileler Meclisi",
+        "description": "Suriye Çerkes Kabileler Meclisi, 25 Ekim – 3 Kasım 2026 Moskova programını ve 1557 “gönüllü katılım” anlatısını reddediyor; orada çıkan hiçbir şeyin Suriye Çerkeslerini bağlamadığını ve temsil etmediğini ilan ediyor.",
+        "url": "documents/2026-11-syria-tribal-council.html?lang=tr",
+        "lang": "TR"
+      },
+      "ru": {
+        "type": "Заявление",
+        "title": "Никто не напишет нашу историю за нас — Совет черкесских племён Сирии",
+        "description": "Совет черкесских племён Сирии отвергает московскую программу 25 октября – 3 ноября 2026 года и версию о «добровольном вхождении» 1557 года и заявляет, что ничто из прозвучавшего там не обязывает и не представляет черкесов Сирии.",
+        "url": "documents/2026-11-syria-tribal-council.html?lang=ru",
+        "lang": "РУС"
+      },
+      "de": {
+        "type": "Erklärung",
+        "title": "Niemand schreibt unsere Geschichte für uns — Rat der tscherkessischen Stämme in Syrien",
+        "description": "Der Rat der tscherkessischen Stämme in Syrien weist das Moskauer Programm vom 25. Oktober bis 3. November 2026 und die Erzählung vom „freiwilligen Anschluss“ 1557 zurück und erklärt, dass nichts davon die Tscherkessen Syriens bindet oder vertritt.",
+        "url": "documents/2026-11-syria-tribal-council.html?lang=de",
+        "lang": "DE"
+      },
+      "ar": {
+        "type": "بيان",
+        "title": "لن نسمح لأحد أن يكتب تاريخنا نيابة عنا — مجلس القبائل الشركسية في سوريا",
+        "description": "مجلس القبائل الشركسية في سوريا يرفض اجتماع موسكو (25 تشرين الأول – 3 تشرين الثاني 2026) ورواية «الانضمام الطوعي عام 1557»، ويؤكد أن ما صدر عنه لا يلزم الشعب الشركسي في سوريا ولا يمثله.",
+        "url": "documents/2026-11-syria-tribal-council.html?lang=ar",
+        "lang": "عر"
+      },
+      "kbd": {
+        "type": "Тхыгъэ",
+        "title": "Ди Тхыдэр Зыми Ди ПӀэкӀэ Итхынукъым",
+        "description": "Сирием щыӀэ Адыгэ Лъэпкъхэм я Хасэм Москва щекӀуэкӀа зэхуэсыр къызэримыщтэр утыку кърихьащ.",
+        "url": "documents/2026-11-syria-tribal-council.html?lang=kbd",
+        "lang": "КАБ"
+      },
+      "ady": {
+        "type": "Тхыгъэ",
+        "title": "Ти Тарихъ Зыми Ти ЧӀыпӀэкӀэ Ытхыщтэп",
+        "description": "Сирием щыӀэ Адыгэ Лъэпкъхэм я Хасэ Москва щыкӀогъэ зэхэсыгъор зэримыштэрэр къыӀуагъ.",
+        "url": "documents/2026-11-syria-tribal-council.html?lang=ady",
+        "lang": "АДЫ"
+      }
+    }
+  },
+  {
+    "type": "Statement",
     "title": "Not in Our Name — Joint Statement of 44 Diaspora Organisations",
     "author": "44 Circassian/Caucasian diaspora organisations",
     "date": "2026-11-06",
