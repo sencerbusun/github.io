@@ -198,6 +198,7 @@
 
     /* LIBRARY */
     .library { background: var(--black); }
+    .library.recognition { border-bottom: 1px solid var(--line); }
     .library-intro { color: var(--smoke); max-width: 620px; margin-bottom: 40px; font-size: 1.05rem; }
     .doc-list { list-style: none; border-top: 1px solid var(--line); }
     .doc-item { border-bottom: 1px solid var(--line); }
@@ -325,6 +326,7 @@
     <div class="nav-right">
       <ul class="nav-links">
         <li><a href="#about" data-i18n="nav_about">About</a></li>
+        <li><a href="#recognition" data-i18n="nav_recognition">Recognition</a></li>
         <li><a href="#library" data-i18n="nav_library">Library</a></li>
         <li><a href="#events" data-i18n="nav_events">Events</a></li>
         <li><a href="#instagram">Instagram</a></li>
@@ -403,6 +405,15 @@
       </p>
       <a href="#contact" class="btn" style="margin-top:12px" data-i18n="about_cta">Join the collective</a>
     </div>
+  </section>
+
+  <!-- RECOGNITION: official acts recognising the Circassian genocide (list lives in recognition.json) -->
+  <section class="library recognition" id="recognition">
+    <p class="section-label" data-i18n="rec_label">Recognition</p>
+    <h2 class="section-title" data-i18n="rec_title">Recognition of the<br>Circassian Genocide</h2>
+    <div class="divider"></div>
+    <p class="library-intro" data-i18n="rec_intro">Official acts by which parliaments have recognised the genocide of the Circassians, or demanded its recognition. Full texts in the original language, with our translations.</p>
+    <ul class="doc-list" id="rec-list"></ul>
   </section>
 
   <!-- LIBRARY: articles & documents (list lives in documents.json) -->
@@ -540,7 +551,7 @@
         lib_empty: 'Nothing published yet — check back soon.', lib_open: 'Open ↗', lib_reader: 'Reader view',
         lib_cat_books: 'Key Books', lib_cat_theses: 'Dissertations &amp; Theses', lib_cat_articles: 'Journal Articles &amp; Papers',
         lib_open_pdf: 'Open PDF ↗', lib_get_access: 'Get access ↗',
-        nav_events: 'Events', ev_label: 'Live Events', ev_title: 'Events &amp;<br>Actions', ev_intro: 'Rallies, commemorations, festivals and exhibitions in the homeland and across the diaspora.', ev_upcoming: 'Upcoming', ev_now: 'Now on', ev_past: 'Past events', ev_empty: 'No events listed yet — check back soon.', ev_more: 'Details ↗',
+        nav_recognition: 'Recognition', rec_label: 'Recognition', rec_title: 'Recognition of the<br>Circassian Genocide', rec_intro: 'Official acts by which parliaments have recognised the genocide of the Circassians, or demanded its recognition. Full texts in the original language, with our translations.', nav_events: 'Events', ev_label: 'Live Events', ev_title: 'Events &amp;<br>Actions', ev_intro: 'Rallies, commemorations, festivals and exhibitions in the homeland and across the diaspora.', ev_upcoming: 'Upcoming', ev_now: 'Now on', ev_past: 'Past events', ev_empty: 'No events listed yet — check back soon.', ev_more: 'Details ↗',
         lib_access_open: 'Open access', lib_access_restricted: 'Restricted · buy or request access', lib_buy: 'Buy ↗', lib_access_buy: 'In print · available to buy', lib_original: 'Original edition',
         stat1: 'Years active', stat2: 'Events documented', stat3: 'Cities reached', stat4: 'Reasons to fight',
         ig_label: 'Follow us', ig_text: 'Short videos on the Circassian question, history and today’s cultural and political issues.', ig_follow: 'Follow on Instagram', flickr_label: 'Photo Archive', flickr_title: 'Gallery',
@@ -569,7 +580,7 @@
         lib_cat_books: 'Тхылъ нэхъыщхьэхэр', lib_cat_theses: 'Диссертацэхэр', lib_cat_articles: 'Щӏэныгъэ тхыгъэхэр',
         lib_open_pdf: 'PDF Еплъын ↗', lib_get_access: 'Ӏэрыхьэн ↗', lib_buy: 'Къэщэхун ↗', lib_original: 'Япэ къыдэкӏыгъуэр',
         lib_access_open: 'Пщӏэншэу', lib_access_restricted: 'Хуитыныгъэ гъэтӏылъащ · къэщэхун е лъэӏун', lib_access_buy: 'Тедзащ · къащэху хъунущ',
-        nav_events: 'Зэхыхьэхэр', ev_label: 'Зэхыхьэхэр', ev_title: 'Зэхыхьэхэр &amp;<br>Акцэхэр', ev_intro: 'Митингхэр, гукъэкӏыж зэхыхьэхэр, фестивалхэр, гъэлъэгъуэныгъэхэр — хэкужьми диаспорэми.', ev_upcoming: 'Къэблагъэ', ev_now: 'Иджы йокӏуэкӏ', ev_past: 'Екӏуэкӏа зэхыхьэхэр', ev_empty: 'Иджыри зэхыхьэ щыӏэкъым.', ev_more: 'Нэхъыбэ ↗',
+        nav_recognition: 'Къызэрацӏыхуар', rec_label: 'Къызэрацӏыхуар', rec_title: 'Черкес геноцидыр<br>Къызэралъытар', rec_intro: 'Парламентхэм черкесхэм я геноцидыр къызэралъыта е къалъытэну къызэрыщӀагъэувыкӀа унафэхэр. Тхыгъэ псор оригиналымкӀэ, ди зэдзэкӀыгъэхэр и гъусэу.', nav_events: 'Зэхыхьэхэр', ev_label: 'Зэхыхьэхэр', ev_title: 'Зэхыхьэхэр &amp;<br>Акцэхэр', ev_intro: 'Митингхэр, гукъэкӏыж зэхыхьэхэр, фестивалхэр, гъэлъэгъуэныгъэхэр — хэкужьми диаспорэми.', ev_upcoming: 'Къэблагъэ', ev_now: 'Иджы йокӏуэкӏ', ev_past: 'Екӏуэкӏа зэхыхьэхэр', ev_empty: 'Иджыри зэхыхьэ щыӏэкъым.', ev_more: 'Нэхъыбэ ↗',
         stat1: 'Илъэс лэжьащ', stat2: 'Хъыбарзехьэ', stat3: 'Къалэ', stat4: 'Зэпэщӏэтыным и щхьэусыгъуэ',
         ig_label: 'ДыкӀэлъыплъ', ig_text: 'Адыгэ Ӏуэхум, тхыдэм, иджырей щэнхабзэ, политикэ Ӏуэхухэм теухуа видео кӀэщӀхэр.', ig_follow: 'Instagram-м дыщыкӀэлъыплъ', flickr_label: 'Сурэт Архив', flickr_title: 'Галерей',
         flickr_link: 'Архив псор ↗', flickr_loading: 'Flickr-м щыщ солъагъу…',
@@ -597,7 +608,7 @@
         lib_cat_books: 'Тхылъ шъхьаӀэхэр', lib_cat_theses: 'Диссертациехэр', lib_cat_articles: 'ШӀэныгъэ тхыгъэхэр',
         lib_open_pdf: 'PDF Еплъын ↗', lib_get_access: 'Ӏэкӏэгъэхьан ↗', lib_buy: 'Къэщэфын ↗', lib_original: 'Апэрэ къыдэкӀыгъор',
         lib_access_open: 'Уасэ хэмылъэу', lib_access_restricted: 'ЗэфэшӀыгъ · къэщэфын е елъэӀун', lib_access_buy: 'Къыдэкӏыгъ · къэпщэфын плъэкӏыщт',
-        nav_events: 'Зэхахьэхэр', ev_label: 'Зэхахьэхэр', ev_title: 'Зэхахьэхэр &amp;<br>Акциехэр', ev_intro: 'Митингхэр, гукъэкӀыжь зэхахьэхэр, фестивальхэр, къэгъэлъэгъонхэр — хэкужъми диаспорэми.', ev_upcoming: 'Къэблагъэ', ev_now: 'Джы макӀо', ev_past: 'КӀогъэ зэхахьэхэр', ev_empty: 'Джыри зэхахьэ щыӀэп.', ev_more: 'НахьыбэкӀэ ↗',
+        nav_recognition: 'Къызэралъытагъэр', rec_label: 'Къызэралъытагъэр', rec_title: 'Черкес геноцидыр<br>Къызэралъытагъэр', rec_intro: 'Парламентхэм черкесхэм ягеноцид къызэралъытагъэ е къалъытэнэу зыкъызэрагъэуцугъэ унашъохэр. Тхыгъэ псаур оригиналымкӀэ, тизэдзэкӀыгъэхэр игъусэхэу.', nav_events: 'Зэхахьэхэр', ev_label: 'Зэхахьэхэр', ev_title: 'Зэхахьэхэр &amp;<br>Акциехэр', ev_intro: 'Митингхэр, гукъэкӀыжь зэхахьэхэр, фестивальхэр, къэгъэлъэгъонхэр — хэкужъми диаспорэми.', ev_upcoming: 'Къэблагъэ', ev_now: 'Джы макӀо', ev_past: 'КӀогъэ зэхахьэхэр', ev_empty: 'Джыри зэхахьэ щыӀэп.', ev_more: 'НахьыбэкӀэ ↗',
         stat1: 'ИлъэскӀэ Іоф ашӀагъ', stat2: 'Хъытыу зэхащагъ', stat3: 'Къалэ', stat4: 'Пэуцужьыным ищхьэусыгъо',
         ig_label: 'ТыкӀэлъыплъ', ig_text: 'Адыгэ Ӏофым, тарихъым, джырэ шэн-хабзэ ыкӀи политикэ Ӏофыгъохэм афэгъэхьыгъэ видео кӀэкӀхэр.', ig_follow: 'Instagram-м тыщыкӀэлъыплъ', flickr_label: 'Сурэт Архив', flickr_title: 'Галерей',
         flickr_link: 'Архив пстэури ↗', flickr_loading: 'Flickr-м щыщ солъэгъу…',
@@ -624,7 +635,7 @@
         lib_empty: 'Пока ничего не опубликовано.', lib_open: 'Открыть ↗', lib_reader: 'Режим чтения',
         lib_cat_books: 'Ключевые книги', lib_cat_theses: 'Диссертации', lib_cat_articles: 'Научные статьи и доклады',
         lib_open_pdf: 'Открыть PDF ↗', lib_get_access: 'Получить доступ ↗',
-        nav_events: 'События', ev_label: 'Живые события', ev_title: 'События и<br>Акции', ev_intro: 'Митинги, памятные акции, фестивали и выставки на родине и в диаспоре.', ev_upcoming: 'Скоро', ev_now: 'Идёт сейчас', ev_past: 'Прошедшие события', ev_empty: 'Пока нет событий.', ev_more: 'Подробнее ↗',
+        nav_recognition: 'Признание', rec_label: 'Признание', rec_title: 'Признание<br>геноцида черкесов', rec_intro: 'Официальные акты, которыми парламенты признали геноцид черкесов или потребовали его признания. Полные тексты на языке оригинала и в наших переводах.', nav_events: 'События', ev_label: 'Живые события', ev_title: 'События и<br>Акции', ev_intro: 'Митинги, памятные акции, фестивали и выставки на родине и в диаспоре.', ev_upcoming: 'Скоро', ev_now: 'Идёт сейчас', ev_past: 'Прошедшие события', ev_empty: 'Пока нет событий.', ev_more: 'Подробнее ↗',
         lib_access_open: 'Открытый доступ', lib_access_restricted: 'Ограниченный доступ · купить или запросить', lib_buy: 'Купить ↗', lib_access_buy: 'Печатное издание · можно купить', lib_original: 'Оригинальное издание',
         stat1: 'Лет активности', stat2: 'Задокументировано событий', stat3: 'Городов', stat4: 'Причин бороться',
         ig_label: 'Подписывайтесь', ig_text: 'Короткие видео о черкесском вопросе, истории и сегодняшних культурных и политических проблемах.', ig_follow: 'Подписаться в Instagram', flickr_label: 'Фотоархив', flickr_title: 'Галерея',
@@ -652,7 +663,7 @@
         lib_empty: 'Henüz yayımlanmış bir şey yok.', lib_open: 'Aç ↗', lib_reader: 'Okuma görünümü',
         lib_cat_books: 'Temel Kitaplar', lib_cat_theses: 'Tezler', lib_cat_articles: 'Akademik Makaleler ve Bildiriler',
         lib_open_pdf: 'PDF’i aç ↗', lib_get_access: 'Erişim ↗',
-        nav_events: 'Etkinlikler', ev_label: 'Canlı Etkinlikler', ev_title: 'Etkinlikler ve<br>Eylemler', ev_intro: 'Anavatanda ve diasporada mitingler, anmalar, festivaller ve sergiler.', ev_upcoming: 'Yaklaşan', ev_now: 'Şu an sürüyor', ev_past: 'Geçmiş etkinlikler', ev_empty: 'Henüz etkinlik yok.', ev_more: 'Ayrıntılar ↗',
+        nav_recognition: 'Tanıma', rec_label: 'Tanıma', rec_title: 'Çerkes Soykırımının<br>Tanınması', rec_intro: 'Parlamentoların Çerkes soykırımını tanıdığı ya da tanınmasını talep ettiği resmî belgeler. Asıl dilinde tam metinler ve çevirilerimiz.', nav_events: 'Etkinlikler', ev_label: 'Canlı Etkinlikler', ev_title: 'Etkinlikler ve<br>Eylemler', ev_intro: 'Anavatanda ve diasporada mitingler, anmalar, festivaller ve sergiler.', ev_upcoming: 'Yaklaşan', ev_now: 'Şu an sürüyor', ev_past: 'Geçmiş etkinlikler', ev_empty: 'Henüz etkinlik yok.', ev_more: 'Ayrıntılar ↗',
         lib_access_open: 'Açık erişim', lib_access_restricted: 'Kısıtlı erişim · satın al veya erişim iste', lib_buy: 'Satın al ↗', lib_access_buy: 'Basılı · satın alınabilir', lib_original: 'Orijinal baskı',
         stat1: 'Yıl aktif', stat2: 'Belgelenen etkinlik', stat3: 'Şehir', stat4: 'Mücadele sebebi',
         ig_label: 'Bizi takip edin', ig_text: 'Çerkes meselesi, tarih ve bugünün kültürel ve siyasi meseleleri üzerine kısa videolar.', ig_follow: 'Instagram’da takip et', flickr_label: 'Fotoğraf Arşivi', flickr_title: 'Galeri',
@@ -680,7 +691,7 @@
         lib_empty: 'Noch nichts veröffentlicht.', lib_open: 'Öffnen ↗', lib_reader: 'Leseansicht',
         lib_cat_books: 'Grundlegende Bücher', lib_cat_theses: 'Dissertationen &amp; Abschlussarbeiten', lib_cat_articles: 'Fachartikel &amp; Aufsätze',
         lib_open_pdf: 'PDF öffnen ↗', lib_get_access: 'Zugang ↗',
-        nav_events: 'Termine', ev_label: 'Live-Events', ev_title: 'Events &amp;<br>Aktionen', ev_intro: 'Kundgebungen, Gedenkveranstaltungen, Festivals und Ausstellungen in der Heimat und in der Diaspora.', ev_upcoming: 'Demnächst', ev_now: 'Läuft gerade', ev_past: 'Vergangene Termine', ev_empty: 'Noch keine Termine.', ev_more: 'Details ↗',
+        nav_recognition: 'Anerkennung', rec_label: 'Anerkennung', rec_title: 'Anerkennung des<br>Völkermords an den Tscherkessen', rec_intro: 'Offizielle Rechtsakte, mit denen Parlamente den Völkermord an den Tscherkessen anerkannt oder seine Anerkennung gefordert haben. Volltexte in der Originalsprache und in unseren Übersetzungen.', nav_events: 'Termine', ev_label: 'Live-Events', ev_title: 'Events &amp;<br>Aktionen', ev_intro: 'Kundgebungen, Gedenkveranstaltungen, Festivals und Ausstellungen in der Heimat und in der Diaspora.', ev_upcoming: 'Demnächst', ev_now: 'Läuft gerade', ev_past: 'Vergangene Termine', ev_empty: 'Noch keine Termine.', ev_more: 'Details ↗',
         lib_access_open: 'Frei zugänglich', lib_access_restricted: 'Zugang beschränkt · kaufen oder Zugang beantragen', lib_buy: 'Kaufen ↗', lib_access_buy: 'Gedruckt · im Handel erhältlich', lib_original: 'Originalausgabe',
         stat1: 'Jahre aktiv', stat2: 'Dokumentierte Ereignisse', stat3: 'Städte erreicht', stat4: 'Gründe zu kämpfen',
         ig_label: 'Folgt uns', ig_text: 'Kurze Videos zur tscherkessischen Frage, zur Geschichte und zu aktuellen kulturellen und politischen Themen.', ig_follow: 'Auf Instagram folgen', flickr_label: 'Fotoarchiv', flickr_title: 'Galerie',
@@ -708,7 +719,7 @@
         lib_empty: 'لم يُنشر شيء بعد.', lib_open: 'فتح ↗', lib_reader: 'وضع القراءة',
         lib_cat_books: 'كتب أساسية', lib_cat_theses: 'أطروحات ورسائل جامعية', lib_cat_articles: 'مقالات ودراسات أكاديمية',
         lib_open_pdf: 'فتح PDF ↗', lib_get_access: 'الحصول على الوصول ↗',
-        nav_events: 'الفعاليات', ev_label: 'فعاليات حية', ev_title: 'فعاليات<br>وتحركات', ev_intro: 'مسيرات وفعاليات إحياء ذكرى ومهرجانات ومعارض في الوطن الأم وفي الشتات.', ev_upcoming: 'قريباً', ev_now: 'جارية الآن', ev_past: 'فعاليات سابقة', ev_empty: 'لا توجد فعاليات بعد.', ev_more: 'التفاصيل ↗',
+        nav_recognition: 'الاعتراف', rec_label: 'الاعتراف', rec_title: 'الاعتراف بالإبادة<br>الجماعية للشركس', rec_intro: 'الوثائق الرسمية التي اعترفت بها البرلمانات بالإبادة الجماعية للشركس أو طالبت بالاعتراف بها. النصوص الكاملة بلغتها الأصلية مع ترجماتنا.', nav_events: 'الفعاليات', ev_label: 'فعاليات حية', ev_title: 'فعاليات<br>وتحركات', ev_intro: 'مسيرات وفعاليات إحياء ذكرى ومهرجانات ومعارض في الوطن الأم وفي الشتات.', ev_upcoming: 'قريباً', ev_now: 'جارية الآن', ev_past: 'فعاليات سابقة', ev_empty: 'لا توجد فعاليات بعد.', ev_more: 'التفاصيل ↗',
         lib_access_open: 'وصول مفتوح', lib_access_restricted: 'وصول مقيّد · شراء أو طلب الوصول', lib_buy: 'شراء ↗', lib_access_buy: 'نسخة مطبوعة · متاحة للشراء', lib_original: 'الطبعة الأصلية',
         stat1: 'سنوات نشاط', stat2: 'فعالية موثّقة', stat3: 'مدينة', stat4: 'أسباب للنضال',
         ig_label: 'تابعونا', ig_text: 'مقاطع فيديو قصيرة عن القضية الشركسية والتاريخ والقضايا الثقافية والسياسية الراهنة.', ig_follow: 'تابعونا على إنستغرام', flickr_label: 'أرشيف الصور', flickr_title: 'المعرض',
@@ -768,6 +779,7 @@
 
       // re-render the library so per-language editions switch too
       if (typeof renderLibrary === 'function') renderLibrary();
+      if (typeof renderRecognition === 'function') renderRecognition();
       if (typeof renderEvents === 'function') renderEvents();
 
       // close dropdown
@@ -1042,6 +1054,27 @@
       renderLibrary();
     }
     loadLibrary();
+
+    /* RECOGNITION — official acts on the Circassian genocide (recognition.json, oldest first; same entry format as documents.json) */
+    var REC_DOCS = null;   // var: setLang may run before this line
+    function renderRecognition() {
+      const list = document.getElementById('rec-list');
+      if (!list || !Array.isArray(REC_DOCS)) return;
+      const lang = currentLang();
+      list.innerHTML = REC_DOCS.map(d => renderDoc(d, lang)).join('');
+    }
+    async function loadRecognition() {
+      let docs = [];
+      try {
+        const res = await fetch('recognition.json', { cache: 'no-cache' });
+        if (res.ok) docs = await res.json();
+      } catch (e) {}
+      docs = (Array.isArray(docs) ? docs : []).filter(d => d && d.title && d.url);
+      docs.sort((a, b) => String(a.date || '').localeCompare(String(b.date || '')));
+      REC_DOCS = docs;
+      renderRecognition();
+    }
+    loadRecognition();
 
     /* ═══════════════════════════════════════════
        EVENTS — live events, rallies, commemorations, exhibitions
